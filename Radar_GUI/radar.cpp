@@ -7,10 +7,21 @@
 
 #include<GLFW/glfw3.h>
 #include"linmath.h"
+#include<WinSock2.h>
+#include<WS2tcpip.h>
 #include <stdlib.h>				
 #include <stdio.h>
 
+#pragma comment(lib, "Ws2_32.lib");
+
 /*constants used in the program*/
+#define MAXRECVSTRING 32767
+#define DEFAULT_PORT "27015"
+#define DEFAULT_BUFLEN 512
+
+struct sockaddr_in ServAddr;
+struct sockaddr_in broadcastAddr; /* Broadcast Address */
+
 const float DEG2RAD = 3.14159 / 180;
 float radius = 0.96;
 
@@ -153,14 +164,138 @@ void ppi_display(void){
 		glfwPollEvents();
 	}
 	glfwDestroyWindow(window);
-	glfwTerminate();													// glfwTerminate() should always be used before exiting the code to release the resources the program is using
+	glfwTerminate();									// glfwTerminate() should always be used before exiting the code to release the resources the program is using
 	exit(EXIT_SUCCESS);
 }
+
+//____________________________________________________________________________________________________________________________
+
+
+
+void readRadarData(void)
+{
+
+	WSADATA wsaData; /* Structure for WinSock setup communication */
+	
+
+	int recvbuflen = DEFAULT_BUFLEN;  /* Length of received string */
+	int iResult;
+
+	// Initialize Winsock
+	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	if (iResult != 0) {												/* Load Winsock 2.0 DLL */
+		printf("WSAStartup failed: %d\n", iResult);
+		//return 1;
+	}
+
+	struct addrinfo *result = NULL,
+					*ptr = NULL,
+					hints;
+
+	ZeroMemory(&hints, sizeof(hints));
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_protocol = IPPROTO_TCP;
+
+	char abcd[5];
+
+	//Resolve the server address and port
+	iResult = getaddrinfo(abcd, DEFAULT_PORT, &hints, &result);
+	if (iResult != 0) {
+		printf("getaddrinfo failed : %d\n", iResult);
+		WSACleanup();
+		//return 1;
+	}
+
+	SOCKET connectSocket = INVALID_SOCKET;
+	
+	// Attempt to connect to the first address returned by
+	// the call to getaddrinfo
+	ptr = result;
+
+	// Create a SOCKET for connecting to server
+	connectSocket = socket(ptr->ai_family, ptr->ai_socktype, ptr->ai_protocol);
+
+	if (connectSocket == INVALID_SOCKET) {
+		printf("Error at socket(): %ld\n", WSAGetLastError());
+		freeaddrinfo(result);
+		WSACleanup();
+		//return 1;
+
+	}
+
+	//TO CONNECT TO A SOCKET
+	// Connect to server.
+	iResult = connect(connectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+	if (iResult == SOCKET_ERROR) {
+		closesocket(connectSocket);
+		connectSocket = INVALID_SOCKET;
+	}
+
+	// Should really try the next address returned by getaddrinfo
+	// if the connect call failed
+	// But for this simple example we just free the resources
+	// returned by getaddrinfo and print an error message
+
+	freeaddrinfo(result);
+
+	if (connectSocket == INVALID_SOCKET) {
+		printf("Unable to connect to server!\n");
+		WSACleanup();
+		//return 1;
+	}
+
+	char *sendbuf = "this is a test jiiii";
+	char recvbuf[DEFAULT_BUFLEN];
+
+
+	// Send an initial buffer
+	iResult = send(connectSocket, sendbuf, (int)strlen(sendbuf), 0);
+	if (iResult == SOCKET_ERROR) {
+		printf("send failed: %d\n", WSAGetLastError());
+		closesocket(connectSocket);
+		WSACleanup();
+		//return 1;
+	}
+
+	printf("Bytes Sent: %ld\n", iResult);
+
+	// shutdown the connection for sending since no more data will be sent
+	// the client can still use the ConnectSocket for receiving data
+	iResult = shutdown(connectSocket, SD_SEND);
+	if (iResult == SOCKET_ERROR) {
+		printf("shutdown failed: %d\n", WSAGetLastError());
+		closesocket(connectSocket);
+		WSACleanup();
+		//return 1;
+	}
+
+	// Receive data until the server closes the connection
+	do {
+		iResult = recv(connectSocket, recvbuf, recvbuflen, 0);
+		if (iResult > 0)
+			printf("Bytes received: %d\n", iResult);
+		else if (iResult == 0)
+			printf("Connection closed\n");
+		else
+			printf("recv failed: %d\n", WSAGetLastError());
+	} while (iResult > 0);
+
+	// cleanup
+	closesocket(connectSocket);
+	WSACleanup();
+
+	//return 0;
+
+}
+
+
 
 
 int main(int argc, char *argv[])
 {
 	
 	ppi_display();
+	readRadarData();
 
 }

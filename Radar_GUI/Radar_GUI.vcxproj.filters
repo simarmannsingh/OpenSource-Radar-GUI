@@ -23,5 +23,8 @@
     <ClInclude Include="linmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="winsock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
