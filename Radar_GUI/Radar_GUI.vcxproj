@@ -120,10 +120,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClientNetwork.cpp" />
+    <ClCompile Include="NetworkServices.cpp" />
     <ClCompile Include="radar.cpp" />
+    <ClCompile Include="RemoteClient.cpp" />
+    <ClCompile Include="RemoteServer.cpp" />
+    <ClCompile Include="ServerNetwork.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClientNetwork.h" />
     <ClInclude Include="linmath.h" />
+    <ClInclude Include="NetworkData.h" />
+    <ClInclude Include="NetworkServices.h" />
+    <ClInclude Include="RemoteClient.h" />
+    <ClInclude Include="RemoteServer.h" />
+    <ClInclude Include="ServerNetwork.h" />
     <ClInclude Include="winsock.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

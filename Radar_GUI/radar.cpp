@@ -1,18 +1,31 @@
 /*
 
    Author			: Simar Mann Singh
-   Reference		: Intro to Computer Science (Link : https://www.youtube.com/watch?v=kwxCP_LLZJ4&t=328s)
-
+   Reference		: 1. Intro to Computer Science (Link : https://www.youtube.com/watch?v=kwxCP_LLZJ4&t=328s)
+					  2. TCP socket programming (Link : https://msdn.microsoft.com/en-us/library/windows/desktop/ms737591(v=vs.85).aspx )
 */
 
-#include<GLFW/glfw3.h>
-#include"linmath.h"
-#include<WinSock2.h>
-#include<WS2tcpip.h>
-#include <stdlib.h>				
+
+//#include "stdafx.h
+#include "RemoteServer.h"
+#include "RemoteClient.h"
+#include <process.h>
+#include <GLFW/glfw3.h>
+#include "linmath.h"
+#include <WinSock2.h>
+#include <WS2tcpip.h>
+#include <stdlib.h>
 #include <stdio.h>
 
-#pragma comment(lib, "Ws2_32.lib");
+#pragma once
+#define WIN32_LEAN_AND_MEAN
+
+/*
+// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
+#pragma comment (lib, "Ws2_32.lib")
+#pragma comment (lib, "Mswsock.lib")
+#pragma comment (lib, "AdvApi32.lib")
+*/
 
 /*constants used in the program*/
 #define MAXRECVSTRING 32767
@@ -33,6 +46,13 @@ float centerY = 240.0;
 float M_PI = 3.14159;
 float PI_180 = M_PI / 180.0f;
 
+void serverLoop(void *);
+void clientLoop(void);
+
+
+RemoteServer * server;
+RemoteClient * client;
+
 void backgroundDisplay(void) {
 	//glClear(GL_COLOR_BUFFER_BIT); // | GL_DEPTH_BUFFER_BIT);
 	//glColor3f(0.712, 0.767, 0.431);
@@ -52,6 +72,8 @@ void backgroundDisplay(void) {
 	}
 	glEnd();
 }
+
+//____________________________________________________________________________________________________________________________
 
 void ppi_display(void){
 	if (!glfwInit())
@@ -171,15 +193,113 @@ void ppi_display(void){
 //____________________________________________________________________________________________________________________________
 
 
-
-void readRadarData(void)
+void readRadarData(int argc, char **argv[])
 {
-
 	WSADATA wsaData; /* Structure for WinSock setup communication */
+	SOCKET connectSocket = INVALID_SOCKET;
+
+	struct addrinfo *result = NULL,
+		*ptr = NULL,
+		hints;
+
+	const char *sendbuf = "this is a test";
+	char recvbuf[DEFAULT_BUFLEN];
+	int iResult;
+	int recvbuflen = DEFAULT_BUFLEN; /* Length of received string */
+
 	
 
-	int recvbuflen = DEFAULT_BUFLEN;  /* Length of received string */
-	int iResult;
+	// Initialize Winsock
+	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	if (iResult != 0) {
+		printf("WSAStartup failed with error: %d\n", iResult);
+		//return 1;
+	}
+
+	ZeroMemory(&hints, sizeof(hints));
+	hints.ai_family = AF_UNSPEC;
+	hints.ai_socktype = SOCK_STREAM;
+	hints.ai_protocol = IPPROTO_TCP;
+	// Resolve the server address and port
+	iResult = getaddrinfo(*argv[2], DEFAULT_PORT, &hints, &result);
+	if (iResult != 0) {
+		printf("getaddrinfo failed with error: %d\n", iResult);
+		WSACleanup();
+		//return 1;
+	}
+
+	// Attempt to connect to an address until one succeeds
+	for (ptr = result; ptr != NULL; ptr = ptr->ai_next) {
+
+		// Create a SOCKET for connecting to server
+		connectSocket = socket(ptr->ai_family, ptr->ai_socktype,
+			ptr->ai_protocol);
+		if (connectSocket == INVALID_SOCKET) {
+			printf("socket failed with error: %ld\n", WSAGetLastError());
+			WSACleanup();
+			//return 1;
+		}
+
+		// Connect to server.
+		iResult = connect(connectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+		if (iResult == SOCKET_ERROR) {
+			closesocket(connectSocket);
+			connectSocket = INVALID_SOCKET;
+			continue;
+		}
+		break;
+	}
+
+	freeaddrinfo(result);
+
+	if (connectSocket == INVALID_SOCKET) {
+		printf("Unable to connect to server!\n");
+		WSACleanup();
+		//return 1;
+	}
+
+	// Send an initial buffer
+	iResult = send(connectSocket, sendbuf, (int)strlen(sendbuf), 0);
+	if (iResult == SOCKET_ERROR) {
+		printf("send failed with error: %d\n", WSAGetLastError());
+		closesocket(connectSocket);
+		WSACleanup();
+		//return 1;
+	}
+
+	printf("Bytes Sent: %ld\n", iResult);
+
+	// shutdown the connection since no more data will be sent
+	iResult = shutdown(connectSocket, SD_SEND);
+	if (iResult == SOCKET_ERROR) {
+		printf("shutdown failed with error: %d\n", WSAGetLastError());
+		closesocket(connectSocket);
+		WSACleanup();
+		//return 1;
+	}
+
+	// Receive until the peer closes the connection
+	do {
+
+		iResult = recv(connectSocket, recvbuf, recvbuflen, 0);
+		if (iResult > 0)
+			printf("Bytes received: %d\n", iResult);
+		else if (iResult == 0)
+			printf("Connection closed\n");
+		else
+			printf("recv failed with error: %d\n", WSAGetLastError());
+
+	} while (iResult > 0);
+
+	// cleanup
+	closesocket(connectSocket);
+	WSACleanup();
+
+
+
+
+
+
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -188,9 +308,7 @@ void readRadarData(void)
 		//return 1;
 	}
 
-	struct addrinfo *result = NULL,
-					*ptr = NULL,
-					hints;
+	
 
 	ZeroMemory(&hints, sizeof(hints));
 	hints.ai_family = AF_UNSPEC;
@@ -207,7 +325,7 @@ void readRadarData(void)
 		//return 1;
 	}
 
-	SOCKET connectSocket = INVALID_SOCKET;
+	
 	
 	// Attempt to connect to the first address returned by
 	// the call to getaddrinfo
@@ -244,9 +362,6 @@ void readRadarData(void)
 		WSACleanup();
 		//return 1;
 	}
-
-	char *sendbuf = "this is a test jiiii";
-	char recvbuf[DEFAULT_BUFLEN];
 
 
 	// Send an initial buffer
@@ -292,10 +407,40 @@ void readRadarData(void)
 
 
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv[])
 {
-	
-	ppi_display();
-	readRadarData();
+	// initialize the server
+	server = new RemoteServer();
+	// create thread with arbitrary argument for the run function
+	_beginthread(serverLoop, 0, (void*)12);
 
+	// initialize the client
+	client = new RemoteClient();
+
+	
+
+	printf("total Number of argc: %d \n", argc);
+	
+	
+	
+	//readRadarData(argc, argv);
+	clientLoop();
+}
+
+void serverLoop(void *)
+{
+	while (true)
+	{
+		server->update();
+	}
+
+}
+
+void clientLoop(void)
+{
+	while (true)
+	{
+		ppi_display();
+		//client->update();
+	}
 }
