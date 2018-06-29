@@ -8,7 +8,7 @@
 #include "NetworkData.h"
 
 //size of our default buffer 
-#define DEFAULT_BUFLEN 512
+#define DEFAULT_BUFLEN 64
 
 //default port to connect to
 #define DEFAULT_PORT "27015"
@@ -25,7 +25,7 @@ public:
 	int iResult;
 
 	//socket for client to connect to server
-	SOCKET connectSocket;
+	SOCKET ClientSocket;
 	ClientNetwork(void);
 	~ClientNetwork(void);
 

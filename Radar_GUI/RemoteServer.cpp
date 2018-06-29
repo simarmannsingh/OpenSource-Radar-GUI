@@ -23,49 +23,39 @@ RemoteServer::~RemoteServer(void)
 
 void RemoteServer::receiveFromClients()
 {
-	Packet packet;
+	Packet Rxpacket;
 
 	// go through all clients
+	
 	std::map<unsigned int, SOCKET>::iterator iter;
-
+	
 	for (iter = network->sessions.begin(); iter != network->sessions.end(); iter++)
 	{
-		// get data for that client
+		// get data for that client. 'data_length' contains the number of bytes received from the incomming socket.
 		int data_length = network->receiveData(iter->first, network_data);
-
+		
+															// network_data is a pointer to the buffer to receive incoming data
 		if (data_length <= 0)
 		{
 			//no data recieved
 			continue;
 		}
-
-		int i = 0;
-		while (i < (int) data_length)
-		{
-			packet.deserialize(&(network_data[i]));
-			i += sizeof(Packet);
-
-			switch (packet.packet_type) {
-
-			case INIT_CONNECTION:
-
-				printf("server received init packet from client\n");
-
-				break;
-
-			case ACTION_EVENT:
-
-				printf("server received action event packet from client\n");
-
-				break;
-
-			default:
-
-				printf("error in packet types\n");
-
-				break;
-			}
+		else
+		{ 
+			printf("\nSize of Data_length : %d\n", data_length);
+			Rxpacket.deserialize(network_data);
+			
+			printf("----------------------------------------------------------\n");
+			printf("Data RECEIVED is :-\n");
+			printf("Amplitude : %d\n", Rxpacket.amplitude);
+			printf("Angle     : %d\n", Rxpacket.Angle);
+			printf("Range     : %d\n", Rxpacket.range);
+			printf("Direction : %d\n", Rxpacket.Direc);
+			printf("----------------------------------------------------------\n");
+			
+		  
 		}
+ 
 	}
 
 }
@@ -77,8 +67,9 @@ void RemoteServer::update()
 	if (network->acceptNewClient(client_id))
 	{
 		printf("client %d has been connected to the server\n", client_id);
-
-		client_id++;
+		
+		//moving on to the next client
+		//client_id++;   
 	}
 	receiveFromClients();
 
@@ -91,8 +82,7 @@ void RemoteServer::sendActionPackets()
 	char packet_data[packet_size];
 
 	Packet packet;
-	packet.packet_type = ACTION_EVENT;
-
+	packet.amplitude = 0;
 	packet.serialize(packet_data);
 
 	network->sendToAll(packet_data, packet_size);

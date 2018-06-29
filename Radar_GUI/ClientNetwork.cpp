@@ -4,10 +4,10 @@
 ClientNetwork::ClientNetwork(void)
 {
 	//create WSA data object
-	WSADATA wsaData;
+	WSADATA clientwsaData;
 
 	//socket 
-	connectSocket = INVALID_SOCKET;
+	ClientSocket = INVALID_SOCKET;
 
 	//holds address information for the socket which is to be connected to
 	struct addrinfo *result = NULL,
@@ -15,7 +15,7 @@ ClientNetwork::ClientNetwork(void)
 		hints;
 	
 	// Initialise winsock
-	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
+	iResult = WSAStartup(MAKEWORD(2, 2), &clientwsaData);
 	if (iResult != 0)
 	{
 		printf("WSAStartup failed with error : %d \n", iResult);
@@ -41,21 +41,21 @@ ClientNetwork::ClientNetwork(void)
 	for (ptr = result; ptr != NULL; ptr = ptr->ai_next)
 	{
 		// Connect a SCOKET for connecting to server
-		connectSocket = socket(ptr->ai_family, ptr->ai_socktype, ptr->ai_protocol);
+		ClientSocket = socket(ptr->ai_family, ptr->ai_socktype, ptr->ai_protocol);
 
-		if (connectSocket == INVALID_SOCKET) {
+		if (ClientSocket == INVALID_SOCKET) {
 			printf("socket failed with error: %ld\n", WSAGetLastError());
 			WSACleanup();
 			exit(1);
 		}
 
 		// Connect to server.
-		iResult = connect(connectSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
+		iResult = connect(ClientSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
 
 		if (iResult == SOCKET_ERROR)
 		{
-			closesocket(connectSocket);
-			connectSocket = INVALID_SOCKET;
+			closesocket(ClientSocket);
+			ClientSocket = INVALID_SOCKET;
 			printf("The server is down... did not connect");
 		}
 	}
@@ -67,7 +67,7 @@ ClientNetwork::ClientNetwork(void)
 
 
 	// if connection failed
-	if (connectSocket == INVALID_SOCKET)
+	if (ClientSocket == INVALID_SOCKET)
 	{
 		printf("Unable to connect to server!\n");
 		WSACleanup();
@@ -77,18 +77,22 @@ ClientNetwork::ClientNetwork(void)
 	// Set the mode of the socket to be nonblocking
 	u_long iMode = 1;
 
-	iResult = ioctlsocket(connectSocket, FIONBIO, &iMode);
+	iResult = ioctlsocket(ClientSocket, FIONBIO, &iMode);
 	if (iResult == SOCKET_ERROR)
 	{
 		printf("ioctlsocket failed with error: %d\n", WSAGetLastError());
-		closesocket(connectSocket);
+		closesocket(ClientSocket);
 		WSACleanup();
 		exit(1);
 	}
 
 	//disable nagle
 	char value = 1;
-	setsockopt(connectSocket, IPPROTO_TCP, TCP_NODELAY, &value, sizeof(value));
+	setsockopt(ClientSocket, IPPROTO_TCP, TCP_NODELAY, &value, sizeof(value));
 
 
+}
+
+ClientNetwork::~ClientNetwork(void)
+{
 }

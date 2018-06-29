@@ -13,7 +13,7 @@ ServerNetwork::ServerNetwork(void)
 
 
 	#define DEFAULT_PORT "27015"
-	#define DEFAULT_BUFLEN 512
+	#define DEFAULT_BUFLEN 64            // use this with caution. It is length of buffer in bytes
 
 
 	// address info for the server to listen to
@@ -28,10 +28,10 @@ ServerNetwork::ServerNetwork(void)
 	}
 
 	// set address information
-	ZeroMemory(&hints, sizeof(hints));
+	ZeroMemory(&hints, sizeof(hints));			//writing zeros in memory pointed to by the pointer '&hints' upto memory length given by 'sizeof(hints)'
 	hints.ai_family = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_protocol = IPPROTO_TCP;    // TCP connection!!!
+	hints.ai_protocol = IPPROTO_TCP;    // <---------------------------For UDP/TCP connection!!!
 	hints.ai_flags = AI_PASSIVE;
 
 	// Resolve the server address and port
@@ -77,7 +77,7 @@ ServerNetwork::ServerNetwork(void)
 
 	// no longer need address information
 	freeaddrinfo(result);
-
+	
 	// start listening for new clients attempting to connect
 	iResult = listen(ListenSocket, SOMAXCONN);
 
@@ -87,6 +87,10 @@ ServerNetwork::ServerNetwork(void)
 		WSACleanup();
 		exit(1);
 	}
+}
+
+ServerNetwork::~ServerNetwork(void)
+{
 }
 
 // accept new connections
@@ -100,10 +104,11 @@ bool ServerNetwork::acceptNewClient(unsigned int & id)
 		//disable nagle on the client's socket
 		char value = 1;
 		setsockopt(ClientSocket, IPPROTO_TCP, TCP_NODELAY, &value, sizeof(value));
+		printf("\nNAGLE DISABLED\n");
 
 		// insert new client into session id table
 		sessions.insert(pair<unsigned int, SOCKET>(id, ClientSocket));
-
+		printf("\nClient Added to the List\n");
 		return true;
 	}
 
@@ -117,13 +122,16 @@ int ServerNetwork::receiveData(unsigned int client_id, char * recvbuf)
 	if (sessions.find(client_id) != sessions.end())
 	{
 		SOCKET currentSocket = sessions[client_id];
-		iResult = NetworkServices::receiveMessage(currentSocket, recvbuf, MAX_PACKET_SIZE);
-		if (iResult == 0)
+		iResult = NetworkServices::receiveMessage(currentSocket, recvbuf, 12);		 //receiveMessage() returns the number of bytes received
+		//printf("\nNumber of bytes received till now: %d", iResult);				 //recvbuf is a pointer which contains the address of received data.
+		if (iResult == 0)    //iResult will be zero when no bytes are received
 		{
 			printf("Connection closed\n");
 			closesocket(currentSocket);
 		}
+		closesocket(currentSocket);
 		return iResult;
+		
 	}
 	return 0;
 

@@ -28,9 +28,9 @@
 */
 
 /*constants used in the program*/
-#define MAXRECVSTRING 32767
+#define MAXRECVSTRING 4294967296
 #define DEFAULT_PORT "27015"
-#define DEFAULT_BUFLEN 512
+#define DEFAULT_BUFLEN 64
 
 struct sockaddr_in ServAddr;
 struct sockaddr_in broadcastAddr; /* Broadcast Address */
@@ -409,22 +409,21 @@ void readRadarData(int argc, char **argv[])
 
 int main(int argc, char **argv[])
 {
-	// initialize the server
+	for(int i= 0; i<10;i++)
+	{ 
+	// initialize the server ( define a socket at server, bind it to address and start listening)
 	server = new RemoteServer();
+
 	// create thread with arbitrary argument for the run function
 	_beginthread(serverLoop, 0, (void*)12);
 
 	// initialize the client
 	client = new RemoteClient();
 
-	
-
-	printf("total Number of argc: %d \n", argc);
-	
-	
-	
+	//printf("total Number of argc: %d \n", argc);
 	//readRadarData(argc, argv);
 	clientLoop();
+	}
 }
 
 void serverLoop(void *)
@@ -440,7 +439,7 @@ void clientLoop(void)
 {
 	while (true)
 	{
-		ppi_display();
+		//ppi_display();
 		//client->update();
 	}
 }
