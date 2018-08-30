@@ -1,21 +1,29 @@
 /*
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Author			:	Simar Mann Singh
+ Department		:	High Frequency Department, TF
+ Date			:	14/06/2018
+ References		:		1. Intro to Computer Science (Link : https://www.youtube.com/watch?v=kwxCP_LLZJ4&t=328s)
+						2. TCP socket programming (Link : https://msdn.microsoft.com/en-us/library/windows/desktop/ms737591(v=vs.85).aspx )
 
-   Author			: Simar Mann Singh
-   Reference		: 1. Intro to Computer Science (Link : https://www.youtube.com/watch?v=kwxCP_LLZJ4&t=328s)
-					  2. TCP socket programming (Link : https://msdn.microsoft.com/en-us/library/windows/desktop/ms737591(v=vs.85).aspx )
+-------------------------------------------------------------------------------------------------------------------------------------------
 */
 
 
 //#include "stdafx.h
 #include "RemoteServer.h"
+#include <iostream>
 #include "RemoteClient.h"
 #include <process.h>
-#include <GLFW/glfw3.h>
 #include "linmath.h"
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "graphics.h"
+
 
 #pragma once
 #define WIN32_LEAN_AND_MEAN
@@ -34,7 +42,7 @@
 
 struct sockaddr_in ServAddr;
 struct sockaddr_in broadcastAddr; /* Broadcast Address */
-
+/*
 const float DEG2RAD = 3.14159 / 180;
 float radius = 0.96;
 
@@ -45,14 +53,17 @@ float centerX = 320.0;
 float centerY = 240.0;
 float M_PI = 3.14159;
 float PI_180 = M_PI / 180.0f;
-
-void serverLoop(void *);
+*/
+//void serverLoop(void *);
+void serverLoop();
 void clientLoop(void);
 
 
 RemoteServer * server;
 RemoteClient * client;
 
+GLFWwindow* window;
+/*
 void backgroundDisplay(void) {
 	//glClear(GL_COLOR_BUFFER_BIT); // | GL_DEPTH_BUFFER_BIT);
 	//glColor3f(0.712, 0.767, 0.431);
@@ -76,115 +87,102 @@ void backgroundDisplay(void) {
 //____________________________________________________________________________________________________________________________
 
 void ppi_display(void){
-	if (!glfwInit())
-	{
-		exit(EXIT_FAILURE);
-	}
-
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);										//defines the veriosn of the openGL used 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-	GLFWwindow* window = glfwCreateWindow(480, 480, "OpenGL using GLFW", NULL, NULL);
-	if (!window) {
-		glfwTerminate();
-		exit(EXIT_FAILURE);
-	}
-
-	/* Make the window's context current */
-	glfwMakeContextCurrent(window);
+	
+	
 	glfwSwapInterval(1);
 
+	//setup view
+	float ratio;
+	int width, height;
+	glfwGetFramebufferSize(window, &width, &height);
+	ratio = width / (float)height;
+	glViewport(0, 0, width, height);
+	glClear(GL_COLOR_BUFFER_BIT);
 
-
-	/* Loop until the user closes the window */
-	while (!glfwWindowShouldClose(window)) {
-		//setup view
-		float ratio;
-		int width, height;
-		glfwGetFramebufferSize(window, &width, &height);
-		ratio = width / (float)height;
-		glViewport(0, 0, width, height);
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		/*
-		//Color
-		r = fmod(r + 0.01, 1);
-		g = fmod(g + 0.02, 1);
-		b = fmod(b + 0.03, 1);
-		*/
-
-		glColor3f(r, g, b);
-		for (int i = -10; i <11; i++) {
-			glLineWidth(0.2);
-			glBegin(GL_LINE_STRIP);
-			glVertex2f(-0.96, (i * 0.1));
-			glVertex2f(0.96, (i * 0.1));
-			glEnd();
-		}
-		for (int i = -10; i <11; i++) {
-			glLineWidth(0.2);
-			glBegin(GL_LINE_STRIP);
-			glVertex2f((i * 0.1), -0.96);
-			glVertex2f((i * 0.1), 0.96);
-			glEnd();
-		}
-		glColor3f(1, 1, 1);
-		//Drawing
-		//glColor3f(r, g, b);
-		glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
-		for (int i = 0; i < 360; i++) {
-			float degInRad = i * DEG2RAD;
-			glVertex2f(cos(degInRad)*radius, sin(degInRad)*radius);
-		}
-		glEnd();
-
-
-		glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
-		for (int i = 0; i < 360; i++) {
-			float degInRad = i * DEG2RAD;
-			glVertex2f(cos(degInRad)*(radius / 2), sin(degInRad)*(radius / 2));
-		}
-		glEnd();
-
-		glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
-		for (int i = 0; i < 360; i++) {
-			float degInRad = i * DEG2RAD;
-			glVertex2f(cos(degInRad)*(0.72), sin(degInRad)*(0.72));
-		}
-		glEnd();
-
-		glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
-		for (int i = 0; i < 360; i++) {
-			float degInRad = i * DEG2RAD;
-			glVertex2f(cos(degInRad)*(radius / 4), sin(degInRad)*(radius / 4));
-		}
-		glEnd();
-
-		glBegin(GL_POLYGON);
-		for (int i = 0; i < 360; i++) {
-			float degInRad = i * DEG2RAD;
-			glVertex2f(cos(degInRad)*(0.01), sin(degInRad)*(0.01));
-		}
-		glEnd();
-
-
-
-		glMatrixMode(GL_MODELVIEW);
-		glLoadIdentity();
+	/*
+	//Color
+	r = fmod(r + 0.01, 1);
+	g = fmod(g + 0.02, 1);
+	b = fmod(b + 0.03, 1);
+	//
+	//Horizontal lines
+	glColor3f(r, g, b);
+	for (int i = -10; i < 11; i++) {
+		glLineWidth(0.2);
 		glBegin(GL_LINE_STRIP);
-		glVertex2f(0, -0.96);
-		glVertex2f(0, 0.96);
+		glVertex2f(-0.96, (i * 0.1));
+		glVertex2f(0.96, (i * 0.1));
 		glEnd();
-
-		glBegin(GL_LINE_STRIP);
-		glVertex2f(-0.96, 0);
-		glVertex2f(0.96, 0);
-		glEnd();
-		backgroundDisplay();							// to display the checked background
-
-														/* Swap front and back buffers */
-		glfwSwapBuffers(window);
-		glfwPollEvents();
 	}
+
+	//Vertical lines
+	for (int i = -10; i < 11; i++) {
+		glLineWidth(0.2);
+		glBegin(GL_LINE_STRIP);
+		glVertex2f((i * 0.1), -0.96);
+		glVertex2f((i * 0.1), 0.96);
+		glEnd();
+	}
+	glColor3f(1, 1, 1);
+	//Drawing
+	//glColor3f(r, g, b);
+	//glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
+	for (int i = 0; i < 360; i++) {
+		float degInRad = i * DEG2RAD;
+		//glVertex2f(cos(degInRad)*radius, sin(degInRad)*radius);
+	}
+	glEnd();
+
+
+	glBegin(GL_LINE_STRIP);												// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
+	for (int i = 0; i < 360; i++) {
+		float degInRad = i * DEG2RAD;
+		glVertex2f(cos(degInRad)*(radius / 2), sin(degInRad)*(radius / 2));
+	}
+	glEnd();
+
+	glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
+	for (int i = 0; i < 360; i++) {
+		float degInRad = i * DEG2RAD;
+		glVertex2f(cos(degInRad)*(0.72), sin(degInRad)*(0.72));
+	}
+	glEnd();
+
+	glBegin(GL_LINE_STRIP);											// GL_LINE_STRIP or GL_POLYGON defines whether the shape drawn would be a line shape or a filled polygon
+	for (int i = 0; i < 360; i++) {
+		float degInRad = i * DEG2RAD;
+		glVertex2f(cos(degInRad)*(radius / 4), sin(degInRad)*(radius / 4));
+	}
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	for (int i = 0; i < 360; i++) {
+		float degInRad = i * DEG2RAD;
+		glVertex2f(cos(degInRad)*(0.01), sin(degInRad)*(0.01));
+	}
+	glEnd();
+
+
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(0, -0.96);
+	glVertex2f(0, 0.96);
+	glEnd();
+
+	glBegin(GL_LINE_STRIP);
+	glVertex2f(-0.96, 0);
+	glVertex2f(0.96, 0);
+	glEnd();
+	//backgroundDisplay();							// to display the checked background
+
+													// Swap front and back buffers 
+	glfwSwapBuffers(window);
+	glfwPollEvents();
+
+	// Loop until the user closes the window 
+	
 	glfwDestroyWindow(window);
 	glfwTerminate();									// glfwTerminate() should always be used before exiting the code to release the resources the program is using
 	exit(EXIT_SUCCESS);
@@ -195,7 +193,7 @@ void ppi_display(void){
 
 void readRadarData(int argc, char **argv[])
 {
-	WSADATA wsaData; /* Structure for WinSock setup communication */
+	WSADATA wsaData;									//Structure for WinSock setup communication 
 	SOCKET connectSocket = INVALID_SOCKET;
 
 	struct addrinfo *result = NULL,
@@ -205,7 +203,7 @@ void readRadarData(int argc, char **argv[])
 	const char *sendbuf = "this is a test";
 	char recvbuf[DEFAULT_BUFLEN];
 	int iResult;
-	int recvbuflen = DEFAULT_BUFLEN; /* Length of received string */
+	int recvbuflen = DEFAULT_BUFLEN;					// Length of received string 
 
 	
 
@@ -303,7 +301,7 @@ void readRadarData(int argc, char **argv[])
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-	if (iResult != 0) {												/* Load Winsock 2.0 DLL */
+	if (iResult != 0) {												// Load Winsock 2.0 DLL 
 		printf("WSAStartup failed: %d\n", iResult);
 		//return 1;
 	}
@@ -404,16 +402,32 @@ void readRadarData(int argc, char **argv[])
 
 }
 
+*/
 
 
-
-int main(int argc, char **argv[])
+int  main(int argc, char **argv[])
 {
-	for(int i= 0; i<10;i++)
-	{ 
+	glInitialize();
+	GLFWwindow* glHandle = glCreateWindow();
+	glRenderLoop(glHandle);
+	
 	// initialize the server ( define a socket at server, bind it to address and start listening)
 	server = new RemoteServer();
 
+	serverLoop();
+
+	// initialize the client
+	client = new RemoteClient();
+	
+//	ppi_display();
+
+	/*
+	for(int i= 0; i<10;i++)
+	{ 
+	// initialize the server ( define a socket at server, bind it to address and start listening)
+	
+	server = new RemoteServer();
+	Sleep(5000);
 	// create thread with arbitrary argument for the run function
 	_beginthread(serverLoop, 0, (void*)12);
 
@@ -422,11 +436,13 @@ int main(int argc, char **argv[])
 
 	//printf("total Number of argc: %d \n", argc);
 	//readRadarData(argc, argv);
-	clientLoop();
+	//clientLoop();
 	}
+	*/
+	return 0;
 }
 
-void serverLoop(void *)
+void serverLoop()
 {
 	while (true)
 	{

@@ -69,14 +69,34 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -84,11 +104,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\simarmannsingh\source\repos\Radar_GUI\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\simarmannsingh\source\repos\Radar_GUI\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -99,10 +120,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -113,14 +137,19 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClientNetwork.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="graphics.cpp" />
     <ClCompile Include="NetworkServices.cpp" />
     <ClCompile Include="radar.cpp" />
     <ClCompile Include="RemoteClient.cpp" />
@@ -129,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClientNetwork.h" />
+    <ClInclude Include="graphics.h" />
     <ClInclude Include="linmath.h" />
     <ClInclude Include="NetworkData.h" />
     <ClInclude Include="NetworkServices.h" />
@@ -136,6 +166,9 @@
     <ClInclude Include="RemoteServer.h" />
     <ClInclude Include="ServerNetwork.h" />
     <ClInclude Include="winsock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
