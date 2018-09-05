@@ -120,13 +120,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pthreadVC2.lib;opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,6 +150,7 @@
     <ClCompile Include="ClientNetwork.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="NetworkServices.cpp" />
     <ClCompile Include="radar.cpp" />
     <ClCompile Include="RemoteClient.cpp" />
@@ -160,15 +161,17 @@
     <ClInclude Include="ClientNetwork.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="linmath.h" />
+    <ClInclude Include="Logger.h" />
     <ClInclude Include="NetworkData.h" />
     <ClInclude Include="NetworkServices.h" />
+    <ClInclude Include="pthread.h" />
     <ClInclude Include="RemoteClient.h" />
     <ClInclude Include="RemoteServer.h" />
     <ClInclude Include="ServerNetwork.h" />
     <ClInclude Include="winsock.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
+    <None Include="res\shaders\Basic.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

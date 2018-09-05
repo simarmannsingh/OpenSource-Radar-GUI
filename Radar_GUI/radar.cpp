@@ -13,6 +13,8 @@
 //#include "stdafx.h
 #include "RemoteServer.h"
 #include <iostream>
+#include <sstream>
+#include "Logger.h"
 #include "RemoteClient.h"
 #include <process.h>
 #include "linmath.h"
@@ -24,6 +26,11 @@
 #include <stdio.h>
 #include "graphics.h"
 
+
+
+
+using namespace std;
+using namespace CPlusPlusLogging;
 
 #pragma once
 #define WIN32_LEAN_AND_MEAN
@@ -409,17 +416,27 @@ int  main(int argc, char **argv[])
 {
 	glInitialize();
 	GLFWwindow* glHandle = glCreateWindow();
-	glRenderLoop(glHandle);
+	//glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	unsigned int shaderprog = setupShaderProgram();
+	//setupVertexData();	
+
+	glRenderLoop(glHandle, shaderprog);
 	
+	glfwDestroyWindow(window);
+		
+	glfwTerminate();
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------
+	/*
 	// initialize the server ( define a socket at server, bind it to address and start listening)
 	server = new RemoteServer();
-
+	Sleep(500);
 	serverLoop();
 
 	// initialize the client
 	client = new RemoteClient();
 	
-//	ppi_display();
+	//ppi_display();
 
 	/*
 	for(int i= 0; i<10;i++)
@@ -439,6 +456,8 @@ int  main(int argc, char **argv[])
 	//clientLoop();
 	}
 	*/
+	//---------------------------------------------------------------------------------------------------------------------------------------
+	
 	return 0;
 }
 
