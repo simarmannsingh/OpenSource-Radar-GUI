@@ -416,14 +416,11 @@ int  main(int argc, char **argv[])
 {
 	glInitialize();
 	GLFWwindow* glHandle = glCreateWindow();
-	//glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	unsigned int shaderprog = setupShaderProgram();
-	//setupVertexData();	
-
+	
 	glRenderLoop(glHandle, shaderprog);
 	
-	glfwDestroyWindow(window);
-		
+	glfwDestroyWindow(window);		
 	glfwTerminate();
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------

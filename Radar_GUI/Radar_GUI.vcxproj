@@ -91,11 +91,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Alexmurphy\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,18 +148,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ClientNetwork.cpp" />
+    <ClCompile Include="FontRenderer.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="NetworkServices.cpp" />
     <ClCompile Include="radar.cpp" />
     <ClCompile Include="RemoteClient.cpp" />
     <ClCompile Include="RemoteServer.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ServerNetwork.cpp" />
+    <ClCompile Include="VertexArray.cpp" />
+    <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClientNetwork.h" />
+    <ClInclude Include="FontRenderer.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="linmath.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="NetworkData.h" />
@@ -167,7 +174,11 @@
     <ClInclude Include="pthread.h" />
     <ClInclude Include="RemoteClient.h" />
     <ClInclude Include="RemoteServer.h" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="ServerNetwork.h" />
+    <ClInclude Include="VertexArray.h" />
+    <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="VertexBufferLayout.h" />
     <ClInclude Include="winsock.h" />
   </ItemGroup>
   <ItemGroup>

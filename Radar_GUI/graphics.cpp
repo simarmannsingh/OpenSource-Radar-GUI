@@ -14,13 +14,29 @@
 #include <string>
 #include <iostream>
 #include <sstream>
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
+#include "VertexArray.h"
+#include <math.h>
+#include "FontRenderer.h"
 
 bool flag_coherent;
+unsigned int fs;
+unsigned int vs;
 
-//static unsigned int vertexShader;
-//static unsigned int fragmentShader;
-//static unsigned int shaderProgram;
 
+static void GLclearError()
+{
+	while (glGetError() != GL_NO_ERROR);
+}
+
+static void  GLCheckError()
+{
+	while (GLenum error = glGetError())
+	{
+		std::cout << "[OpenGL Error] Error Code ->" << error << std::endl;
+	}
+}
 
 struct shaderProgramSource
 {
@@ -79,20 +95,20 @@ void glInitialize()
 	if (!glfw_Init)
 	{
 		printf("Failed at GLFW Initialization\n");
-		Sleep(5000);
+		Sleep(3000);
 		exit(EXIT_FAILURE);
 	}
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);										//defines the veriosn of the openGL used 
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);										// defines the veriosn of the openGL used 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);						// We are using <<---OPENGL_CORE--->> Profile
 	printf("GLFW initialization completed successfully\n");
 }
 
 GLFWwindow* glCreateWindow()
 {
 	glfwSetErrorCallback(error_callback);
-	GLFWwindow* window = glfwCreateWindow(800, 800, "Radar - HF dept TF", NULL, NULL);		// creating a window 800x600 in size					--->> 800 x 800
+	GLFWwindow* window = glfwCreateWindow(800, 800, "Radar - HF dept TF", NULL, NULL);	// creating a window 800x800 in size			--->> 800 x 600
 	if (window == NULL)
 	{
 		printf("Failed at creating window\n");
@@ -103,14 +119,14 @@ GLFWwindow* glCreateWindow()
 	printf("Window Creation completed successfully\n");
 	
 	/* Make the window's context current */
-	glfwMakeContextCurrent(window);															//making context of our window the main context on the current thread
+	glfwMakeContextCurrent(window);														//making context of our window the main context on the current thread
 	glfwSwapInterval(1);
 
 	//  GLAD Initialization
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		printf("Failed at GLAD Initialization\n");
-		Sleep(5000);
+		Sleep(3000);
 		exit(EXIT_FAILURE);
 	}
 	printf("GLAD Initialization completed successfully\n");
@@ -120,7 +136,7 @@ GLFWwindow* glCreateWindow()
 	return window;
 }
 
-int glRenderLoop(GLFWwindow* window, unsigned int shp)
+int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 {
 	/*
 	 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -129,52 +145,187 @@ int glRenderLoop(GLFWwindow* window, unsigned int shp)
 
 	 -------------------------------------------------------------------------------------------------------------------------------------------
 	*/
+
 	int width, height;
 	width = 200;
 	height = 200;
 
 	static float vertices[] = {									//vertex data is a collection of vertices in 3D space
-		-0.5f, -0.5f, 0.0f,			// 0
-		 0.5f, -0.5f, 0.0f,			// 1
-		 0.5f,  0.5f, 0.0f,			// 2
-	    -0.5f,  0.5f, 0.0f,			// 3		
+		 0.0f,	   -0.5f,    		// 0
+		 0.125f,   -0.175f,
+		 0.5f,		0.0f,    		// 1
+		 0.125f,    0.175f,
+		 0.0f,		0.5f,    		// 2
+		-0.125f,    0.175f,
+	    -0.5f,		0.0f,    		// 3		
+		-0.125f,   -0.175f,
+
 	};
 	
 
 	unsigned int indices[] = {
 		0, 1, 2,
-		2, 3, 0
+		2, 3, 4,
+		4, 5, 6,
+		6, 7, 0
 	};
-	unsigned int VBO, VAO;
-	glGenBuffers(1, &VBO);									//we can generate a vertex buffer object(VBO) or a vertex array object(VAO)
+   
+	unsigned int VAO, circleVao, circleVbo, circleEbo;
+	
+	//vertex array
 	glGenVertexArrays(1, &VAO);
-	
 	glBindVertexArray(VAO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);						//bind that generated buffer to the type GL_ARRAY_BUFFER
 	
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);  //Copies vertex data into buffer's memory
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
+
+	VertexArray va;
+	VertexBuffer vb(vertices, sizeof(vertices));
+
+	VertexBufferLayout layout;
+	layout.Push<float>(2);
+	va.AddBuffer(vb, layout);	
 	
-	//unbinding the VertexBuffer
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
+	IndexBuffer ib(indices, 12);
+	glUseProgram(shdrprgm);
+				
+	int location = glGetUniformLocation(shdrprgm, "u_Color");
+	if (location != -1)
+	{
+		std::cout << "Uniform Location not found" << std::endl;
+	}
+	glUniform4f(location, 0.9f, 0.0f, 0.0f, 1.0f);
 
 	//to DRAW in WIREFRAME mode
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
+	//unbinding the Vertex array and Vertex Buffers
+	glBindVertexArray(0);
+	glUseProgram(0);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	
+	/*
+	// Initialize the FreeType fonts
+	FontInit();
+	// Set OpenGL options
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	*/
+	/*
+	 -------------------------------------------------------------------------------------------------------------------------------------------
+
+														-->>  OpenGL Loop  <<--
+
+	 -------------------------------------------------------------------------------------------------------------------------------------------
+	*/
+
 	while (!glfwWindowShouldClose(window))
 	{		
-		glViewport(0, 0, width, height);
-		glClearColor(0.4f, 0.9f, 0.1f, 1.0f);
+		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
-		glUseProgram(shp);
+		
+		glUseProgram(shdrprgm);
+				
+		va.Bind();
+		ib.bind();
+		
+		// Rendering object number 1
+		// Defining Properties 
+		glViewport(0, 0, width, height);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		glUniform4f(location, 0.9f, 0.0f, 0.0f, 1.0f);
+		//Drawing the object
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+		
+		
+		// Rendering object number 2
+		// Defining Properties 
+		glViewport(600, 0, width, height);
+		glUniform4f(location, 0.0f, 0.9f, 0.0f, 1.0f);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		//Drawing the object
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+			
+				
+
+		// Rendering object number 3
+		// Defining Properties 
+		glViewport(0, 600, width, height);
+		void FontRender();
+		glUniform4f(location, 0.0f, 0.0f, 0.9f, 1.0f);
+		
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+
+
+
+		// Rendering object number 4
+		// Defining Properties 
+		glViewport(600, 600, width, height);
+		void FontRender();
+		glUniform4f(location, 0.9f, 0.9f, 0.9f, 1.0f);
+
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+
+		// Rendering object number 5
+		// Defining Properties 
+		glViewport(100, 100, 600, 600);
+		void FontRender();
+		glUniform4f(location, 0.9f, 0.9f, 0.0f, 1.0f);
+
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+
+
+
+		/*
+		// Buffers for CIRCLE
+		glGenVertexArrays(1, &circleVao);
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+
+		glGenBuffers(1, &circleVbo);
+		glBindBuffer(GL_ARRAY_BUFFER, circleVbo);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+		glGenBuffers(1, &circleEbo);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, circleEbo);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+				
+		GLclearError();
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
+		GLCheckError();
+		*/			
+		glFlush();
+
+
+		/*
+		int number = 80;
+		float radius = 0.4f;
+		float twopi = 2.0 * 3.1452423;
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		glBegin(GL_POLYGON);
+		glUseProgram(shp);
+		glUniform4f(location, 0.9f, 0.0f, 0.0f, 1.0f);
+		glVertex2f(0.0f, 0.0f);
+		for (int i = 0; i <= 80; i++)
+			glVertex2f(radius*cosf(i*twopi / number), radius*sinf(i*twopi / number));
+		glEnd();
+
+		*/
 			   
 		// glfw: swap buffers and poll IO events (key pressed/release, mouse moved etc)
 		glfwSwapBuffers(window);
 		glfwPollEvents();
+		//glFlush();
 	}
 
 	return 0;
@@ -247,8 +398,8 @@ static unsigned int compileShader(unsigned int type, const std::string& source)
 static unsigned int createShader(const std::string& vertexShadersrc, const std::string& fragmentShadersrc)
 {
 	//creating vertex and fragment shaders
-	unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexShadersrc);
-	unsigned int fs = compileShader(GL_FRAGMENT_SHADER, fragmentShadersrc);
+	vs = compileShader(GL_VERTEX_SHADER, vertexShadersrc);
+	fs = compileShader(GL_FRAGMENT_SHADER, fragmentShadersrc);
 	
 	//Linking Shaders to the shader Program
 	unsigned int program = glCreateProgram();
@@ -259,7 +410,7 @@ static unsigned int createShader(const std::string& vertexShadersrc, const std::
 	
 	
 	//checking for Linking Errors
-	int progLinkRes;
+	int progLinkRes;													// to store the result of the program linking
 	glGetProgramiv(program, GL_LINK_STATUS, &progLinkRes);
 	if(!progLinkRes)
 	{
@@ -272,10 +423,8 @@ static unsigned int createShader(const std::string& vertexShadersrc, const std::
 		std::cout << message << std::endl;
 		return 0;
 	}
-
 	glDeleteShader(vs);
-	glDeleteShader(fs);
-
+	//glDeleteShader(fs);
 	return program;
 }
 
