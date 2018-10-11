@@ -22,7 +22,6 @@ struct VertexBufferElement
 		_ASSERT(false);
 		return 0;
 	}
-
 };
 
 class VertexBufferLayout 

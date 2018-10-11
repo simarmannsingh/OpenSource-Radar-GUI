@@ -110,9 +110,18 @@
     <ClInclude Include="FontRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="shader_s.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\shaders\text.vs">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\shaders\text.frag">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

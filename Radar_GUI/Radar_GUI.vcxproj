@@ -176,6 +176,7 @@
     <ClInclude Include="RemoteServer.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ServerNetwork.h" />
+    <ClInclude Include="shader_s.h" />
     <ClInclude Include="VertexArray.h" />
     <ClInclude Include="VertexBuffer.h" />
     <ClInclude Include="VertexBufferLayout.h" />
@@ -183,6 +184,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
+    <None Include="res\shaders\text.frag" />
+    <None Include="res\shaders\text.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

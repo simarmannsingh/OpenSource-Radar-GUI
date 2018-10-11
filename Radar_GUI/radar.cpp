@@ -27,20 +27,13 @@
 #include "graphics.h"
 
 
-
-
 using namespace std;
 using namespace CPlusPlusLogging;
 
 #pragma once
 #define WIN32_LEAN_AND_MEAN
 
-/*
-// Need to link with Ws2_32.lib, Mswsock.lib, and Advapi32.lib
-#pragma comment (lib, "Ws2_32.lib")
-#pragma comment (lib, "Mswsock.lib")
-#pragma comment (lib, "AdvApi32.lib")
-*/
+
 
 /*constants used in the program*/
 #define MAXRECVSTRING 4294967296
@@ -49,19 +42,6 @@ using namespace CPlusPlusLogging;
 
 struct sockaddr_in ServAddr;
 struct sockaddr_in broadcastAddr; /* Broadcast Address */
-/*
-const float DEG2RAD = 3.14159 / 180;
-float radius = 0.96;
-
-float r = 0.31;
-float g = 0.52;
-float b = 0.2;
-float centerX = 320.0;
-float centerY = 240.0;
-float M_PI = 3.14159;
-float PI_180 = M_PI / 180.0f;
-*/
-//void serverLoop(void *);
 void serverLoop();
 void clientLoop(void);
 
@@ -71,7 +51,8 @@ RemoteClient * client;
 
 GLFWwindow* window;
 /*
-void backgroundDisplay(void) {
+void backgroundDisplay(void) 
+{
 	//glClear(GL_COLOR_BUFFER_BIT); // | GL_DEPTH_BUFFER_BIT);
 	//glColor3f(0.712, 0.767, 0.431);
 	glBegin(GL_LINES);
