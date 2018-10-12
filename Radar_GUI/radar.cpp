@@ -397,9 +397,11 @@ int  main(int argc, char **argv[])
 {
 	glInitialize();
 	GLFWwindow* glHandle = glCreateWindow();
-	unsigned int shaderprog = setupShaderProgram();
+
+	unsigned int shaderprog1 = setupShaderProgram(1);
+	unsigned int shaderprog2 = setupShaderProgram(2);
 	
-	glRenderLoop(glHandle, shaderprog);
+	glRenderLoop(glHandle, shaderprog1, shaderprog2);
 	
 	glfwDestroyWindow(window);		
 	glfwTerminate();
@@ -452,7 +454,6 @@ void clientLoop(void)
 {
 	while (true)
 	{
-		//ppi_display();
 		//client->update();
 	}
 }

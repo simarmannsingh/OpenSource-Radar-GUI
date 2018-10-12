@@ -24,8 +24,10 @@
 #include "shader_s.h"
 
 bool flag_coherent = FALSE;
+
 unsigned int fs;
 unsigned int vs;
+unsigned int shaderprog;
 
 int width = 200;
 int height = 200;
@@ -36,6 +38,7 @@ float PI_180 = M_PI / 180.0f;
 float radius = (centerX < centerY) ? centerX : centerY;
 float rad_64 = radius / 64;
 float rad_3 = radius / 3;
+
 
 
 // Initialize the FreeType fonts
@@ -58,9 +61,16 @@ static void  GLCheckError()
 	}
 }
 
+
+struct shaderprog {
+	unsigned int shaderprog1;
+	unsigned int shaderprog2;	
+};
+
 struct shaderProgramSource
 {
-	std::string vertexSource;
+	std::string vertexSource1;
+	std::string vertexSource2;
 	std::string fragSource;
 };
 
@@ -70,11 +80,12 @@ static shaderProgramSource ParseShader(const std::string& filepath)
 
 	enum class ShaderType
 	{
-		NONE = -1, VERTEX = 0, FRAGMENT = 1
+		NONE = -1, VERTEX1 = 0, VERTEX2 = 1, FRAGMENT = 2,
 	};
-
+		
 	ShaderType  type = ShaderType::NONE;
-	std::stringstream ss[2];
+	
+	std::stringstream ss[3];
 
 	std::string line;
 	while (getline(stream, line))
@@ -82,8 +93,15 @@ static shaderProgramSource ParseShader(const std::string& filepath)
 		if (line.find("#shader") != std::string::npos)
 		{
 			if (line.find("vertex") != std::string::npos)
-			{
-				type = ShaderType::VERTEX;
+			{				
+				if (line.find("1") != std::string::npos)
+				{
+					type = ShaderType::VERTEX1;					
+				}
+				else if (line.find("2") != std::string::npos)
+				{
+					type = ShaderType::VERTEX2;
+				}
 			}
 				
 			else if (line.find("fragment") != std::string::npos)
@@ -96,8 +114,7 @@ static shaderProgramSource ParseShader(const std::string& filepath)
 			ss[(int)type] << line << '\n';
 		}
 	}
-
-	return { ss[0].str(), ss[1].str() };
+	return { ss[0].str(), ss[1].str(), ss[2].str() };
 }
 
 void glInitialize()
@@ -159,7 +176,7 @@ GLFWwindow* glCreateWindow()
 	return window;
 }
 
-int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
+int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrprgm_2)
 {
 	/*
 	 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -169,7 +186,7 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 	 -------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 
-	static float vertices[] = {									//vertex data is a collection of vertices in 3D space
+	static float vertices[] = {											// vertices - vertex data for rectangle
 		  0.5f,	    0.3f,    		// 0		
 		 -0.5f,		0.3f,    		// 1
 		 -0.5f,		-0.3f,    		// 2
@@ -177,11 +194,11 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 		
 	};
 	
-	GLfloat vertices_PPI[v_corners][2];									//vertex data is a collection of vertices in 3D space		
+	GLfloat vertices_PPI[v_corners][2];									//vertices_PPI - vertex data for Circle		
 	GLfloat angle = 0.0;
 	GLfloat radius = 1.0;
 	
-	for (int i = 0; i < v_corners; i++)
+	for (int i = 0; i < v_corners; i++)									// Initializing the vertex_PPI vector 
 	{
 		angle = i * 2 * 3.14 / v_corners;
 		vertices_PPI[i][0] = radius * cos(angle);
@@ -218,23 +235,21 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 	glGenVertexArrays(1, &VAO);
 	glBindVertexArray(VAO);
 	
-	// Test code 
-
+	//Generating Vertex buffer for rasterizing circle,  adding data and unlinking 
 	glGenBuffers(1, &circleVbo);
 	glBindBuffer(GL_ARRAY_BUFFER, circleVbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices_PPI), vertices_PPI, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices_PPI), vertices_PPI, GL_STATIC_DRAW);					// Adding vertices_PPI data to out buffer
 	glBindBuffer(GL_ARRAY_BUFFER, 0);	
+
+	//Generating Vertex Array and adding data
 	glGenVertexArrays(1, &circleVao);
 	glBindVertexArray(circleVao);
 	glBindBuffer(GL_ARRAY_BUFFER, circleVbo);
+	
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
-
-
-	// *test code ends
-
-
-	// vertex array and buffer for rendering squares on the screen
+	
+	// Generating vertex buffer and vertex array for rendering Rectangles
 	VertexArray va;
 	VertexBuffer vb(vertices, sizeof(vertices));
 
@@ -243,10 +258,10 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 	va.AddBuffer(vb, layout);	
 	
 	IndexBuffer ib(indices, 6);
-	glUseProgram(shdrprgm);
+	glUseProgram(shdrprgm_1);
 		
 
-	int color = glGetUniformLocation(shdrprgm, "u_Color");
+	int color = glGetUniformLocation(shdrprgm_1, "u_Color");
 	if (color == NULL)
 	{
 		std::cout << "Uniform color not found" << std::endl;
@@ -329,7 +344,7 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm)
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-		glUseProgram(shdrprgm);
+		glUseProgram(shdrprgm_1);
 				
 		glViewport(0, 0, 800, 800);
 		glUniform4f(color, 0.8f, 0.8f, 0.1f, 1.0f);
@@ -541,19 +556,19 @@ static unsigned int compileShader(unsigned int type, const std::string& source)
 
 		glGetShaderInfoLog(id, length, &length, message);
 
-		std::cout << "COMPILATION FAILED \n" << (type == GL_VERTEX_SHADER ? "vertex" : "fragment") << "shader" << std::endl;
+		std::cout << "COMPILATION FAILED \n" << std::endl; 
+		//if (type == GL_VERTEX_SHADER && "vertex" : "fragment") << "shader" << std::endl;
 		std::cout << message << std::endl;
 		glDeleteShader(id);
 		return 0;
 	}
-
 	return id;
 }
 
-static unsigned int createShader(const std::string& vertexShadersrc, const std::string& fragmentShadersrc)
+static unsigned int createShader(const std::string& vertexShadersrc_n, const std::string& fragmentShadersrc)
 {
 	//creating vertex and fragment shaders
-	vs = compileShader(GL_VERTEX_SHADER, vertexShadersrc);
+	vs = compileShader(GL_VERTEX_SHADER, vertexShadersrc_n);
 	fs = compileShader(GL_FRAGMENT_SHADER, fragmentShadersrc);
 	
 	//Linking Shaders to the shader Program
@@ -577,21 +592,27 @@ static unsigned int createShader(const std::string& vertexShadersrc, const std::
 		std::cout << message << std::endl;
 		return 0;
 	}
-	//glDeleteShader(vs);
-	//glDeleteShader(fs);
 	return program;
 }
 
-unsigned int setupShaderProgram()
-{
+
+unsigned int setupShaderProgram(unsigned int vertexshdr_n)
+{	
 	// Prsring Shader file
 	shaderProgramSource spsource = ParseShader("res/shaders/Basic.shader");
-	std::cout << "VERTEX data" << spsource.vertexSource;
-	std::cout << "FRAGMENT data" << spsource.fragSource;
-
-	unsigned int shaderprog = createShader(spsource.vertexSource, spsource.fragSource);
+	if (vertexshdr_n == 1)
+	{
+		std::cout << "VERTEX Shader 1  :-\n" << spsource.vertexSource1 << std::endl;
+		std::cout << "FRAGMENT Shader  :-\n" << spsource.fragSource;
+		shaderprog = createShader(spsource.vertexSource1, spsource.fragSource);
+	}
+	else if (vertexshdr_n == 2)
+	{
+		std::cout << "VERTEX Shader 2  :-\n" << spsource.vertexSource2 << std::endl;
+		std::cout << "FRAGMENT Shader  :-\n" << spsource.fragSource;
+		shaderprog = createShader(spsource.vertexSource2, spsource.fragSource);
+	}		
 	std::cout << "Object Shader Program Compilation Successfull..." << std::endl;
-		
 	return shaderprog;
 }
 

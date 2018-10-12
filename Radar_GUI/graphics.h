@@ -28,7 +28,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 // Shader Setup and Rendering
 static unsigned int createShader(const std::string& vertexShadersrc, const std::string& fragmentShadersrc);
 static unsigned int compileShader(unsigned int type, const std::string& source);
-unsigned int setupShaderProgram();
-int glRenderLoop(GLFWwindow* window, unsigned int shp);
+unsigned int setupShaderProgram(unsigned int vertexshdr_n);
+int glRenderLoop(GLFWwindow* window, unsigned int shp_1, unsigned int shp_2);
 
 
