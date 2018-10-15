@@ -7,9 +7,7 @@
 
  -------------------------------------------------------------------------------------------------------------------------------------------
 */
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include "Logger.h"
+#include "Renderer.h"
 
 
 
@@ -17,18 +15,12 @@
 void glInitialize();
 GLFWwindow* glCreateWindow();
 
-
-
-
 // Callbacks
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void error_callback(int error, const char* description);
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-// Shader Setup and Rendering
-static unsigned int createShader(const std::string& vertexShadersrc, const std::string& fragmentShadersrc);
-static unsigned int compileShader(unsigned int type, const std::string& source);
-unsigned int setupShaderProgram(unsigned int vertexshdr_n);
-int glRenderLoop(GLFWwindow* window, unsigned int shp_1, unsigned int shp_2);
+// Rendering
+int glRenderLoop(GLFWwindow* window);
 
 

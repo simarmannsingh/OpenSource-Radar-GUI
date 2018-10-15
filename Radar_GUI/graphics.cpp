@@ -21,13 +21,11 @@
 #include <math.h>
 #include "FontRenderer.h"
 #include <corecrt_math_defines.h>
-#include "shader_s.h"
+#include "Shader.h"
+#include "Shader_s.h"
+#include "Texture.h"
 
 bool flag_coherent = FALSE;
-
-unsigned int fs;
-unsigned int vs;
-unsigned int shaderprog;
 
 int width = 200;
 int height = 200;
@@ -43,79 +41,11 @@ float rad_3 = radius / 3;
 
 // Initialize the FreeType fonts
 FontRenderer FR;
-Shader font_shader;
+Shader_s font_shader;
 GLuint va_font, vb_font;
 
 const int v_corners = 80;
 
-static void GLclearError()
-{
-	while (glGetError() != GL_NO_ERROR);
-}
-
-static void  GLCheckError()
-{
-	while (GLenum error = glGetError())
-	{
-		std::cout << "[OpenGL Error] Error Code ->" << error << std::endl;
-	}
-}
-
-
-struct shaderprog {
-	unsigned int shaderprog1;
-	unsigned int shaderprog2;	
-};
-
-struct shaderProgramSource
-{
-	std::string vertexSource1;
-	std::string vertexSource2;
-	std::string fragSource;
-};
-
-static shaderProgramSource ParseShader(const std::string& filepath)
-{
-	std::ifstream stream(filepath);
-
-	enum class ShaderType
-	{
-		NONE = -1, VERTEX1 = 0, VERTEX2 = 1, FRAGMENT = 2,
-	};
-		
-	ShaderType  type = ShaderType::NONE;
-	
-	std::stringstream ss[3];
-
-	std::string line;
-	while (getline(stream, line))
-	{
-		if (line.find("#shader") != std::string::npos)
-		{
-			if (line.find("vertex") != std::string::npos)
-			{				
-				if (line.find("1") != std::string::npos)
-				{
-					type = ShaderType::VERTEX1;					
-				}
-				else if (line.find("2") != std::string::npos)
-				{
-					type = ShaderType::VERTEX2;
-				}
-			}
-				
-			else if (line.find("fragment") != std::string::npos)
-			{
-				type = ShaderType::FRAGMENT;
-			}
-		}
-		else
-		{
-			ss[(int)type] << line << '\n';
-		}
-	}
-	return { ss[0].str(), ss[1].str(), ss[2].str() };
-}
 
 void glInitialize()
 {
@@ -176,7 +106,7 @@ GLFWwindow* glCreateWindow()
 	return window;
 }
 
-int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrprgm_2)
+int glRenderLoop(GLFWwindow* window)
 {
 	/*
 	 -------------------------------------------------------------------------------------------------------------------------------------------
@@ -187,10 +117,11 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 	*/
 
 	static float vertices[] = {											// vertices - vertex data for rectangle
-		  0.5f,	    0.3f,    		// 0		
-		 -0.5f,		0.3f,    		// 1
-		 -0.5f,		-0.3f,    		// 2
-		  0.5f,		-0.3f,    		// 3		
+		-0.5f,		-0.3f,   0.0f,   0.0f,		// 2
+		 0.5f,		-0.3f,   1.0f,   0.0f,		// 3		  
+		 0.5f,	    0.3f,    1.0f,   1.0f,	// 0		
+		-0.5f,		0.3f,    0.0f,   1.0f	// 1
+		 
 		
 	};
 	
@@ -209,7 +140,7 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 
 	unsigned int indices[] = {
 		0, 1, 2,
-		2, 3, 0,
+		2, 3, 0
 	};
 
 	unsigned int indices_PPI[] = {
@@ -222,66 +153,79 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 		0, 7, 8,
 		0, 1, 8,
 	};   
-
+	/*
 	float texCoord[] = {
 		0.0f, 0.0f,		//Lower-left corner
 		1.0f, 0.0f,		//Lower-Right corner
 		0.5f, 1.0f,		//top-center corner
 	};
-
-	unsigned int VAO, circleVao, circleVbo, circleEbo;
+	*/
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	
+	//unsigned int VAO, circleVao, circleVbo, circleEbo;
 	
 	//vertex array
-	glGenVertexArrays(1, &VAO);
-	glBindVertexArray(VAO);
-	
+	//glGenVertexArrays(1, &VAO);
+	//glBindVertexArray(VAO);
+	/*
 	//Generating Vertex buffer for rasterizing circle,  adding data and unlinking 
 	glGenBuffers(1, &circleVbo);
 	glBindBuffer(GL_ARRAY_BUFFER, circleVbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices_PPI), vertices_PPI, GL_STATIC_DRAW);					// Adding vertices_PPI data to out buffer
 	glBindBuffer(GL_ARRAY_BUFFER, 0);	
-
-	//Generating Vertex Array and adding data
+	
 	glGenVertexArrays(1, &circleVao);
 	glBindVertexArray(circleVao);
-	glBindBuffer(GL_ARRAY_BUFFER, circleVbo);
+	glBindBuffer(GL_ARRAY_BUFFER, circleVbo);	
+	*/
 	
+	//Generating CIRCLE's Buffers and adding data
+	VertexArray va_circ;
+	VertexBuffer vb_circ(vertices_PPI, sizeof(vertices_PPI));
+	VertexBufferLayout layout_circ;
+	layout_circ.Push<float>(2);	
+	layout_circ.Push<float>(2);	
+	va_circ.AddBuffer(vb_circ, layout_circ);	
+	IndexBuffer ib_circ(indices_PPI, 8);	
+	va_circ.unBind();
+	vb_circ.unbind();
+	ib_circ.unbind();
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
-	
-	// Generating vertex buffer and vertex array for rendering Rectangles
-	VertexArray va;
-	VertexBuffer vb(vertices, sizeof(vertices));
 
-	VertexBufferLayout layout;
-	layout.Push<float>(2);
-	va.AddBuffer(vb, layout);	
-	
-	IndexBuffer ib(indices, 6);
-	glUseProgram(shdrprgm_1);
-		
+	// Generating RECTANGLE's buffer and adding data
+	VertexArray va_rec;
+	VertexBuffer vb_rec(vertices, sizeof(vertices));
+	VertexBufferLayout layout_rec;
+	layout_rec.Push<float>(2);	
+	layout_rec.Push<float>(2);		
+	va_rec.AddBuffer(vb_rec, layout_rec);
+	IndexBuffer ib_rec(indices, 6);
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(vertices), (void*)(6 * sizeof(float)));
+	glEnableVertexAttribArray(2);
+	va_rec.unBind();
+	vb_rec.unbind();
+	ib_rec.unbind();
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
-	int color = glGetUniformLocation(shdrprgm_1, "u_Color");
-	if (color == NULL)
-	{
-		std::cout << "Uniform color not found" << std::endl;
-		std::cout << "color value :  " << color << std::endl;
-	}
-	glUniform4f(color, 0.9f, 0.0f, 0.0f, 1.0f);
-	if (color == NULL)
-	{
-		std::cout << "Uniform color AGAIN not found" << std::endl;
-		std::cout << "color value :  " << color << std::endl;
-	}
-	//to DRAW in WIREFRAME mode
-	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	Shader shader1("res/shaders/Basic.shader", 1);
+	Shader shader2("res/shaders/Basic.shader", 2);
+	shader1.bind();
+	shader2.bind();
 
-	//unbinding the Vertex array and Vertex Buffers
-	glBindVertexArray(0);
-	glUseProgram(0);
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-	
+	shader1.setUniform4f("u_Color", 0.9f, 0.0f, 0.0f, 1.0f);
+	shader2.setUniform4f("u_Color", 0.9f, 0.0f, 0.0f, 1.0f);
+	shader1.setUniform1i("u_Texture", 0);
+	shader2.setUniform1i("u_Texture", 0);
+	   	
+	//creating texture
+	Texture texture("res/images/diamond.png");
+	texture.bind();
+	//shader.unBind();
+
+
 	//-------------------------------------------------------------------------------------------------------------------------------------------
 	//
 	//											FONT rendering using Freetype library
@@ -344,26 +288,27 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-		glUseProgram(shdrprgm_1);
-				
+		shader1.bind();
 		glViewport(0, 0, 800, 800);
-		glUniform4f(color, 0.8f, 0.8f, 0.1f, 1.0f);
+		shader1.setUniform4f("u_Color", 0.8f, 0.8f, 0.1f, 1.0f);
+		
 				
 		//glDrawArrays(GL_TRIANGLE_FAN, circleVao, 8);
-
-		va.Bind();
-		ib.bind();
-		
+				
 		{
 			// RECTANGLES
 			// Rendering object number 1		-  OUTER RECT
 			// Defining Properties 
+			va_rec.Bind();
+			ib_rec.bind();
 			glViewport(600, 600, width, height);
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-			glUniform4f(color, 0.4f, 0.4f, 0.4f, 1.0f);
+			shader1.setUniform4f("u_Color", 0.4f, 0.4f, 0.4f, 1.0f);
+		
 			
 			//Drawing the object
-			GLclearError();
+			
+			GLClearError();
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
 			GLCheckError();
 
@@ -371,10 +316,11 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 			// Defining Properties 
 			glViewport(625, 625, 150, 150);
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-			glUniform4f(color, 0.3f, 0.3f, 0.3f, 1.0f);
+			shader1.setUniform4f("u_Color", 0.3f, 0.3f, 0.3f, 1.0f);
+			
 
 			//Drawing the object
-			GLclearError();
+			GLClearError();
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
 			GLCheckError();
 					
@@ -383,49 +329,54 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 			// Rendering object number 2		
 			// Defining Properties 
 			glViewport(600, 500, width, height);
-			glUniform4f(color, 0.4f, 0.4f, 0.4f, 1.0f);
+			shader1.setUniform4f("u_Color",0.4f, 0.4f, 0.4f, 1.0f);
+			
 			//Drawing the object
-			GLclearError();
+			GLClearError();
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
 			GLCheckError();
 
 			// Rendering object number 2.2		
 			// Defining Properties 
 			glViewport(625, 525, 150, 150);
-			glUniform4f(color, 0.3f, 0.3f, 0.3f, 1.0f);
+			shader1.setUniform4f("u_Color", 0.3f, 0.3f, 0.3f, 1.0f); 
+			
 			//Drawing the object
-			GLclearError();
+			GLClearError();
 			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
 			GLCheckError();
+			va_rec.unBind();
 		}
 		
 		{
 			//CIRCELS
 			// Outer Circle
+			va_circ.Bind();
+			ib_circ.bind();
 			glViewport(60, 100, 600, 600);
-			glUniform4f(color, 0.2f, 0.2f, 0.6f, 1.0f);
-			glBindVertexArray(circleVao);
+			shader1.setUniform4f("u_Color", 0.2f, 0.2f, 0.6f, 1.0f);			
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
 			//Inner Circle
 			glViewport(70, 110, 580, 580);
-			glUniform4f(color, 0.2f, 0.2f, 0.3f, 1.0f);
+			shader1.setUniform4f("u_Color", 0.2f, 0.2f, 0.3f, 1.0f);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
 
 			//first ring
 			glViewport(210, 250, 300, 300);
-			glUniform4f(color, 0.15f, 0.15f, 0.25f, 1.0f);
+			shader1.setUniform4f("u_Color", 0.15f, 0.15f, 0.25f, 1.0f);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
 
 			glViewport(215, 255, 290, 290);
-			glUniform4f(color, 0.2f, 0.2f, 0.3f, 1.0f);
+			shader1.setUniform4f("u_Color",0.2f, 0.2f, 0.3f, 1.0f);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
 
 			//Center Dome
 			glViewport(355, 395, 10, 10);
-			glUniform4f(color, 0.15f, 0.15f, 0.25f, 1.0f);
+			shader1.setUniform4f("u_Color",0.15f, 0.15f, 0.25f, 1.0f);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
-
+			va_circ.unBind();
+			ib_circ.unbind();
 		}
 		
 		glViewport(600, 600, width, height);
@@ -439,9 +390,6 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 		}
 		FR.RenderText(font_shader, "(C) HF Department, TF lala", 0.0f, 570.0f, 1.0f, va_font, vb_font);
 		
-		
-		
-		
 		//Color
 		GLfloat r = 0; 
 		GLfloat g = 0;
@@ -449,11 +397,10 @@ int glRenderLoop(GLFWwindow* window, unsigned int shdrprgm_1, unsigned int shdrp
 
 		r = fmod(r + 0.01, 1);
 		g = fmod(g + 0.02, 1);
-		b = fmod(b + 0.03, 1);
-		
+		b = fmod(b + 0.03, 1);		
 		
 		//Horizontal lines
-		glUniform4f(color, 0.7f, 0.7f, 0.7f, 1.0f);
+		shader1.setUniform4f("u_Color", 0.7f, 0.7f, 0.7f, 1.0f);
 		for (int i = -10; i < 11; i++) {
 			glLineWidth(0.2);
 			glBegin(GL_LINE_STRIP);
@@ -536,84 +483,6 @@ void error_callback(int error, const char* description)
 {
 	puts(description);
 	Sleep(2000);
-}
-
-static unsigned int compileShader(unsigned int type, const std::string& source)
-{
-	unsigned int id = glCreateShader(type);
-	const char* src = source.c_str();
-	glShaderSource(id, 1, &src, 0);
-	glCompileShader(id);
-
-	GLint result;
-	glGetShaderiv(id, GL_COMPILE_STATUS, &result);
-	if (!result)
-	{
-		printf("-->> COMPILATION UNSUCCESSFULL \n");
-		int length;
-		glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
-		char* message = (char*)alloca(length * sizeof(char));
-
-		glGetShaderInfoLog(id, length, &length, message);
-
-		std::cout << "COMPILATION FAILED \n" << std::endl; 
-		//if (type == GL_VERTEX_SHADER && "vertex" : "fragment") << "shader" << std::endl;
-		std::cout << message << std::endl;
-		glDeleteShader(id);
-		return 0;
-	}
-	return id;
-}
-
-static unsigned int createShader(const std::string& vertexShadersrc_n, const std::string& fragmentShadersrc)
-{
-	//creating vertex and fragment shaders
-	vs = compileShader(GL_VERTEX_SHADER, vertexShadersrc_n);
-	fs = compileShader(GL_FRAGMENT_SHADER, fragmentShadersrc);
-	
-	//Linking Shaders to the shader Program
-	GLuint program = glCreateProgram();
-	glAttachShader(program, vs);
-	glAttachShader(program, fs);
-	glLinkProgram(program);
-	glValidateProgram(program);
-	
-	//checking for Linking Errors
-	int progLinkRes;													// to store the result of the program linking
-	glGetProgramiv(program, GL_LINK_STATUS, &progLinkRes);
-	if(!progLinkRes)
-	{
-		printf("-->> SHADER PROGRAM LINKING UNSUCCESSFULL \n");
-		int length;
-		glGetShaderiv(program, GL_INFO_LOG_LENGTH, &length);
-		char* message = (char*)alloca(length * sizeof(char));
-		glGetShaderInfoLog(program, length, &length, message);
-		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << std::endl;
-		std::cout << message << std::endl;
-		return 0;
-	}
-	return program;
-}
-
-
-unsigned int setupShaderProgram(unsigned int vertexshdr_n)
-{	
-	// Prsring Shader file
-	shaderProgramSource spsource = ParseShader("res/shaders/Basic.shader");
-	if (vertexshdr_n == 1)
-	{
-		std::cout << "VERTEX Shader 1  :-\n" << spsource.vertexSource1 << std::endl;
-		std::cout << "FRAGMENT Shader  :-\n" << spsource.fragSource;
-		shaderprog = createShader(spsource.vertexSource1, spsource.fragSource);
-	}
-	else if (vertexshdr_n == 2)
-	{
-		std::cout << "VERTEX Shader 2  :-\n" << spsource.vertexSource2 << std::endl;
-		std::cout << "FRAGMENT Shader  :-\n" << spsource.fragSource;
-		shaderprog = createShader(spsource.vertexSource2, spsource.fragSource);
-	}		
-	std::cout << "Object Shader Program Compilation Successfull..." << std::endl;
-	return shaderprog;
 }
 
 

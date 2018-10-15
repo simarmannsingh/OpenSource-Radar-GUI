@@ -18,8 +18,6 @@
 #include "RemoteClient.h"
 #include <process.h>
 #include "linmath.h"
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 #include <WinSock2.h>
 #include <WS2tcpip.h>
 #include <stdlib.h>
@@ -396,12 +394,8 @@ void readRadarData(int argc, char **argv[])
 int  main(int argc, char **argv[])
 {
 	glInitialize();
-	GLFWwindow* glHandle = glCreateWindow();
-
-	unsigned int shaderprog1 = setupShaderProgram(1);
-	unsigned int shaderprog2 = setupShaderProgram(2);
-	
-	glRenderLoop(glHandle, shaderprog1, shaderprog2);
+	GLFWwindow* glHandle = glCreateWindow();	
+	glRenderLoop(glHandle);
 	
 	glfwDestroyWindow(window);		
 	glfwTerminate();

@@ -9,13 +9,13 @@
 #include <sstream>
 #include <iostream>
 
-class Shader
+class Shader_s
 {
 public:
 	unsigned int Program;
-	// constructor generates the shader on the fly
+	// constructor generates the Shader_s on the fly
 	// ------------------------------------------------------------------------
-	Shader(const char* vertexPath, const char* fragmentPath)
+	Shader_s(const char* vertexPath, const char* fragmentPath)
 	{
 		// 1. retrieve the vertex/fragment source code from filePath
 		std::string vertexCode;
@@ -46,7 +46,7 @@ public:
 		}
 		catch (std::ifstream::failure e)
 		{
-			std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+			std::cout << "ERROR::Shader_s.h::FILE_NOT_SUCCESFULLY_READ" << std::endl;
 		}
 		const char* vShaderCode = vertexCode.c_str();
 		const char * fShaderCode = fragmentCode.c_str();
@@ -54,17 +54,17 @@ public:
 		unsigned int vertex, fragment;
 		int success;
 		char infoLog[512];
-		// vertex shader
+		// vertex Shader_s
 		vertex = glCreateShader(GL_VERTEX_SHADER);
 		glShaderSource(vertex, 1, &vShaderCode, NULL);
 		glCompileShader(vertex);
 		checkCompileErrors(vertex, "VERTEX");
-		// fragment Shader
+		// fragment Shader_s
 		fragment = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragment, 1, &fShaderCode, NULL);
 		glCompileShader(fragment);
 		checkCompileErrors(fragment, "FRAGMENT");
-		// shader Program
+		// Shader_s Program
 		Program = glCreateProgram();
 		glAttachShader(Program, vertex);
 		glAttachShader(Program, fragment);
@@ -73,13 +73,13 @@ public:
 		// delete the shaders as they're linked into our program now and no longer necessary
 		glDeleteShader(vertex);
 		glDeleteShader(fragment);
-		printf("Font Shader's Compilation successfull...\n");
+		printf("Font Shader_s's Compilation successfull...\n");
 	}
 
-	Shader()
+	Shader_s()
 	{}
 
-	// activate the shader
+	// activate the Shader_s
 	// ------------------------------------------------------------------------
 	void use()
 	{
@@ -103,27 +103,27 @@ public:
 	}
 
 private:
-	// utility function for checking shader compilation/linking errors.
+	// utility function for checking Shader_s compilation/linking errors.
 	// ------------------------------------------------------------------------
-	void checkCompileErrors(unsigned int shader, std::string type)
+	void checkCompileErrors(unsigned int Shader_s, std::string type)
 	{
 		int success;
 		char infoLog[1024];
 		if (type != "PROGRAM")
 		{
-			glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
+			glGetShaderiv(Shader_s, GL_COMPILE_STATUS, &success);
 			if (!success)
 			{
-				glGetShaderInfoLog(shader, 1024, NULL, infoLog);
+				glGetShaderInfoLog(Shader_s, 1024, NULL, infoLog);
 				std::cout << "ERROR::SHADER_COMPILATION_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
 			}
 		}
 		else
 		{
-			glGetProgramiv(shader, GL_LINK_STATUS, &success);
+			glGetProgramiv(Shader_s, GL_LINK_STATUS, &success);
 			if (!success)
 			{
-				glGetProgramInfoLog(shader, 1024, NULL, infoLog);
+				glGetProgramInfoLog(Shader_s, 1024, NULL, infoLog);
 				std::cout << "ERROR::PROGRAM_LINKING_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
 			}
 		}

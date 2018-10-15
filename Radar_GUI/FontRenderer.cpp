@@ -1,10 +1,8 @@
 #include "FontRenderer.h"
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 
 std::map<GLchar, Character> Characters;
 
-void FontRenderer::RenderText( Shader F_shader, std::string text, GLfloat x, GLfloat y, GLfloat scale, GLuint va_font, GLuint vb_font)
+void FontRenderer::RenderText( Shader_s F_shader, std::string text, GLfloat x, GLfloat y, GLfloat scale, GLuint va_font, GLuint vb_font)
 {
 	// Binding vertex array for font class
 	F_shader.use();
@@ -48,16 +46,16 @@ void FontRenderer::RenderText( Shader F_shader, std::string text, GLfloat x, GLf
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-Shader FontRenderer::FontInit()
+Shader_s FontRenderer::FontInit()
 {	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	// Compile and setup the shader
-	Shader shader("res/shaders/text.vs", "res/shaders/text.frag");
+	// Compile and setup the Shader_s
+	Shader_s Shader_s("res/shaders/text.vs", "res/shaders/text.frag");
 	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(800), 0.0f, static_cast<GLfloat>(800));
-	shader.use();
-	glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
+	Shader_s.use();
+	glUniformMatrix4fv(glGetUniformLocation(Shader_s.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 
 	if (FT_Init_FreeType(&ft))
 	{
@@ -71,7 +69,7 @@ Shader FontRenderer::FontInit()
 	FT_Set_Pixel_Sizes(face, 0, 48);
 	printf("FreeType Initialization successfull\n");
 	
-	return shader;
+	return Shader_s;
 }
 
 

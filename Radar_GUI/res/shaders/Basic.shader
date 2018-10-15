@@ -1,39 +1,46 @@
-#shader vertex 1								//Vertex shader - 1
+#shader vertex 1			// VERTEX SHADER 1					
 #version 330 core
-layout(location = 0) in vec3 aPos;				// the position variable has attribute position 0
-//layout(location = 1) in vec3 aColor;			// the color variable has attribute position 1
+layout(location = 0) in vec3 aPos;
+layout(location = 1) in vec3 aColor;
 
-//out vec4 u_Color;								// output a color to the fragment shader
+layout(location = 2) in vec2 texCoord;
+
+
+uniform vec3 u_Color;
+out vec2 v_texCoord;
 
 void main()
 {
-	gl_Position = vec4(aPos, 1.0);
-	//u_Color = aColor;							// set ourColor to the input color we got from the vertex data
+	gl_Position = vec4(aPos, 1.0);	
+	u_Color = aColor;
+	v_texCoord = texCoord;
 }
 
-
-#shader vertex 2								//Vertex shader - 2
+#shader vertex 2						// VERTEX SHADER 2		
 #version 330 core
 layout(location = 0) in vec3 aPos;			
-layout(location = 1) in vec3 aColor;		
+layout(location = 1) in vec2 texCoord;		
 
-out vec4 u_Color;							
+out vec2 v_texCoord;							
 
 void main()
 {
 	gl_Position = vec4(aPos, 1.0);
-	u_Color = aColor;							
+	v_texCoord = texCoord;
 }
 
-
-#shader fragment
+#shader fragment					// FRAGMENT SHADER
 #version 330 core
+layout(location = 0) out vec4 FragColor;
 
-out vec4 FragColor;   //layout(location = 0) out vec4 FragColor;
+in vec3 u_Color;
+in vec2 v_texCoord;
 
-uniform vec4 u_Color;
+
+uniform sampler2D u_Texture;
+
 
 void main()
 {
-	FragColor = u_Color;
+	FragColor = texture(u_Texture, v_texCoord) * vec4(u_Color, 1.0f);
 };

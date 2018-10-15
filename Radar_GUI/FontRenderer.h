@@ -27,7 +27,7 @@ private:
 	FT_Face face;
 
 public:
-	void RenderText(Shader fshader, std::string text, GLfloat x, GLfloat y, GLfloat scale, GLuint va_font, GLuint vb_font);
-	Shader FontInit();
+	void RenderText(Shader_s fshader, std::string text, GLfloat x, GLfloat y, GLfloat scale, GLuint va_font, GLuint vb_font);
+	Shader_s FontInit();
 	void FontSetup();
 };

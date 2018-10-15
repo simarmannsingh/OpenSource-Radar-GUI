@@ -159,6 +159,9 @@
     <ClCompile Include="RemoteServer.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ServerNetwork.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VertexArray.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
@@ -176,7 +179,10 @@
     <ClInclude Include="RemoteServer.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ServerNetwork.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="shader_s.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="VertexArray.h" />
     <ClInclude Include="VertexBuffer.h" />
     <ClInclude Include="VertexBufferLayout.h" />
@@ -186,6 +192,9 @@
     <None Include="res\shaders\Basic.shader" />
     <None Include="res\shaders\text.frag" />
     <None Include="res\shaders\text.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\images\hf.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
