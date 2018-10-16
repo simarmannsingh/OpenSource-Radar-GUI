@@ -4,3 +4,4 @@
 #define GLFWAPI __declspec(dllexport)
 #define GLFWAPI __declspec(dllimport)
 #define GLFWAPI __attribute__((visibility("default")))
+#define IMGUI_IMPL_API

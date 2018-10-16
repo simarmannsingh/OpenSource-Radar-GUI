@@ -22,8 +22,11 @@ Shader::Shader(const std::string & filepath, int vertexshdr_n)
 		std::cout << "FRAGMENT Shader  :-\n" << spsource.fragSource;
 		m_RendererID = createShader(spsource.vertexSource2, spsource.fragSource);
 	}
-	std::cout << "Object Shader Program Compilation Successfull..." << std::endl;
-
+	else 
+	{
+		std::cout << "Shader Program Compilation Unsuccessfull.\n Undefined Value of vertexshdr_n : " << vertexshdr_n << std::endl;
+	}
+	//m_RendererID contains the fully compiled shader program, not the vertex or fragment shader.
 }
 
 Shader::~Shader()
@@ -94,7 +97,7 @@ unsigned int Shader::compileShader(unsigned int type, const std::string& source)
 	 if (location == -1)
 	 {
 		 std::cout << "Warning : Uniform " << name << " not found !!" << std::endl;
-		 std::cout << "color value :  " << location << std::endl;
+		 std::cout << "Value : " << location << std::endl;
 	 }
 	  m_UniformLocationCache[name] = location;
 	 return location;
@@ -114,7 +117,7 @@ unsigned int Shader::compileShader(unsigned int type, const std::string& source)
 	glValidateProgram(program);
 
 	//checking for Linking Errors
-	int progLinkRes;													// to store the result of the program linking
+	int progLinkRes = 0;													// to store the result of the program linking
 	glGetProgramiv(program, GL_LINK_STATUS, &progLinkRes);
 	if (!progLinkRes)
 	{

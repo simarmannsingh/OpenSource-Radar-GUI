@@ -92,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -151,6 +152,13 @@
     <ClCompile Include="FontRenderer.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_glfw.cpp" />
+    <ClCompile Include="imgui_impl_opengl3.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="include\gl3w\GL\gl3w.c" />
     <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="NetworkServices.cpp" />
@@ -169,6 +177,14 @@
     <ClInclude Include="ClientNetwork.h" />
     <ClInclude Include="FontRenderer.h" />
     <ClInclude Include="graphics.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_impl_glfw.h" />
+    <ClInclude Include="imgui_impl_opengl3.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imstb_textedit.h" />
+    <ClInclude Include="include\gl3w\GL\gl3w.h" />
+    <ClInclude Include="include\gl3w\GL\glcorearb.h" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="linmath.h" />
     <ClInclude Include="Logger.h" />

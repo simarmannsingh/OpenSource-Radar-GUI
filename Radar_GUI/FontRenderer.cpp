@@ -66,7 +66,7 @@ Shader_s FontRenderer::FontInit()
 	{
 		std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;
 	}
-	FT_Set_Pixel_Sizes(face, 0, 48);
+	FT_Set_Pixel_Sizes(face, 0, 52);
 	printf("FreeType Initialization successfull\n");
 	
 	return Shader_s;
