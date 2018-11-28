@@ -1,3 +1,10 @@
+/*
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ Author			:	Simar Mann Singh
+ Department		:	High Frequency Department, TF
+ Date			:	28/08/2018
+ -------------------------------------------------------------------------------------------------------------------------------------------
+*/
 #pragma once
 #include <winsock2.h>
 #include <Windows.h>
@@ -10,7 +17,7 @@ using namespace std;
 #pragma comment (lib, "Ws2_32.lib")
 
 //#define DEFAULT_BUFLEN 512
-//#define DEFAULT_PORT "6881" 
+//#define DEFAULT_PORT "5050"
 
 class ServerNetwork
 {
@@ -21,7 +28,7 @@ public:
     ~ServerNetwork(void);
 
     // Socket to listen for new connections
-    SOCKET ListenSocket;
+	SOCKET ListenSocket ;
 
     // Socket to give to the clients
     SOCKET ClientSocket;
@@ -33,7 +40,7 @@ public:
     std::map<unsigned int, SOCKET> sessions; 
 
 	// accept new connections
-	bool acceptNewClient(unsigned int & id);
+	bool acceptNewClient(const unsigned int & id);
 
 	// receive incoming data
 	int receiveData(unsigned int client_id, char * recvbuf);

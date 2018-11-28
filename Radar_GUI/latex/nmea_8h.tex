@@ -1,0 +1,128 @@
+\hypertarget{nmea_8h}{}\section{nmea.\+h File Reference}
+\label{nmea_8h}\index{nmea.\+h@{nmea.\+h}}
+
+
+Header file for nmea.\+c.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnmea__state}{nmea\+\_\+state}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{nmea_8h_a1266d7c7847e5fce687eafaee2f46262}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}}~255
+\item 
+\#define \mbox{\hyperlink{nmea_8h_a3e71b1d0a33b70921fc460b33bbf068d}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}}~50
+\item 
+\#define \mbox{\hyperlink{nmea_8h_a3018c7600b7bb9866400596a56a57af7}{S\+T\+A\+RT}}~0
+\item 
+\#define \mbox{\hyperlink{nmea_8h_a29fd18bed01c4d836c7ebfe73a125c3f}{E\+ND}}~1
+\item 
+\#define \mbox{\hyperlink{nmea_8h_abe6b865c045f3e7c6892ef4f15ff5779}{D\+O\+NE}}~2
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{nmea_8h_a6783874280afd355047b297eadc19554}{check\+\_\+nmea\+\_\+checksum}} (char $\ast$buffer, unsigned char $\ast$checksum)
+\item 
+unsigned int \mbox{\hyperlink{nmea_8h_a7b9bf7e02925792d7a3a1c0e2344c21d}{nmea\+\_\+checksum}} (char $\ast$buffer, unsigned char $\ast$checksum)
+\item 
+char $\ast$ \mbox{\hyperlink{nmea_8h_a1e9448fca94b1277ac8367b83f9002ad}{find\+\_\+nmea\+\_\+start}} (char $\ast$buffer)
+\item 
+char \mbox{\hyperlink{nmea_8h_a93777f8d8f06628cb91aab4b80ffbfec}{ahextobin}} (char $\ast$c)
+\item 
+char $\ast$ \mbox{\hyperlink{nmea_8h_a2567560faf5600fecc24e3233d497dfc}{nmea\+\_\+next\+\_\+field}} (char $\ast$p)
+\item 
+unsigned int \mbox{\hyperlink{nmea_8h_a1b6b2ba698b42dc76761ed4bed720450}{nmea\+\_\+uint}} (char $\ast$p)
+\item 
+char $\ast$ \mbox{\hyperlink{nmea_8h_af706fcfbad58b2c5e9fa5bfd25554c86}{nmea\+\_\+copy\+\_\+field}} (char $\ast$dest, char $\ast$src, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for nmea.\+c. 
+
+\begin{DoxyAuthor}{Author}
+Brian C. Lane \href{mailto:bcl@brianlane.com}{\tt bcl@brianlane.\+com}
+\end{DoxyAuthor}
+Definitions and structures for the N\+M\+EA sentence parser 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{nmea_8h_abe6b865c045f3e7c6892ef4f15ff5779}\label{nmea_8h_abe6b865c045f3e7c6892ef4f15ff5779}} 
+\index{nmea.\+h@{nmea.\+h}!D\+O\+NE@{D\+O\+NE}}
+\index{D\+O\+NE@{D\+O\+NE}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{D\+O\+NE}{DONE}}
+{\footnotesize\ttfamily \#define D\+O\+NE~2}
+
+\mbox{\Hypertarget{nmea_8h_a29fd18bed01c4d836c7ebfe73a125c3f}\label{nmea_8h_a29fd18bed01c4d836c7ebfe73a125c3f}} 
+\index{nmea.\+h@{nmea.\+h}!E\+ND@{E\+ND}}
+\index{E\+ND@{E\+ND}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{E\+ND}{END}}
+{\footnotesize\ttfamily \#define E\+ND~1}
+
+\mbox{\Hypertarget{nmea_8h_a3e71b1d0a33b70921fc460b33bbf068d}\label{nmea_8h_a3e71b1d0a33b70921fc460b33bbf068d}} 
+\index{nmea.\+h@{nmea.\+h}!M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS@{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}}
+\index{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS@{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}{MAX\_NMEA\_FIELDS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS~50}
+
+\mbox{\Hypertarget{nmea_8h_a1266d7c7847e5fce687eafaee2f46262}\label{nmea_8h_a1266d7c7847e5fce687eafaee2f46262}} 
+\index{nmea.\+h@{nmea.\+h}!M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}{MAX\_NMEA\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH~255}
+
+\mbox{\Hypertarget{nmea_8h_a3018c7600b7bb9866400596a56a57af7}\label{nmea_8h_a3018c7600b7bb9866400596a56a57af7}} 
+\index{nmea.\+h@{nmea.\+h}!S\+T\+A\+RT@{S\+T\+A\+RT}}
+\index{S\+T\+A\+RT@{S\+T\+A\+RT}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+A\+RT}{START}}
+{\footnotesize\ttfamily \#define S\+T\+A\+RT~0}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{nmea_8h_a93777f8d8f06628cb91aab4b80ffbfec}\label{nmea_8h_a93777f8d8f06628cb91aab4b80ffbfec}} 
+\index{nmea.\+h@{nmea.\+h}!ahextobin@{ahextobin}}
+\index{ahextobin@{ahextobin}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{ahextobin()}{ahextobin()}}
+{\footnotesize\ttfamily char ahextobin (\begin{DoxyParamCaption}\item[{char $\ast$}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_a6783874280afd355047b297eadc19554}\label{nmea_8h_a6783874280afd355047b297eadc19554}} 
+\index{nmea.\+h@{nmea.\+h}!check\+\_\+nmea\+\_\+checksum@{check\+\_\+nmea\+\_\+checksum}}
+\index{check\+\_\+nmea\+\_\+checksum@{check\+\_\+nmea\+\_\+checksum}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+nmea\+\_\+checksum()}{check\_nmea\_checksum()}}
+{\footnotesize\ttfamily unsigned int check\+\_\+nmea\+\_\+checksum (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{unsigned char $\ast$}]{checksum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_a1e9448fca94b1277ac8367b83f9002ad}\label{nmea_8h_a1e9448fca94b1277ac8367b83f9002ad}} 
+\index{nmea.\+h@{nmea.\+h}!find\+\_\+nmea\+\_\+start@{find\+\_\+nmea\+\_\+start}}
+\index{find\+\_\+nmea\+\_\+start@{find\+\_\+nmea\+\_\+start}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{find\+\_\+nmea\+\_\+start()}{find\_nmea\_start()}}
+{\footnotesize\ttfamily char$\ast$ find\+\_\+nmea\+\_\+start (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_a7b9bf7e02925792d7a3a1c0e2344c21d}\label{nmea_8h_a7b9bf7e02925792d7a3a1c0e2344c21d}} 
+\index{nmea.\+h@{nmea.\+h}!nmea\+\_\+checksum@{nmea\+\_\+checksum}}
+\index{nmea\+\_\+checksum@{nmea\+\_\+checksum}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{nmea\+\_\+checksum()}{nmea\_checksum()}}
+{\footnotesize\ttfamily unsigned int nmea\+\_\+checksum (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{unsigned char $\ast$}]{checksum }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_af706fcfbad58b2c5e9fa5bfd25554c86}\label{nmea_8h_af706fcfbad58b2c5e9fa5bfd25554c86}} 
+\index{nmea.\+h@{nmea.\+h}!nmea\+\_\+copy\+\_\+field@{nmea\+\_\+copy\+\_\+field}}
+\index{nmea\+\_\+copy\+\_\+field@{nmea\+\_\+copy\+\_\+field}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{nmea\+\_\+copy\+\_\+field()}{nmea\_copy\_field()}}
+{\footnotesize\ttfamily char$\ast$ nmea\+\_\+copy\+\_\+field (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{char $\ast$}]{src,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_a2567560faf5600fecc24e3233d497dfc}\label{nmea_8h_a2567560faf5600fecc24e3233d497dfc}} 
+\index{nmea.\+h@{nmea.\+h}!nmea\+\_\+next\+\_\+field@{nmea\+\_\+next\+\_\+field}}
+\index{nmea\+\_\+next\+\_\+field@{nmea\+\_\+next\+\_\+field}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{nmea\+\_\+next\+\_\+field()}{nmea\_next\_field()}}
+{\footnotesize\ttfamily char$\ast$ nmea\+\_\+next\+\_\+field (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{nmea_8h_a1b6b2ba698b42dc76761ed4bed720450}\label{nmea_8h_a1b6b2ba698b42dc76761ed4bed720450}} 
+\index{nmea.\+h@{nmea.\+h}!nmea\+\_\+uint@{nmea\+\_\+uint}}
+\index{nmea\+\_\+uint@{nmea\+\_\+uint}!nmea.\+h@{nmea.\+h}}
+\subsubsection{\texorpdfstring{nmea\+\_\+uint()}{nmea\_uint()}}
+{\footnotesize\ttfamily unsigned int nmea\+\_\+uint (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+

@@ -1,0 +1,11 @@
+<map id="ImGui::CheckboxFlags" name="ImGui::CheckboxFlags">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a57d73c1d0ef807fef734d91024092027" title="ImGui::Checkbox" alt="" coords="208,157,331,184"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="577,145,751,172"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="379,31,520,57"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="392,132,507,159"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a9a01bed1445b5b7edaf0af6a31c08d2c" title="ImGui::SameLine" alt="" coords="388,183,511,209"/>
+<area shape="rect" id="node9" href="$struct_im_rect.html#afa75cb8491f20901c96166d17dcddac4" title="ImRect::GetWidth" alt="" coords="386,233,513,260"/>
+<area shape="rect" id="node10" href="$struct_im_rect.html#a748d8ae9cb26508951ec6e2f2df0625b" title="ImRect::GetHeight" alt="" coords="385,284,514,311"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="568,56,760,83"/>
+<area shape="rect" id="node6" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="586,5,742,32"/>
+</map>

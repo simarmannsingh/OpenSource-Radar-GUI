@@ -1,0 +1,511 @@
+\hypertarget{imgui_8cpp}{}\section{imgui.\+cpp File Reference}
+\label{imgui_8cpp}\index{imgui.\+cpp@{imgui.\+cpp}}
+{\ttfamily \#include \char`\"{}imgui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for imgui.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_resize_grip_def}{Im\+Gui\+Resize\+Grip\+Def}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_style_var_info}{Im\+Gui\+Style\+Var\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_im_gui}{Im\+Gui}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imgui_8cpp_adf4d73301961430d50d7edd96f92ce38}{I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS}}
+\item 
+\#define \mbox{\hyperlink{imgui_8cpp_aaedc8fff290d4893a84c62411b0ddeed}{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG}}~0
+\item 
+\#define \mbox{\hyperlink{imgui_8cpp_aee6443348cf59f4769b271e36febc80c}{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS}}~0
+\item 
+\#define \mbox{\hyperlink{imgui_8cpp_a19fd5658c088617859d4a89c657ec5cc}{va\+\_\+copy}}(dest,  src)~(dest = src)
+\item 
+\#define \mbox{\hyperlink{imgui_8cpp_ac31befbe0bea7809852786485c77b3f9}{N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY}}(\+\_\+\+K\+EY,  \+\_\+\+N\+A\+V\+\_\+\+I\+N\+P\+UT)~if (Is\+Key\+Down(g.\+I\+O.\+Key\+Map\mbox{[}\+\_\+\+K\+EY\mbox{]})) \{ g.\+I\+O.\+Nav\+Inputs\mbox{[}\+\_\+\+N\+A\+V\+\_\+\+I\+N\+P\+UT\mbox{]} = 1.\+0f; g.\+Nav\+Input\+Source = Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard; \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{imgui_8cpp_a78740b7be00764a8c15b60295edc9f51}{Im\+Line\+Closest\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+bool \mbox{\hyperlink{imgui_8cpp_aa53a4a0b963d2d35b8e58442247e1239}{Im\+Triangle\+Contains\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+void \mbox{\hyperlink{imgui_8cpp_a42ba83efd4d19e4a61898dc8f8632ff1}{Im\+Triangle\+Barycentric\+Coords}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p, float \&out\+\_\+u, float \&out\+\_\+v, float \&out\+\_\+w)
+\item 
+\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{imgui_8cpp_af48be8bc196ebaf2129062bd67007387}{Im\+Triangle\+Closest\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_adff1a1bf60752cd3395dae990cc2e34f}{Im\+Stricmp}} (const char $\ast$str1, const char $\ast$str2)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a603026e750e955098e8c1e99428ca8b2}{Im\+Strnicmp}} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{imgui_8cpp_aebf0117d9d0fb0f2731a94d64173b41a}{Im\+Strncpy}} (char $\ast$dst, const char $\ast$src, size\+\_\+t count)
+\item 
+char $\ast$ \mbox{\hyperlink{imgui_8cpp_a079f29569de5779052f1fbf3dd283e0f}{Im\+Strdup}} (const char $\ast$str)
+\item 
+const char $\ast$ \mbox{\hyperlink{imgui_8cpp_a2b5b2ff91a5980e3143141a882216fe8}{Im\+Strchr\+Range}} (const char $\ast$str, const char $\ast$str\+\_\+end, char c)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a66b44f8391ea7cba388700e4991a4859}{Im\+StrlenW}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$str)
+\item 
+const char $\ast$ \mbox{\hyperlink{imgui_8cpp_a578b4ec1e004a6c9e07610720421a482}{Im\+Streol\+Range}} (const char $\ast$str, const char $\ast$str\+\_\+end)
+\item 
+const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$ \mbox{\hyperlink{imgui_8cpp_a9e742332d7944d1c0e938005fdb77834}{Im\+StrbolW}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf\+\_\+mid\+\_\+line, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf\+\_\+begin)
+\item 
+const char $\ast$ \mbox{\hyperlink{imgui_8cpp_a457a373caeddd76d58ff282da05273b4}{Im\+Stristr}} (const char $\ast$haystack, const char $\ast$haystack\+\_\+end, const char $\ast$needle, const char $\ast$needle\+\_\+end)
+\item 
+void \mbox{\hyperlink{imgui_8cpp_a7d087fd93eb10b876979598caae02c64}{Im\+Str\+Trim\+Blanks}} (char $\ast$buf)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a75ccaf7d676b1f567ba888ae42ac3809}{Im\+Format\+String}} (char $\ast$buf, size\+\_\+t buf\+\_\+size, const char $\ast$fmt,...)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a2e0022a073d369645a0daab17f823779}{Im\+Format\+StringV}} (char $\ast$buf, size\+\_\+t buf\+\_\+size, const char $\ast$fmt, va\+\_\+list args)
+\item 
+\mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} \mbox{\hyperlink{imgui_8cpp_aa55e55e944172fc87494a342da489970}{Im\+Hash}} (const void $\ast$data, int data\+\_\+size, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} seed)
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{imgui_8cpp_a59120cb7e606e96199c452c1e1c34c0f}{Im\+File\+Open}} (const char $\ast$filename, const char $\ast$mode)
+\item 
+void $\ast$ \mbox{\hyperlink{imgui_8cpp_af2eb6628093055e05a064ef1e9ca3461}{Im\+File\+Load\+To\+Memory}} (const char $\ast$filename, const char $\ast$file\+\_\+open\+\_\+mode, size\+\_\+t $\ast$out\+\_\+file\+\_\+size, int padding\+\_\+bytes)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a036b9dd7f0942fd34e385cc115f36631}{Im\+Text\+Char\+From\+Utf8}} (unsigned int $\ast$out\+\_\+char, const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_aeb054c43ad8aae45de24efc759a0ff7a}{Im\+Text\+Str\+From\+Utf8}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf, int buf\+\_\+size, const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end, const char $\ast$$\ast$in\+\_\+text\+\_\+remaining)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_ac2561e31f0de066ef0bb5bfbb541c8ae}{Im\+Text\+Count\+Chars\+From\+Utf8}} (const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_ae1d5a0a2772f1e426f4bedbf4148235d}{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}} (const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_a6c310426654de2fac6776408bdfd1f01}{Im\+Text\+Str\+To\+Utf8}} (char $\ast$buf, int buf\+\_\+size, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text\+\_\+end)
+\item 
+int \mbox{\hyperlink{imgui_8cpp_ab0c1cae5ca2331c54681553722d0f72c}{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} \mbox{\hyperlink{imgui_8cpp_a38bff81ada6282254daeea397063282f}{Im\+Get\+Dir\+Quadrant\+From\+Delta}} (float dx, float dy)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}} $\ast$ \mbox{\hyperlink{imgui_8cpp_a26aa67b834c0453a50c5e3970a8eba07}{G\+Im\+Gui}} = N\+U\+LL
+\item 
+const \mbox{\hyperlink{struct_im_gui_resize_grip_def}{Im\+Gui\+Resize\+Grip\+Def}} \mbox{\hyperlink{imgui_8cpp_a4172a86a71ad90be6fb63c63f362222d}{resize\+\_\+grip\+\_\+def}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imgui_8cpp_aee6443348cf59f4769b271e36febc80c}\label{imgui_8cpp_aee6443348cf59f4769b271e36febc80c}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS@{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS}}
+\index{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS@{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS}{IMGUI\_DEBUG\_NAV\_RECTS}}
+{\footnotesize\ttfamily \#define I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+R\+E\+C\+TS~0}
+
+\mbox{\Hypertarget{imgui_8cpp_aaedc8fff290d4893a84c62411b0ddeed}\label{imgui_8cpp_aaedc8fff290d4893a84c62411b0ddeed}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG@{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG}}
+\index{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG@{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG}{IMGUI\_DEBUG\_NAV\_SCORING}}
+{\footnotesize\ttfamily \#define I\+M\+G\+U\+I\+\_\+\+D\+E\+B\+U\+G\+\_\+\+N\+A\+V\+\_\+\+S\+C\+O\+R\+I\+NG~0}
+
+\mbox{\Hypertarget{imgui_8cpp_adf4d73301961430d50d7edd96f92ce38}\label{imgui_8cpp_adf4d73301961430d50d7edd96f92ce38}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS@{I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS}}
+\index{I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS@{I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS}{IMGUI\_DEFINE\_MATH\_OPERATORS}}
+{\footnotesize\ttfamily \#define I\+M\+G\+U\+I\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+M\+A\+T\+H\+\_\+\+O\+P\+E\+R\+A\+T\+O\+RS}
+
+\mbox{\Hypertarget{imgui_8cpp_ac31befbe0bea7809852786485c77b3f9}\label{imgui_8cpp_ac31befbe0bea7809852786485c77b3f9}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY@{N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY}}
+\index{N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY@{N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY}{NAV\_MAP\_KEY}}
+{\footnotesize\ttfamily \#define N\+A\+V\+\_\+\+M\+A\+P\+\_\+\+K\+EY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+K\+EY,  }\item[{}]{\+\_\+\+N\+A\+V\+\_\+\+I\+N\+P\+UT }\end{DoxyParamCaption})~if (Is\+Key\+Down(g.\+I\+O.\+Key\+Map\mbox{[}\+\_\+\+K\+EY\mbox{]})) \{ g.\+I\+O.\+Nav\+Inputs\mbox{[}\+\_\+\+N\+A\+V\+\_\+\+I\+N\+P\+UT\mbox{]} = 1.\+0f; g.\+Nav\+Input\+Source = Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard; \}}
+
+\mbox{\Hypertarget{imgui_8cpp_a19fd5658c088617859d4a89c657ec5cc}\label{imgui_8cpp_a19fd5658c088617859d4a89c657ec5cc}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!va\+\_\+copy@{va\+\_\+copy}}
+\index{va\+\_\+copy@{va\+\_\+copy}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{va\+\_\+copy}{va\_copy}}
+{\footnotesize\ttfamily \#define va\+\_\+copy(\begin{DoxyParamCaption}\item[{}]{dest,  }\item[{}]{src }\end{DoxyParamCaption})~(dest = src)}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{imgui_8cpp_af2eb6628093055e05a064ef1e9ca3461}\label{imgui_8cpp_af2eb6628093055e05a064ef1e9ca3461}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+File\+Load\+To\+Memory@{Im\+File\+Load\+To\+Memory}}
+\index{Im\+File\+Load\+To\+Memory@{Im\+File\+Load\+To\+Memory}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+File\+Load\+To\+Memory()}{ImFileLoadToMemory()}}
+{\footnotesize\ttfamily void$\ast$ Im\+File\+Load\+To\+Memory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{file\+\_\+open\+\_\+mode,  }\item[{size\+\_\+t $\ast$}]{out\+\_\+file\+\_\+size,  }\item[{int}]{padding\+\_\+bytes }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_af2eb6628093055e05a064ef1e9ca3461_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_af2eb6628093055e05a064ef1e9ca3461_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a59120cb7e606e96199c452c1e1c34c0f}\label{imgui_8cpp_a59120cb7e606e96199c452c1e1c34c0f}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+File\+Open@{Im\+File\+Open}}
+\index{Im\+File\+Open@{Im\+File\+Open}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+File\+Open()}{ImFileOpen()}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Im\+File\+Open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a59120cb7e606e96199c452c1e1c34c0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a59120cb7e606e96199c452c1e1c34c0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a75ccaf7d676b1f567ba888ae42ac3809}\label{imgui_8cpp_a75ccaf7d676b1f567ba888ae42ac3809}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Format\+String@{Im\+Format\+String}}
+\index{Im\+Format\+String@{Im\+Format\+String}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Format\+String()}{ImFormatString()}}
+{\footnotesize\ttfamily int Im\+Format\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a75ccaf7d676b1f567ba888ae42ac3809_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a2e0022a073d369645a0daab17f823779}\label{imgui_8cpp_a2e0022a073d369645a0daab17f823779}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Format\+StringV@{Im\+Format\+StringV}}
+\index{Im\+Format\+StringV@{Im\+Format\+StringV}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Format\+String\+V()}{ImFormatStringV()}}
+{\footnotesize\ttfamily int Im\+Format\+StringV (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a2e0022a073d369645a0daab17f823779_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a38bff81ada6282254daeea397063282f}\label{imgui_8cpp_a38bff81ada6282254daeea397063282f}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Get\+Dir\+Quadrant\+From\+Delta@{Im\+Get\+Dir\+Quadrant\+From\+Delta}}
+\index{Im\+Get\+Dir\+Quadrant\+From\+Delta@{Im\+Get\+Dir\+Quadrant\+From\+Delta}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Get\+Dir\+Quadrant\+From\+Delta()}{ImGetDirQuadrantFromDelta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} Im\+Get\+Dir\+Quadrant\+From\+Delta (\begin{DoxyParamCaption}\item[{float}]{dx,  }\item[{float}]{dy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_aa55e55e944172fc87494a342da489970}\label{imgui_8cpp_aa55e55e944172fc87494a342da489970}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Hash@{Im\+Hash}}
+\index{Im\+Hash@{Im\+Hash}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Hash()}{ImHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} Im\+Hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{int}]{data\+\_\+size,  }\item[{\mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}}}]{seed }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_aa55e55e944172fc87494a342da489970_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a78740b7be00764a8c15b60295edc9f51}\label{imgui_8cpp_a78740b7be00764a8c15b60295edc9f51}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Line\+Closest\+Point@{Im\+Line\+Closest\+Point}}
+\index{Im\+Line\+Closest\+Point@{Im\+Line\+Closest\+Point}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Line\+Closest\+Point()}{ImLineClosestPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Line\+Closest\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{imgui_8cpp_a78740b7be00764a8c15b60295edc9f51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a9e742332d7944d1c0e938005fdb77834}\label{imgui_8cpp_a9e742332d7944d1c0e938005fdb77834}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+StrbolW@{Im\+StrbolW}}
+\index{Im\+StrbolW@{Im\+StrbolW}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strbol\+W()}{ImStrbolW()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}$\ast$ Im\+StrbolW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf\+\_\+mid\+\_\+line,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf\+\_\+begin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_a2b5b2ff91a5980e3143141a882216fe8}\label{imgui_8cpp_a2b5b2ff91a5980e3143141a882216fe8}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Strchr\+Range@{Im\+Strchr\+Range}}
+\index{Im\+Strchr\+Range@{Im\+Strchr\+Range}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strchr\+Range()}{ImStrchrRange()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Strchr\+Range (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{str\+\_\+end,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a2b5b2ff91a5980e3143141a882216fe8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a079f29569de5779052f1fbf3dd283e0f}\label{imgui_8cpp_a079f29569de5779052f1fbf3dd283e0f}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Strdup@{Im\+Strdup}}
+\index{Im\+Strdup@{Im\+Strdup}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strdup()}{ImStrdup()}}
+{\footnotesize\ttfamily char$\ast$ Im\+Strdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{imgui_8cpp_a079f29569de5779052f1fbf3dd283e0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{imgui_8cpp_a079f29569de5779052f1fbf3dd283e0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a578b4ec1e004a6c9e07610720421a482}\label{imgui_8cpp_a578b4ec1e004a6c9e07610720421a482}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Streol\+Range@{Im\+Streol\+Range}}
+\index{Im\+Streol\+Range@{Im\+Streol\+Range}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Streol\+Range()}{ImStreolRange()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Streol\+Range (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{str\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a578b4ec1e004a6c9e07610720421a482_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_adff1a1bf60752cd3395dae990cc2e34f}\label{imgui_8cpp_adff1a1bf60752cd3395dae990cc2e34f}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Stricmp@{Im\+Stricmp}}
+\index{Im\+Stricmp@{Im\+Stricmp}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Stricmp()}{ImStricmp()}}
+{\footnotesize\ttfamily int Im\+Stricmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_a457a373caeddd76d58ff282da05273b4}\label{imgui_8cpp_a457a373caeddd76d58ff282da05273b4}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Stristr@{Im\+Stristr}}
+\index{Im\+Stristr@{Im\+Stristr}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Stristr()}{ImStristr()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Stristr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{haystack,  }\item[{const char $\ast$}]{haystack\+\_\+end,  }\item[{const char $\ast$}]{needle,  }\item[{const char $\ast$}]{needle\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a457a373caeddd76d58ff282da05273b4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a66b44f8391ea7cba388700e4991a4859}\label{imgui_8cpp_a66b44f8391ea7cba388700e4991a4859}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+StrlenW@{Im\+StrlenW}}
+\index{Im\+StrlenW@{Im\+StrlenW}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strlen\+W()}{ImStrlenW()}}
+{\footnotesize\ttfamily int Im\+StrlenW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{str }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a66b44f8391ea7cba388700e4991a4859_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_aebf0117d9d0fb0f2731a94d64173b41a}\label{imgui_8cpp_aebf0117d9d0fb0f2731a94d64173b41a}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Strncpy@{Im\+Strncpy}}
+\index{Im\+Strncpy@{Im\+Strncpy}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strncpy()}{ImStrncpy()}}
+{\footnotesize\ttfamily void Im\+Strncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_aebf0117d9d0fb0f2731a94d64173b41a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a603026e750e955098e8c1e99428ca8b2}\label{imgui_8cpp_a603026e750e955098e8c1e99428ca8b2}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Strnicmp@{Im\+Strnicmp}}
+\index{Im\+Strnicmp@{Im\+Strnicmp}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Strnicmp()}{ImStrnicmp()}}
+{\footnotesize\ttfamily int Im\+Strnicmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_a7d087fd93eb10b876979598caae02c64}\label{imgui_8cpp_a7d087fd93eb10b876979598caae02c64}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Str\+Trim\+Blanks@{Im\+Str\+Trim\+Blanks}}
+\index{Im\+Str\+Trim\+Blanks@{Im\+Str\+Trim\+Blanks}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Str\+Trim\+Blanks()}{ImStrTrimBlanks()}}
+{\footnotesize\ttfamily void Im\+Str\+Trim\+Blanks (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_a036b9dd7f0942fd34e385cc115f36631}\label{imgui_8cpp_a036b9dd7f0942fd34e385cc115f36631}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Char\+From\+Utf8@{Im\+Text\+Char\+From\+Utf8}}
+\index{Im\+Text\+Char\+From\+Utf8@{Im\+Text\+Char\+From\+Utf8}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Char\+From\+Utf8()}{ImTextCharFromUtf8()}}
+{\footnotesize\ttfamily int Im\+Text\+Char\+From\+Utf8 (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{out\+\_\+char,  }\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_a036b9dd7f0942fd34e385cc115f36631_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_ac2561e31f0de066ef0bb5bfbb541c8ae}\label{imgui_8cpp_ac2561e31f0de066ef0bb5bfbb541c8ae}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Count\+Chars\+From\+Utf8@{Im\+Text\+Count\+Chars\+From\+Utf8}}
+\index{Im\+Text\+Count\+Chars\+From\+Utf8@{Im\+Text\+Count\+Chars\+From\+Utf8}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Chars\+From\+Utf8()}{ImTextCountCharsFromUtf8()}}
+{\footnotesize\ttfamily int Im\+Text\+Count\+Chars\+From\+Utf8 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_ac2561e31f0de066ef0bb5bfbb541c8ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_ac2561e31f0de066ef0bb5bfbb541c8ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_ae1d5a0a2772f1e426f4bedbf4148235d}\label{imgui_8cpp_ae1d5a0a2772f1e426f4bedbf4148235d}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Count\+Utf8\+Bytes\+From\+Char@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}}
+\index{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char()}{ImTextCountUtf8BytesFromChar()}}
+{\footnotesize\ttfamily int Im\+Text\+Count\+Utf8\+Bytes\+From\+Char (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_ae1d5a0a2772f1e426f4bedbf4148235d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_ae1d5a0a2772f1e426f4bedbf4148235d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_ab0c1cae5ca2331c54681553722d0f72c}\label{imgui_8cpp_ab0c1cae5ca2331c54681553722d0f72c}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Count\+Utf8\+Bytes\+From\+Str@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}}
+\index{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str()}{ImTextCountUtf8BytesFromStr()}}
+{\footnotesize\ttfamily int Im\+Text\+Count\+Utf8\+Bytes\+From\+Str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_ab0c1cae5ca2331c54681553722d0f72c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_aeb054c43ad8aae45de24efc759a0ff7a}\label{imgui_8cpp_aeb054c43ad8aae45de24efc759a0ff7a}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Str\+From\+Utf8@{Im\+Text\+Str\+From\+Utf8}}
+\index{Im\+Text\+Str\+From\+Utf8@{Im\+Text\+Str\+From\+Utf8}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Str\+From\+Utf8()}{ImTextStrFromUtf8()}}
+{\footnotesize\ttfamily int Im\+Text\+Str\+From\+Utf8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf,  }\item[{int}]{buf\+\_\+size,  }\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end,  }\item[{const char $\ast$$\ast$}]{in\+\_\+text\+\_\+remaining }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{imgui_8cpp_aeb054c43ad8aae45de24efc759a0ff7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui_8cpp_aeb054c43ad8aae45de24efc759a0ff7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_a6c310426654de2fac6776408bdfd1f01}\label{imgui_8cpp_a6c310426654de2fac6776408bdfd1f01}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Text\+Str\+To\+Utf8@{Im\+Text\+Str\+To\+Utf8}}
+\index{Im\+Text\+Str\+To\+Utf8@{Im\+Text\+Str\+To\+Utf8}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Text\+Str\+To\+Utf8()}{ImTextStrToUtf8()}}
+{\footnotesize\ttfamily int Im\+Text\+Str\+To\+Utf8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{buf\+\_\+size,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_a42ba83efd4d19e4a61898dc8f8632ff1}\label{imgui_8cpp_a42ba83efd4d19e4a61898dc8f8632ff1}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Triangle\+Barycentric\+Coords@{Im\+Triangle\+Barycentric\+Coords}}
+\index{Im\+Triangle\+Barycentric\+Coords@{Im\+Triangle\+Barycentric\+Coords}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Barycentric\+Coords()}{ImTriangleBarycentricCoords()}}
+{\footnotesize\ttfamily void Im\+Triangle\+Barycentric\+Coords (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p,  }\item[{float \&}]{out\+\_\+u,  }\item[{float \&}]{out\+\_\+v,  }\item[{float \&}]{out\+\_\+w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui_8cpp_af48be8bc196ebaf2129062bd67007387}\label{imgui_8cpp_af48be8bc196ebaf2129062bd67007387}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Triangle\+Closest\+Point@{Im\+Triangle\+Closest\+Point}}
+\index{Im\+Triangle\+Closest\+Point@{Im\+Triangle\+Closest\+Point}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Closest\+Point()}{ImTriangleClosestPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Triangle\+Closest\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{imgui_8cpp_af48be8bc196ebaf2129062bd67007387_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui_8cpp_aa53a4a0b963d2d35b8e58442247e1239}\label{imgui_8cpp_aa53a4a0b963d2d35b8e58442247e1239}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!Im\+Triangle\+Contains\+Point@{Im\+Triangle\+Contains\+Point}}
+\index{Im\+Triangle\+Contains\+Point@{Im\+Triangle\+Contains\+Point}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Contains\+Point()}{ImTriangleContainsPoint()}}
+{\footnotesize\ttfamily bool Im\+Triangle\+Contains\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{imgui_8cpp_a26aa67b834c0453a50c5e3970a8eba07}\label{imgui_8cpp_a26aa67b834c0453a50c5e3970a8eba07}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!G\+Im\+Gui@{G\+Im\+Gui}}
+\index{G\+Im\+Gui@{G\+Im\+Gui}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{G\+Im\+Gui}{GImGui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}}$\ast$ G\+Im\+Gui = N\+U\+LL}
+
+\mbox{\Hypertarget{imgui_8cpp_a4172a86a71ad90be6fb63c63f362222d}\label{imgui_8cpp_a4172a86a71ad90be6fb63c63f362222d}} 
+\index{imgui.\+cpp@{imgui.\+cpp}!resize\+\_\+grip\+\_\+def@{resize\+\_\+grip\+\_\+def}}
+\index{resize\+\_\+grip\+\_\+def@{resize\+\_\+grip\+\_\+def}!imgui.\+cpp@{imgui.\+cpp}}
+\subsubsection{\texorpdfstring{resize\+\_\+grip\+\_\+def}{resize\_grip\_def}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_im_gui_resize_grip_def}{Im\+Gui\+Resize\+Grip\+Def}} resize\+\_\+grip\+\_\+def\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \{ \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(1,1), \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(-1,-1), 0, 3 \}, 
+    \{ \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(0,1), \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(+1,-1), 3, 6 \}, 
+    \{ \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(0,0), \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(+1,+1), 6, 9 \}, 
+    \{ \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(1,0), \mbox{\hyperlink{struct_im_vec2}{ImVec2}}(-1,+1), 9,12 \}, 
+\}
+\end{DoxyCode}

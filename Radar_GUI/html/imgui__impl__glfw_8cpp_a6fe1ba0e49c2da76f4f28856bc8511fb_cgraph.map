@@ -1,0 +1,9 @@
+<map id="ImGui_ImplGlfw_InstallCallbacks" name="ImGui_ImplGlfw_InstallCallbacks">
+<area shape="rect" id="node2" href="$imgui__impl__glfw_8cpp.html#a7e2f4161d656b233ce0fb093bd7b73f0" title="ImGui_ImplGlfw_MouseButton\lCallback" alt="" coords="267,5,463,47"/>
+<area shape="rect" id="node3" href="$imgui__impl__glfw_8cpp.html#a2824e65fa25cf3906feef67cfb864787" title="ImGui_ImplGlfw_ScrollCallback" alt="" coords="264,71,467,98"/>
+<area shape="rect" id="node5" href="$imgui__impl__glfw_8cpp.html#a87ff0a6084161760006ea22e5afe7a4e" title="ImGui_ImplGlfw_KeyCallback" alt="" coords="269,122,461,149"/>
+<area shape="rect" id="node6" href="$imgui__impl__glfw_8cpp.html#a9081dfebdfc735ac037191d1cad33791" title="ImGui_ImplGlfw_CharCallback" alt="" coords="267,173,463,199"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a3179e560812f878f3961ce803a5d9302" title="ImGui::GetIO" alt="" coords="557,122,656,149"/>
+<area shape="rect" id="node7" href="$struct_im_gui_i_o.html#a52b6bdef9278de5ae2031311a269cf14" title="ImGuiIO::AddInputCharacter" alt="" coords="515,173,699,199"/>
+<area shape="rect" id="node8" href="$imgui_8cpp.html#a66b44f8391ea7cba388700e4991a4859" title="ImStrlenW" alt="" coords="747,173,829,199"/>
+</map>

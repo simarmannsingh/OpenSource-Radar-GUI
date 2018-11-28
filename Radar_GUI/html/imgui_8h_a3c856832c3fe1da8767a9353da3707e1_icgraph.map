@@ -1,0 +1,6 @@
+<map id="IM_DELETE" name="IM_DELETE">
+<area shape="rect" id="node2" href="$struct_im_gui_window.html#a8e81d730c3a39a71e6b6ca4654451c53" title="ImGuiWindow::~ImGuiWindow" alt="" coords="147,5,345,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ab9132deece575023170cd8e681d0581d" title="ImGui::DestroyContext" alt="" coords="393,81,548,108"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ae8e2043e5d630169423e2d14a913afa1" title="ImGui::Shutdown" alt="" coords="185,107,307,133"/>
+<area shape="rect" id="node5" href="$struct_im_font_atlas.html#ad5c2560d708bd0c389e9bd9da2d9b055" title="ImFontAtlas::ClearFonts" alt="" coords="165,157,327,184"/>
+</map>

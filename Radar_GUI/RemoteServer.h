@@ -1,28 +1,32 @@
+/*
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ Author			:	Simar Mann Singh
+ Department		:	High Frequency Department, TF
+ Date			:	28/08/2018
+ -------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+// Please refer to RemoteServer.cpp for documentation
 
 #include "ServerNetwork.h"
 #include "NetworkData.h"
 
-class RemoteServer
-{
-
+class RemoteServer{
 public:
 	// id's to assign clients for our table
-	static unsigned int client_id; 
+	unsigned int client_id;
 	RemoteServer(void);
 	~RemoteServer(void);
 
 	void receiveFromClients();
 	void update();
 	void sendActionPackets();
-
-
-private:
-
 	// IDs for the clients connecting for table in ServerNetwork 
 	//static unsigned int client_id;
 
 	// The ServerNetwork object 
-	ServerNetwork* network;
+	ServerNetwork* svnetwork;
 	// data buffer
 	char network_data[MAX_PACKET_SIZE];
 };
+

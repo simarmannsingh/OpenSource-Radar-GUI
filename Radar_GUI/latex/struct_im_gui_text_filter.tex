@@ -1,0 +1,178 @@
+\hypertarget{struct_im_gui_text_filter}{}\section{Im\+Gui\+Text\+Filter Struct Reference}
+\label{struct_im_gui_text_filter}\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+
+
+Collaboration diagram for Im\+Gui\+Text\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_im_gui_text_filter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_text_filter_1_1_text_range}{Text\+Range}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_text_filter_a0a61ee76f0b4f3c354791734b06e3140}{Im\+Gui\+Text\+Filter}} (const char $\ast$default\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{struct_im_gui_text_filter_ab93ad5985019ff9d3781606551fc26cc}{Draw}} (const char $\ast$label=\char`\"{}Filter (inc,-\/exc)\char`\"{}, float \mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{struct_im_gui_text_filter_a88d73ff8b81fbbd0a129b1bf3498d8aa}{Pass\+Filter}} (const char $\ast$text, const char $\ast$text\+\_\+end=N\+U\+LL) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_gui_text_filter_aef362baafaa9dfa62d11bc6101c0f4c1}{Build}} ()
+\item 
+void \mbox{\hyperlink{struct_im_gui_text_filter_a9043c1f0c33d29e6fc9b75ae81f9705a}{Clear}} ()
+\item 
+bool \mbox{\hyperlink{struct_im_gui_text_filter_a493158f2ab8f45fcf303c3f953be9b88}{Is\+Active}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{struct_im_gui_text_filter_ad070acb1038199dd4e8f5d010c5cb5ba}{Input\+Buf}} \mbox{[}256\mbox{]}
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ \mbox{\hyperlink{struct_im_gui_text_filter_1_1_text_range}{Text\+Range}} $>$ \mbox{\hyperlink{struct_im_gui_text_filter_a5a930a339a9384e6bfadfa56a7c111fd}{Filters}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_text_filter_ac31839c319fe4211c21fc143b7249f86}{Count\+Grep}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_filter_a0a61ee76f0b4f3c354791734b06e3140}\label{struct_im_gui_text_filter_a0a61ee76f0b4f3c354791734b06e3140}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Text\+Filter()}{ImGuiTextFilter()}}
+{\footnotesize\ttfamily Im\+Gui\+Text\+Filter\+::\+Im\+Gui\+Text\+Filter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{default\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_a0a61ee76f0b4f3c354791734b06e3140_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_filter_aef362baafaa9dfa62d11bc6101c0f4c1}\label{struct_im_gui_text_filter_aef362baafaa9dfa62d11bc6101c0f4c1}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Build@{Build}}
+\index{Build@{Build}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Filter\+::\+Build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_aef362baafaa9dfa62d11bc6101c0f4c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_aef362baafaa9dfa62d11bc6101c0f4c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_filter_a9043c1f0c33d29e6fc9b75ae81f9705a}\label{struct_im_gui_text_filter_a9043c1f0c33d29e6fc9b75ae81f9705a}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Clear@{Clear}}
+\index{Clear@{Clear}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Filter\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_im_gui_text_filter_ab93ad5985019ff9d3781606551fc26cc}\label{struct_im_gui_text_filter_ab93ad5985019ff9d3781606551fc26cc}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Draw@{Draw}}
+\index{Draw@{Draw}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily bool Im\+Gui\+Text\+Filter\+::\+Draw (\begin{DoxyParamCaption}\item[{const char $\ast$}]{label = {\ttfamily \char`\"{}Filter~(inc,-\/exc)\char`\"{}},  }\item[{float}]{width = {\ttfamily 0.0f} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_ab93ad5985019ff9d3781606551fc26cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_ab93ad5985019ff9d3781606551fc26cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_filter_a493158f2ab8f45fcf303c3f953be9b88}\label{struct_im_gui_text_filter_a493158f2ab8f45fcf303c3f953be9b88}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Is\+Active@{Is\+Active}}
+\index{Is\+Active@{Is\+Active}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Is\+Active()}{IsActive()}}
+{\footnotesize\ttfamily bool Im\+Gui\+Text\+Filter\+::\+Is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_a493158f2ab8f45fcf303c3f953be9b88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_filter_a88d73ff8b81fbbd0a129b1bf3498d8aa}\label{struct_im_gui_text_filter_a88d73ff8b81fbbd0a129b1bf3498d8aa}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Pass\+Filter@{Pass\+Filter}}
+\index{Pass\+Filter@{Pass\+Filter}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Pass\+Filter()}{PassFilter()}}
+{\footnotesize\ttfamily bool Im\+Gui\+Text\+Filter\+::\+Pass\+Filter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{const char $\ast$}]{text\+\_\+end = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_a88d73ff8b81fbbd0a129b1bf3498d8aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_filter_a88d73ff8b81fbbd0a129b1bf3498d8aa_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_filter_ac31839c319fe4211c21fc143b7249f86}\label{struct_im_gui_text_filter_ac31839c319fe4211c21fc143b7249f86}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Count\+Grep@{Count\+Grep}}
+\index{Count\+Grep@{Count\+Grep}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Count\+Grep}{CountGrep}}
+{\footnotesize\ttfamily int Im\+Gui\+Text\+Filter\+::\+Count\+Grep}
+
+\mbox{\Hypertarget{struct_im_gui_text_filter_a5a930a339a9384e6bfadfa56a7c111fd}\label{struct_im_gui_text_filter_a5a930a339a9384e6bfadfa56a7c111fd}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Filters@{Filters}}
+\index{Filters@{Filters}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Filters}{Filters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$\mbox{\hyperlink{struct_im_gui_text_filter_1_1_text_range}{Text\+Range}}$>$ Im\+Gui\+Text\+Filter\+::\+Filters}
+
+\mbox{\Hypertarget{struct_im_gui_text_filter_ad070acb1038199dd4e8f5d010c5cb5ba}\label{struct_im_gui_text_filter_ad070acb1038199dd4e8f5d010c5cb5ba}} 
+\index{Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}!Input\+Buf@{Input\+Buf}}
+\index{Input\+Buf@{Input\+Buf}!Im\+Gui\+Text\+Filter@{Im\+Gui\+Text\+Filter}}
+\subsubsection{\texorpdfstring{Input\+Buf}{InputBuf}}
+{\footnotesize\ttfamily char Im\+Gui\+Text\+Filter\+::\+Input\+Buf\mbox{[}256\mbox{]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\item 
+\mbox{\hyperlink{imgui_8cpp}{imgui.\+cpp}}\end{DoxyCompactItemize}

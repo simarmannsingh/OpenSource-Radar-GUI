@@ -1,0 +1,18 @@
+<map id="ImGui::InputFloat2" name="ImGui::InputFloat2">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a885fc00fd3382f0aeb34c1140303c86a" title="ImGui::InputScalarN" alt="" coords="181,625,320,652"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="2075,524,2248,551"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a42407e196b7ed2a8755bff28aae9805f" title="ImGui::BeginGroup" alt="" coords="619,701,751,728"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="1885,245,1992,272"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#ab913605fcf6d405d102cdf56cd414a5a" title="ImGui::PushMultiItemsWidths" alt="" coords="368,600,563,627"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="2060,169,2263,196"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#ab3b3ba92ebd8bca4a552dd93321a1994" title="ImGui::CalcItemWidth" alt="" coords="611,119,760,145"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a410c8e19b2fea8b52746ca11b3930301" title="ImGui::GetContentRegionAvail" alt="" coords="808,119,1005,145"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#a0a4dbfabbfa45d74319ef541962ce2eb" title="ImGui::GetContentRegionMax" alt="" coords="1053,144,1248,171"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a79c22e9c5c208b6c9534a273be71a9e6" title="ImGui::GetColumnOffset" alt="" coords="1296,195,1459,221"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a0e2889956542527c4039b6b8bf5c2a38" title="ImGui::Columns" alt="" coords="1507,359,1621,385"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#af93bed3bce5475fe4d525d744f16aa20" title="ImGui::EndColumns" alt="" coords="1674,423,1813,449"/>
+<area shape="rect" id="node16" href="$namespace_im_gui.html#a6992289cbdb087a690403e48340bfb23" title="ImGui::BeginColumns" alt="" coords="1669,321,1817,348"/>
+<area shape="rect" id="node14" href="$namespace_im_gui.html#ad29a3fc0cb5dfc7f9fc7224512ce90bf" title="ImGui::PopItemWidth" alt="" coords="1865,448,2012,475"/>
+<area shape="rect" id="node15" href="$namespace_im_gui.html#aef1c8a6e5a3c70cb10d03d2a2a66dfd8" title="ImGui::PopClipRect" alt="" coords="1871,499,2007,525"/>
+<area shape="rect" id="node17" href="$namespace_im_gui.html#aba0b2d8f890a5d435ae43d0c4a2d4dd1" title="ImGui::PopID" alt="" coords="1889,296,1988,323"/>
+</map>

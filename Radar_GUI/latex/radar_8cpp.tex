@@ -1,0 +1,132 @@
+\hypertarget{radar_8cpp}{}\section{radar.\+cpp File Reference}
+\label{radar_8cpp}\index{radar.\+cpp@{radar.\+cpp}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{radar_8cpp_a9750cd4a2fad18e2069cacb44725354c}{M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG}}~128
+\item 
+\#define \mbox{\hyperlink{radar_8cpp_a16b710f592bf8f7900666392adc444dc}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}}~\char`\"{}27015\char`\"{}
+\item 
+\#define \mbox{\hyperlink{radar_8cpp_a5261516a174b035b084a9ae06dc85730}{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN}}~64
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{radar_8cpp_a4cbb697f5ceabed39aa904c5045ac181}{server\+Loop}} ()
+\item 
+void \mbox{\hyperlink{radar_8cpp_a82500693441c062496b0d861924200f8}{client\+Loop}} (void)
+\item 
+int \mbox{\hyperlink{radar_8cpp_a17c71e8de8c58645dd41431d716ac739}{main}} (int argc, char $\ast$$\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{radar_8cpp_a8bdd724e7f900a50960d8dcb69ac6eb2}{Serv\+Addr}}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{radar_8cpp_a3a57e935a86c9a15dba005b214923a52}{broadcast\+Addr}}
+\item 
+\mbox{\hyperlink{class_remote_server}{Remote\+Server}} $\ast$ \mbox{\hyperlink{radar_8cpp_a3729ec6e7dc30c355ee1be1290da06bc}{server}}
+\item 
+\mbox{\hyperlink{class_remote_client}{Remote\+Client}} $\ast$ \mbox{\hyperlink{radar_8cpp_ad646e3b6c03a0a338320b26939627e93}{client}}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{radar_8cpp_a5261516a174b035b084a9ae06dc85730}\label{radar_8cpp_a5261516a174b035b084a9ae06dc85730}} 
+\index{radar.\+cpp@{radar.\+cpp}!D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN@{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN@{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN}{DEFAULT\_BUFLEN}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+B\+U\+F\+L\+EN~64}
+
+\mbox{\Hypertarget{radar_8cpp_a16b710f592bf8f7900666392adc444dc}\label{radar_8cpp_a16b710f592bf8f7900666392adc444dc}} 
+\index{radar.\+cpp@{radar.\+cpp}!D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT}{DEFAULT\_PORT}}
+{\footnotesize\ttfamily \#define D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+O\+RT~\char`\"{}27015\char`\"{}}
+
+\mbox{\Hypertarget{radar_8cpp_a9750cd4a2fad18e2069cacb44725354c}\label{radar_8cpp_a9750cd4a2fad18e2069cacb44725354c}} 
+\index{radar.\+cpp@{radar.\+cpp}!M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG@{M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG}}
+\index{M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG@{M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG}{MAXRECVSTRING}}
+{\footnotesize\ttfamily \#define M\+A\+X\+R\+E\+C\+V\+S\+T\+R\+I\+NG~128}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{radar_8cpp_a82500693441c062496b0d861924200f8}\label{radar_8cpp_a82500693441c062496b0d861924200f8}} 
+\index{radar.\+cpp@{radar.\+cpp}!client\+Loop@{client\+Loop}}
+\index{client\+Loop@{client\+Loop}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{client\+Loop()}{clientLoop()}}
+{\footnotesize\ttfamily void client\+Loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{radar_8cpp_a17c71e8de8c58645dd41431d716ac739}\label{radar_8cpp_a17c71e8de8c58645dd41431d716ac739}} 
+\index{radar.\+cpp@{radar.\+cpp}!main@{main}}
+\index{main@{main}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{radar_8cpp_a17c71e8de8c58645dd41431d716ac739_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{radar_8cpp_a4cbb697f5ceabed39aa904c5045ac181}\label{radar_8cpp_a4cbb697f5ceabed39aa904c5045ac181}} 
+\index{radar.\+cpp@{radar.\+cpp}!server\+Loop@{server\+Loop}}
+\index{server\+Loop@{server\+Loop}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{server\+Loop()}{serverLoop()}}
+{\footnotesize\ttfamily void server\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{radar_8cpp_a4cbb697f5ceabed39aa904c5045ac181_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{radar_8cpp_a4cbb697f5ceabed39aa904c5045ac181_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{radar_8cpp_a3a57e935a86c9a15dba005b214923a52}\label{radar_8cpp_a3a57e935a86c9a15dba005b214923a52}} 
+\index{radar.\+cpp@{radar.\+cpp}!broadcast\+Addr@{broadcast\+Addr}}
+\index{broadcast\+Addr@{broadcast\+Addr}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{broadcast\+Addr}{broadcastAddr}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in broadcast\+Addr}
+
+\mbox{\Hypertarget{radar_8cpp_ad646e3b6c03a0a338320b26939627e93}\label{radar_8cpp_ad646e3b6c03a0a338320b26939627e93}} 
+\index{radar.\+cpp@{radar.\+cpp}!client@{client}}
+\index{client@{client}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_remote_client}{Remote\+Client}}$\ast$ client}
+
+\mbox{\Hypertarget{radar_8cpp_a8bdd724e7f900a50960d8dcb69ac6eb2}\label{radar_8cpp_a8bdd724e7f900a50960d8dcb69ac6eb2}} 
+\index{radar.\+cpp@{radar.\+cpp}!Serv\+Addr@{Serv\+Addr}}
+\index{Serv\+Addr@{Serv\+Addr}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{Serv\+Addr}{ServAddr}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in Serv\+Addr}
+
+\mbox{\Hypertarget{radar_8cpp_a3729ec6e7dc30c355ee1be1290da06bc}\label{radar_8cpp_a3729ec6e7dc30c355ee1be1290da06bc}} 
+\index{radar.\+cpp@{radar.\+cpp}!server@{server}}
+\index{server@{server}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_remote_server}{Remote\+Server}}$\ast$ server}
+
+\mbox{\Hypertarget{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}\label{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}} 
+\index{radar.\+cpp@{radar.\+cpp}!window@{window}}
+\index{window@{window}!radar.\+cpp@{radar.\+cpp}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ window}
+

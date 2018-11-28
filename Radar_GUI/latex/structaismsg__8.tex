@@ -1,0 +1,102 @@
+\hypertarget{structaismsg__8}{}\section{aismsg\+\_\+8 Struct Reference}
+\label{structaismsg__8}\index{aismsg\+\_\+8@{aismsg\+\_\+8}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+8\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{structaismsg__8__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__8_adc222cb89285a262627463a800d17abd}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (8) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__8_af47fdf710cf22896e221dadcf6f4d5c9}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__8_a6360180e0963f7965b0584af6900c53a}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__8_a93279dd4cf452d1059570d2d544a192c}{spare}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Spare \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structaismsg__8_a083a6bc8a91bc86c7a47b783cdaf2687}{app\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em 16 bits \+: Application ID \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsixbit}{sixbit}} \mbox{\hyperlink{structaismsg__8_abc710e9927cccea052dc2cd139dd2364}{data}}
+\begin{DoxyCompactList}\small\item\em 952 bits \+: Data payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 8 -\/ Binary Broadcast Message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__8_a083a6bc8a91bc86c7a47b783cdaf2687}\label{structaismsg__8_a083a6bc8a91bc86c7a47b783cdaf2687}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!app\+\_\+id@{app\+\_\+id}}
+\index{app\+\_\+id@{app\+\_\+id}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{app\+\_\+id}{app\_id}}
+{\footnotesize\ttfamily unsigned int aismsg\+\_\+8\+::app\+\_\+id}
+
+
+
+16 bits \+: Application ID 
+
+\mbox{\Hypertarget{structaismsg__8_abc710e9927cccea052dc2cd139dd2364}\label{structaismsg__8_abc710e9927cccea052dc2cd139dd2364}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!data@{data}}
+\index{data@{data}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsixbit}{sixbit}} aismsg\+\_\+8\+::data}
+
+
+
+952 bits \+: Data payload 
+
+\mbox{\Hypertarget{structaismsg__8_adc222cb89285a262627463a800d17abd}\label{structaismsg__8_adc222cb89285a262627463a800d17abd}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+8\+::msgid}
+
+
+
+6 bits \+: Message\+ID (8) 
+
+\mbox{\Hypertarget{structaismsg__8_af47fdf710cf22896e221dadcf6f4d5c9}\label{structaismsg__8_af47fdf710cf22896e221dadcf6f4d5c9}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+8\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__8_a93279dd4cf452d1059570d2d544a192c}\label{structaismsg__8_a93279dd4cf452d1059570d2d544a192c}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!spare@{spare}}
+\index{spare@{spare}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char aismsg\+\_\+8\+::spare}
+
+
+
+2 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__8_a6360180e0963f7965b0584af6900c53a}\label{structaismsg__8_a6360180e0963f7965b0584af6900c53a}} 
+\index{aismsg\+\_\+8@{aismsg\+\_\+8}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+8@{aismsg\+\_\+8}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+8\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

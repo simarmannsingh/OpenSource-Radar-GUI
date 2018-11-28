@@ -1,0 +1,92 @@
+\hypertarget{structbinary__state}{}\section{binary\+\_\+state Struct Reference}
+\label{structbinary__state}\index{binary\+\_\+state@{binary\+\_\+state}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for binary\+\_\+state\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{structbinary__state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structbinary__state_ae8cf4591ee7170f618edc13bb96d340a}{dac}}
+\begin{DoxyCompactList}\small\item\em D\+AC. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structbinary__state_a204ab2eec6e01aab85747a8014dd0425}{fi}}
+\begin{DoxyCompactList}\small\item\em FI. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structbinary__state_ace2dab0bdacb7a7929db1377b36f20cc}{spare}}
+\begin{DoxyCompactList}\small\item\em 2 bits Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structbinary__state_afa92bba159375e76df8924ecf0de2789}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits Message ID 0-\/31 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsixbit}{sixbit}} \mbox{\hyperlink{structbinary__state_a482cffe8a412223abc3a14f791340cd3}{six\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em sixbit parser state \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{structbinary__state}{binary\+\_\+state}} the state for the Seaway/\+I\+MO Message Parser
+
+Holds the D\+AC, FI, msgid and the message bits in six\+\_\+state Used for processing the data portion of a binary message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structbinary__state_ae8cf4591ee7170f618edc13bb96d340a}\label{structbinary__state_ae8cf4591ee7170f618edc13bb96d340a}} 
+\index{binary\+\_\+state@{binary\+\_\+state}!dac@{dac}}
+\index{dac@{dac}!binary\+\_\+state@{binary\+\_\+state}}
+\subsubsection{\texorpdfstring{dac}{dac}}
+{\footnotesize\ttfamily int binary\+\_\+state\+::dac}
+
+
+
+D\+AC. 
+
+\mbox{\Hypertarget{structbinary__state_a204ab2eec6e01aab85747a8014dd0425}\label{structbinary__state_a204ab2eec6e01aab85747a8014dd0425}} 
+\index{binary\+\_\+state@{binary\+\_\+state}!fi@{fi}}
+\index{fi@{fi}!binary\+\_\+state@{binary\+\_\+state}}
+\subsubsection{\texorpdfstring{fi}{fi}}
+{\footnotesize\ttfamily char binary\+\_\+state\+::fi}
+
+
+
+FI. 
+
+\mbox{\Hypertarget{structbinary__state_afa92bba159375e76df8924ecf0de2789}\label{structbinary__state_afa92bba159375e76df8924ecf0de2789}} 
+\index{binary\+\_\+state@{binary\+\_\+state}!msgid@{msgid}}
+\index{msgid@{msgid}!binary\+\_\+state@{binary\+\_\+state}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char binary\+\_\+state\+::msgid}
+
+
+
+6 bits Message ID 0-\/31 
+
+\mbox{\Hypertarget{structbinary__state_a482cffe8a412223abc3a14f791340cd3}\label{structbinary__state_a482cffe8a412223abc3a14f791340cd3}} 
+\index{binary\+\_\+state@{binary\+\_\+state}!six\+\_\+state@{six\+\_\+state}}
+\index{six\+\_\+state@{six\+\_\+state}!binary\+\_\+state@{binary\+\_\+state}}
+\subsubsection{\texorpdfstring{six\+\_\+state}{six\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsixbit}{sixbit}} binary\+\_\+state\+::six\+\_\+state}
+
+
+
+sixbit parser state 
+
+\mbox{\Hypertarget{structbinary__state_ace2dab0bdacb7a7929db1377b36f20cc}\label{structbinary__state_ace2dab0bdacb7a7929db1377b36f20cc}} 
+\index{binary\+\_\+state@{binary\+\_\+state}!spare@{spare}}
+\index{spare@{spare}!binary\+\_\+state@{binary\+\_\+state}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char binary\+\_\+state\+::spare}
+
+
+
+2 bits Spare 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

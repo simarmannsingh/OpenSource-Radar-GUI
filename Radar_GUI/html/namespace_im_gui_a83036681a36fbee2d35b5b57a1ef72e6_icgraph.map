@@ -1,0 +1,12 @@
+<map id="ImGui::MarkItemEdited" name="ImGui::MarkItemEdited">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#ae479220c66b039874c6e4c9e9b22849f" title="ImGui::ButtonEx" alt="" coords="216,107,335,133"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#a6b146763845cbad5a4144772279631bc" title="ImGui::RadioButton" alt="" coords="208,157,343,184"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a38094c568ce398db5a3abb9d3ac92030" title="ImGui::Button" alt="" coords="407,107,509,133"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a7bd295da4be19bab98262c76fcaeb4fb" title="ImGui::LogButtons" alt="" coords="607,5,738,32"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="593,56,753,83"/>
+<area shape="rect" id="node6" href="$struct_example_app_log.html#a5ad3a4bdb89171b84aeaff96948a1f77" title="ExampleAppLog::Draw" alt="" coords="595,107,750,133"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a6bfb117816d669f8704e5d0c0c0795fe" title="ImGui::ColorEditOptionsPopup" alt="" coords="573,157,772,184"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#ac3f45e2aa0b1d591cc8a2cdf8b566a45" title="ImGui::ColorEdit4" alt="" coords="820,157,944,184"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a5afe76ba1c91f07363e40396e7df656e" title="ImGui::ColorEdit3" alt="" coords="992,157,1116,184"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a018d2b61d2f00bb7a9dd2b1f933b93a5" title="ImGui::RadioButton" alt="" coords="391,208,525,235"/>
+</map>

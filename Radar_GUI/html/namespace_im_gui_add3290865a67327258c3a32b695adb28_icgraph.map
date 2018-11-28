@@ -1,0 +1,8 @@
+<map id="ImGui::IsItemFocused" name="ImGui::IsItemFocused">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#ac9a400eff3a9561d95e80486c52a660b" title="ImGui::IsItemHovered" alt="" coords="203,81,348,108"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a0b5780dbd580e28f5d31f39da80b0b01" title="ImGui::IsItemClicked" alt="" coords="427,5,569,32"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a546fc46d8f510cb17a2f272891e2f5b3" title="ImGui::OpenPopupOnItemClick" alt="" coords="397,56,599,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a579fc507f5b5d164c8fd628aee3d7bbd" title="ImGui::BeginPopupContextItem" alt="" coords="396,107,600,133"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#afe7a28c6eb52fff3cc27d5a698fea4ff" title="ImGui::ShowMetricsWindow" alt="" coords="405,157,591,184"/>
+<area shape="rect" id="node6" href="$struct_example_app_console.html#a0518a09c7e8648dd52c7c06df19ac17a" title="ExampleAppConsole::Draw" alt="" coords="648,107,828,133"/>
+</map>

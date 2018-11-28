@@ -1,0 +1,10 @@
+<map id="ImGui::RenderTextWrapped" name="ImGui::RenderTextWrapped">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="249,27,388,54"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a7a0d62e33f2236ec2f789e24ca0fb56f" title="ImGui::LogRenderedText" alt="" coords="236,107,401,134"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="459,5,632,47"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="449,71,641,98"/>
+<area shape="rect" id="node6" href="$imgui_8cpp.html#a578b4ec1e004a6c9e07610720421a482" title="ImStreolRange" alt="" coords="492,122,599,149"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#aa548475d8f771ab6524d73d900a41198" title="ImGui::LogText" alt="" coords="490,173,601,199"/>
+<area shape="rect" id="node8" href="$struct_im_gui_text_buffer.html#ac8a6b11834c4cee8113bf6950e66112e" title="ImGuiTextBuffer::appendfv" alt="" coords="689,173,861,199"/>
+<area shape="rect" id="node9" href="$imgui_8cpp.html#a2e0022a073d369645a0daab17f823779" title="ImFormatStringV" alt="" coords="909,173,1029,199"/>
+</map>

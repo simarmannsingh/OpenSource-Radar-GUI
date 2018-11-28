@@ -1,0 +1,4 @@
+<map id="ImGui::TreeNodeBehaviorIsOpen" name="ImGui::TreeNodeBehaviorIsOpen">
+<area shape="rect" id="node2" href="$struct_im_gui_storage.html#af83975ca841a9bd0e06a6ea0a41bf159" title="ImGuiStorage::SetInt" alt="" coords="263,5,406,32"/>
+<area shape="rect" id="node3" href="$struct_im_gui_storage.html#ac86b64f5c69a15de6c6c326963eca64a" title="ImGuiStorage::GetInt" alt="" coords="263,56,407,83"/>
+</map>

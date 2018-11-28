@@ -1,0 +1,212 @@
+\hypertarget{structaismsg__23}{}\section{aismsg\+\_\+23 Struct Reference}
+\label{structaismsg__23}\index{aismsg\+\_\+23@{aismsg\+\_\+23}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+23\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{structaismsg__23__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__23_adc2906d66d6e0e2b2ebb76e6ef5b0b1b}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (23) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_a9c3cab8634e095e75fb284e7605adcd5}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__23_a862fd5d6fb56e83c1f4aef145ac4850a}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_ad69c4e6c1a9e9e75a98bd920ef25a758}{spare1}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Spare \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__23_a3f871bfde4885f298021af1375f0ee9c}{N\+E\+\_\+longitude}}
+\begin{DoxyCompactList}\small\item\em 18 bits \+: Longitude in 1/1000 minutes \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__23_a3471f451bd9702099dabe115f01bddff}{N\+E\+\_\+latitude}}
+\begin{DoxyCompactList}\small\item\em 17 bits \+: Latitude in 1/1000 minutes \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__23_aee9f9133a81157e690760c342c13ea73}{S\+W\+\_\+longitude}}
+\begin{DoxyCompactList}\small\item\em 18 bits \+: Longitude in 1/1000 minutes \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__23_ac822afe7a2821e10a09e007e55616ad4}{S\+W\+\_\+latitude}}
+\begin{DoxyCompactList}\small\item\em 17 bits \+: Latitude in 1/1000 minutes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_a2bd301660a0f40633832c4433aceab11}{station\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 4 bits \+: Station Type \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{structaismsg__23_af5e72a1092ef715a37048d1c687daced}{ship\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 8 bits \+: Type of Ship and Cargo \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__23_ab89d257cab0e0e65a73ef850e683a7c4}{spare2}}
+\begin{DoxyCompactList}\small\item\em 22 bits \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_a840683386b370ac6b11d9dce20a31f7c}{txrx\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: T\+X/\+RX Mode \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_ac045e7c0b7f05c999d597ea7e2e79930}{report\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em 4 bits \+: Reporting Interval from I\+EC 62287 Table 17 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_a62581fdee5f20c04414ef03648573c58}{quiet\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em 4 bits \+: Quiet Time in Minutes \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__23_a9c2e91297f11b3807d6aa723b9c08284}{spare3}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Spare \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 23 -\/ Group Assignment Command
+
+The geographic area is defined by 2 corners, stored in the NE and SW positions. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__23_adc2906d66d6e0e2b2ebb76e6ef5b0b1b}\label{structaismsg__23_adc2906d66d6e0e2b2ebb76e6ef5b0b1b}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::msgid}
+
+
+
+6 bits \+: Message\+ID (23) 
+
+\mbox{\Hypertarget{structaismsg__23_a3471f451bd9702099dabe115f01bddff}\label{structaismsg__23_a3471f451bd9702099dabe115f01bddff}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!N\+E\+\_\+latitude@{N\+E\+\_\+latitude}}
+\index{N\+E\+\_\+latitude@{N\+E\+\_\+latitude}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{N\+E\+\_\+latitude}{NE\_latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+23\+::\+N\+E\+\_\+latitude}
+
+
+
+17 bits \+: Latitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__23_a3f871bfde4885f298021af1375f0ee9c}\label{structaismsg__23_a3f871bfde4885f298021af1375f0ee9c}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!N\+E\+\_\+longitude@{N\+E\+\_\+longitude}}
+\index{N\+E\+\_\+longitude@{N\+E\+\_\+longitude}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{N\+E\+\_\+longitude}{NE\_longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+23\+::\+N\+E\+\_\+longitude}
+
+
+
+18 bits \+: Longitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__23_a62581fdee5f20c04414ef03648573c58}\label{structaismsg__23_a62581fdee5f20c04414ef03648573c58}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!quiet\+\_\+time@{quiet\+\_\+time}}
+\index{quiet\+\_\+time@{quiet\+\_\+time}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{quiet\+\_\+time}{quiet\_time}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::quiet\+\_\+time}
+
+
+
+4 bits \+: Quiet Time in Minutes 
+
+\mbox{\Hypertarget{structaismsg__23_a9c3cab8634e095e75fb284e7605adcd5}\label{structaismsg__23_a9c3cab8634e095e75fb284e7605adcd5}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__23_ac045e7c0b7f05c999d597ea7e2e79930}\label{structaismsg__23_ac045e7c0b7f05c999d597ea7e2e79930}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!report\+\_\+interval@{report\+\_\+interval}}
+\index{report\+\_\+interval@{report\+\_\+interval}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{report\+\_\+interval}{report\_interval}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::report\+\_\+interval}
+
+
+
+4 bits \+: Reporting Interval from I\+EC 62287 Table 17 
+
+\mbox{\Hypertarget{structaismsg__23_af5e72a1092ef715a37048d1c687daced}\label{structaismsg__23_af5e72a1092ef715a37048d1c687daced}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!ship\+\_\+type@{ship\+\_\+type}}
+\index{ship\+\_\+type@{ship\+\_\+type}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{ship\+\_\+type}{ship\_type}}
+{\footnotesize\ttfamily unsigned char aismsg\+\_\+23\+::ship\+\_\+type}
+
+
+
+8 bits \+: Type of Ship and Cargo 
+
+\mbox{\Hypertarget{structaismsg__23_ad69c4e6c1a9e9e75a98bd920ef25a758}\label{structaismsg__23_ad69c4e6c1a9e9e75a98bd920ef25a758}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!spare1@{spare1}}
+\index{spare1@{spare1}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{spare1}{spare1}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::spare1}
+
+
+
+2 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__23_ab89d257cab0e0e65a73ef850e683a7c4}\label{structaismsg__23_ab89d257cab0e0e65a73ef850e683a7c4}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!spare2@{spare2}}
+\index{spare2@{spare2}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{spare2}{spare2}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+23\+::spare2}
+
+
+
+22 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__23_a9c2e91297f11b3807d6aa723b9c08284}\label{structaismsg__23_a9c2e91297f11b3807d6aa723b9c08284}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!spare3@{spare3}}
+\index{spare3@{spare3}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{spare3}{spare3}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::spare3}
+
+
+
+6 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__23_a2bd301660a0f40633832c4433aceab11}\label{structaismsg__23_a2bd301660a0f40633832c4433aceab11}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!station\+\_\+type@{station\+\_\+type}}
+\index{station\+\_\+type@{station\+\_\+type}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{station\+\_\+type}{station\_type}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::station\+\_\+type}
+
+
+
+4 bits \+: Station Type 
+
+\mbox{\Hypertarget{structaismsg__23_ac822afe7a2821e10a09e007e55616ad4}\label{structaismsg__23_ac822afe7a2821e10a09e007e55616ad4}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!S\+W\+\_\+latitude@{S\+W\+\_\+latitude}}
+\index{S\+W\+\_\+latitude@{S\+W\+\_\+latitude}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{S\+W\+\_\+latitude}{SW\_latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+23\+::\+S\+W\+\_\+latitude}
+
+
+
+17 bits \+: Latitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__23_aee9f9133a81157e690760c342c13ea73}\label{structaismsg__23_aee9f9133a81157e690760c342c13ea73}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!S\+W\+\_\+longitude@{S\+W\+\_\+longitude}}
+\index{S\+W\+\_\+longitude@{S\+W\+\_\+longitude}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{S\+W\+\_\+longitude}{SW\_longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+23\+::\+S\+W\+\_\+longitude}
+
+
+
+18 bits \+: Longitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__23_a840683386b370ac6b11d9dce20a31f7c}\label{structaismsg__23_a840683386b370ac6b11d9dce20a31f7c}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!txrx\+\_\+mode@{txrx\+\_\+mode}}
+\index{txrx\+\_\+mode@{txrx\+\_\+mode}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{txrx\+\_\+mode}{txrx\_mode}}
+{\footnotesize\ttfamily char aismsg\+\_\+23\+::txrx\+\_\+mode}
+
+
+
+2 bits \+: T\+X/\+RX Mode 
+
+\mbox{\Hypertarget{structaismsg__23_a862fd5d6fb56e83c1f4aef145ac4850a}\label{structaismsg__23_a862fd5d6fb56e83c1f4aef145ac4850a}} 
+\index{aismsg\+\_\+23@{aismsg\+\_\+23}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+23@{aismsg\+\_\+23}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+23\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,28 @@
+<map id="ImGui::DragIntRange2" name="ImGui::DragIntRange2">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="2063,196,2236,222"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="1873,500,1980,526"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a42407e196b7ed2a8755bff28aae9805f" title="ImGui::BeginGroup" alt="" coords="1299,44,1431,70"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#ab913605fcf6d405d102cdf56cd414a5a" title="ImGui::PushMultiItemsWidths" alt="" coords="356,196,551,222"/>
+<area shape="rect" id="node17" href="$namespace_im_gui.html#a202444c7b59820ae0a16d26f4322b4a9" title="ImGui::DragInt" alt="" coords="203,500,308,526"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="2048,576,2251,602"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#ab3b3ba92ebd8bca4a552dd93321a1994" title="ImGui::CalcItemWidth" alt="" coords="599,550,748,577"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a410c8e19b2fea8b52746ca11b3930301" title="ImGui::GetContentRegionAvail" alt="" coords="796,601,993,628"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a0a4dbfabbfa45d74319ef541962ce2eb" title="ImGui::GetContentRegionMax" alt="" coords="1041,601,1236,628"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#a79c22e9c5c208b6c9534a273be71a9e6" title="ImGui::GetColumnOffset" alt="" coords="1284,601,1447,628"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a0e2889956542527c4039b6b8bf5c2a38" title="ImGui::Columns" alt="" coords="1495,398,1609,425"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#af93bed3bce5475fe4d525d744f16aa20" title="ImGui::EndColumns" alt="" coords="1662,272,1801,298"/>
+<area shape="rect" id="node15" href="$namespace_im_gui.html#a6992289cbdb087a690403e48340bfb23" title="ImGui::BeginColumns" alt="" coords="1657,398,1805,425"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#ad29a3fc0cb5dfc7f9fc7224512ce90bf" title="ImGui::PopItemWidth" alt="" coords="1853,196,2000,222"/>
+<area shape="rect" id="node14" href="$namespace_im_gui.html#aef1c8a6e5a3c70cb10d03d2a2a66dfd8" title="ImGui::PopClipRect" alt="" coords="1859,246,1995,273"/>
+<area shape="rect" id="node16" href="$namespace_im_gui.html#aba0b2d8f890a5d435ae43d0c4a2d4dd1" title="ImGui::PopID" alt="" coords="1877,449,1976,476"/>
+<area shape="rect" id="node18" href="$namespace_im_gui.html#a127eccba6a956933f8c0f35b9e55105e" title="ImGui::DragScalar" alt="" coords="389,601,517,628"/>
+<area shape="rect" id="node19" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="603,601,744,628"/>
+<area shape="rect" id="node22" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="617,652,729,678"/>
+<area shape="rect" id="node23" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="616,702,731,729"/>
+<area shape="rect" id="node24" href="$namespace_im_gui.html#a488b86a9f235923304186fb86ff64ffb" title="ImGui::ItemHoverable" alt="" coords="601,753,746,780"/>
+<area shape="rect" id="node20" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="799,702,991,729"/>
+<area shape="rect" id="node21" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="817,652,973,678"/>
+<area shape="rect" id="node25" href="$namespace_im_gui.html#ae0b8ea0e06c457316d6aed6c5b2a1c25" title="ImGui::IsMouseHoveringRect" alt="" coords="800,753,989,780"/>
+<area shape="rect" id="node26" href="$struct_im_rect.html#ac02d5cf6ce0358aea9ed9df43d368f3f" title="ImRect::ClipWith" alt="" coords="1079,753,1199,780"/>
+<area shape="rect" id="node27" href="$struct_im_rect.html#ac583156fd0e9306181fff5d120b262ea" title="ImRect::Contains" alt="" coords="1077,804,1200,830"/>
+</map>

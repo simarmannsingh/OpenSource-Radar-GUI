@@ -1,0 +1,1690 @@
+\hypertarget{imgui__internal_8h}{}\section{imgui\+\_\+internal.\+h File Reference}
+\label{imgui__internal_8h}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}imstb\+\_\+textedit.\+h\char`\"{}}\newline
+Include dependency graph for imgui\+\_\+internal.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_stb_1_1_stb_undo_record}{Im\+Gui\+Stb\+::\+Stb\+Undo\+Record}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_stb_1_1_stb_undo_state}{Im\+Gui\+Stb\+::\+Stb\+Undo\+State}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_stb_1_1_s_t_b___textedit_state}{Im\+Gui\+Stb\+::\+S\+T\+B\+\_\+\+Textedit\+State}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_stb_1_1_stb_textedit_row}{Im\+Gui\+Stb\+::\+Stb\+Textedit\+Row}}
+\item 
+struct \mbox{\hyperlink{struct_im_vec1}{Im\+Vec1}}
+\item 
+struct \mbox{\hyperlink{struct_im_rect}{Im\+Rect}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_color_mod}{Im\+Gui\+Color\+Mod}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_style_mod}{Im\+Gui\+Style\+Mod}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_group_data}{Im\+Gui\+Group\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_menu_columns}{Im\+Gui\+Menu\+Columns}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_input_text_state}{Im\+Gui\+Input\+Text\+State}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_window_settings}{Im\+Gui\+Window\+Settings}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_settings_handler}{Im\+Gui\+Settings\+Handler}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_popup_ref}{Im\+Gui\+Popup\+Ref}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_column_data}{Im\+Gui\+Column\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_columns_set}{Im\+Gui\+Columns\+Set}}
+\item 
+struct \mbox{\hyperlink{struct_im_draw_list_shared_data}{Im\+Draw\+List\+Shared\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_im_draw_data_builder}{Im\+Draw\+Data\+Builder}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_nav_move_result}{Im\+Gui\+Nav\+Move\+Result}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_next_window_data}{Im\+Gui\+Next\+Window\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_window_temp_data}{Im\+Gui\+Window\+Temp\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}}
+\item 
+struct \mbox{\hyperlink{struct_im_gui_item_hovered_data_backup}{Im\+Gui\+Item\+Hovered\+Data\+Backup}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_im_gui_stb}{Im\+Gui\+Stb}}
+\item 
+ \mbox{\hyperlink{namespace_im_gui}{Im\+Gui}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_ab58b961887715e3f06f0a60a773c6de1}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG}}~\mbox{\hyperlink{struct_im_gui_input_text_state}{Im\+Gui\+Input\+Text\+State}}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a6e64031a061922e3a48d88fd8623f4c3}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}}~\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_ab109eb512ec8d9ad1973e58b367fec22}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE}}~-\/1.\+0f
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_ab8de43e3f17a4f0081fa6c2def6af1c1}{I\+M\+\_\+\+PI}}~3.\+14159265358979323846f
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a1bfa04d9a2431433f9668c814fd4c3d5}{I\+M\+\_\+\+N\+E\+W\+L\+I\+NE}}~\char`\"{}\textbackslash{}n\char`\"{}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_ab48aaa96aa99bc25d19384ec3492a6d3}{I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}(\+\_\+\+C\+O\+ND)~typedef char static\+\_\+assertion\+\_\+\#\#\+\_\+\+\_\+line\+\_\+\+\_\+\mbox{[}(\+\_\+\+C\+O\+ND)?1\+:-\/1\mbox{]}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_aac14064fede4cb5a2263206baea7ffb1}{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND}}(\+\_\+\+V\+AL)~((int)((\+\_\+\+V\+AL) $\ast$ 255.\+0f + ((\+\_\+\+V\+A\+L)$>$=0 ? 0.\+5f \+: -\/0.\+5f)))
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a044d12ff2cdc7af4a6de58d63cd96839}{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT}}(\+\_\+\+V\+AL)~((int)(Im\+Saturate(\+\_\+\+V\+AL) $\ast$ 255.\+0f + 0.\+5f))
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a3a504542c4837c193bd5e54911123fe1}{I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL}}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a65c3e94a04354397cba5ded06fbe3737}{Im\+Qsort}}~qsort
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a86d7bb2ee8297d38b131d8ea7e6430c6}{Im\+Gui\+Layout\+Type}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}{Im\+Gui\+Button\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_abcf9eafab4557e911b2c0d8fe2feeb38}{Im\+Gui\+Item\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a86b8f9e2fd4084fb2112f003070b53fa}{Im\+Gui\+Item\+Status\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a8c2855ba575756109c607c10697bcccd}{Im\+Gui\+Nav\+Highlight\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a83858661b68556d7da82de40d020e152}{Im\+Gui\+Nav\+Dir\+Source\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}{Im\+Gui\+Nav\+Move\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a5bfe5a88609ebcdf61cfee4e2fabf9a8}{Im\+Gui\+Separator\+Flags}}
+\item 
+typedef int \mbox{\hyperlink{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}{Im\+Gui\+Slider\+Flags}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008b}{Im\+Gui\+Button\+Flags\+\_\+}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baeb23ad59b1f7a681574c86ff55a030dc}{Im\+Gui\+Button\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba61bec0e6cea16f5041e0d362419dc3c8}{Im\+Gui\+Button\+Flags\+\_\+\+Repeat}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba78a6a688669d26385c0e6757264e5e4a}{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bace7632232484c218d34933d0eaedd67d}{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baa0492b4253b162233f95158b251c1bbc}{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release}} = 1 $<$$<$ 3, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba303d3f0c9d93bd42ca8953ec49c21441}{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click}} = 1 $<$$<$ 4, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba0aca23522a6dc5d2e61da31bf328760b}{Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children}} = 1 $<$$<$ 5, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac9daa551a7112a723aacd8151d836f33}{Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap}} = 1 $<$$<$ 6, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baee99adc9d4d07682346e2a23079e5a8f}{Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups}} = 1 $<$$<$ 7, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac63ac08f6b0bee7563a6be6936abb7ed}{Im\+Gui\+Button\+Flags\+\_\+\+Disabled}} = 1 $<$$<$ 8, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba655cb0c3df1c9d3a7ed732d4d37384ef}{Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line}} = 1 $<$$<$ 9, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba23b895e50fa2347537040e69a062f75d}{Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers}} = 1 $<$$<$ 10, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baf0c56b7963c87ae0c25ffa3f175f30e4}{Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID}} = 1 $<$$<$ 11, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba824c84e57100b4aa8621dc3ab2a4be8f}{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold}} = 1 $<$$<$ 12, 
+\mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba7da3d020255bec5e67f944e6f12543a5}{Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus}} = 1 $<$$<$ 13
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383a}{Im\+Gui\+Slider\+Flags\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aac563d0eaa0ac617f240ce1c82277bfc4}{Im\+Gui\+Slider\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aa2db4b9ade9f3519d30e6fe3ab8a25f3f}{Im\+Gui\+Slider\+Flags\+\_\+\+Vertical}} = 1 $<$$<$ 0
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8da}{Im\+Gui\+Columns\+Flags\+\_\+}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa6b2cf5f4ec329ea36ca98c1c8d547761}{Im\+Gui\+Columns\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daaeafe73f0f7664ce44e5c08277803228d}{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa5297643b959c2e5c542bf8ef36cff686}{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daae32cb38aa0d09e87a951a0ce9b9a4553}{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa816318249c9a40a068953849275ad4aa}{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window}} = 1 $<$$<$ 3, 
+\mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daad86ef11ecd7b2dc932c98cb7ab58bf78}{Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size}} = 1 $<$$<$ 4
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bf}{Im\+Gui\+Selectable\+Flags\+Private\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa50000511c374320cb282b0eb775ace28}{Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID}} = 1 $<$$<$ 10, 
+\mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa4328c28f73760d71f01ba9cbfff66749}{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click}} = 1 $<$$<$ 11, 
+\mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa136899d2ac60e40d4dd187520c6950d1}{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release}} = 1 $<$$<$ 12, 
+\mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfac39f947c0e06f17cede665aba43db741}{Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width}} = 1 $<$$<$ 13
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654}{Im\+Gui\+Separator\+Flags\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ac709701ce3986d718c7dc97d93f04516}{Im\+Gui\+Separator\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654a00e6c7e3f77de10a4bfa908f55e7d16a}{Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ad27b2c49ccef9f50993053c7cc1dcfaa}{Im\+Gui\+Separator\+Flags\+\_\+\+Vertical}} = 1 $<$$<$ 1
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfc}{Im\+Gui\+Item\+Status\+Flags\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfcaae7c0f0b20c6c151ea189ed5b078c6ba}{Im\+Gui\+Item\+Status\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca1cd7702ed1d8354e5d80a20f750c7ca2}{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca114af7511bce1d820abac3e236351c9a}{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca67d1ba9815c60860dd0e98773a1c07cd}{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited}} = 1 $<$$<$ 2
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823}{Im\+Gui\+Layout\+Type\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823abca9a5514cc9bbf69f532ab6ee4f387e}{Im\+Gui\+Layout\+Type\+\_\+\+Vertical}}, 
+\mbox{\hyperlink{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823accc103236d2a074a05ac0f5857a423ae}{Im\+Gui\+Layout\+Type\+\_\+\+Horizontal}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483}{Im\+Gui\+Axis}} \{ \mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a03c230bed95e0bedfe4ae746835848a8}{Im\+Gui\+Axis\+\_\+\+None}} = -\/1, 
+\mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a56b8304279c0c828698ae893b3687354}{Im\+Gui\+Axis\+\_\+X}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483aea4d0df122c8f789939a73ff4b213a72}{Im\+Gui\+Axis\+\_\+Y}} = 1
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728}{Im\+Gui\+Plot\+Type}} \{ \mbox{\hyperlink{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728aadebee780e8bd6f9dbb4741efb86377b}{Im\+Gui\+Plot\+Type\+\_\+\+Lines}}, 
+\mbox{\hyperlink{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728a1c19c715203ea8cb19886098b87494da}{Im\+Gui\+Plot\+Type\+\_\+\+Histogram}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78}{Im\+Gui\+Input\+Source}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aef18047c6e32382b1644a98fa68a2622}{Im\+Gui\+Input\+Source\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a004e3cd161dccc08c9dd2814c552d305}{Im\+Gui\+Input\+Source\+\_\+\+Mouse}}, 
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78ab31b60490e3ba3e2fae77988936062e7}{Im\+Gui\+Input\+Source\+\_\+\+Nav}}, 
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a2bc686f7c0f05f5e915a6ec96c4e251d}{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard}}, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aff488e3baf3b07e320da7e217b97c062}{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad}}, 
+\mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a86ca1f5ab44fc267491e0cf7518dd883}{Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda7de346eb74709d862c1a354c66fc81db}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down}}, 
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda62b2902c4138e255df31f2d7010e311b}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed}}, 
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda76247163c506317acb6aab2fb70dda90}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released}}, 
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fdae4ebadc9a73b269a8fa4b50a32662e69}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat}}, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda18bfb6910777eb7d00185d46c47f0ad2}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow}}, 
+\mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda13765db913d3abe27a0ba7fb2c5b70aa}{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a6f47e567193290259dd85fdcade51ee6}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26ae54860a6f56817772ef7f1f42ca3c1bd}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a12a4f12d464b2a5313a8bba2b9250d8a}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a8d97ef7eb2ce4cfa5ee98957dbb941cd}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a0d2af936bbd5e37cc62ba573f02250be}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding}} = 1 $<$$<$ 3
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+}} \{ \mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a4508beca51b1de5f06bded9ceebae335}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a26c911383d076bcd4a536fd4fe6d7dbf}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30ae9988d3760de3b2575faeac3fe1b182f}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a0515fcf2914bc6adccbbac4ed31a5e0a}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick}} = 1 $<$$<$ 2
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177c}{Im\+Gui\+Nav\+Move\+Flags\+\_\+}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac52ba4fd5c7ad628e2dace965f1c02cd}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None}} = 0, 
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac784f58a6171479f3fb754af4701298a}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca9f8e276286a9675c723a6531374362ba}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca90dc1c64af4b4e43a0c555573ad6f714}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX}} = 1 $<$$<$ 2, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca097bd55eceaa4c0e4ef88f6aee5f38c0}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY}} = 1 $<$$<$ 3, 
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca61f1ac459b7ca1dd1097aeb279278c56}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id}} = 1 $<$$<$ 4, 
+\mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca1f4719a5582f194ef9d8c7aa65fe1ef7}{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set}} = 1 $<$$<$ 5
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096}{Im\+Gui\+Nav\+Forward}} \{ \mbox{\hyperlink{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a6a0210c6cda2c4905bdaef4875fac1bb}{Im\+Gui\+Nav\+Forward\+\_\+\+None}}, 
+\mbox{\hyperlink{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096ac14000d5134c2055af3f8b455d9906cb}{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued}}, 
+\mbox{\hyperlink{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a108e71c912a222a65b4b37999cc4fb6a}{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8}{Im\+Gui\+Popup\+Position\+Policy}} \{ \mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8ab8a9815cfc6ed3f721aa8e75d960dbdf}{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default}}, 
+\mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8a8aaec33fd337ffbffd524a140f6810ea}{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box}}
+ \}
+\item 
+enum \mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44b}{Im\+Gui\+Item\+Flags\+\_\+}} \{ \newline
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba446348bf1c0722c99ad0332f76276129}{Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop}} = 1 $<$$<$ 0, 
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba995328c4628ba17f0bd4b51cd6b41b5a}{Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat}} = 1 $<$$<$ 1, 
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba16dccc85f1c0bd80cc4aed5a736ba308}{Im\+Gui\+Item\+Flags\+\_\+\+Disabled}} = 1 $<$$<$ 2, 
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44bac6dbbff7a3a5bd0b7af2339f650b53c6}{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav}} = 1 $<$$<$ 3, 
+\newline
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba6f18c9cbb835376ddeba52c55571ee41}{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus}} = 1 $<$$<$ 4, 
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba78e8b3f2ffa6203a2d59e03577158509}{Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup}} = 1 $<$$<$ 5, 
+\mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba7134a42bb8aa48ebfd4ef7ea34ddd108}{Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+}} = 0
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_aa9952674a01c295ef093f65774a15652}{Im\+Text\+Str\+To\+Utf8}} (char $\ast$buf, int buf\+\_\+size, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_aa4a574b013af98bc338e7dbb5c078c25}{Im\+Text\+Char\+From\+Utf8}} (unsigned int $\ast$out\+\_\+char, const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_aa1a254689b23e6111f14d1690fb3c568}{Im\+Text\+Str\+From\+Utf8}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf, int buf\+\_\+size, const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end, const char $\ast$$\ast$in\+\_\+remaining=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_a67e2dd0d3d5f244f3607f6071541c902}{Im\+Text\+Count\+Chars\+From\+Utf8}} (const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_a0b29b7595abee961a88370cf8bb62cfa}{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}} (const char $\ast$in\+\_\+text, const char $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_ae7d1184270a003cecacd3b45e8cbd44d}{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$in\+\_\+text\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} \mbox{\hyperlink{imgui__internal_8h_a73a80a8b1399060ccffa058091381d02}{Im\+Hash}} (const void $\ast$data, int data\+\_\+size, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} seed=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void $\ast$ \mbox{\hyperlink{imgui__internal_8h_a34cfdde6f955b177feb9bc6e45dc1362}{Im\+File\+Load\+To\+Memory}} (const char $\ast$filename, const char $\ast$file\+\_\+open\+\_\+mode, size\+\_\+t $\ast$out\+\_\+file\+\_\+size=N\+U\+LL, int padding\+\_\+bytes=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} F\+I\+LE $\ast$ \mbox{\hyperlink{imgui__internal_8h_a717fff2d21aa5930cb934393eab9fcaa}{Im\+File\+Open}} (const char $\ast$filename, const char $\ast$file\+\_\+open\+\_\+mode)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{imgui__internal_8h_aaa66fc7d25c00956cf6c1a4541e585a9}{Im\+Line\+Closest\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{imgui__internal_8h_a0e623415e91787735e0fb4773454f8f7}{Im\+Triangle\+Contains\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{imgui__internal_8h_aa3c3af3a40f69cc3569e1f16898a41d5}{Im\+Triangle\+Closest\+Point}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_af8d02d5d38ee7c5ca68f1927665214cc}{Im\+Triangle\+Barycentric\+Coords}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&c, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&p, float \&out\+\_\+u, float \&out\+\_\+v, float \&out\+\_\+w)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} \mbox{\hyperlink{imgui__internal_8h_a347ff0c7923bfcda19058cb0a3564b1a}{Im\+Get\+Dir\+Quadrant\+From\+Delta}} (float dx, float dy)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_ac83ff6f214b1dac86be7da67c3206c0c}{Im\+Stricmp}} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_ad3c3ef07cbc7d62ca9000c4e38bb6f88}{Im\+Strnicmp}} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t count)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_aba04ec0781116f3fa7dcd16c0bdd2886}{Im\+Strncpy}} (char $\ast$dst, const char $\ast$src, size\+\_\+t count)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} char $\ast$ \mbox{\hyperlink{imgui__internal_8h_ac2ec50c02d28df9619dc6479c492b094}{Im\+Strdup}} (const char $\ast$str)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_a8ee7e6530e5bbdc07549c1223b478956}{Im\+Strchr\+Range}} (const char $\ast$str\+\_\+begin, const char $\ast$str\+\_\+end, char c)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_ad4061c0b279f4c5fb44f070fd3704f88}{Im\+StrlenW}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$str)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_ac136a143c568dcbd0c615ad0cfa5f6ae}{Im\+Streol\+Range}} (const char $\ast$str, const char $\ast$str\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$ \mbox{\hyperlink{imgui__internal_8h_a35333fc1248c81fdd5e459c03e025dc1}{Im\+StrbolW}} (const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf\+\_\+mid\+\_\+line, const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$buf\+\_\+begin)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_a94873aeee1ce89e6205e043e37243bb9}{Im\+Stristr}} (const char $\ast$haystack, const char $\ast$haystack\+\_\+end, const char $\ast$needle, const char $\ast$needle\+\_\+end)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_a62f34433ca9defd9ae50a3b69606eb63}{Im\+Str\+Trim\+Blanks}} (char $\ast$str)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_a92825e36c348cccb1b7451263504a8ba}{Im\+Format\+String}} (char $\ast$buf, size\+\_\+t buf\+\_\+size, const char $\ast$fmt,...) \mbox{\hyperlink{imgui_8h_a1251c2f9ddac0873dbad8181bd82c9f1}{I\+M\+\_\+\+F\+M\+T\+A\+R\+GS}}(3)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_a9aa25e73aa28500257b65ec9f6f9c3d6}{Im\+Format\+StringV}} (char $\ast$buf, size\+\_\+t buf\+\_\+size, const char $\ast$fmt, va\+\_\+list args) \mbox{\hyperlink{imgui_8h_a047693beb7f899f5deab1e20202016b3}{I\+M\+\_\+\+F\+M\+T\+L\+I\+ST}}(3)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_a2d50c8ccdff17ed7fbe8540d8b42f505}{Im\+Parse\+Format\+Find\+Start}} (const char $\ast$format)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_a196f683bd9412caf0146f271f027722e}{Im\+Parse\+Format\+Find\+End}} (const char $\ast$format)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{imgui__internal_8h_a117bd1ad6a0577158ba5a9f49a8b6583}{Im\+Parse\+Format\+Trim\+Decorations}} (const char $\ast$format, char $\ast$buf, int buf\+\_\+size)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{imgui__internal_8h_a4bff16ce85d201d97552ce9017c1d79a}{Im\+Parse\+Format\+Precision}} (const char $\ast$format, int default\+\_\+value)
+\item 
+\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a408f9ddac92f8629a7e273ced5f8c3aa}{Im\+Gui\+::\+Get\+Current\+Window\+Read}} ()
+\item 
+\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a7ceba68eca2b09fb6bf1ad88037e6203}{Im\+Gui\+::\+Get\+Current\+Window}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ \mbox{\hyperlink{namespace_im_gui_abca25f22c02e73d5eb2e9c72c4557813}{Im\+Gui\+::\+Find\+Window\+By\+Name}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ade4c08e7e7ad7bbfa4835248f5f3a7c6}{Im\+Gui\+::\+Focus\+Window}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_afbd916bd6d921233e57bfdf1309dae65}{Im\+Gui\+::\+Focus\+Previous\+Window\+Ignoring\+One}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ignore\+\_\+window)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_affe95a2dc969f0d15fbd4b588c94ac1a}{Im\+Gui\+::\+Bring\+Window\+To\+Focus\+Front}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a1f7b95f36d03751c928af7b1b745e959}{Im\+Gui\+::\+Bring\+Window\+To\+Display\+Front}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a34d2363f631f1df5ab1a2a131ab98fa7}{Im\+Gui\+::\+Bring\+Window\+To\+Display\+Back}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a85d7262320ed7ce8e40863b99f8db4a3}{Im\+Gui\+::\+Update\+Window\+Parent\+And\+Root\+Links}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, \mbox{\hyperlink{imgui_8h_a0b8e067ab4f7a818828c8d89e531addc}{Im\+Gui\+Window\+Flags}} flags, \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$parent\+\_\+window)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{namespace_im_gui_ae81c20afd5ce4b663f48d05c40af93f9}{Im\+Gui\+::\+Calc\+Window\+Expected\+Size}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a2ca7721bfc85f5e98c212c2e9ad793b5}{Im\+Gui\+::\+Is\+Window\+Child\+Of}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$potential\+\_\+parent)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a6dfaa7187edcbc862be2edb2bbc987bb}{Im\+Gui\+::\+Is\+Window\+Nav\+Focusable}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_acf275b9e13b29083f8ec22adb3e76306}{Im\+Gui\+::\+Set\+Window\+ScrollX}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, float new\+\_\+scroll\+\_\+x)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_aa6ccd0096d175543a43078b3f6ecb333}{Im\+Gui\+::\+Set\+Window\+ScrollY}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, float new\+\_\+scroll\+\_\+y)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} float \mbox{\hyperlink{namespace_im_gui_a3675c33f4780febb0ea9801499a4b262}{Im\+Gui\+::\+Get\+Window\+Scroll\+MaxX}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} float \mbox{\hyperlink{namespace_im_gui_a1016c33aeb30e58a7aa4a66adceed436}{Im\+Gui\+::\+Get\+Window\+Scroll\+MaxY}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \mbox{\hyperlink{namespace_im_gui_a4189cc4ec6ac56f3b21b29165d09ff98}{Im\+Gui\+::\+Get\+Window\+Allowed\+Extent\+Rect}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a4f83c0a884e07247a00700d3dd3d01e3}{Im\+Gui\+::\+Set\+Current\+Font}} (\mbox{\hyperlink{struct_im_font}{Im\+Font}} $\ast$font)
+\item 
+\mbox{\hyperlink{struct_im_font}{Im\+Font}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a78aef54ecb95954deefaca2e850148a3}{Im\+Gui\+::\+Get\+Default\+Font}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a2e1fd6aabbb02f367fd6aee248506782}{Im\+Gui\+::\+Initialize}} (\mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}} $\ast$context)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ae8e2043e5d630169423e2d14a913afa1}{Im\+Gui\+::\+Shutdown}} (\mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}} $\ast$context)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a8156f9d63c3184d40e7e303be175b5fb}{Im\+Gui\+::\+Update\+Hovered\+Window\+And\+Capture\+Flags}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_afd03199380411a711c74893434d91258}{Im\+Gui\+::\+Start\+Mouse\+Moving\+Window}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a67808962a8f76d51e7dfc701729f1591}{Im\+Gui\+::\+Update\+Mouse\+Moving\+Window}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_aee9b660c1d6786c00fc47c71c66eb1eb}{Im\+Gui\+::\+Mark\+Ini\+Settings\+Dirty}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6b682344c53a8fc93b08b833021a49ee}{Im\+Gui\+::\+Mark\+Ini\+Settings\+Dirty}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_window_settings}{Im\+Gui\+Window\+Settings}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a2f325a08e833855b408f70a96d5fa064}{Im\+Gui\+::\+Create\+New\+Window\+Settings}} (const char $\ast$name)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_window_settings}{Im\+Gui\+Window\+Settings}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a9920e3b99972583f7fed0357b64a3fb2}{Im\+Gui\+::\+Find\+Window\+Settings}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_settings_handler}{Im\+Gui\+Settings\+Handler}} $\ast$ \mbox{\hyperlink{namespace_im_gui_ad9e15440c52f63aa96ef3b3938d566f8}{Im\+Gui\+::\+Find\+Settings\+Handler}} (const char $\ast$type\+\_\+name)
+\item 
+\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} \mbox{\hyperlink{namespace_im_gui_a102bd745dcb69ab33637e25ceeabb444}{Im\+Gui\+::\+Get\+Item\+ID}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} \mbox{\hyperlink{namespace_im_gui_a2577aabfddbb8c092a014cbdcc333204}{Im\+Gui\+::\+Get\+Active\+ID}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} \mbox{\hyperlink{namespace_im_gui_a2657245e3c14385d8caf03e06a8b76aa}{Im\+Gui\+::\+Get\+Focus\+ID}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a27b8ace13a8c421ee8405f0cbebe4ead}{Im\+Gui\+::\+Set\+Active\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a8ad578d7141486ff12b59b0c251234e6}{Im\+Gui\+::\+Set\+Focus\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a17ff60ad1e2669130ac38a04d16eb354}{Im\+Gui\+::\+Clear\+Active\+ID}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} \mbox{\hyperlink{namespace_im_gui_ad57aba42e0eb99a7302a614ddbc363c9}{Im\+Gui\+::\+Get\+Hovered\+ID}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_aba1f0c75d6f98702e6b02eb1bc30d915}{Im\+Gui\+::\+Set\+Hovered\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a85a245c78a9f7c351636bdad6e60c488}{Im\+Gui\+::\+Keep\+Alive\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a83036681a36fbee2d35b5b57a1ef72e6}{Im\+Gui\+::\+Mark\+Item\+Edited}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ac7b9a7399d9606b25278002303f545b6}{Im\+Gui\+::\+Item\+Size}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&size, float text\+\_\+offset\+\_\+y=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a97b821f022e36964b40973fe1ff4367b}{Im\+Gui\+::\+Item\+Size}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, float text\+\_\+offset\+\_\+y=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_aa6e503009550f5e42d6eb4c146090929}{Im\+Gui\+::\+Item\+Add}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} $\ast$nav\+\_\+bb=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a488b86a9f235923304186fb86ff64ffb}{Im\+Gui\+::\+Item\+Hoverable}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a8674467ae34d04bc99df1f7f98f47407}{Im\+Gui\+::\+Is\+Clipped\+Ex}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, bool clip\+\_\+even\+\_\+when\+\_\+logged)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_ab1e2f7069edbab669b56e93e30930c45}{Im\+Gui\+::\+Focusable\+Item\+Register}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, bool tab\+\_\+stop=true)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a390518fcaef04b4d399d2475d4d84df7}{Im\+Gui\+::\+Focusable\+Item\+Unregister}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{namespace_im_gui_a3c1505e785f9571ed82500692a727c5f}{Im\+Gui\+::\+Calc\+Item\+Size}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} size, float default\+\_\+x, float default\+\_\+y)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} float \mbox{\hyperlink{namespace_im_gui_a66416151e58c34cd02973976de66e0e9}{Im\+Gui\+::\+Calc\+Wrap\+Width\+For\+Pos}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&pos, float wrap\+\_\+pos\+\_\+x)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ab913605fcf6d405d102cdf56cd414a5a}{Im\+Gui\+::\+Push\+Multi\+Items\+Widths}} (int components, float width\+\_\+full=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ac7301f6378333f6d17f47823eed9e00a}{Im\+Gui\+::\+Push\+Item\+Flag}} (\mbox{\hyperlink{imgui__internal_8h_abcf9eafab4557e911b2c0d8fe2feeb38}{Im\+Gui\+Item\+Flags}} option, bool enabled)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_aa93281155e1dd23715dbd384e91edc6b}{Im\+Gui\+::\+Pop\+Item\+Flag}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6ce26d34d09c7657d7abd8e28cbb1b85}{Im\+Gui\+::\+Open\+Popup\+Ex}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a7f3f82fc44d67af554faf104b913ea55}{Im\+Gui\+::\+Close\+Popup}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_abaa7a1d867e9f6fbb8c7c20bf8344a8b}{Im\+Gui\+::\+Close\+Popup\+To\+Level}} (int remaining)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a2febc7edd279491870160d390fd6e2e5}{Im\+Gui\+::\+Close\+Popups\+Over\+Window}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ref\+\_\+window)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_ae747d8e0c6ff9c24535e9d07e9350397}{Im\+Gui\+::\+Is\+Popup\+Open}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a89da3a22300e8293257b6cfdf1b83b7a}{Im\+Gui\+::\+Begin\+Popup\+Ex}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a0b8e067ab4f7a818828c8d89e531addc}{Im\+Gui\+Window\+Flags}} extra\+\_\+flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a3189530b7795a9b99169eb95f36c516d}{Im\+Gui\+::\+Begin\+Tooltip\+Ex}} (\mbox{\hyperlink{imgui_8h_a0b8e067ab4f7a818828c8d89e531addc}{Im\+Gui\+Window\+Flags}} extra\+\_\+flags, bool override\+\_\+previous\+\_\+tooltip=true)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$ \mbox{\hyperlink{namespace_im_gui_a780ad366ee59b123675d598136011970}{Im\+Gui\+::\+Get\+Front\+Most\+Popup\+Modal}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{namespace_im_gui_a310ff87cbe678e2c632bf1f5577a7fbd}{Im\+Gui\+::\+Find\+Best\+Window\+Pos\+For\+Popup}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{namespace_im_gui_a4159d978951d11bb8be459911ae58db2}{Im\+Gui\+::\+Find\+Best\+Window\+Pos\+For\+Popup\+Ex}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&ref\+\_\+pos, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&size, \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} $\ast$last\+\_\+dir, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&r\+\_\+outer, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&r\+\_\+avoid, \mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8}{Im\+Gui\+Popup\+Position\+Policy}} policy=\mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8ab8a9815cfc6ed3f721aa8e75d960dbdf}{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ae46a79d836c4b223c7030ea432e3ec15}{Im\+Gui\+::\+Nav\+Init\+Window}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, bool force\+\_\+reinit)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a3fab98556d11690efd4f7f2fde94968e}{Im\+Gui\+::\+Nav\+Move\+Request\+But\+No\+Result\+Yet}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a43326bb080d9fa80327ed81d864d8b8d}{Im\+Gui\+::\+Nav\+Move\+Request\+Cancel}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a8a96ace94b2000ada6f21d7459d51920}{Im\+Gui\+::\+Nav\+Move\+Request\+Forward}} (\mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} move\+\_\+dir, \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} clip\+\_\+dir, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb\+\_\+rel, \mbox{\hyperlink{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}{Im\+Gui\+Nav\+Move\+Flags}} move\+\_\+flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a95a9a1a5411cccb918fc29a0b0d3f953}{Im\+Gui\+::\+Nav\+Move\+Request\+Try\+Wrapping}} (\mbox{\hyperlink{struct_im_gui_window}{Im\+Gui\+Window}} $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, \mbox{\hyperlink{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}{Im\+Gui\+Nav\+Move\+Flags}} move\+\_\+flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} float \mbox{\hyperlink{namespace_im_gui_a468ab885f9d3bd81cc7e8c3608c05193}{Im\+Gui\+::\+Get\+Nav\+Input\+Amount}} (\mbox{\hyperlink{imgui_8h_a8334d2b3901efd9820b64e2413967469}{Im\+Gui\+Nav\+Input}} n, \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}} mode)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{namespace_im_gui_a7b84c4630dad4ef5d07b366d36c39476}{Im\+Gui\+::\+Get\+Nav\+Input\+Amount2d}} (\mbox{\hyperlink{imgui__internal_8h_a83858661b68556d7da82de40d020e152}{Im\+Gui\+Nav\+Dir\+Source\+Flags}} dir\+\_\+sources, \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}} mode, float slow\+\_\+factor=0.\+0f, float fast\+\_\+factor=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int \mbox{\hyperlink{namespace_im_gui_ad3af0fc327467a44116d7d04018b9124}{Im\+Gui\+::\+Calc\+Typematic\+Pressed\+Repeat\+Amount}} (float t, float t\+\_\+prev, float repeat\+\_\+delay, float repeat\+\_\+rate)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ac56279417745ae5680a7ae5b00a2a60f}{Im\+Gui\+::\+Activate\+Item}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_acb36abbe2ac25534eed9fc73f8c6adef}{Im\+Gui\+::\+Set\+Nav\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, int nav\+\_\+layer)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a91892871e19fba553a0f81e2cc49b0d3}{Im\+Gui\+::\+Set\+Nav\+I\+D\+With\+Rect\+Rel}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, int nav\+\_\+layer, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&rect\+\_\+rel)
+\item 
+bool \mbox{\hyperlink{namespace_im_gui_aa4c4806c81aef3abe125b209f19d4a2b}{Im\+Gui\+::\+Is\+Key\+Pressed\+Map}} (\mbox{\hyperlink{imgui_8h_a1671ca739cf1384a8cc268758f27b4e7}{Im\+Gui\+Key}} key, bool repeat=true)
+\item 
+bool \mbox{\hyperlink{namespace_im_gui_a6e17ebbbba6b83702bb1059aee98e420}{Im\+Gui\+::\+Is\+Nav\+Input\+Down}} (\mbox{\hyperlink{imgui_8h_a8334d2b3901efd9820b64e2413967469}{Im\+Gui\+Nav\+Input}} n)
+\item 
+bool \mbox{\hyperlink{namespace_im_gui_a1ad1c0c31f7299147da51093baa1663e}{Im\+Gui\+::\+Is\+Nav\+Input\+Pressed}} (\mbox{\hyperlink{imgui_8h_a8334d2b3901efd9820b64e2413967469}{Im\+Gui\+Nav\+Input}} n, \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}} mode)
+\item 
+bool \mbox{\hyperlink{namespace_im_gui_a9e235473624d8c3c1539add6df8bf032}{Im\+Gui\+::\+Is\+Nav\+Input\+Pressed\+Any\+Of\+Two}} (\mbox{\hyperlink{imgui_8h_a8334d2b3901efd9820b64e2413967469}{Im\+Gui\+Nav\+Input}} n1, \mbox{\hyperlink{imgui_8h_a8334d2b3901efd9820b64e2413967469}{Im\+Gui\+Nav\+Input}} n2, \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}} mode)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a929a420d3af29051a140d0f36addbcd2}{Im\+Gui\+::\+Begin\+Drag\+Drop\+Target\+Custom}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_adae8f94649956a2a717c00dbf81a5df9}{Im\+Gui\+::\+Clear\+Drag\+Drop}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a673042a1ed3eeb3c19781faed83ad4a8}{Im\+Gui\+::\+Is\+Drag\+Drop\+Payload\+Being\+Accepted}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6992289cbdb087a690403e48340bfb23}{Im\+Gui\+::\+Begin\+Columns}} (const char $\ast$str\+\_\+id, int count, \mbox{\hyperlink{imgui_8h_a0edb3053546fcf6c5f7dcb7531c3a17a}{Im\+Gui\+Columns\+Flags}} flags=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_af93bed3bce5475fe4d525d744f16aa20}{Im\+Gui\+::\+End\+Columns}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_abb20c9f8365cab62d9394ebb1dd5d769}{Im\+Gui\+::\+Push\+Column\+Clip\+Rect}} (int column\+\_\+index=-\/1)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a9971ce57f2a288ac3a12df886c5550d1}{Im\+Gui\+::\+Render\+Text}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, const char $\ast$text, const char $\ast$text\+\_\+end=N\+U\+LL, bool hide\+\_\+text\+\_\+after\+\_\+hash=true)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_aa483b40f6899e1b289b4bf6c2673d1d2}{Im\+Gui\+::\+Render\+Text\+Wrapped}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, const char $\ast$text, const char $\ast$text\+\_\+end, float wrap\+\_\+width)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ab362eafae794c7364a6b96ea06f38eb9}{Im\+Gui\+::\+Render\+Text\+Clipped}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&pos\+\_\+min, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&pos\+\_\+max, const char $\ast$text, const char $\ast$text\+\_\+end, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} $\ast$text\+\_\+size\+\_\+if\+\_\+known, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&align=\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}}(0, 0), const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} $\ast$clip\+\_\+rect=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a621ba649568ede3939d4f10d83b86d04}{Im\+Gui\+::\+Render\+Frame}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+min, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+max, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} fill\+\_\+col, bool border=true, float rounding=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_adc76239c2006e66f8dab7638529a763d}{Im\+Gui\+::\+Render\+Frame\+Border}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+min, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+max, float rounding=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a4715686ee0c613e8518c0f5e92c358ce}{Im\+Gui\+::\+Render\+Color\+Rect\+With\+Alpha\+Checkerboard}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+min, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} p\+\_\+max, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} fill\+\_\+col, float grid\+\_\+step, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} grid\+\_\+off, float rounding=0.\+0f, int rounding\+\_\+corners\+\_\+flags=$\sim$0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a23383180b2870fa1326f5c5394fc03d7}{Im\+Gui\+::\+Render\+Arrow}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} dir, float scale=1.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a2d0e4160081b3953fc8f88e2d8e8da15}{Im\+Gui\+::\+Render\+Bullet}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6adfc430445ed42a65556ffb0d58a8b8}{Im\+Gui\+::\+Render\+Check\+Mark}} (\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col, float sz)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_afc84af0481214603f058b6ee31d20855}{Im\+Gui\+::\+Render\+Nav\+Highlight}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui__internal_8h_a8c2855ba575756109c607c10697bcccd}{Im\+Gui\+Nav\+Highlight\+Flags}} flags=\mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26ae54860a6f56817772ef7f1f42ca3c1bd}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{namespace_im_gui_a7671e1dbc803a31b06081b52a771d83f}{Im\+Gui\+::\+Find\+Rendered\+Text\+End}} (const char $\ast$text, const char $\ast$text\+\_\+end=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a7a0d62e33f2236ec2f789e24ca0fb56f}{Im\+Gui\+::\+Log\+Rendered\+Text}} (const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} $\ast$ref\+\_\+pos, const char $\ast$text, const char $\ast$text\+\_\+end=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a01dc52b1969c6b3ae52fdd3228b377ad}{Im\+Gui\+::\+Render\+Mouse\+Cursor}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, float scale, \mbox{\hyperlink{imgui_8h_a9223d6c82bb5d12c2eab5f829ca520ef}{Im\+Gui\+Mouse\+Cursor}} mouse\+\_\+cursor=\mbox{\hyperlink{imgui_8h_a2eb1181cc1d7872a061df8731141dde9ad0616df87319845990941ce7c9deb197}{Im\+Gui\+Mouse\+Cursor\+\_\+\+Arrow}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_af1ea568bffa58ec26100de3bf60af5f2}{Im\+Gui\+::\+Render\+Arrow\+Pointing\+At}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} half\+\_\+sz, \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} direction, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_af311762331bda4508b25e05f6afc7f45}{Im\+Gui\+::\+Render\+Rect\+Filled\+RangeH}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&rect, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col, float x\+\_\+start\+\_\+norm, float x\+\_\+end\+\_\+norm, float rounding)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_ae479220c66b039874c6e4c9e9b22849f}{Im\+Gui\+::\+Button\+Ex}} (const char $\ast$label, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&size\+\_\+arg=\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}}(0, 0), \mbox{\hyperlink{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}{Im\+Gui\+Button\+Flags}} flags=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a5e8e4df6418dcda3c4c5d15ecdf7d968}{Im\+Gui\+::\+Close\+Button}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&pos, float \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}})
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_acd027458d7a062d3d3073339454624e3}{Im\+Gui\+::\+Collapse\+Button}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&pos)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_af8efa3144c85104fbb0aa2e7bc6a6069}{Im\+Gui\+::\+Arrow\+Button\+Ex}} (const char $\ast$str\+\_\+id, \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} dir, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} size\+\_\+arg, \mbox{\hyperlink{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}{Im\+Gui\+Button\+Flags}} flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_abf1d7a83c5f0a555bbe7f831b0319c8a}{Im\+Gui\+::\+Scrollbar}} (\mbox{\hyperlink{imgui__internal_8h_a86d7bb2ee8297d38b131d8ea7e6430c6}{Im\+Gui\+Layout\+Type}} direction)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_ae60f7b8ece8808c477796e6594c8d796}{Im\+Gui\+::\+Vertical\+Separator}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a65a4f18b1bc8ce0f351687922089f374}{Im\+Gui\+::\+Button\+Behavior}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, bool $\ast$out\+\_\+hovered, bool $\ast$out\+\_\+held, \mbox{\hyperlink{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}{Im\+Gui\+Button\+Flags}} flags=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_aa92640ed1ce4a58db1976487d6c4dea2}{Im\+Gui\+::\+Drag\+Behavior}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, void $\ast$v, float v\+\_\+speed, const void $\ast$v\+\_\+min, const void $\ast$v\+\_\+max, const char $\ast$format, float power)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a4e0edc9434473ac6590d8d8af2291f24}{Im\+Gui\+::\+Slider\+Behavior}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, void $\ast$v, const void $\ast$v\+\_\+min, const void $\ast$v\+\_\+max, const char $\ast$format, float power, \mbox{\hyperlink{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}{Im\+Gui\+Slider\+Flags}} flags, \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} $\ast$out\+\_\+grab\+\_\+bb)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a9d222e1384c6c56ff61b61cfa3016855}{Im\+Gui\+::\+Splitter\+Behavior}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483}{Im\+Gui\+Axis}} axis, float $\ast$size1, float $\ast$size2, float min\+\_\+size1, float min\+\_\+size2, float hover\+\_\+extend=0.\+0f, float hover\+\_\+visibility\+\_\+delay=0.\+0f)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a918eabf70d288e93b2519ee1eac2c0b4}{Im\+Gui\+::\+Tree\+Node\+Behavior}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a0588fdd10c59b49a0159484fe9ec4564}{Im\+Gui\+Tree\+Node\+Flags}} flags, const char $\ast$label, const char $\ast$label\+\_\+end=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a22cc50485aad6da8a3a4e156b500ed4a}{Im\+Gui\+::\+Tree\+Node\+Behavior\+Is\+Open}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a0588fdd10c59b49a0159484fe9ec4564}{Im\+Gui\+Tree\+Node\+Flags}} flags=0)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_afddcddce9f2801769e4c79ef769ab600}{Im\+Gui\+::\+Tree\+Push\+Raw\+ID}} (\mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id)
+\item 
+{\footnotesize template$<$typename T , typename S\+I\+G\+N\+E\+D\+\_\+T , typename F\+L\+O\+A\+T\+\_\+T $>$ }\\\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_a36170175bcdad063eff30717dae91108}{Im\+Gui\+::\+Drag\+BehaviorT}} (\mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, T $\ast$v, float v\+\_\+speed, const T v\+\_\+min, const T v\+\_\+max, const char $\ast$format, float power)
+\item 
+{\footnotesize template$<$typename T , typename S\+I\+G\+N\+E\+D\+\_\+T , typename F\+L\+O\+A\+T\+\_\+T $>$ }\\\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_ab9dee3b5cb6249c0929f90ed0647bd8b}{Im\+Gui\+::\+Slider\+BehaviorT}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, \mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, T $\ast$v, const T v\+\_\+min, const T v\+\_\+max, const char $\ast$format, float power, \mbox{\hyperlink{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}{Im\+Gui\+Slider\+Flags}} flags, \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} $\ast$out\+\_\+grab\+\_\+bb)
+\item 
+{\footnotesize template$<$typename T , typename F\+L\+O\+A\+T\+\_\+T $>$ }\\\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} float \mbox{\hyperlink{namespace_im_gui_adbcf6e29a3059e11aebe37d89cc77991}{Im\+Gui\+::\+Slider\+Calc\+Ratio\+From\+ValueT}} (\mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, T v, T v\+\_\+min, T v\+\_\+max, float power, float linear\+\_\+zero\+\_\+pos)
+\item 
+{\footnotesize template$<$typename T , typename S\+I\+G\+N\+E\+D\+\_\+T $>$ }\\\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} T \mbox{\hyperlink{namespace_im_gui_ad10f0dd923775bac3903666a2751f08a}{Im\+Gui\+::\+Round\+Scalar\+With\+FormatT}} (const char $\ast$format, \mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, T v)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_acc8cda7bb7c80b9dd36bc394723d1606}{Im\+Gui\+::\+Input\+Text\+Ex}} (const char $\ast$label, char $\ast$buf, int buf\+\_\+size, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&size\+\_\+arg, \mbox{\hyperlink{imgui_8h_a7d2c6153a6b9b5d3178ce82434ac9fb8}{Im\+Gui\+Input\+Text\+Flags}} flags, \mbox{\hyperlink{imgui_8h_a65fd2b568a62c9aa2a28a8a13eb65ad7}{Im\+Gui\+Input\+Text\+Callback}} callback=N\+U\+LL, void $\ast$user\+\_\+data=N\+U\+LL)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{namespace_im_gui_ad724ab94c8aff2440c6a1b58ae7b2334}{Im\+Gui\+::\+Input\+Scalar\+As\+Widget\+Replacement}} (const \mbox{\hyperlink{struct_im_rect}{Im\+Rect}} \&bb, \mbox{\hyperlink{imgui_8h_a1785c9b6f4e16406764a85f32582236f}{Im\+Gui\+ID}} id, const char $\ast$label, \mbox{\hyperlink{imgui_8h_a4cfa8697a3d76722fff83eb18922e9d5}{Im\+Gui\+Data\+Type}} data\+\_\+type, void $\ast$data\+\_\+ptr, const char $\ast$format)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_afad90b366b6471e3b13175c0ebeb26c8}{Im\+Gui\+::\+Color\+Tooltip}} (const char $\ast$text, const float $\ast$col, \mbox{\hyperlink{imgui_8h_a6b2d5e95adc38f22c021252189f669c6}{Im\+Gui\+Color\+Edit\+Flags}} flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6bfb117816d669f8704e5d0c0c0795fe}{Im\+Gui\+::\+Color\+Edit\+Options\+Popup}} (const float $\ast$col, \mbox{\hyperlink{imgui_8h_a6b2d5e95adc38f22c021252189f669c6}{Im\+Gui\+Color\+Edit\+Flags}} flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a6d112eeb6d8ffdebbc9d9a8c66babbee}{Im\+Gui\+::\+Color\+Picker\+Options\+Popup}} (const float $\ast$ref\+\_\+col, \mbox{\hyperlink{imgui_8h_a6b2d5e95adc38f22c021252189f669c6}{Im\+Gui\+Color\+Edit\+Flags}} flags)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a0a18ae07b294d5667f95a5c003d2efb6}{Im\+Gui\+::\+Plot\+Ex}} (\mbox{\hyperlink{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728}{Im\+Gui\+Plot\+Type}} plot\+\_\+type, const char $\ast$label, float($\ast$values\+\_\+getter)(void $\ast$data, int idx), void $\ast$data, int values\+\_\+count, int values\+\_\+offset, const char $\ast$overlay\+\_\+text, float scale\+\_\+min, float scale\+\_\+max, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} graph\+\_\+size)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_acd137f6ee31f657e539eaa7e62f4f28a}{Im\+Gui\+::\+Shade\+Verts\+Linear\+Color\+Gradient\+Keep\+Alpha}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, int vert\+\_\+start\+\_\+idx, int vert\+\_\+end\+\_\+idx, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} gradient\+\_\+p0, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} gradient\+\_\+p1, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col0, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col1)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{namespace_im_gui_a676637659ec4291b07f386454840b58a}{Im\+Gui\+::\+Shade\+Verts\+Linear\+UV}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, int vert\+\_\+start\+\_\+idx, int vert\+\_\+end\+\_\+idx, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&b, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&uv\+\_\+a, const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&uv\+\_\+b, bool clamp)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool \mbox{\hyperlink{imgui__internal_8h_a434a381598e3cdcefeff89f63803588a}{Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype}} (\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$atlas)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_abd2f1ae504d72fa21c99956ca707767f}{Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects}} (\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$atlas)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_a56160f7248aed6a767f706848d9b9c55}{Im\+Font\+Atlas\+Build\+Setup\+Font}} (\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$atlas, \mbox{\hyperlink{struct_im_font}{Im\+Font}} $\ast$font, \mbox{\hyperlink{struct_im_font_config}{Im\+Font\+Config}} $\ast$font\+\_\+config, float ascent, float descent)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_a229ee0ada86f9daf3e23ad313dfeb586}{Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects}} (\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$atlas, void $\ast$spc)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_af44667fe1e74c3ebace8aa35ece9d4ae}{Im\+Font\+Atlas\+Build\+Finish}} (\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$atlas)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_a3f2f38197a3ea2a246fd75d50878647f}{Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table}} (unsigned char out\+\_\+table\mbox{[}256\mbox{]}, float in\+\_\+multiply\+\_\+factor)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{imgui__internal_8h_aff7910be269c5759331ffc45fbe0c98f}{Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8}} (const unsigned char table\mbox{[}256\mbox{]}, unsigned char $\ast$pixels, int x, int y, int w, int h, int stride)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}} $\ast$ \mbox{\hyperlink{imgui__internal_8h_a93caa8df61dac3cb1ab1271a755442a3}{G\+Im\+Gui}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a044d12ff2cdc7af4a6de58d63cd96839}\label{imgui__internal_8h_a044d12ff2cdc7af4a6de58d63cd96839}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT@{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT}}
+\index{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT@{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT}{IM\_F32\_TO\_INT8\_SAT}}
+{\footnotesize\ttfamily \#define I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+S\+AT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+V\+AL }\end{DoxyParamCaption})~((int)(Im\+Saturate(\+\_\+\+V\+AL) $\ast$ 255.\+0f + 0.\+5f))}
+
+\mbox{\Hypertarget{imgui__internal_8h_aac14064fede4cb5a2263206baea7ffb1}\label{imgui__internal_8h_aac14064fede4cb5a2263206baea7ffb1}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND@{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND}}
+\index{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND@{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND}{IM\_F32\_TO\_INT8\_UNBOUND}}
+{\footnotesize\ttfamily \#define I\+M\+\_\+\+F32\+\_\+\+T\+O\+\_\+\+I\+N\+T8\+\_\+\+U\+N\+B\+O\+U\+ND(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+V\+AL }\end{DoxyParamCaption})~((int)((\+\_\+\+V\+AL) $\ast$ 255.\+0f + ((\+\_\+\+V\+A\+L)$>$=0 ? 0.\+5f \+: -\/0.\+5f)))}
+
+\mbox{\Hypertarget{imgui__internal_8h_a1bfa04d9a2431433f9668c814fd4c3d5}\label{imgui__internal_8h_a1bfa04d9a2431433f9668c814fd4c3d5}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+\_\+\+N\+E\+W\+L\+I\+NE@{I\+M\+\_\+\+N\+E\+W\+L\+I\+NE}}
+\index{I\+M\+\_\+\+N\+E\+W\+L\+I\+NE@{I\+M\+\_\+\+N\+E\+W\+L\+I\+NE}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+\_\+\+N\+E\+W\+L\+I\+NE}{IM\_NEWLINE}}
+{\footnotesize\ttfamily \#define I\+M\+\_\+\+N\+E\+W\+L\+I\+NE~\char`\"{}\textbackslash{}n\char`\"{}}
+
+\mbox{\Hypertarget{imgui__internal_8h_ab8de43e3f17a4f0081fa6c2def6af1c1}\label{imgui__internal_8h_ab8de43e3f17a4f0081fa6c2def6af1c1}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+\_\+\+PI@{I\+M\+\_\+\+PI}}
+\index{I\+M\+\_\+\+PI@{I\+M\+\_\+\+PI}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+\_\+\+PI}{IM\_PI}}
+{\footnotesize\ttfamily \#define I\+M\+\_\+\+PI~3.\+14159265358979323846f}
+
+\mbox{\Hypertarget{imgui__internal_8h_ab48aaa96aa99bc25d19384ec3492a6d3}\label{imgui__internal_8h_ab48aaa96aa99bc25d19384ec3492a6d3}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT@{I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}}
+\index{I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT@{I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT}{IM\_STATIC\_ASSERT}}
+{\footnotesize\ttfamily \#define I\+M\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+C\+O\+ND }\end{DoxyParamCaption})~typedef char static\+\_\+assertion\+\_\+\#\#\+\_\+\+\_\+line\+\_\+\+\_\+\mbox{[}(\+\_\+\+C\+O\+ND)?1\+:-\/1\mbox{]}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a3a504542c4837c193bd5e54911123fe1}\label{imgui__internal_8h_a3a504542c4837c193bd5e54911123fe1}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL@{I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL}}
+\index{I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL@{I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL}{IMGUI\_CDECL}}
+{\footnotesize\ttfamily \#define I\+M\+G\+U\+I\+\_\+\+C\+D\+E\+CL}
+
+\mbox{\Hypertarget{imgui__internal_8h_a65c3e94a04354397cba5ded06fbe3737}\label{imgui__internal_8h_a65c3e94a04354397cba5ded06fbe3737}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Qsort@{Im\+Qsort}}
+\index{Im\+Qsort@{Im\+Qsort}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Qsort}{ImQsort}}
+{\footnotesize\ttfamily \#define Im\+Qsort~qsort}
+
+\mbox{\Hypertarget{imgui__internal_8h_a6e64031a061922e3a48d88fd8623f4c3}\label{imgui__internal_8h_a6e64031a061922e3a48d88fd8623f4c3}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}{STB\_TEXTEDIT\_CHARTYPE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE~\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_ab109eb512ec8d9ad1973e58b367fec22}\label{imgui__internal_8h_ab109eb512ec8d9ad1973e58b367fec22}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE}{STB\_TEXTEDIT\_GETWIDTH\_NEWLINE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+G\+E\+T\+W\+I\+D\+T\+H\+\_\+\+N\+E\+W\+L\+I\+NE~-\/1.\+0f}
+
+\mbox{\Hypertarget{imgui__internal_8h_ab58b961887715e3f06f0a60a773c6de1}\label{imgui__internal_8h_ab58b961887715e3f06f0a60a773c6de1}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG}{STB\_TEXTEDIT\_STRING}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+S\+T\+R\+I\+NG~\mbox{\hyperlink{struct_im_gui_input_text_state}{Im\+Gui\+Input\+Text\+State}}}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}\label{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags@{Im\+Gui\+Button\+Flags}}
+\index{Im\+Gui\+Button\+Flags@{Im\+Gui\+Button\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Button\+Flags}{ImGuiButtonFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a990fae518aa1d95f571ee40989de4c22}{Im\+Gui\+Button\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_abcf9eafab4557e911b2c0d8fe2feeb38}\label{imgui__internal_8h_abcf9eafab4557e911b2c0d8fe2feeb38}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags@{Im\+Gui\+Item\+Flags}}
+\index{Im\+Gui\+Item\+Flags@{Im\+Gui\+Item\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Item\+Flags}{ImGuiItemFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_abcf9eafab4557e911b2c0d8fe2feeb38}{Im\+Gui\+Item\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a86b8f9e2fd4084fb2112f003070b53fa}\label{imgui__internal_8h_a86b8f9e2fd4084fb2112f003070b53fa}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags@{Im\+Gui\+Item\+Status\+Flags}}
+\index{Im\+Gui\+Item\+Status\+Flags@{Im\+Gui\+Item\+Status\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Item\+Status\+Flags}{ImGuiItemStatusFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a86b8f9e2fd4084fb2112f003070b53fa}{Im\+Gui\+Item\+Status\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a86d7bb2ee8297d38b131d8ea7e6430c6}\label{imgui__internal_8h_a86d7bb2ee8297d38b131d8ea7e6430c6}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Layout\+Type@{Im\+Gui\+Layout\+Type}}
+\index{Im\+Gui\+Layout\+Type@{Im\+Gui\+Layout\+Type}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Layout\+Type}{ImGuiLayoutType}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a86d7bb2ee8297d38b131d8ea7e6430c6}{Im\+Gui\+Layout\+Type}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a83858661b68556d7da82de40d020e152}\label{imgui__internal_8h_a83858661b68556d7da82de40d020e152}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags@{Im\+Gui\+Nav\+Dir\+Source\+Flags}}
+\index{Im\+Gui\+Nav\+Dir\+Source\+Flags@{Im\+Gui\+Nav\+Dir\+Source\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Dir\+Source\+Flags}{ImGuiNavDirSourceFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a83858661b68556d7da82de40d020e152}{Im\+Gui\+Nav\+Dir\+Source\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a8c2855ba575756109c607c10697bcccd}\label{imgui__internal_8h_a8c2855ba575756109c607c10697bcccd}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags@{Im\+Gui\+Nav\+Highlight\+Flags}}
+\index{Im\+Gui\+Nav\+Highlight\+Flags@{Im\+Gui\+Nav\+Highlight\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Highlight\+Flags}{ImGuiNavHighlightFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a8c2855ba575756109c607c10697bcccd}{Im\+Gui\+Nav\+Highlight\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}\label{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags@{Im\+Gui\+Nav\+Move\+Flags}}
+\index{Im\+Gui\+Nav\+Move\+Flags@{Im\+Gui\+Nav\+Move\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Move\+Flags}{ImGuiNavMoveFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_aff7a453b89555bb074f2fe46a159ac25}{Im\+Gui\+Nav\+Move\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a5bfe5a88609ebcdf61cfee4e2fabf9a8}\label{imgui__internal_8h_a5bfe5a88609ebcdf61cfee4e2fabf9a8}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Separator\+Flags@{Im\+Gui\+Separator\+Flags}}
+\index{Im\+Gui\+Separator\+Flags@{Im\+Gui\+Separator\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Separator\+Flags}{ImGuiSeparatorFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a5bfe5a88609ebcdf61cfee4e2fabf9a8}{Im\+Gui\+Separator\+Flags}}}
+
+\mbox{\Hypertarget{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}\label{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Slider\+Flags@{Im\+Gui\+Slider\+Flags}}
+\index{Im\+Gui\+Slider\+Flags@{Im\+Gui\+Slider\+Flags}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Slider\+Flags}{ImGuiSliderFlags}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{imgui__internal_8h_a50cc3e3e4beb155e2186f8c1dc057e18}{Im\+Gui\+Slider\+Flags}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483}\label{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Axis@{Im\+Gui\+Axis}}
+\index{Im\+Gui\+Axis@{Im\+Gui\+Axis}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Axis}{ImGuiAxis}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483}{Im\+Gui\+Axis}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Axis\+\_\+\+None@{Im\+Gui\+Axis\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Axis\+\_\+\+None@{Im\+Gui\+Axis\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a03c230bed95e0bedfe4ae746835848a8}\label{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a03c230bed95e0bedfe4ae746835848a8}} 
+Im\+Gui\+Axis\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Axis\+\_\+X@{Im\+Gui\+Axis\+\_\+X}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Axis\+\_\+X@{Im\+Gui\+Axis\+\_\+X}}}\mbox{\Hypertarget{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a56b8304279c0c828698ae893b3687354}\label{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483a56b8304279c0c828698ae893b3687354}} 
+Im\+Gui\+Axis\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Axis\+\_\+Y@{Im\+Gui\+Axis\+\_\+Y}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Axis\+\_\+Y@{Im\+Gui\+Axis\+\_\+Y}}}\mbox{\Hypertarget{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483aea4d0df122c8f789939a73ff4b213a72}\label{imgui__internal_8h_a468e54d5ed387abfbf0d1fc1e33ab483aea4d0df122c8f789939a73ff4b213a72}} 
+Im\+Gui\+Axis\+\_\+Y&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008b}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008b}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+@{Im\+Gui\+Button\+Flags\+\_\+}}
+\index{Im\+Gui\+Button\+Flags\+\_\+@{Im\+Gui\+Button\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Button\+Flags\+\_\+}{ImGuiButtonFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008b}{Im\+Gui\+Button\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+None@{Im\+Gui\+Button\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+None@{Im\+Gui\+Button\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baeb23ad59b1f7a681574c86ff55a030dc}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baeb23ad59b1f7a681574c86ff55a030dc}} 
+Im\+Gui\+Button\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Repeat@{Im\+Gui\+Button\+Flags\+\_\+\+Repeat}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Repeat@{Im\+Gui\+Button\+Flags\+\_\+\+Repeat}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba61bec0e6cea16f5041e0d362419dc3c8}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba61bec0e6cea16f5041e0d362419dc3c8}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Repeat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba78a6a688669d26385c0e6757264e5e4a}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba78a6a688669d26385c0e6757264e5e4a}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click\+Release&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bace7632232484c218d34933d0eaedd67d}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bace7632232484c218d34933d0eaedd67d}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Click&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baa0492b4253b162233f95158b251c1bbc}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baa0492b4253b162233f95158b251c1bbc}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Release&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba303d3f0c9d93bd42ca8953ec49c21441}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba303d3f0c9d93bd42ca8953ec49c21441}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Double\+Click&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children@{Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children@{Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba0aca23522a6dc5d2e61da31bf328760b}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba0aca23522a6dc5d2e61da31bf328760b}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Flatten\+Children&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap@{Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap@{Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac9daa551a7112a723aacd8151d836f33}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac9daa551a7112a723aacd8151d836f33}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Allow\+Item\+Overlap&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups@{Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups@{Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baee99adc9d4d07682346e2a23079e5a8f}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baee99adc9d4d07682346e2a23079e5a8f}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Dont\+Close\+Popups&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Disabled@{Im\+Gui\+Button\+Flags\+\_\+\+Disabled}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Disabled@{Im\+Gui\+Button\+Flags\+\_\+\+Disabled}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac63ac08f6b0bee7563a6be6936abb7ed}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008bac63ac08f6b0bee7563a6be6936abb7ed}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Disabled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line@{Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line@{Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba655cb0c3df1c9d3a7ed732d4d37384ef}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba655cb0c3df1c9d3a7ed732d4d37384ef}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Align\+Text\+Base\+Line&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba23b895e50fa2347537040e69a062f75d}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba23b895e50fa2347537040e69a062f75d}} 
+Im\+Gui\+Button\+Flags\+\_\+\+No\+Key\+Modifiers&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baf0c56b7963c87ae0c25ffa3f175f30e4}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008baf0c56b7963c87ae0c25ffa3f175f30e4}} 
+Im\+Gui\+Button\+Flags\+\_\+\+No\+Holding\+Active\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold@{Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba824c84e57100b4aa8621dc3ab2a4be8f}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba824c84e57100b4aa8621dc3ab2a4be8f}} 
+Im\+Gui\+Button\+Flags\+\_\+\+Pressed\+On\+Drag\+Drop\+Hold&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus@{Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus}}}\mbox{\Hypertarget{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba7da3d020255bec5e67f944e6f12543a5}\label{imgui__internal_8h_a3bd3172cebf104d1063a28a88fb1008ba7da3d020255bec5e67f944e6f12543a5}} 
+Im\+Gui\+Button\+Flags\+\_\+\+No\+Nav\+Focus&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8da}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8da}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+@{Im\+Gui\+Columns\+Flags\+\_\+}}
+\index{Im\+Gui\+Columns\+Flags\+\_\+@{Im\+Gui\+Columns\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Columns\+Flags\+\_\+}{ImGuiColumnsFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8da}{Im\+Gui\+Columns\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+None@{Im\+Gui\+Columns\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+None@{Im\+Gui\+Columns\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa6b2cf5f4ec329ea36ca98c1c8d547761}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa6b2cf5f4ec329ea36ca98c1c8d547761}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daaeafe73f0f7664ce44e5c08277803228d}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daaeafe73f0f7664ce44e5c08277803228d}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+No\+Border&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa5297643b959c2e5c542bf8ef36cff686}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa5297643b959c2e5c542bf8ef36cff686}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+No\+Resize&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daae32cb38aa0d09e87a951a0ce9b9a4553}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daae32cb38aa0d09e87a951a0ce9b9a4553}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+No\+Preserve\+Widths&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window@{Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa816318249c9a40a068953849275ad4aa}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daa816318249c9a40a068953849275ad4aa}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+No\+Force\+Within\+Window&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size@{Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size@{Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size}}}\mbox{\Hypertarget{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daad86ef11ecd7b2dc932c98cb7ab58bf78}\label{imgui__internal_8h_a99f1582181b8acf1035adda3bad9f8daad86ef11ecd7b2dc932c98cb7ab58bf78}} 
+Im\+Gui\+Columns\+Flags\+\_\+\+Grow\+Parent\+Contents\+Size&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode@{Im\+Gui\+Input\+Read\+Mode}}
+\index{Im\+Gui\+Input\+Read\+Mode@{Im\+Gui\+Input\+Read\+Mode}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Input\+Read\+Mode}{ImGuiInputReadMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a595aad51728e2685daff714edb3d05fd}{Im\+Gui\+Input\+Read\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda7de346eb74709d862c1a354c66fc81db}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda7de346eb74709d862c1a354c66fc81db}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Down&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda62b2902c4138e255df31f2d7010e311b}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda62b2902c4138e255df31f2d7010e311b}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Pressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda76247163c506317acb6aab2fb70dda90}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda76247163c506317acb6aab2fb70dda90}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Released&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fdae4ebadc9a73b269a8fa4b50a32662e69}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fdae4ebadc9a73b269a8fa4b50a32662e69}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda18bfb6910777eb7d00185d46c47f0ad2}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda18bfb6910777eb7d00185d46c47f0ad2}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Slow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast@{Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast}}}\mbox{\Hypertarget{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda13765db913d3abe27a0ba7fb2c5b70aa}\label{imgui__internal_8h_a595aad51728e2685daff714edb3d05fda13765db913d3abe27a0ba7fb2c5b70aa}} 
+Im\+Gui\+Input\+Read\+Mode\+\_\+\+Repeat\+Fast&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source@{Im\+Gui\+Input\+Source}}
+\index{Im\+Gui\+Input\+Source@{Im\+Gui\+Input\+Source}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Input\+Source}{ImGuiInputSource}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78}{Im\+Gui\+Input\+Source}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+None@{Im\+Gui\+Input\+Source\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+None@{Im\+Gui\+Input\+Source\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aef18047c6e32382b1644a98fa68a2622}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aef18047c6e32382b1644a98fa68a2622}} 
+Im\+Gui\+Input\+Source\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+Mouse@{Im\+Gui\+Input\+Source\+\_\+\+Mouse}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+Mouse@{Im\+Gui\+Input\+Source\+\_\+\+Mouse}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a004e3cd161dccc08c9dd2814c552d305}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a004e3cd161dccc08c9dd2814c552d305}} 
+Im\+Gui\+Input\+Source\+\_\+\+Mouse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+Nav@{Im\+Gui\+Input\+Source\+\_\+\+Nav}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+Nav@{Im\+Gui\+Input\+Source\+\_\+\+Nav}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78ab31b60490e3ba3e2fae77988936062e7}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78ab31b60490e3ba3e2fae77988936062e7}} 
+Im\+Gui\+Input\+Source\+\_\+\+Nav&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard@{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard@{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a2bc686f7c0f05f5e915a6ec96c4e251d}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a2bc686f7c0f05f5e915a6ec96c4e251d}} 
+Im\+Gui\+Input\+Source\+\_\+\+Nav\+Keyboard&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad@{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad@{Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aff488e3baf3b07e320da7e217b97c062}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78aff488e3baf3b07e320da7e217b97c062}} 
+Im\+Gui\+Input\+Source\+\_\+\+Nav\+Gamepad&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT@{Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT@{Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT}}}\mbox{\Hypertarget{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a86ca1f5ab44fc267491e0cf7518dd883}\label{imgui__internal_8h_a8ee603a145a3a4f4ab5c93c8c8333b78a86ca1f5ab44fc267491e0cf7518dd883}} 
+Im\+Gui\+Input\+Source\+\_\+\+C\+O\+U\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44b}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44b}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+@{Im\+Gui\+Item\+Flags\+\_\+}}
+\index{Im\+Gui\+Item\+Flags\+\_\+@{Im\+Gui\+Item\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Item\+Flags\+\_\+}{ImGuiItemFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44b}{Im\+Gui\+Item\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba446348bf1c0722c99ad0332f76276129}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba446348bf1c0722c99ad0332f76276129}} 
+Im\+Gui\+Item\+Flags\+\_\+\+No\+Tab\+Stop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat@{Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat@{Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba995328c4628ba17f0bd4b51cd6b41b5a}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba995328c4628ba17f0bd4b51cd6b41b5a}} 
+Im\+Gui\+Item\+Flags\+\_\+\+Button\+Repeat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+Disabled@{Im\+Gui\+Item\+Flags\+\_\+\+Disabled}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+Disabled@{Im\+Gui\+Item\+Flags\+\_\+\+Disabled}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba16dccc85f1c0bd80cc4aed5a736ba308}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba16dccc85f1c0bd80cc4aed5a736ba308}} 
+Im\+Gui\+Item\+Flags\+\_\+\+Disabled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44bac6dbbff7a3a5bd0b7af2339f650b53c6}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44bac6dbbff7a3a5bd0b7af2339f650b53c6}} 
+Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus@{Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba6f18c9cbb835376ddeba52c55571ee41}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba6f18c9cbb835376ddeba52c55571ee41}} 
+Im\+Gui\+Item\+Flags\+\_\+\+No\+Nav\+Default\+Focus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup@{Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup@{Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba78e8b3f2ffa6203a2d59e03577158509}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba78e8b3f2ffa6203a2d59e03577158509}} 
+Im\+Gui\+Item\+Flags\+\_\+\+Selectable\+Dont\+Close\+Popup&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+@{Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+@{Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+}}}\mbox{\Hypertarget{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba7134a42bb8aa48ebfd4ef7ea34ddd108}\label{imgui__internal_8h_a64418599f4e9c7eeb3e322b22eb8d44ba7134a42bb8aa48ebfd4ef7ea34ddd108}} 
+Im\+Gui\+Item\+Flags\+\_\+\+Default\+\_\+&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfc}\label{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfc}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags\+\_\+@{Im\+Gui\+Item\+Status\+Flags\+\_\+}}
+\index{Im\+Gui\+Item\+Status\+Flags\+\_\+@{Im\+Gui\+Item\+Status\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Item\+Status\+Flags\+\_\+}{ImGuiItemStatusFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfc}{Im\+Gui\+Item\+Status\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Status\+Flags\+\_\+\+None@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags\+\_\+\+None@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfcaae7c0f0b20c6c151ea189ed5b078c6ba}\label{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfcaae7c0f0b20c6c151ea189ed5b078c6ba}} 
+Im\+Gui\+Item\+Status\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect}}}\mbox{\Hypertarget{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca1cd7702ed1d8354e5d80a20f750c7ca2}\label{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca1cd7702ed1d8354e5d80a20f750c7ca2}} 
+Im\+Gui\+Item\+Status\+Flags\+\_\+\+Hovered\+Rect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect}}}\mbox{\Hypertarget{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca114af7511bce1d820abac3e236351c9a}\label{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca114af7511bce1d820abac3e236351c9a}} 
+Im\+Gui\+Item\+Status\+Flags\+\_\+\+Has\+Display\+Rect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited@{Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited}}}\mbox{\Hypertarget{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca67d1ba9815c60860dd0e98773a1c07cd}\label{imgui__internal_8h_a772a57072bdc1dbcb826d3acb3c00cfca67d1ba9815c60860dd0e98773a1c07cd}} 
+Im\+Gui\+Item\+Status\+Flags\+\_\+\+Edited&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823}\label{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Layout\+Type\+\_\+@{Im\+Gui\+Layout\+Type\+\_\+}}
+\index{Im\+Gui\+Layout\+Type\+\_\+@{Im\+Gui\+Layout\+Type\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Layout\+Type\+\_\+}{ImGuiLayoutType\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823}{Im\+Gui\+Layout\+Type\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Layout\+Type\+\_\+\+Vertical@{Im\+Gui\+Layout\+Type\+\_\+\+Vertical}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Layout\+Type\+\_\+\+Vertical@{Im\+Gui\+Layout\+Type\+\_\+\+Vertical}}}\mbox{\Hypertarget{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823abca9a5514cc9bbf69f532ab6ee4f387e}\label{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823abca9a5514cc9bbf69f532ab6ee4f387e}} 
+Im\+Gui\+Layout\+Type\+\_\+\+Vertical&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Layout\+Type\+\_\+\+Horizontal@{Im\+Gui\+Layout\+Type\+\_\+\+Horizontal}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Layout\+Type\+\_\+\+Horizontal@{Im\+Gui\+Layout\+Type\+\_\+\+Horizontal}}}\mbox{\Hypertarget{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823accc103236d2a074a05ac0f5857a423ae}\label{imgui__internal_8h_abce83213b194cfc876faa80cd9da4823accc103236d2a074a05ac0f5857a423ae}} 
+Im\+Gui\+Layout\+Type\+\_\+\+Horizontal&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30}\label{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+}}
+\index{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+}{ImGuiNavDirSourceFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30}{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a4508beca51b1de5f06bded9ceebae335}\label{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a4508beca51b1de5f06bded9ceebae335}} 
+Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard}}}\mbox{\Hypertarget{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a26c911383d076bcd4a536fd4fe6d7dbf}\label{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a26c911383d076bcd4a536fd4fe6d7dbf}} 
+Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Keyboard&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad}}}\mbox{\Hypertarget{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30ae9988d3760de3b2575faeac3fe1b182f}\label{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30ae9988d3760de3b2575faeac3fe1b182f}} 
+Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+D\+Pad&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick@{Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick}}}\mbox{\Hypertarget{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a0515fcf2914bc6adccbbac4ed31a5e0a}\label{imgui__internal_8h_ac8abedb3b5ce10300fd7049f72887e30a0515fcf2914bc6adccbbac4ed31a5e0a}} 
+Im\+Gui\+Nav\+Dir\+Source\+Flags\+\_\+\+Pad\+L\+Stick&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096}\label{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Forward@{Im\+Gui\+Nav\+Forward}}
+\index{Im\+Gui\+Nav\+Forward@{Im\+Gui\+Nav\+Forward}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Forward}{ImGuiNavForward}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096}{Im\+Gui\+Nav\+Forward}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Forward\+\_\+\+None@{Im\+Gui\+Nav\+Forward\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Forward\+\_\+\+None@{Im\+Gui\+Nav\+Forward\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a6a0210c6cda2c4905bdaef4875fac1bb}\label{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a6a0210c6cda2c4905bdaef4875fac1bb}} 
+Im\+Gui\+Nav\+Forward\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued@{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued@{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued}}}\mbox{\Hypertarget{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096ac14000d5134c2055af3f8b455d9906cb}\label{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096ac14000d5134c2055af3f8b455d9906cb}} 
+Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Queued&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active@{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active@{Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active}}}\mbox{\Hypertarget{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a108e71c912a222a65b4b37999cc4fb6a}\label{imgui__internal_8h_a53d6374f774bfdc522d90c1b7a16a096a108e71c912a222a65b4b37999cc4fb6a}} 
+Im\+Gui\+Nav\+Forward\+\_\+\+Forward\+Active&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+}}
+\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+}{ImGuiNavHighlightFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26}{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a6f47e567193290259dd85fdcade51ee6}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a6f47e567193290259dd85fdcade51ee6}} 
+Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default}}}\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26ae54860a6f56817772ef7f1f42ca3c1bd}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26ae54860a6f56817772ef7f1f42ca3c1bd}} 
+Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Default&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin}}}\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a12a4f12d464b2a5313a8bba2b9250d8a}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a12a4f12d464b2a5313a8bba2b9250d8a}} 
+Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Type\+Thin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw}}}\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a8d97ef7eb2ce4cfa5ee98957dbb941cd}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a8d97ef7eb2ce4cfa5ee98957dbb941cd}} 
+Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+Always\+Draw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding@{Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding}}}\mbox{\Hypertarget{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a0d2af936bbd5e37cc62ba573f02250be}\label{imgui__internal_8h_a55ae92b6fb7a0edbe4814f6e261d9e26a0d2af936bbd5e37cc62ba573f02250be}} 
+Im\+Gui\+Nav\+Highlight\+Flags\+\_\+\+No\+Rounding&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177c}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177c}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+@{Im\+Gui\+Nav\+Move\+Flags\+\_\+}}
+\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+@{Im\+Gui\+Nav\+Move\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Nav\+Move\+Flags\+\_\+}{ImGuiNavMoveFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177c}{Im\+Gui\+Nav\+Move\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac52ba4fd5c7ad628e2dace965f1c02cd}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac52ba4fd5c7ad628e2dace965f1c02cd}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac784f58a6171479f3fb754af4701298a}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177cac784f58a6171479f3fb754af4701298a}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca9f8e276286a9675c723a6531374362ba}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca9f8e276286a9675c723a6531374362ba}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+LoopY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca90dc1c64af4b4e43a0c555573ad6f714}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca90dc1c64af4b4e43a0c555573ad6f714}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca097bd55eceaa4c0e4ef88f6aee5f38c0}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca097bd55eceaa4c0e4ef88f6aee5f38c0}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+WrapY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca61f1ac459b7ca1dd1097aeb279278c56}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca61f1ac459b7ca1dd1097aeb279278c56}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Allow\+Current\+Nav\+Id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set@{Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set}}}\mbox{\Hypertarget{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca1f4719a5582f194ef9d8c7aa65fe1ef7}\label{imgui__internal_8h_ad3fdd202d1973cfeb10564b8f55b177ca1f4719a5582f194ef9d8c7aa65fe1ef7}} 
+Im\+Gui\+Nav\+Move\+Flags\+\_\+\+Also\+Score\+Visible\+Set&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728}\label{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Plot\+Type@{Im\+Gui\+Plot\+Type}}
+\index{Im\+Gui\+Plot\+Type@{Im\+Gui\+Plot\+Type}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Plot\+Type}{ImGuiPlotType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728}{Im\+Gui\+Plot\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Plot\+Type\+\_\+\+Lines@{Im\+Gui\+Plot\+Type\+\_\+\+Lines}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Plot\+Type\+\_\+\+Lines@{Im\+Gui\+Plot\+Type\+\_\+\+Lines}}}\mbox{\Hypertarget{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728aadebee780e8bd6f9dbb4741efb86377b}\label{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728aadebee780e8bd6f9dbb4741efb86377b}} 
+Im\+Gui\+Plot\+Type\+\_\+\+Lines&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Plot\+Type\+\_\+\+Histogram@{Im\+Gui\+Plot\+Type\+\_\+\+Histogram}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Plot\+Type\+\_\+\+Histogram@{Im\+Gui\+Plot\+Type\+\_\+\+Histogram}}}\mbox{\Hypertarget{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728a1c19c715203ea8cb19886098b87494da}\label{imgui__internal_8h_a9d5efcdd8895aa3544f1e8ce366c2728a1c19c715203ea8cb19886098b87494da}} 
+Im\+Gui\+Plot\+Type\+\_\+\+Histogram&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8}\label{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Popup\+Position\+Policy@{Im\+Gui\+Popup\+Position\+Policy}}
+\index{Im\+Gui\+Popup\+Position\+Policy@{Im\+Gui\+Popup\+Position\+Policy}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Popup\+Position\+Policy}{ImGuiPopupPositionPolicy}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8}{Im\+Gui\+Popup\+Position\+Policy}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default@{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default@{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default}}}\mbox{\Hypertarget{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8ab8a9815cfc6ed3f721aa8e75d960dbdf}\label{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8ab8a9815cfc6ed3f721aa8e75d960dbdf}} 
+Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Default&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box@{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box@{Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box}}}\mbox{\Hypertarget{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8a8aaec33fd337ffbffd524a140f6810ea}\label{imgui__internal_8h_a9c122103feadc7b225fc21698ff0f4d8a8aaec33fd337ffbffd524a140f6810ea}} 
+Im\+Gui\+Popup\+Position\+Policy\+\_\+\+Combo\+Box&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bf}\label{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bf}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Selectable\+Flags\+Private\+\_\+@{Im\+Gui\+Selectable\+Flags\+Private\+\_\+}}
+\index{Im\+Gui\+Selectable\+Flags\+Private\+\_\+@{Im\+Gui\+Selectable\+Flags\+Private\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Selectable\+Flags\+Private\+\_\+}{ImGuiSelectableFlagsPrivate\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bf}{Im\+Gui\+Selectable\+Flags\+Private\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID@{Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID@{Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID}}}\mbox{\Hypertarget{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa50000511c374320cb282b0eb775ace28}\label{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa50000511c374320cb282b0eb775ace28}} 
+Im\+Gui\+Selectable\+Flags\+\_\+\+No\+Holding\+Active\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click@{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click@{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click}}}\mbox{\Hypertarget{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa4328c28f73760d71f01ba9cbfff66749}\label{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa4328c28f73760d71f01ba9cbfff66749}} 
+Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Click&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release@{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release@{Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release}}}\mbox{\Hypertarget{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa136899d2ac60e40d4dd187520c6950d1}\label{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfa136899d2ac60e40d4dd187520c6950d1}} 
+Im\+Gui\+Selectable\+Flags\+\_\+\+Pressed\+On\+Release&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width@{Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width@{Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width}}}\mbox{\Hypertarget{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfac39f947c0e06f17cede665aba43db741}\label{imgui__internal_8h_ad3009e4cdf58220e2d87426a575e18bfac39f947c0e06f17cede665aba43db741}} 
+Im\+Gui\+Selectable\+Flags\+\_\+\+Draw\+Fill\+Avail\+Width&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654}\label{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Separator\+Flags\+\_\+@{Im\+Gui\+Separator\+Flags\+\_\+}}
+\index{Im\+Gui\+Separator\+Flags\+\_\+@{Im\+Gui\+Separator\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Separator\+Flags\+\_\+}{ImGuiSeparatorFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654}{Im\+Gui\+Separator\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Separator\+Flags\+\_\+\+None@{Im\+Gui\+Separator\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Separator\+Flags\+\_\+\+None@{Im\+Gui\+Separator\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ac709701ce3986d718c7dc97d93f04516}\label{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ac709701ce3986d718c7dc97d93f04516}} 
+Im\+Gui\+Separator\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal@{Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal@{Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal}}}\mbox{\Hypertarget{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654a00e6c7e3f77de10a4bfa908f55e7d16a}\label{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654a00e6c7e3f77de10a4bfa908f55e7d16a}} 
+Im\+Gui\+Separator\+Flags\+\_\+\+Horizontal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Separator\+Flags\+\_\+\+Vertical@{Im\+Gui\+Separator\+Flags\+\_\+\+Vertical}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Separator\+Flags\+\_\+\+Vertical@{Im\+Gui\+Separator\+Flags\+\_\+\+Vertical}}}\mbox{\Hypertarget{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ad27b2c49ccef9f50993053c7cc1dcfaa}\label{imgui__internal_8h_a2b58eba4cf52133830d1eb2ac3c42654ad27b2c49ccef9f50993053c7cc1dcfaa}} 
+Im\+Gui\+Separator\+Flags\+\_\+\+Vertical&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383a}\label{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383a}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Slider\+Flags\+\_\+@{Im\+Gui\+Slider\+Flags\+\_\+}}
+\index{Im\+Gui\+Slider\+Flags\+\_\+@{Im\+Gui\+Slider\+Flags\+\_\+}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Slider\+Flags\+\_\+}{ImGuiSliderFlags\_}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383a}{Im\+Gui\+Slider\+Flags\+\_\+}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Slider\+Flags\+\_\+\+None@{Im\+Gui\+Slider\+Flags\+\_\+\+None}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Slider\+Flags\+\_\+\+None@{Im\+Gui\+Slider\+Flags\+\_\+\+None}}}\mbox{\Hypertarget{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aac563d0eaa0ac617f240ce1c82277bfc4}\label{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aac563d0eaa0ac617f240ce1c82277bfc4}} 
+Im\+Gui\+Slider\+Flags\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Im\+Gui\+Slider\+Flags\+\_\+\+Vertical@{Im\+Gui\+Slider\+Flags\+\_\+\+Vertical}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Gui\+Slider\+Flags\+\_\+\+Vertical@{Im\+Gui\+Slider\+Flags\+\_\+\+Vertical}}}\mbox{\Hypertarget{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aa2db4b9ade9f3519d30e6fe3ab8a25f3f}\label{imgui__internal_8h_a6724109814c04a3c3d8797dfd893383aa2db4b9ade9f3519d30e6fe3ab8a25f3f}} 
+Im\+Gui\+Slider\+Flags\+\_\+\+Vertical&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a34cfdde6f955b177feb9bc6e45dc1362}\label{imgui__internal_8h_a34cfdde6f955b177feb9bc6e45dc1362}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+File\+Load\+To\+Memory@{Im\+File\+Load\+To\+Memory}}
+\index{Im\+File\+Load\+To\+Memory@{Im\+File\+Load\+To\+Memory}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+File\+Load\+To\+Memory()}{ImFileLoadToMemory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void$\ast$ Im\+File\+Load\+To\+Memory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{file\+\_\+open\+\_\+mode,  }\item[{size\+\_\+t $\ast$}]{out\+\_\+file\+\_\+size = {\ttfamily NULL},  }\item[{int}]{padding\+\_\+bytes = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a34cfdde6f955b177feb9bc6e45dc1362_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a34cfdde6f955b177feb9bc6e45dc1362_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a717fff2d21aa5930cb934393eab9fcaa}\label{imgui__internal_8h_a717fff2d21aa5930cb934393eab9fcaa}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+File\+Open@{Im\+File\+Open}}
+\index{Im\+File\+Open@{Im\+File\+Open}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+File\+Open()}{ImFileOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} F\+I\+LE$\ast$ Im\+File\+Open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const char $\ast$}]{file\+\_\+open\+\_\+mode }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a717fff2d21aa5930cb934393eab9fcaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a717fff2d21aa5930cb934393eab9fcaa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_af44667fe1e74c3ebace8aa35ece9d4ae}\label{imgui__internal_8h_af44667fe1e74c3ebace8aa35ece9d4ae}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Finish@{Im\+Font\+Atlas\+Build\+Finish}}
+\index{Im\+Font\+Atlas\+Build\+Finish@{Im\+Font\+Atlas\+Build\+Finish}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Finish()}{ImFontAtlasBuildFinish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$}]{atlas }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a3f2f38197a3ea2a246fd75d50878647f}\label{imgui__internal_8h_a3f2f38197a3ea2a246fd75d50878647f}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table@{Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table}}
+\index{Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table@{Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table()}{ImFontAtlasBuildMultiplyCalcLookupTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Multiply\+Calc\+Lookup\+Table (\begin{DoxyParamCaption}\item[{unsigned char}]{out\+\_\+table\mbox{[}256\mbox{]},  }\item[{float}]{in\+\_\+multiply\+\_\+factor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_aff7910be269c5759331ffc45fbe0c98f}\label{imgui__internal_8h_aff7910be269c5759331ffc45fbe0c98f}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8@{Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8}}
+\index{Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8@{Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8()}{ImFontAtlasBuildMultiplyRectAlpha8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Multiply\+Rect\+Alpha8 (\begin{DoxyParamCaption}\item[{const unsigned char}]{table\mbox{[}256\mbox{]},  }\item[{unsigned char $\ast$}]{pixels,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{stride }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a229ee0ada86f9daf3e23ad313dfeb586}\label{imgui__internal_8h_a229ee0ada86f9daf3e23ad313dfeb586}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects@{Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects}}
+\index{Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects@{Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects()}{ImFontAtlasBuildPackCustomRects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Pack\+Custom\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$}]{atlas,  }\item[{void $\ast$}]{spc }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a229ee0ada86f9daf3e23ad313dfeb586_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a229ee0ada86f9daf3e23ad313dfeb586_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_abd2f1ae504d72fa21c99956ca707767f}\label{imgui__internal_8h_abd2f1ae504d72fa21c99956ca707767f}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects@{Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects}}
+\index{Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects@{Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects()}{ImFontAtlasBuildRegisterDefaultCustomRects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Register\+Default\+Custom\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$}]{atlas }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_abd2f1ae504d72fa21c99956ca707767f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_abd2f1ae504d72fa21c99956ca707767f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a56160f7248aed6a767f706848d9b9c55}\label{imgui__internal_8h_a56160f7248aed6a767f706848d9b9c55}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+Setup\+Font@{Im\+Font\+Atlas\+Build\+Setup\+Font}}
+\index{Im\+Font\+Atlas\+Build\+Setup\+Font@{Im\+Font\+Atlas\+Build\+Setup\+Font}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+Setup\+Font()}{ImFontAtlasBuildSetupFont()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Font\+Atlas\+Build\+Setup\+Font (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$}]{atlas,  }\item[{\mbox{\hyperlink{struct_im_font}{Im\+Font}} $\ast$}]{font,  }\item[{\mbox{\hyperlink{struct_im_font_config}{Im\+Font\+Config}} $\ast$}]{font\+\_\+config,  }\item[{float}]{ascent,  }\item[{float}]{descent }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a56160f7248aed6a767f706848d9b9c55_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a434a381598e3cdcefeff89f63803588a}\label{imgui__internal_8h_a434a381598e3cdcefeff89f63803588a}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype@{Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype}}
+\index{Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype@{Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype()}{ImFontAtlasBuildWithStbTruetype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool Im\+Font\+Atlas\+Build\+With\+Stb\+Truetype (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$}]{atlas }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a434a381598e3cdcefeff89f63803588a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a434a381598e3cdcefeff89f63803588a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a92825e36c348cccb1b7451263504a8ba}\label{imgui__internal_8h_a92825e36c348cccb1b7451263504a8ba}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Format\+String@{Im\+Format\+String}}
+\index{Im\+Format\+String@{Im\+Format\+String}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Format\+String()}{ImFormatString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Format\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a92825e36c348cccb1b7451263504a8ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a9aa25e73aa28500257b65ec9f6f9c3d6}\label{imgui__internal_8h_a9aa25e73aa28500257b65ec9f6f9c3d6}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Format\+StringV@{Im\+Format\+StringV}}
+\index{Im\+Format\+StringV@{Im\+Format\+StringV}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Format\+String\+V()}{ImFormatStringV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Format\+StringV (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{buf\+\_\+size,  }\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a9aa25e73aa28500257b65ec9f6f9c3d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a347ff0c7923bfcda19058cb0a3564b1a}\label{imgui__internal_8h_a347ff0c7923bfcda19058cb0a3564b1a}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Get\+Dir\+Quadrant\+From\+Delta@{Im\+Get\+Dir\+Quadrant\+From\+Delta}}
+\index{Im\+Get\+Dir\+Quadrant\+From\+Delta@{Im\+Get\+Dir\+Quadrant\+From\+Delta}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Get\+Dir\+Quadrant\+From\+Delta()}{ImGetDirQuadrantFromDelta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{imgui_8h_a874086389bc27cc9647118d22a806403}{Im\+Gui\+Dir}} Im\+Get\+Dir\+Quadrant\+From\+Delta (\begin{DoxyParamCaption}\item[{float}]{dx,  }\item[{float}]{dy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a73a80a8b1399060ccffa058091381d02}\label{imgui__internal_8h_a73a80a8b1399060ccffa058091381d02}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Hash@{Im\+Hash}}
+\index{Im\+Hash@{Im\+Hash}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Hash()}{ImHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} Im\+Hash (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{int}]{data\+\_\+size,  }\item[{\mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}}}]{seed = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a73a80a8b1399060ccffa058091381d02_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_aaa66fc7d25c00956cf6c1a4541e585a9}\label{imgui__internal_8h_aaa66fc7d25c00956cf6c1a4541e585a9}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Line\+Closest\+Point@{Im\+Line\+Closest\+Point}}
+\index{Im\+Line\+Closest\+Point@{Im\+Line\+Closest\+Point}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Line\+Closest\+Point()}{ImLineClosestPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Line\+Closest\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{imgui__internal_8h_aaa66fc7d25c00956cf6c1a4541e585a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a196f683bd9412caf0146f271f027722e}\label{imgui__internal_8h_a196f683bd9412caf0146f271f027722e}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Parse\+Format\+Find\+End@{Im\+Parse\+Format\+Find\+End}}
+\index{Im\+Parse\+Format\+Find\+End@{Im\+Parse\+Format\+Find\+End}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Parse\+Format\+Find\+End()}{ImParseFormatFindEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Parse\+Format\+Find\+End (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a196f683bd9412caf0146f271f027722e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a2d50c8ccdff17ed7fbe8540d8b42f505}\label{imgui__internal_8h_a2d50c8ccdff17ed7fbe8540d8b42f505}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Parse\+Format\+Find\+Start@{Im\+Parse\+Format\+Find\+Start}}
+\index{Im\+Parse\+Format\+Find\+Start@{Im\+Parse\+Format\+Find\+Start}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Parse\+Format\+Find\+Start()}{ImParseFormatFindStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Parse\+Format\+Find\+Start (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a2d50c8ccdff17ed7fbe8540d8b42f505_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a4bff16ce85d201d97552ce9017c1d79a}\label{imgui__internal_8h_a4bff16ce85d201d97552ce9017c1d79a}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Parse\+Format\+Precision@{Im\+Parse\+Format\+Precision}}
+\index{Im\+Parse\+Format\+Precision@{Im\+Parse\+Format\+Precision}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Parse\+Format\+Precision()}{ImParseFormatPrecision()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Parse\+Format\+Precision (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{int}]{default\+\_\+value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a4bff16ce85d201d97552ce9017c1d79a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a117bd1ad6a0577158ba5a9f49a8b6583}\label{imgui__internal_8h_a117bd1ad6a0577158ba5a9f49a8b6583}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Parse\+Format\+Trim\+Decorations@{Im\+Parse\+Format\+Trim\+Decorations}}
+\index{Im\+Parse\+Format\+Trim\+Decorations@{Im\+Parse\+Format\+Trim\+Decorations}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Parse\+Format\+Trim\+Decorations()}{ImParseFormatTrimDecorations()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Parse\+Format\+Trim\+Decorations (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{char $\ast$}]{buf,  }\item[{int}]{buf\+\_\+size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a117bd1ad6a0577158ba5a9f49a8b6583_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a117bd1ad6a0577158ba5a9f49a8b6583_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a35333fc1248c81fdd5e459c03e025dc1}\label{imgui__internal_8h_a35333fc1248c81fdd5e459c03e025dc1}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+StrbolW@{Im\+StrbolW}}
+\index{Im\+StrbolW@{Im\+StrbolW}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strbol\+W()}{ImStrbolW()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}$\ast$ Im\+StrbolW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf\+\_\+mid\+\_\+line,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf\+\_\+begin }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a8ee7e6530e5bbdc07549c1223b478956}\label{imgui__internal_8h_a8ee7e6530e5bbdc07549c1223b478956}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Strchr\+Range@{Im\+Strchr\+Range}}
+\index{Im\+Strchr\+Range@{Im\+Strchr\+Range}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strchr\+Range()}{ImStrchrRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Strchr\+Range (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str\+\_\+begin,  }\item[{const char $\ast$}]{str\+\_\+end,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a8ee7e6530e5bbdc07549c1223b478956_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ac2ec50c02d28df9619dc6479c492b094}\label{imgui__internal_8h_ac2ec50c02d28df9619dc6479c492b094}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Strdup@{Im\+Strdup}}
+\index{Im\+Strdup@{Im\+Strdup}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strdup()}{ImStrdup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} char$\ast$ Im\+Strdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{imgui__internal_8h_ac2ec50c02d28df9619dc6479c492b094_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{imgui__internal_8h_ac2ec50c02d28df9619dc6479c492b094_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ac136a143c568dcbd0c615ad0cfa5f6ae}\label{imgui__internal_8h_ac136a143c568dcbd0c615ad0cfa5f6ae}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Streol\+Range@{Im\+Streol\+Range}}
+\index{Im\+Streol\+Range@{Im\+Streol\+Range}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Streol\+Range()}{ImStreolRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Streol\+Range (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{str\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_ac136a143c568dcbd0c615ad0cfa5f6ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ac83ff6f214b1dac86be7da67c3206c0c}\label{imgui__internal_8h_ac83ff6f214b1dac86be7da67c3206c0c}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Stricmp@{Im\+Stricmp}}
+\index{Im\+Stricmp@{Im\+Stricmp}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Stricmp()}{ImStricmp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Stricmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a94873aeee1ce89e6205e043e37243bb9}\label{imgui__internal_8h_a94873aeee1ce89e6205e043e37243bb9}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Stristr@{Im\+Stristr}}
+\index{Im\+Stristr@{Im\+Stristr}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Stristr()}{ImStristr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char$\ast$ Im\+Stristr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{haystack,  }\item[{const char $\ast$}]{haystack\+\_\+end,  }\item[{const char $\ast$}]{needle,  }\item[{const char $\ast$}]{needle\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a94873aeee1ce89e6205e043e37243bb9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ad4061c0b279f4c5fb44f070fd3704f88}\label{imgui__internal_8h_ad4061c0b279f4c5fb44f070fd3704f88}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+StrlenW@{Im\+StrlenW}}
+\index{Im\+StrlenW@{Im\+StrlenW}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strlen\+W()}{ImStrlenW()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+StrlenW (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{str }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_ad4061c0b279f4c5fb44f070fd3704f88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_aba04ec0781116f3fa7dcd16c0bdd2886}\label{imgui__internal_8h_aba04ec0781116f3fa7dcd16c0bdd2886}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Strncpy@{Im\+Strncpy}}
+\index{Im\+Strncpy@{Im\+Strncpy}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strncpy()}{ImStrncpy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Strncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_aba04ec0781116f3fa7dcd16c0bdd2886_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ad3c3ef07cbc7d62ca9000c4e38bb6f88}\label{imgui__internal_8h_ad3c3ef07cbc7d62ca9000c4e38bb6f88}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Strnicmp@{Im\+Strnicmp}}
+\index{Im\+Strnicmp@{Im\+Strnicmp}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Strnicmp()}{ImStrnicmp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Strnicmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str1,  }\item[{const char $\ast$}]{str2,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_a62f34433ca9defd9ae50a3b69606eb63}\label{imgui__internal_8h_a62f34433ca9defd9ae50a3b69606eb63}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Str\+Trim\+Blanks@{Im\+Str\+Trim\+Blanks}}
+\index{Im\+Str\+Trim\+Blanks@{Im\+Str\+Trim\+Blanks}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Str\+Trim\+Blanks()}{ImStrTrimBlanks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Str\+Trim\+Blanks (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_aa4a574b013af98bc338e7dbb5c078c25}\label{imgui__internal_8h_aa4a574b013af98bc338e7dbb5c078c25}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Char\+From\+Utf8@{Im\+Text\+Char\+From\+Utf8}}
+\index{Im\+Text\+Char\+From\+Utf8@{Im\+Text\+Char\+From\+Utf8}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Char\+From\+Utf8()}{ImTextCharFromUtf8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Char\+From\+Utf8 (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{out\+\_\+char,  }\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_aa4a574b013af98bc338e7dbb5c078c25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a67e2dd0d3d5f244f3607f6071541c902}\label{imgui__internal_8h_a67e2dd0d3d5f244f3607f6071541c902}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Count\+Chars\+From\+Utf8@{Im\+Text\+Count\+Chars\+From\+Utf8}}
+\index{Im\+Text\+Count\+Chars\+From\+Utf8@{Im\+Text\+Count\+Chars\+From\+Utf8}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Chars\+From\+Utf8()}{ImTextCountCharsFromUtf8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Count\+Chars\+From\+Utf8 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a67e2dd0d3d5f244f3607f6071541c902_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a67e2dd0d3d5f244f3607f6071541c902_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a0b29b7595abee961a88370cf8bb62cfa}\label{imgui__internal_8h_a0b29b7595abee961a88370cf8bb62cfa}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Count\+Utf8\+Bytes\+From\+Char@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}}
+\index{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Utf8\+Bytes\+From\+Char()}{ImTextCountUtf8BytesFromChar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Count\+Utf8\+Bytes\+From\+Char (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a0b29b7595abee961a88370cf8bb62cfa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_a0b29b7595abee961a88370cf8bb62cfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_ae7d1184270a003cecacd3b45e8cbd44d}\label{imgui__internal_8h_ae7d1184270a003cecacd3b45e8cbd44d}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Count\+Utf8\+Bytes\+From\+Str@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}}
+\index{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str@{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Count\+Utf8\+Bytes\+From\+Str()}{ImTextCountUtf8BytesFromStr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Count\+Utf8\+Bytes\+From\+Str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_ae7d1184270a003cecacd3b45e8cbd44d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_aa1a254689b23e6111f14d1690fb3c568}\label{imgui__internal_8h_aa1a254689b23e6111f14d1690fb3c568}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Str\+From\+Utf8@{Im\+Text\+Str\+From\+Utf8}}
+\index{Im\+Text\+Str\+From\+Utf8@{Im\+Text\+Str\+From\+Utf8}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Str\+From\+Utf8()}{ImTextStrFromUtf8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Str\+From\+Utf8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{buf,  }\item[{int}]{buf\+\_\+size,  }\item[{const char $\ast$}]{in\+\_\+text,  }\item[{const char $\ast$}]{in\+\_\+text\+\_\+end,  }\item[{const char $\ast$$\ast$}]{in\+\_\+remaining = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{imgui__internal_8h_aa1a254689b23e6111f14d1690fb3c568_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__internal_8h_aa1a254689b23e6111f14d1690fb3c568_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_aa9952674a01c295ef093f65774a15652}\label{imgui__internal_8h_aa9952674a01c295ef093f65774a15652}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Text\+Str\+To\+Utf8@{Im\+Text\+Str\+To\+Utf8}}
+\index{Im\+Text\+Str\+To\+Utf8@{Im\+Text\+Str\+To\+Utf8}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Text\+Str\+To\+Utf8()}{ImTextStrToUtf8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} int Im\+Text\+Str\+To\+Utf8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{buf\+\_\+size,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text,  }\item[{const \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $\ast$}]{in\+\_\+text\+\_\+end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_af8d02d5d38ee7c5ca68f1927665214cc}\label{imgui__internal_8h_af8d02d5d38ee7c5ca68f1927665214cc}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Triangle\+Barycentric\+Coords@{Im\+Triangle\+Barycentric\+Coords}}
+\index{Im\+Triangle\+Barycentric\+Coords@{Im\+Triangle\+Barycentric\+Coords}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Barycentric\+Coords()}{ImTriangleBarycentricCoords()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void Im\+Triangle\+Barycentric\+Coords (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p,  }\item[{float \&}]{out\+\_\+u,  }\item[{float \&}]{out\+\_\+v,  }\item[{float \&}]{out\+\_\+w }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__internal_8h_aa3c3af3a40f69cc3569e1f16898a41d5}\label{imgui__internal_8h_aa3c3af3a40f69cc3569e1f16898a41d5}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Triangle\+Closest\+Point@{Im\+Triangle\+Closest\+Point}}
+\index{Im\+Triangle\+Closest\+Point@{Im\+Triangle\+Closest\+Point}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Closest\+Point()}{ImTriangleClosestPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Triangle\+Closest\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{imgui__internal_8h_aa3c3af3a40f69cc3569e1f16898a41d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__internal_8h_a0e623415e91787735e0fb4773454f8f7}\label{imgui__internal_8h_a0e623415e91787735e0fb4773454f8f7}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!Im\+Triangle\+Contains\+Point@{Im\+Triangle\+Contains\+Point}}
+\index{Im\+Triangle\+Contains\+Point@{Im\+Triangle\+Contains\+Point}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{Im\+Triangle\+Contains\+Point()}{ImTriangleContainsPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} bool Im\+Triangle\+Contains\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{b,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{c,  }\item[{const \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a93caa8df61dac3cb1ab1271a755442a3}\label{imgui__internal_8h_a93caa8df61dac3cb1ab1271a755442a3}} 
+\index{imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}!G\+Im\+Gui@{G\+Im\+Gui}}
+\index{G\+Im\+Gui@{G\+Im\+Gui}!imgui\+\_\+internal.\+h@{imgui\+\_\+internal.\+h}}
+\subsubsection{\texorpdfstring{G\+Im\+Gui}{GImGui}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_context}{Im\+Gui\+Context}}$\ast$ G\+Im\+Gui}
+

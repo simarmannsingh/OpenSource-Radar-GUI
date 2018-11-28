@@ -1,0 +1,7 @@
+<map id="ImGui::SliderScalar" name="ImGui::SliderScalar">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a35dcc90b1981663bcc6e3e8eb5c75021" title="ImGui::SliderFloat" alt="" coords="188,56,315,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a2a78a45bfc70a98c7894bc8e75c53e4b" title="ImGui::SliderInt" alt="" coords="196,107,307,133"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="363,5,523,32"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ad20170a9fff4ded0076476dad8ec6645" title="ImGui::SliderAngle" alt="" coords="377,56,508,83"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a7bd295da4be19bab98262c76fcaeb4fb" title="ImGui::LogButtons" alt="" coords="377,107,508,133"/>
+</map>

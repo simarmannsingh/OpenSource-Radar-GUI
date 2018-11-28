@@ -1,0 +1,23 @@
+<map id="ImRect::Overlaps" name="ImRect::Overlaps">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a8674467ae34d04bc99df1f7f98f47407" title="ImGui::IsClippedEx" alt="" coords="175,107,308,133"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a96a5f42789ecc419b2ae8af7b2acc28e" title="ImGui::TextUnformatted" alt="" coords="356,107,515,133"/>
+<area shape="rect" id="node4" href="$struct_example_app_console.html#a0518a09c7e8648dd52c7c06df19ac17a" title="ExampleAppConsole::Draw" alt="" coords="1156,31,1336,57"/>
+<area shape="rect" id="node5" href="$struct_example_app_log.html#a5ad3a4bdb89171b84aeaff96948a1f77" title="ExampleAppLog::Draw" alt="" coords="563,81,717,108"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a10a0d6362178c2f743092f21e1b6cd20" title="ImGui::TextV" alt="" coords="591,132,689,159"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#afad90b366b6471e3b13175c0ebeb26c8" title="ImGui::ColorTooltip" alt="" coords="969,335,1101,361"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a3826acf68fc4a12bb66401575f51d6a2" title="ImGui::SetTooltipV" alt="" coords="775,132,906,159"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a9e7b83611fe441d54fad2effb4bf4965" title="ImGui::Text" alt="" coords="796,245,885,272"/>
+<area shape="rect" id="node17" href="$namespace_im_gui.html#a87c24ece994188a7145d8feecb4439ed" title="ImGui::TextColoredV" alt="" coords="769,183,912,209"/>
+<area shape="rect" id="node19" href="$namespace_im_gui.html#a5b128d4f12d7e33e95fb9cef7dce027e" title="ImGui::TextDisabledV" alt="" coords="767,31,915,57"/>
+<area shape="rect" id="node21" href="$namespace_im_gui.html#a9019a388cd0c410bcb3d3ae63a008123" title="ImGui::TextWrappedV" alt="" coords="765,81,916,108"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a313073fa01b8a9791f241ef93091ce92" title="ImGui::SetTooltip" alt="" coords="973,132,1096,159"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#afe7a28c6eb52fff3cc27d5a698fea4ff" title="ImGui::ShowMetricsWindow" alt="" coords="1153,183,1339,209"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a1b3324308e43eeded5c3599fa0f03e85" title="ImGui::Value" alt="" coords="986,284,1083,311"/>
+<area shape="rect" id="node13" href="$struct_im_color.html#a95206b688dcc03f725790538c74f4526" title="ImColor::ImColor" alt="" coords="1187,284,1305,311"/>
+<area shape="rect" id="node14" href="$struct_im_color.html#a4f4fc53e0676d50404d6d5ffcf16637f" title="ImColor::operator ImU32" alt="" coords="1165,335,1327,361"/>
+<area shape="rect" id="node15" href="$struct_im_color.html#a10f1de242f13c93f8be64545e4cbcb0a" title="ImColor::operator ImVec4" alt="" coords="1161,385,1331,412"/>
+<area shape="rect" id="node16" href="$struct_im_color.html#afcff20160db703b956d56e5a9fa88e24" title="ImColor::SetHSV" alt="" coords="1185,233,1307,260"/>
+<area shape="rect" id="node18" href="$namespace_im_gui.html#a36ab8fcad68b26863d6e910755de04c2" title="ImGui::TextColored" alt="" coords="968,183,1101,209"/>
+<area shape="rect" id="node20" href="$namespace_im_gui.html#aa96bf14c5fa288e106820aeb4ba7fcb6" title="ImGui::TextDisabled" alt="" coords="965,31,1104,57"/>
+<area shape="rect" id="node22" href="$namespace_im_gui.html#ad57bb15c599e73b2ccc7c0f7de6e5823" title="ImGui::TextWrapped" alt="" coords="964,81,1105,108"/>
+</map>

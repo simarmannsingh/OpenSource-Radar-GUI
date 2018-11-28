@@ -1,0 +1,339 @@
+\hypertarget{vdm__parse_8h}{}\section{vdm\+\_\+parse.\+h File Reference}
+\label{vdm__parse_8h}\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+
+
+Header file for vdm\+\_\+parse.\+c.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaismsg__1}{aismsg\+\_\+1}}
+\item 
+struct \mbox{\hyperlink{structaismsg__2}{aismsg\+\_\+2}}
+\item 
+struct \mbox{\hyperlink{structaismsg__3}{aismsg\+\_\+3}}
+\item 
+struct \mbox{\hyperlink{structaismsg__4}{aismsg\+\_\+4}}
+\item 
+struct \mbox{\hyperlink{structaismsg__5}{aismsg\+\_\+5}}
+\item 
+struct \mbox{\hyperlink{structaismsg__6}{aismsg\+\_\+6}}
+\item 
+struct \mbox{\hyperlink{structaismsg__7}{aismsg\+\_\+7}}
+\item 
+struct \mbox{\hyperlink{structaismsg__8}{aismsg\+\_\+8}}
+\item 
+struct \mbox{\hyperlink{structaismsg__9}{aismsg\+\_\+9}}
+\item 
+struct \mbox{\hyperlink{structaismsg__10}{aismsg\+\_\+10}}
+\item 
+struct \mbox{\hyperlink{structaismsg__11}{aismsg\+\_\+11}}
+\item 
+struct \mbox{\hyperlink{structaismsg__12}{aismsg\+\_\+12}}
+\item 
+struct \mbox{\hyperlink{structaismsg__13}{aismsg\+\_\+13}}
+\item 
+struct \mbox{\hyperlink{structaismsg__14}{aismsg\+\_\+14}}
+\item 
+struct \mbox{\hyperlink{structaismsg__15}{aismsg\+\_\+15}}
+\item 
+struct \mbox{\hyperlink{structaismsg__16}{aismsg\+\_\+16}}
+\item 
+struct \mbox{\hyperlink{structaismsg__17}{aismsg\+\_\+17}}
+\item 
+struct \mbox{\hyperlink{structaismsg__18}{aismsg\+\_\+18}}
+\item 
+struct \mbox{\hyperlink{structaismsg__19}{aismsg\+\_\+19}}
+\item 
+struct \mbox{\hyperlink{structaismsg__20}{aismsg\+\_\+20}}
+\item 
+struct \mbox{\hyperlink{structaismsg__21}{aismsg\+\_\+21}}
+\item 
+struct \mbox{\hyperlink{structaismsg__22}{aismsg\+\_\+22}}
+\item 
+struct \mbox{\hyperlink{structaismsg__23}{aismsg\+\_\+23}}
+\item 
+struct \mbox{\hyperlink{structaismsg__24}{aismsg\+\_\+24}}
+\item 
+struct \mbox{\hyperlink{structtimetag}{timetag}}
+\item 
+struct \mbox{\hyperlink{structais__state}{ais\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structbinary__state}{binary\+\_\+state}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vdm__parse_8h_a9e00f4976cb697bb41d3dec2b9d21c66}{S\+I\+X\+B\+U\+F\+\_\+\+L\+EN}}~255
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_aa2b257bc1e71b38e26269e069035d13c}{get\+\_\+timetag}} (\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$state, \mbox{\hyperlink{structtimetag}{timetag}} $\ast$datetime)
+\item 
+void \mbox{\hyperlink{vdm__parse_8h_a1371067031a16e8faae85234bf800491}{conv\+\_\+sign}} (unsigned int sign\+\_\+bit, int $\ast$value)
+\item 
+char \mbox{\hyperlink{vdm__parse_8h_a6472c5579aab2915c72eb4967dd55441}{ais2ascii}} (char value)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_abe1a14fec7d456b179c29272a57f0525}{pos2ddd}} (long latitude, long longitude, double $\ast$lat\+\_\+dd, double $\ast$long\+\_\+ddd)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a1c69ab08b538a084ec7a2b719c9e7ce4}{pos2dmm}} (long latitude, long longitude, short $\ast$lat\+\_\+dd, double $\ast$lat\+\_\+min, short $\ast$long\+\_\+ddd, double $\ast$long\+\_\+min)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a730f77060af3d873743a07033e1c0693}{conv\+\_\+pos}} (long $\ast$latitude, long $\ast$longitude)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a418102448934bc2e16b563d20ba71708}{assemble\+\_\+vdm}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, char $\ast$str)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a8dce56e88d69b14b478f8fa5d70ee9b5}{parse\+\_\+ais\+\_\+1}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__1}{aismsg\+\_\+1}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a503595d5e3b6f4f0d97462679c08e717}{parse\+\_\+ais\+\_\+2}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__2}{aismsg\+\_\+2}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a84481420190ad170cadf9d6f1d36d2ce}{parse\+\_\+ais\+\_\+3}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__3}{aismsg\+\_\+3}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a91ad99e318612364a9d6ff407e53f101}{parse\+\_\+ais\+\_\+4}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__4}{aismsg\+\_\+4}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a82d4a7448f336bd260fff123b4edcc5b}{parse\+\_\+ais\+\_\+5}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__5}{aismsg\+\_\+5}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a8c6d2bd1055414894eec83ac792b98c2}{parse\+\_\+ais\+\_\+6}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__6}{aismsg\+\_\+6}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_afcf0bea0cb3857693a03f364829471e9}{parse\+\_\+ais\+\_\+7}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__7}{aismsg\+\_\+7}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_af4d1a8ca050e368a855e3773f9bfbcb3}{parse\+\_\+ais\+\_\+8}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__8}{aismsg\+\_\+8}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_aab92ebcd7d05ec90921afb699bbee5f8}{parse\+\_\+ais\+\_\+9}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__9}{aismsg\+\_\+9}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_ab844cd7436727246720573fd92fe4bf5}{parse\+\_\+ais\+\_\+10}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__10}{aismsg\+\_\+10}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a6e281327caf0cbea681c3e21ea44b1af}{parse\+\_\+ais\+\_\+11}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__11}{aismsg\+\_\+11}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_acb822b8adb7a0d81a47bd09479862ef0}{parse\+\_\+ais\+\_\+12}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__12}{aismsg\+\_\+12}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a486f34e69e42446bc81c0ef2088ce183}{parse\+\_\+ais\+\_\+13}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__13}{aismsg\+\_\+13}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a3d12a7f00ec9dc378eabc3c82a88f2b6}{parse\+\_\+ais\+\_\+14}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__14}{aismsg\+\_\+14}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a1ee2431ba4cf35c061b135531cb79fa9}{parse\+\_\+ais\+\_\+15}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__15}{aismsg\+\_\+15}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a63b110185a917f24ca4595f8ba6f8e15}{parse\+\_\+ais\+\_\+16}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__16}{aismsg\+\_\+16}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a0f2fe1ad75ced2e2bb341a1af68dad03}{parse\+\_\+ais\+\_\+17}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__17}{aismsg\+\_\+17}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_adc7e10df5c893286c8ca9b6d69cf6285}{parse\+\_\+ais\+\_\+18}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__18}{aismsg\+\_\+18}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a57d6f71003ee2f48c6329176a15eb81c}{parse\+\_\+ais\+\_\+19}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__19}{aismsg\+\_\+19}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_adec3e585004aaa91a5b61579d646fb3d}{parse\+\_\+ais\+\_\+20}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__20}{aismsg\+\_\+20}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a1fe7b9a01110c80f0fd28f7ab264aed4}{parse\+\_\+ais\+\_\+21}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__21}{aismsg\+\_\+21}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_aa542844e5b147e67e4a0cfb81c430668}{parse\+\_\+ais\+\_\+22}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__22}{aismsg\+\_\+22}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_ab3655705c4d3a767e9ee7324a6360816}{parse\+\_\+ais\+\_\+23}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__23}{aismsg\+\_\+23}} $\ast$result)
+\item 
+int \mbox{\hyperlink{vdm__parse_8h_a160919de4a2c669b5e3fe740777a691d}{parse\+\_\+ais\+\_\+24}} (\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$state, \mbox{\hyperlink{structaismsg__24}{aismsg\+\_\+24}} $\ast$result)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for vdm\+\_\+parse.\+c. 
+
+Structures for each A\+IS message type and a structure to hold position information
+
+For exact definitions of each field you should see the I\+TU M.\+1371, I\+EC 62287 and the I\+A\+LA Clarifications on M.\+1371 The format of the !\+A\+I\+V\+DM strings are covered in I\+EC 61993-\/2 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vdm__parse_8h_a9e00f4976cb697bb41d3dec2b9d21c66}\label{vdm__parse_8h_a9e00f4976cb697bb41d3dec2b9d21c66}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!S\+I\+X\+B\+U\+F\+\_\+\+L\+EN@{S\+I\+X\+B\+U\+F\+\_\+\+L\+EN}}
+\index{S\+I\+X\+B\+U\+F\+\_\+\+L\+EN@{S\+I\+X\+B\+U\+F\+\_\+\+L\+EN}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+X\+B\+U\+F\+\_\+\+L\+EN}{SIXBUF\_LEN}}
+{\footnotesize\ttfamily \#define S\+I\+X\+B\+U\+F\+\_\+\+L\+EN~255}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{vdm__parse_8h_a6472c5579aab2915c72eb4967dd55441}\label{vdm__parse_8h_a6472c5579aab2915c72eb4967dd55441}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!ais2ascii@{ais2ascii}}
+\index{ais2ascii@{ais2ascii}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{ais2ascii()}{ais2ascii()}}
+{\footnotesize\ttfamily char ais2ascii (\begin{DoxyParamCaption}\item[{char}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a418102448934bc2e16b563d20ba71708}\label{vdm__parse_8h_a418102448934bc2e16b563d20ba71708}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!assemble\+\_\+vdm@{assemble\+\_\+vdm}}
+\index{assemble\+\_\+vdm@{assemble\+\_\+vdm}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{assemble\+\_\+vdm()}{assemble\_vdm()}}
+{\footnotesize\ttfamily int assemble\+\_\+vdm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a730f77060af3d873743a07033e1c0693}\label{vdm__parse_8h_a730f77060af3d873743a07033e1c0693}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!conv\+\_\+pos@{conv\+\_\+pos}}
+\index{conv\+\_\+pos@{conv\+\_\+pos}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{conv\+\_\+pos()}{conv\_pos()}}
+{\footnotesize\ttfamily int conv\+\_\+pos (\begin{DoxyParamCaption}\item[{long $\ast$}]{latitude,  }\item[{long $\ast$}]{longitude }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a1371067031a16e8faae85234bf800491}\label{vdm__parse_8h_a1371067031a16e8faae85234bf800491}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!conv\+\_\+sign@{conv\+\_\+sign}}
+\index{conv\+\_\+sign@{conv\+\_\+sign}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{conv\+\_\+sign()}{conv\_sign()}}
+{\footnotesize\ttfamily void conv\+\_\+sign (\begin{DoxyParamCaption}\item[{unsigned int}]{sign\+\_\+bit,  }\item[{int $\ast$}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_aa2b257bc1e71b38e26269e069035d13c}\label{vdm__parse_8h_aa2b257bc1e71b38e26269e069035d13c}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!get\+\_\+timetag@{get\+\_\+timetag}}
+\index{get\+\_\+timetag@{get\+\_\+timetag}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+timetag()}{get\_timetag()}}
+{\footnotesize\ttfamily int get\+\_\+timetag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structtimetag}{timetag}} $\ast$}]{datetime }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a8dce56e88d69b14b478f8fa5d70ee9b5}\label{vdm__parse_8h_a8dce56e88d69b14b478f8fa5d70ee9b5}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+1@{parse\+\_\+ais\+\_\+1}}
+\index{parse\+\_\+ais\+\_\+1@{parse\+\_\+ais\+\_\+1}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+1()}{parse\_ais\_1()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__1}{aismsg\+\_\+1}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_ab844cd7436727246720573fd92fe4bf5}\label{vdm__parse_8h_ab844cd7436727246720573fd92fe4bf5}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+10@{parse\+\_\+ais\+\_\+10}}
+\index{parse\+\_\+ais\+\_\+10@{parse\+\_\+ais\+\_\+10}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+10()}{parse\_ais\_10()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+10 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__10}{aismsg\+\_\+10}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a6e281327caf0cbea681c3e21ea44b1af}\label{vdm__parse_8h_a6e281327caf0cbea681c3e21ea44b1af}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+11@{parse\+\_\+ais\+\_\+11}}
+\index{parse\+\_\+ais\+\_\+11@{parse\+\_\+ais\+\_\+11}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+11()}{parse\_ais\_11()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__11}{aismsg\+\_\+11}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_acb822b8adb7a0d81a47bd09479862ef0}\label{vdm__parse_8h_acb822b8adb7a0d81a47bd09479862ef0}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+12@{parse\+\_\+ais\+\_\+12}}
+\index{parse\+\_\+ais\+\_\+12@{parse\+\_\+ais\+\_\+12}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+12()}{parse\_ais\_12()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+12 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__12}{aismsg\+\_\+12}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a486f34e69e42446bc81c0ef2088ce183}\label{vdm__parse_8h_a486f34e69e42446bc81c0ef2088ce183}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+13@{parse\+\_\+ais\+\_\+13}}
+\index{parse\+\_\+ais\+\_\+13@{parse\+\_\+ais\+\_\+13}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+13()}{parse\_ais\_13()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+13 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__13}{aismsg\+\_\+13}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a3d12a7f00ec9dc378eabc3c82a88f2b6}\label{vdm__parse_8h_a3d12a7f00ec9dc378eabc3c82a88f2b6}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+14@{parse\+\_\+ais\+\_\+14}}
+\index{parse\+\_\+ais\+\_\+14@{parse\+\_\+ais\+\_\+14}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+14()}{parse\_ais\_14()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+14 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__14}{aismsg\+\_\+14}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a1ee2431ba4cf35c061b135531cb79fa9}\label{vdm__parse_8h_a1ee2431ba4cf35c061b135531cb79fa9}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+15@{parse\+\_\+ais\+\_\+15}}
+\index{parse\+\_\+ais\+\_\+15@{parse\+\_\+ais\+\_\+15}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+15()}{parse\_ais\_15()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+15 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__15}{aismsg\+\_\+15}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a63b110185a917f24ca4595f8ba6f8e15}\label{vdm__parse_8h_a63b110185a917f24ca4595f8ba6f8e15}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+16@{parse\+\_\+ais\+\_\+16}}
+\index{parse\+\_\+ais\+\_\+16@{parse\+\_\+ais\+\_\+16}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+16()}{parse\_ais\_16()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__16}{aismsg\+\_\+16}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a0f2fe1ad75ced2e2bb341a1af68dad03}\label{vdm__parse_8h_a0f2fe1ad75ced2e2bb341a1af68dad03}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+17@{parse\+\_\+ais\+\_\+17}}
+\index{parse\+\_\+ais\+\_\+17@{parse\+\_\+ais\+\_\+17}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+17()}{parse\_ais\_17()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+17 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__17}{aismsg\+\_\+17}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_adc7e10df5c893286c8ca9b6d69cf6285}\label{vdm__parse_8h_adc7e10df5c893286c8ca9b6d69cf6285}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+18@{parse\+\_\+ais\+\_\+18}}
+\index{parse\+\_\+ais\+\_\+18@{parse\+\_\+ais\+\_\+18}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+18()}{parse\_ais\_18()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+18 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__18}{aismsg\+\_\+18}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a57d6f71003ee2f48c6329176a15eb81c}\label{vdm__parse_8h_a57d6f71003ee2f48c6329176a15eb81c}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+19@{parse\+\_\+ais\+\_\+19}}
+\index{parse\+\_\+ais\+\_\+19@{parse\+\_\+ais\+\_\+19}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+19()}{parse\_ais\_19()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+19 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__19}{aismsg\+\_\+19}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a503595d5e3b6f4f0d97462679c08e717}\label{vdm__parse_8h_a503595d5e3b6f4f0d97462679c08e717}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+2@{parse\+\_\+ais\+\_\+2}}
+\index{parse\+\_\+ais\+\_\+2@{parse\+\_\+ais\+\_\+2}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+2()}{parse\_ais\_2()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__2}{aismsg\+\_\+2}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_adec3e585004aaa91a5b61579d646fb3d}\label{vdm__parse_8h_adec3e585004aaa91a5b61579d646fb3d}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+20@{parse\+\_\+ais\+\_\+20}}
+\index{parse\+\_\+ais\+\_\+20@{parse\+\_\+ais\+\_\+20}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+20()}{parse\_ais\_20()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+20 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__20}{aismsg\+\_\+20}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a1fe7b9a01110c80f0fd28f7ab264aed4}\label{vdm__parse_8h_a1fe7b9a01110c80f0fd28f7ab264aed4}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+21@{parse\+\_\+ais\+\_\+21}}
+\index{parse\+\_\+ais\+\_\+21@{parse\+\_\+ais\+\_\+21}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+21()}{parse\_ais\_21()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+21 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__21}{aismsg\+\_\+21}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_aa542844e5b147e67e4a0cfb81c430668}\label{vdm__parse_8h_aa542844e5b147e67e4a0cfb81c430668}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+22@{parse\+\_\+ais\+\_\+22}}
+\index{parse\+\_\+ais\+\_\+22@{parse\+\_\+ais\+\_\+22}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+22()}{parse\_ais\_22()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+22 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__22}{aismsg\+\_\+22}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_ab3655705c4d3a767e9ee7324a6360816}\label{vdm__parse_8h_ab3655705c4d3a767e9ee7324a6360816}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+23@{parse\+\_\+ais\+\_\+23}}
+\index{parse\+\_\+ais\+\_\+23@{parse\+\_\+ais\+\_\+23}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+23()}{parse\_ais\_23()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+23 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__23}{aismsg\+\_\+23}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a160919de4a2c669b5e3fe740777a691d}\label{vdm__parse_8h_a160919de4a2c669b5e3fe740777a691d}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+24@{parse\+\_\+ais\+\_\+24}}
+\index{parse\+\_\+ais\+\_\+24@{parse\+\_\+ais\+\_\+24}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+24()}{parse\_ais\_24()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+24 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__24}{aismsg\+\_\+24}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a84481420190ad170cadf9d6f1d36d2ce}\label{vdm__parse_8h_a84481420190ad170cadf9d6f1d36d2ce}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+3@{parse\+\_\+ais\+\_\+3}}
+\index{parse\+\_\+ais\+\_\+3@{parse\+\_\+ais\+\_\+3}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+3()}{parse\_ais\_3()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__3}{aismsg\+\_\+3}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a91ad99e318612364a9d6ff407e53f101}\label{vdm__parse_8h_a91ad99e318612364a9d6ff407e53f101}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+4@{parse\+\_\+ais\+\_\+4}}
+\index{parse\+\_\+ais\+\_\+4@{parse\+\_\+ais\+\_\+4}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+4()}{parse\_ais\_4()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__4}{aismsg\+\_\+4}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a82d4a7448f336bd260fff123b4edcc5b}\label{vdm__parse_8h_a82d4a7448f336bd260fff123b4edcc5b}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+5@{parse\+\_\+ais\+\_\+5}}
+\index{parse\+\_\+ais\+\_\+5@{parse\+\_\+ais\+\_\+5}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+5()}{parse\_ais\_5()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__5}{aismsg\+\_\+5}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a8c6d2bd1055414894eec83ac792b98c2}\label{vdm__parse_8h_a8c6d2bd1055414894eec83ac792b98c2}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+6@{parse\+\_\+ais\+\_\+6}}
+\index{parse\+\_\+ais\+\_\+6@{parse\+\_\+ais\+\_\+6}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+6()}{parse\_ais\_6()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+6 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__6}{aismsg\+\_\+6}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_afcf0bea0cb3857693a03f364829471e9}\label{vdm__parse_8h_afcf0bea0cb3857693a03f364829471e9}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+7@{parse\+\_\+ais\+\_\+7}}
+\index{parse\+\_\+ais\+\_\+7@{parse\+\_\+ais\+\_\+7}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+7()}{parse\_ais\_7()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+7 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__7}{aismsg\+\_\+7}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_af4d1a8ca050e368a855e3773f9bfbcb3}\label{vdm__parse_8h_af4d1a8ca050e368a855e3773f9bfbcb3}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+8@{parse\+\_\+ais\+\_\+8}}
+\index{parse\+\_\+ais\+\_\+8@{parse\+\_\+ais\+\_\+8}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+8()}{parse\_ais\_8()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__8}{aismsg\+\_\+8}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_aab92ebcd7d05ec90921afb699bbee5f8}\label{vdm__parse_8h_aab92ebcd7d05ec90921afb699bbee5f8}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!parse\+\_\+ais\+\_\+9@{parse\+\_\+ais\+\_\+9}}
+\index{parse\+\_\+ais\+\_\+9@{parse\+\_\+ais\+\_\+9}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{parse\+\_\+ais\+\_\+9()}{parse\_ais\_9()}}
+{\footnotesize\ttfamily int parse\+\_\+ais\+\_\+9 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structais__state}{ais\+\_\+state}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{structaismsg__9}{aismsg\+\_\+9}} $\ast$}]{result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_abe1a14fec7d456b179c29272a57f0525}\label{vdm__parse_8h_abe1a14fec7d456b179c29272a57f0525}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!pos2ddd@{pos2ddd}}
+\index{pos2ddd@{pos2ddd}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{pos2ddd()}{pos2ddd()}}
+{\footnotesize\ttfamily int pos2ddd (\begin{DoxyParamCaption}\item[{long}]{latitude,  }\item[{long}]{longitude,  }\item[{double $\ast$}]{lat\+\_\+dd,  }\item[{double $\ast$}]{long\+\_\+ddd }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vdm__parse_8h_a1c69ab08b538a084ec7a2b719c9e7ce4}\label{vdm__parse_8h_a1c69ab08b538a084ec7a2b719c9e7ce4}} 
+\index{vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}!pos2dmm@{pos2dmm}}
+\index{pos2dmm@{pos2dmm}!vdm\+\_\+parse.\+h@{vdm\+\_\+parse.\+h}}
+\subsubsection{\texorpdfstring{pos2dmm()}{pos2dmm()}}
+{\footnotesize\ttfamily int pos2dmm (\begin{DoxyParamCaption}\item[{long}]{latitude,  }\item[{long}]{longitude,  }\item[{short $\ast$}]{lat\+\_\+dd,  }\item[{double $\ast$}]{lat\+\_\+min,  }\item[{short $\ast$}]{long\+\_\+ddd,  }\item[{double $\ast$}]{long\+\_\+min }\end{DoxyParamCaption})}
+

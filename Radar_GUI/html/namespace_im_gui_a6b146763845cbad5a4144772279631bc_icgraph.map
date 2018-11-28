@@ -1,0 +1,6 @@
+<map id="ImGui::RadioButton" name="ImGui::RadioButton">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a018d2b61d2f00bb7a9dd2b1f933b93a5" title="ImGui::RadioButton" alt="" coords="220,5,355,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a6bfb117816d669f8704e5d0c0c0795fe" title="ImGui::ColorEditOptionsPopup" alt="" coords="188,56,387,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ac3f45e2aa0b1d591cc8a2cdf8b566a45" title="ImGui::ColorEdit4" alt="" coords="435,56,559,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a5afe76ba1c91f07363e40396e7df656e" title="ImGui::ColorEdit3" alt="" coords="607,56,731,83"/>
+</map>

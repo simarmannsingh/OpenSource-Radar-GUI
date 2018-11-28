@@ -1,0 +1,260 @@
+\hypertarget{structaismsg__22}{}\section{aismsg\+\_\+22 Struct Reference}
+\label{structaismsg__22}\index{aismsg\+\_\+22@{aismsg\+\_\+22}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+22\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{structaismsg__22__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__22_a64c77ae59ef591a33fda4edbe63717d7}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (22) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_abc92f086212c12847c62e40ad400175c}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__22_a171e90386762b51830a5c27f1c8df835}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_af4cd0dc6b79dbecd8695df8cd5c21b66}{spare1}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Spare \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__22_a3a01a92788c47ccb58e4d1d479c5bc48}{channel\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: M.\+1084 Channel A Frequency \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__22_a740a96027a0a786dcd7928da3d150118}{channel\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: M.\+1084 Channel B Frequency \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_ad2030bfc2c9066e52a3ea201ef530949}{txrx\+\_\+mode}}
+\begin{DoxyCompactList}\small\item\em 4 bits \+: T\+X/\+RX Mode \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_ae87a0383c97732f8674653b0d6a3fd10}{power}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Power Level \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__22_aed8d0468e3a9ea3edbdeae19f516326d}{N\+E\+\_\+longitude}}
+\begin{DoxyCompactList}\small\item\em 18 bits \+: Longitude in 1/1000 minutes \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__22_a7bee3419941b32aa1a43d865251d8bf7}{N\+E\+\_\+latitude}}
+\begin{DoxyCompactList}\small\item\em 17 bits \+: Latitude in 1/1000 minutes \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__22_a4bea924a9151daf7eefa6fb66946d3a8}{addressed\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI 1 \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__22_a9935056db59b3a0ba7037fb7e5c3468b}{S\+W\+\_\+longitude}}
+\begin{DoxyCompactList}\small\item\em 18 bits \+: Longitude in 1/1000 minutes \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__22_ae80faa358d573074daba810134427863}{S\+W\+\_\+latitude}}
+\begin{DoxyCompactList}\small\item\em 17 bits \+: Latitude in 1/1000 minutes \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__22_a6fbf36e1da211c96dcdde63d4a0f7b30}{addressed\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI 2 \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_ac3ed55d23d45cda49607dffb82ebca40}{addressed}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Addressed flag \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_af3ba83357d64e2e86302cd8e248e1011}{bw\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Channel A Bandwidth \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_a5a368baceba365a60270255dae616e1e}{bw\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Channel B Bandwidth \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__22_a39eaf2f56d7b224ea3254b3b4674e56d}{tz\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em 3 bits \+: Transitional Zone size \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__22_a04464450dac6d3e0061681f9ee98725f}{spare2}}
+\begin{DoxyCompactList}\small\item\em 23 bits \+: Spare \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 22 -\/ Channel Management
+
+If the message is for a geographic area its 2 corners are defined by the NE and SW positions. If it is an assigned message the destination M\+M\+SI will be in addressed\+\_\+1 and addressed\+\_\+2. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__22_ac3ed55d23d45cda49607dffb82ebca40}\label{structaismsg__22_ac3ed55d23d45cda49607dffb82ebca40}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!addressed@{addressed}}
+\index{addressed@{addressed}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{addressed}{addressed}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::addressed}
+
+
+
+1 bit \+: Addressed flag 
+
+\mbox{\Hypertarget{structaismsg__22_a4bea924a9151daf7eefa6fb66946d3a8}\label{structaismsg__22_a4bea924a9151daf7eefa6fb66946d3a8}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!addressed\+\_\+1@{addressed\+\_\+1}}
+\index{addressed\+\_\+1@{addressed\+\_\+1}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{addressed\+\_\+1}{addressed\_1}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+22\+::addressed\+\_\+1}
+
+
+
+30 bits \+: Destination M\+M\+SI 1 
+
+\mbox{\Hypertarget{structaismsg__22_a6fbf36e1da211c96dcdde63d4a0f7b30}\label{structaismsg__22_a6fbf36e1da211c96dcdde63d4a0f7b30}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!addressed\+\_\+2@{addressed\+\_\+2}}
+\index{addressed\+\_\+2@{addressed\+\_\+2}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{addressed\+\_\+2}{addressed\_2}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+22\+::addressed\+\_\+2}
+
+
+
+30 bits \+: Destination M\+M\+SI 2 
+
+\mbox{\Hypertarget{structaismsg__22_af3ba83357d64e2e86302cd8e248e1011}\label{structaismsg__22_af3ba83357d64e2e86302cd8e248e1011}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!bw\+\_\+a@{bw\+\_\+a}}
+\index{bw\+\_\+a@{bw\+\_\+a}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{bw\+\_\+a}{bw\_a}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::bw\+\_\+a}
+
+
+
+1 bit \+: Channel A Bandwidth 
+
+\mbox{\Hypertarget{structaismsg__22_a5a368baceba365a60270255dae616e1e}\label{structaismsg__22_a5a368baceba365a60270255dae616e1e}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!bw\+\_\+b@{bw\+\_\+b}}
+\index{bw\+\_\+b@{bw\+\_\+b}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{bw\+\_\+b}{bw\_b}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::bw\+\_\+b}
+
+
+
+1 bit \+: Channel B Bandwidth 
+
+\mbox{\Hypertarget{structaismsg__22_a3a01a92788c47ccb58e4d1d479c5bc48}\label{structaismsg__22_a3a01a92788c47ccb58e4d1d479c5bc48}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!channel\+\_\+a@{channel\+\_\+a}}
+\index{channel\+\_\+a@{channel\+\_\+a}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{channel\+\_\+a}{channel\_a}}
+{\footnotesize\ttfamily int aismsg\+\_\+22\+::channel\+\_\+a}
+
+
+
+12 bits \+: M.\+1084 Channel A Frequency 
+
+\mbox{\Hypertarget{structaismsg__22_a740a96027a0a786dcd7928da3d150118}\label{structaismsg__22_a740a96027a0a786dcd7928da3d150118}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!channel\+\_\+b@{channel\+\_\+b}}
+\index{channel\+\_\+b@{channel\+\_\+b}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{channel\+\_\+b}{channel\_b}}
+{\footnotesize\ttfamily int aismsg\+\_\+22\+::channel\+\_\+b}
+
+
+
+12 bits \+: M.\+1084 Channel B Frequency 
+
+\mbox{\Hypertarget{structaismsg__22_a64c77ae59ef591a33fda4edbe63717d7}\label{structaismsg__22_a64c77ae59ef591a33fda4edbe63717d7}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::msgid}
+
+
+
+6 bits \+: Message\+ID (22) 
+
+\mbox{\Hypertarget{structaismsg__22_a7bee3419941b32aa1a43d865251d8bf7}\label{structaismsg__22_a7bee3419941b32aa1a43d865251d8bf7}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!N\+E\+\_\+latitude@{N\+E\+\_\+latitude}}
+\index{N\+E\+\_\+latitude@{N\+E\+\_\+latitude}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{N\+E\+\_\+latitude}{NE\_latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+22\+::\+N\+E\+\_\+latitude}
+
+
+
+17 bits \+: Latitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__22_aed8d0468e3a9ea3edbdeae19f516326d}\label{structaismsg__22_aed8d0468e3a9ea3edbdeae19f516326d}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!N\+E\+\_\+longitude@{N\+E\+\_\+longitude}}
+\index{N\+E\+\_\+longitude@{N\+E\+\_\+longitude}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{N\+E\+\_\+longitude}{NE\_longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+22\+::\+N\+E\+\_\+longitude}
+
+
+
+18 bits \+: Longitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__22_ae87a0383c97732f8674653b0d6a3fd10}\label{structaismsg__22_ae87a0383c97732f8674653b0d6a3fd10}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!power@{power}}
+\index{power@{power}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::power}
+
+
+
+1 bit \+: Power Level 
+
+\mbox{\Hypertarget{structaismsg__22_abc92f086212c12847c62e40ad400175c}\label{structaismsg__22_abc92f086212c12847c62e40ad400175c}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__22_af4cd0dc6b79dbecd8695df8cd5c21b66}\label{structaismsg__22_af4cd0dc6b79dbecd8695df8cd5c21b66}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!spare1@{spare1}}
+\index{spare1@{spare1}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{spare1}{spare1}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::spare1}
+
+
+
+2 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__22_a04464450dac6d3e0061681f9ee98725f}\label{structaismsg__22_a04464450dac6d3e0061681f9ee98725f}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!spare2@{spare2}}
+\index{spare2@{spare2}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{spare2}{spare2}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+22\+::spare2}
+
+
+
+23 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__22_ae80faa358d573074daba810134427863}\label{structaismsg__22_ae80faa358d573074daba810134427863}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!S\+W\+\_\+latitude@{S\+W\+\_\+latitude}}
+\index{S\+W\+\_\+latitude@{S\+W\+\_\+latitude}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{S\+W\+\_\+latitude}{SW\_latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+22\+::\+S\+W\+\_\+latitude}
+
+
+
+17 bits \+: Latitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__22_a9935056db59b3a0ba7037fb7e5c3468b}\label{structaismsg__22_a9935056db59b3a0ba7037fb7e5c3468b}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!S\+W\+\_\+longitude@{S\+W\+\_\+longitude}}
+\index{S\+W\+\_\+longitude@{S\+W\+\_\+longitude}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{S\+W\+\_\+longitude}{SW\_longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+22\+::\+S\+W\+\_\+longitude}
+
+
+
+18 bits \+: Longitude in 1/1000 minutes 
+
+\mbox{\Hypertarget{structaismsg__22_ad2030bfc2c9066e52a3ea201ef530949}\label{structaismsg__22_ad2030bfc2c9066e52a3ea201ef530949}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!txrx\+\_\+mode@{txrx\+\_\+mode}}
+\index{txrx\+\_\+mode@{txrx\+\_\+mode}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{txrx\+\_\+mode}{txrx\_mode}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::txrx\+\_\+mode}
+
+
+
+4 bits \+: T\+X/\+RX Mode 
+
+\mbox{\Hypertarget{structaismsg__22_a39eaf2f56d7b224ea3254b3b4674e56d}\label{structaismsg__22_a39eaf2f56d7b224ea3254b3b4674e56d}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!tz\+\_\+size@{tz\+\_\+size}}
+\index{tz\+\_\+size@{tz\+\_\+size}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{tz\+\_\+size}{tz\_size}}
+{\footnotesize\ttfamily char aismsg\+\_\+22\+::tz\+\_\+size}
+
+
+
+3 bits \+: Transitional Zone size 
+
+\mbox{\Hypertarget{structaismsg__22_a171e90386762b51830a5c27f1c8df835}\label{structaismsg__22_a171e90386762b51830a5c27f1c8df835}} 
+\index{aismsg\+\_\+22@{aismsg\+\_\+22}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+22@{aismsg\+\_\+22}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+22\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

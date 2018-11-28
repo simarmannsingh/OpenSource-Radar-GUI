@@ -1,0 +1,947 @@
+\hypertarget{imstb__truetype_8h}{}\section{imstb\+\_\+truetype.\+h File Reference}
+\label{imstb__truetype_8h}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for imstb\+\_\+truetype.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{imstb__truetype_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{imstb__truetype_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstbtt____buf}{stbtt\+\_\+\+\_\+buf}}
+\item 
+struct \mbox{\hyperlink{structstbtt__bakedchar}{stbtt\+\_\+bakedchar}}
+\item 
+struct \mbox{\hyperlink{structstbtt__aligned__quad}{stbtt\+\_\+aligned\+\_\+quad}}
+\item 
+struct \mbox{\hyperlink{structstbtt__packedchar}{stbtt\+\_\+packedchar}}
+\item 
+struct \mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}}
+\item 
+struct \mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}}
+\item 
+struct \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}}
+\item 
+struct \mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}}
+\item 
+struct \mbox{\hyperlink{structstbtt____bitmap}{stbtt\+\_\+\+\_\+bitmap}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_a793c93dc8e39787cf5966bec548730d5}{\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+}}
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}}~extern
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_a42c4058f71988e703efdf4703d5dfe31}{S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE}}(x)~(-\/(x))
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_ab8fd8e5e0b82b0f7da54532035e47b22}{stbtt\+\_\+vertex\+\_\+type}}~short
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_ac914b70667c9abbe432dcc4c048e6542}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE}}~0
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_a3856cc4fbab4c126c2c438c6f567525d}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD}}~1
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_a95e8d57e767119c978652397df54afef}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC}}~2
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_a9064e582d96dcbaf2f573896cccd5ef7}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}}~4
+\item 
+\#define \mbox{\hyperlink{imstb__truetype_8h_accb2ecf3e0d840362ebba3fe3da192da}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE}}~8
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} \mbox{\hyperlink{imstb__truetype_8h_a37d613643adacbed24c22718faf6afc7}{stbtt\+\_\+pack\+\_\+context}}
+\item 
+typedef struct \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} \mbox{\hyperlink{imstb__truetype_8h_a82ca6622f6983cc08eca850280126daf}{stbtt\+\_\+fontinfo}}
+\item 
+typedef struct \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} \mbox{\hyperlink{imstb__truetype_8h_a7c4a99b31ea2207a0b2bbcbdab8f3840}{stbrp\+\_\+rect}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab335ba97e1798b621313de85a9a6e69d}{S\+T\+B\+T\+T\+\_\+vmove}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eade4bb6465c32e56588f35e5120769e2e}{S\+T\+B\+T\+T\+\_\+vline}}, 
+\mbox{\hyperlink{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab9ac3e527ce18873abeab556f6768ce4}{S\+T\+B\+T\+T\+\_\+vcurve}}, 
+\mbox{\hyperlink{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab6cd2670234c731eafba404d3a2470fd}{S\+T\+B\+T\+T\+\_\+vcubic}}
+ \}
+\item 
+enum \{ \mbox{\hyperlink{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a7df9cd0e95e0b375d03348661b399b69}{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE}} =0, 
+\mbox{\hyperlink{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635adc1a3ed4f2abe63dd4e91d789136db3f}{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635acd63703eafd91118387dfb70b384132d}{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO}} =2, 
+\mbox{\hyperlink{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a86f00e4c49cfec574b34090faa47f878}{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT}} =3
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daeec1111b4adcd61a20a461138726fc46}{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0}} =0, 
+\mbox{\hyperlink{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa13de23938974ed5ed2039ad0c623901}{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2803b7d7150216b6e67cdd2ef9e734b0}{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646}} =2, 
+\mbox{\hyperlink{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ead513507e004e256fb772d7ee91f60}{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP}} =3, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da95f85f02ffe39539e6b4032a3db58eed}{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL}} =4
+ \}
+\item 
+enum \{ \mbox{\hyperlink{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a87372d512b2e4be1dce36fe0153b8cc0}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL}} =0, 
+\mbox{\hyperlink{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600af3b7a17fc226e7540f025d241f36f17d}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600aaaab3da7b4e39433ac3db32fd9a83808}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS}} =2, 
+\mbox{\hyperlink{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a08224d2a200bd947c6513926290f4640}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL}} =10
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a11789a74295482059768d7ed21ddc1ae}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN}} =0, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aedbd64dd9fc105aabbbae72bae09be1f}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC}} =4, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aa1cd5f4622dd634ffafe0487a2135524}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a4f4920b5c91733bd8bb176d5425bd106}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW}} =5, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a808bbaa74269579caa945ffdae31c62a}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}} =2, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ac3c0a50ac37d4b5a68e0ea22824bee75}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK}} =6, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a0b8da1ad3177e0c9b1564c780fc11f0b}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN}} =3, 
+\mbox{\hyperlink{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aba7e217cc8f987ce69ab91180bd15a7f}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN}} =7
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a73e1e353a8727baf20ce85ee329b310b}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}} =0x0409, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a9d1b0af23f2f76cd1789e0cd638b935d}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}} =0x0410, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a6092851487f2d9708532ee955d4a75bd}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE}} =0x0804, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0e44b54e59bcc095ff9fe786850cbf74}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}} =0x0411, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0b5f77089567369488e03917d99ddbe5}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}} =0x0413, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388adc4f5bbc60ef97f1418902574fd9b418}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}} =0x0412, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a3b89fa08e6376c8314c330bd1e9837b5}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}} =0x040c, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a7930264450b0313e58f7590550520786}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}} =0x0419, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aebb69f5af1155d26a280778c5ab72580}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}} =0x0407, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a541da99c0255bb044006cc32c2ae50a2}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}} =0x0409, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aed7119e1e991009f49065071f4df39c6}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}} =0x040d, 
+\mbox{\hyperlink{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a126d5bcdbb6e42a9799873b4ffde6c34}{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}} =0x041D
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da845b632475daa7639bb3438785ca3fc9}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}} =0, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da988de1366d401829c919b481c5c3c8e2}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}} =11, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae6f91a195abd217070ca9cee63849420}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC}} =12, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da236502e69e2e07df089168e80dc1330d}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}} =23, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf2757f8c4078dfb9fe9ad9dc32e801ee}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}} =4, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf99640bf65945428bcb19f3b9e6e287f}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}} =32, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da9a8ae7b8dca3b2902eb69ece32b817a3}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}} =1, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da5399db7b554ed772c935f1b5d9d67852}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}} =6, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae3360f5396032fdf22ebb35f3d30e849}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}} =2, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da0315abafecf696110de133e4d54ade8c}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}} =5, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dad60d41526c1e9ee9ec50e8fd8950b9a4}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}} =10, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da552ed7fe17ee850f3883344b3424e26b}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED}} =33, 
+\newline
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da50fb98b75fe8bc23d2bc963e45ea8d96}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}} =3, 
+\mbox{\hyperlink{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf7d2b171e725e29ef4fbfbff7c3b5926}{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}} =19
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a9f906556cc09c60d136cb9af18305ef3}{stbtt\+\_\+\+Bake\+Font\+Bitmap}} (const unsigned char $\ast$data, int offset, float pixel\+\_\+height, unsigned char $\ast$pixels, int pw, int ph, int first\+\_\+char, int num\+\_\+chars, \mbox{\hyperlink{structstbtt__bakedchar}{stbtt\+\_\+bakedchar}} $\ast$chardata)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_ab7f7e3a2bc7ae72720057b07a13c400f}{stbtt\+\_\+\+Get\+Baked\+Quad}} (const \mbox{\hyperlink{structstbtt__bakedchar}{stbtt\+\_\+bakedchar}} $\ast$chardata, int pw, int ph, int char\+\_\+index, float $\ast$xpos, float $\ast$ypos, \mbox{\hyperlink{structstbtt__aligned__quad}{stbtt\+\_\+aligned\+\_\+quad}} $\ast$q, int opengl\+\_\+fillrule)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_adfc8faff4ebfbad1ce0bff9b4ebc691c}{stbtt\+\_\+\+Pack\+Begin}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, unsigned char $\ast$pixels, int \mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int \mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int stride\+\_\+in\+\_\+bytes, int padding, void $\ast$alloc\+\_\+context)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_ab51e492c4b320b8af6ef557ad3388140}{stbtt\+\_\+\+Pack\+End}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a344fc3b0ff7829d993ca8db3eadd321f}{stbtt\+\_\+\+Pack\+Font\+Range}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, const unsigned char $\ast$fontdata, int font\+\_\+index, float font\+\_\+size, int first\+\_\+unicode\+\_\+char\+\_\+in\+\_\+range, int num\+\_\+chars\+\_\+in\+\_\+range, \mbox{\hyperlink{structstbtt__packedchar}{stbtt\+\_\+packedchar}} $\ast$chardata\+\_\+for\+\_\+range)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a051bbf0eddd73f253c1b1050a9e47157}{stbtt\+\_\+\+Pack\+Font\+Ranges}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, const unsigned char $\ast$fontdata, int font\+\_\+index, \mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$ranges, int num\+\_\+ranges)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a4c55e174efbacaf82a8ddb9d1956717e}{stbtt\+\_\+\+Pack\+Set\+Oversampling}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, unsigned int h\+\_\+oversample, unsigned int v\+\_\+oversample)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_abbca8f4e5de8209200a7be6c1c57661e}{stbtt\+\_\+\+Get\+Packed\+Quad}} (const \mbox{\hyperlink{structstbtt__packedchar}{stbtt\+\_\+packedchar}} $\ast$chardata, int pw, int ph, int char\+\_\+index, float $\ast$xpos, float $\ast$ypos, \mbox{\hyperlink{structstbtt__aligned__quad}{stbtt\+\_\+aligned\+\_\+quad}} $\ast$q, int align\+\_\+to\+\_\+integer)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a8cf20362ceefc78d4df2e1703de3da50}{stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, \mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$ranges, int num\+\_\+ranges, \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$rects)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_aeec3933fdb14884b7c2919e6ddc44259}{stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$rects, int num\+\_\+rects)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_ab6eca9e0104838ca2483dea24dd9e631}{stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects}} (\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$spc, const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, \mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$ranges, int num\+\_\+ranges, \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$rects)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_af7ee37667bd84fee4c1fcf640fe8a672}{stbtt\+\_\+\+Get\+Number\+Of\+Fonts}} (const unsigned char $\ast$data)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a5ba17159df62ca39649e6f2231ac6e89}{stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index}} (const unsigned char $\ast$data, int index)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_ac3b6bda1851d0b1a4fd53f5f353668e5}{stbtt\+\_\+\+Init\+Font}} (\mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, const unsigned char $\ast$data, int offset)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a213d5628c6b2e5c107b99378eefc6e3a}{stbtt\+\_\+\+Find\+Glyph\+Index}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int unicode\+\_\+codepoint)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} float \mbox{\hyperlink{imstb__truetype_8h_aad275d7211530a3d817fcd8647690b7b}{stbtt\+\_\+\+Scale\+For\+Pixel\+Height}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float pixels)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} float \mbox{\hyperlink{imstb__truetype_8h_a76da72e13355eae763c567ffde0b4607}{stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float pixels)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a2784e0e55678a5980e950b1c9fbc75f0}{stbtt\+\_\+\+Get\+Font\+V\+Metrics}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int $\ast$ascent, int $\ast$descent, int $\ast$line\+Gap)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a12154e222685026a3cf315a1b5720f24}{stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int $\ast$typo\+Ascent, int $\ast$typo\+Descent, int $\ast$typo\+Line\+Gap)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a4dd4ca3bff4e304b2c8d952f87fbb639}{stbtt\+\_\+\+Get\+Font\+Bounding\+Box}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int $\ast$x0, int $\ast$y0, int $\ast$x1, int $\ast$y1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a015fbd6e96df8ee58bd41bb4211b64e7}{stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int codepoint, int $\ast$advance\+Width, int $\ast$left\+Side\+Bearing)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a83703ede616bacefc0312ef2803774a1}{stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int ch1, int ch2)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_abbfa26d9cbfeae7e224f2f62ef6c096d}{stbtt\+\_\+\+Get\+Codepoint\+Box}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int codepoint, int $\ast$x0, int $\ast$y0, int $\ast$x1, int $\ast$y1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_ab593f3066f2a8a7e33e7b7011d1b1f9a}{stbtt\+\_\+\+Get\+Glyph\+H\+Metrics}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int glyph\+\_\+index, int $\ast$advance\+Width, int $\ast$left\+Side\+Bearing)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_acf0b09547b1c2002ad0266802224552d}{stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int glyph1, int glyph2)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_accf148d2d285fd55178d9a401734ba92}{stbtt\+\_\+\+Get\+Glyph\+Box}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int glyph\+\_\+index, int $\ast$x0, int $\ast$y0, int $\ast$x1, int $\ast$y1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a3378c5794e9ab2a16492ab7e3c3c9485}{stbtt\+\_\+\+Is\+Glyph\+Empty}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int glyph\+\_\+index)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a073c07bd3c08775d2528a0a602be1795}{stbtt\+\_\+\+Get\+Codepoint\+Shape}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int unicode\+\_\+codepoint, \mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$$\ast$vertices)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a695c82840a7d4eaa1d5be00131c9718b}{stbtt\+\_\+\+Get\+Glyph\+Shape}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, int glyph\+\_\+index, \mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$$\ast$vertices)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a8aa85852fbc25667bf0438e29e128c93}{stbtt\+\_\+\+Free\+Shape}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, \mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$vertices)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a8254e6763560645597c44e00024b58fa}{stbtt\+\_\+\+Free\+Bitmap}} (unsigned char $\ast$bitmap, void $\ast$userdata)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_ae0b8431bbb0b6aa53126fd7c71839157}{stbtt\+\_\+\+Get\+Codepoint\+Bitmap}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale\+\_\+x, float scale\+\_\+y, int codepoint, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_a8a7a6a78f74633fce32d70cb18f90c9c}{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int codepoint, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a4416bb8395a4d2e717f613bb4903c7eb}{stbtt\+\_\+\+Make\+Codepoint\+Bitmap}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, int codepoint)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a51bd3fc45817d8606c749e585241fa71}{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int codepoint)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a4b3487c748701f5b89b7be56625df1be}{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int oversample\+\_\+x, int oversample\+\_\+y, float $\ast$sub\+\_\+x, float $\ast$sub\+\_\+y, int codepoint)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a2e607ba774cee7f2425917105dabd16f}{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$font, int codepoint, float scale\+\_\+x, float scale\+\_\+y, int $\ast$ix0, int $\ast$iy0, int $\ast$ix1, int $\ast$iy1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a18fae014dd2261e554248ca737d05578}{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$font, int codepoint, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int $\ast$ix0, int $\ast$iy0, int $\ast$ix1, int $\ast$iy1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_a6268874111f9c616cd53c63ea509a8d3}{stbtt\+\_\+\+Get\+Glyph\+Bitmap}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale\+\_\+x, float scale\+\_\+y, int glyph, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_a94b39dcc8fcc6921ddbfee882daf70fd}{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int glyph, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a915acab7676b20098f4d480376c5b589}{stbtt\+\_\+\+Make\+Glyph\+Bitmap}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, int glyph)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_aa82d35f758bc70bd675c48da381e7ea7}{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int glyph)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a006159e27c5c733ea11c688211e47c25}{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, unsigned char $\ast$output, int out\+\_\+w, int out\+\_\+h, int out\+\_\+stride, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int oversample\+\_\+x, int oversample\+\_\+y, float $\ast$sub\+\_\+x, float $\ast$sub\+\_\+y, int glyph)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a7bba8bb63f534246ccd3ed5b9390cc53}{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$font, int glyph, float scale\+\_\+x, float scale\+\_\+y, int $\ast$ix0, int $\ast$iy0, int $\ast$ix1, int $\ast$iy1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a597ef6b92ab0b5800c74478548b4782f}{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$font, int glyph, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int $\ast$ix0, int $\ast$iy0, int $\ast$ix1, int $\ast$iy1)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a5b868ef9a9f92e0cc8b6bc0dd52087db}{stbtt\+\_\+\+Rasterize}} (\mbox{\hyperlink{structstbtt____bitmap}{stbtt\+\_\+\+\_\+bitmap}} $\ast$result, float flatness\+\_\+in\+\_\+pixels, \mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$vertices, int num\+\_\+verts, float scale\+\_\+x, float scale\+\_\+y, float shift\+\_\+x, float shift\+\_\+y, int x\+\_\+off, int y\+\_\+off, int invert, void $\ast$userdata)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void \mbox{\hyperlink{imstb__truetype_8h_a1254dc807df81931ab070c6e80370489}{stbtt\+\_\+\+Free\+S\+DF}} (unsigned char $\ast$bitmap, void $\ast$userdata)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_a3e41dff0cd53e65bbce3b37591ac6c88}{stbtt\+\_\+\+Get\+Glyph\+S\+DF}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale, int glyph, int padding, unsigned char onedge\+\_\+value, float pixel\+\_\+dist\+\_\+scale, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_af5e7bd15f27b2add615b0141af2a9683}{stbtt\+\_\+\+Get\+Codepoint\+S\+DF}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$info, float scale, int codepoint, int padding, unsigned char onedge\+\_\+value, float pixel\+\_\+dist\+\_\+scale, int $\ast$\mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int $\ast$\mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}}, int $\ast$xoff, int $\ast$yoff)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_a76ec14e5c7e57981dc5a409d89b5e92f}{stbtt\+\_\+\+Find\+Matching\+Font}} (const unsigned char $\ast$fontdata, const char $\ast$name, int flags)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int \mbox{\hyperlink{imstb__truetype_8h_aafc4974ee424f18246f47b0926a1cd31}{stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian}} (const char $\ast$s1, int len1, const char $\ast$s2, int len2)
+\item 
+\mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} const char $\ast$ \mbox{\hyperlink{imstb__truetype_8h_ae32ee486ed5ececb8109dc51ac0eafde}{stbtt\+\_\+\+Get\+Font\+Name\+String}} (const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$font, int $\ast$length, int platform\+ID, int encoding\+ID, int language\+ID, int name\+ID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imstb__truetype_8h_a793c93dc8e39787cf5966bec548730d5}\label{imstb__truetype_8h_a793c93dc8e39787cf5966bec548730d5}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+@{\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+}{\_\_STB\_INCLUDE\_STB\_TRUETYPE\_H\_\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+S\+T\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+\_\+}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}\label{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+D\+EF@{S\+T\+B\+T\+T\+\_\+\+D\+EF}}
+\index{S\+T\+B\+T\+T\+\_\+\+D\+EF@{S\+T\+B\+T\+T\+\_\+\+D\+EF}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+D\+EF}{STBTT\_DEF}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+D\+EF~extern}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a3856cc4fbab4c126c2c438c6f567525d}\label{imstb__truetype_8h_a3856cc4fbab4c126c2c438c6f567525d}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD}}
+\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD}{STBTT\_MACSTYLE\_BOLD}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+B\+O\+LD~1}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ac914b70667c9abbe432dcc4c048e6542}\label{imstb__truetype_8h_ac914b70667c9abbe432dcc4c048e6542}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE}}
+\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE}{STBTT\_MACSTYLE\_DONTCARE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+D\+O\+N\+T\+C\+A\+RE~0}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a95e8d57e767119c978652397df54afef}\label{imstb__truetype_8h_a95e8d57e767119c978652397df54afef}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC}}
+\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC}{STBTT\_MACSTYLE\_ITALIC}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+I\+T\+A\+L\+IC~2}
+
+\mbox{\Hypertarget{imstb__truetype_8h_accb2ecf3e0d840362ebba3fe3da192da}\label{imstb__truetype_8h_accb2ecf3e0d840362ebba3fe3da192da}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE}}
+\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE}{STBTT\_MACSTYLE\_NONE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+N\+O\+NE~8}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a9064e582d96dcbaf2f573896cccd5ef7}\label{imstb__truetype_8h_a9064e582d96dcbaf2f573896cccd5ef7}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}}
+\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE}{STBTT\_MACSTYLE\_UNDERSCORE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+S\+T\+Y\+L\+E\+\_\+\+U\+N\+D\+E\+R\+S\+C\+O\+RE~4}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a42c4058f71988e703efdf4703d5dfe31}\label{imstb__truetype_8h_a42c4058f71988e703efdf4703d5dfe31}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE@{S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE}}
+\index{S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE@{S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE}{STBTT\_POINT\_SIZE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+T\+T\+\_\+\+P\+O\+I\+N\+T\+\_\+\+S\+I\+ZE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(-\/(x))}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ab8fd8e5e0b82b0f7da54532035e47b22}\label{imstb__truetype_8h_ab8fd8e5e0b82b0f7da54532035e47b22}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+vertex\+\_\+type@{stbtt\+\_\+vertex\+\_\+type}}
+\index{stbtt\+\_\+vertex\+\_\+type@{stbtt\+\_\+vertex\+\_\+type}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+vertex\+\_\+type}{stbtt\_vertex\_type}}
+{\footnotesize\ttfamily \#define stbtt\+\_\+vertex\+\_\+type~short}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{imstb__truetype_8h_a7c4a99b31ea2207a0b2bbcbdab8f3840}\label{imstb__truetype_8h_a7c4a99b31ea2207a0b2bbcbdab8f3840}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbrp\+\_\+rect@{stbrp\+\_\+rect}}
+\index{stbrp\+\_\+rect@{stbrp\+\_\+rect}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbrp\+\_\+rect}{stbrp\_rect}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} \mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}}}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a82ca6622f6983cc08eca850280126daf}\label{imstb__truetype_8h_a82ca6622f6983cc08eca850280126daf}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+fontinfo@{stbtt\+\_\+fontinfo}}
+\index{stbtt\+\_\+fontinfo@{stbtt\+\_\+fontinfo}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+fontinfo}{stbtt\_fontinfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}}}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a37d613643adacbed24c22718faf6afc7}\label{imstb__truetype_8h_a37d613643adacbed24c22718faf6afc7}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+pack\+\_\+context@{stbtt\+\_\+pack\+\_\+context}}
+\index{stbtt\+\_\+pack\+\_\+context@{stbtt\+\_\+pack\+\_\+context}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+pack\+\_\+context}{stbtt\_pack\_context}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} \mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a73e1e353a8727baf20ce85ee329b310b}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a73e1e353a8727baf20ce85ee329b310b}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a9d1b0af23f2f76cd1789e0cd638b935d}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a9d1b0af23f2f76cd1789e0cd638b935d}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a6092851487f2d9708532ee955d4a75bd}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a6092851487f2d9708532ee955d4a75bd}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0e44b54e59bcc095ff9fe786850cbf74}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0e44b54e59bcc095ff9fe786850cbf74}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0b5f77089567369488e03917d99ddbe5}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a0b5f77089567369488e03917d99ddbe5}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388adc4f5bbc60ef97f1418902574fd9b418}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388adc4f5bbc60ef97f1418902574fd9b418}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a3b89fa08e6376c8314c330bd1e9837b5}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a3b89fa08e6376c8314c330bd1e9837b5}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a7930264450b0313e58f7590550520786}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a7930264450b0313e58f7590550520786}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aebb69f5af1155d26a280778c5ab72580}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aebb69f5af1155d26a280778c5ab72580}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a541da99c0255bb044006cc32c2ae50a2}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a541da99c0255bb044006cc32c2ae50a2}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aed7119e1e991009f49065071f4df39c6}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388aed7119e1e991009f49065071f4df39c6}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a126d5bcdbb6e42a9799873b4ffde6c34}\label{imstb__truetype_8h_a385c44f6fb256e5716a2302a5b940388a126d5bcdbb6e42a9799873b4ffde6c34}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035d}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035d}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da845b632475daa7639bb3438785ca3fc9}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da845b632475daa7639bb3438785ca3fc9}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+E\+N\+G\+L\+I\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da988de1366d401829c919b481c5c3c8e2}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da988de1366d401829c919b481c5c3c8e2}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+J\+A\+P\+A\+N\+E\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae6f91a195abd217070ca9cee63849420}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae6f91a195abd217070ca9cee63849420}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+A\+R\+A\+B\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da236502e69e2e07df089168e80dc1330d}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da236502e69e2e07df089168e80dc1330d}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+K\+O\+R\+E\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf2757f8c4078dfb9fe9ad9dc32e801ee}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf2757f8c4078dfb9fe9ad9dc32e801ee}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+D\+U\+T\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf99640bf65945428bcb19f3b9e6e287f}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf99640bf65945428bcb19f3b9e6e287f}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+R\+U\+S\+S\+I\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da9a8ae7b8dca3b2902eb69ece32b817a3}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da9a8ae7b8dca3b2902eb69ece32b817a3}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+F\+R\+E\+N\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da5399db7b554ed772c935f1b5d9d67852}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da5399db7b554ed772c935f1b5d9d67852}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+P\+A\+N\+I\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae3360f5396032fdf22ebb35f3d30e849}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dae3360f5396032fdf22ebb35f3d30e849}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+G\+E\+R\+M\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da0315abafecf696110de133e4d54ade8c}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da0315abafecf696110de133e4d54ade8c}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+S\+W\+E\+D\+I\+SH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dad60d41526c1e9ee9ec50e8fd8950b9a4}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035dad60d41526c1e9ee9ec50e8fd8950b9a4}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+H\+E\+B\+R\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da552ed7fe17ee850f3883344b3424e26b}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da552ed7fe17ee850f3883344b3424e26b}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+S\+I\+M\+P\+L\+I\+F\+I\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da50fb98b75fe8bc23d2bc963e45ea8d96}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035da50fb98b75fe8bc23d2bc963e45ea8d96}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+I\+T\+A\+L\+I\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}}}\mbox{\Hypertarget{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf7d2b171e725e29ef4fbfbff7c3b5926}\label{imstb__truetype_8h_abc5c98fcc1211af2b80116dd6e0a035daf7d2b171e725e29ef4fbfbff7c3b5926}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+L\+A\+N\+G\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9e}\label{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9e}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+vmove@{S\+T\+B\+T\+T\+\_\+vmove}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+vmove@{S\+T\+B\+T\+T\+\_\+vmove}}}\mbox{\Hypertarget{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab335ba97e1798b621313de85a9a6e69d}\label{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab335ba97e1798b621313de85a9a6e69d}} 
+S\+T\+B\+T\+T\+\_\+vmove&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+vline@{S\+T\+B\+T\+T\+\_\+vline}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+vline@{S\+T\+B\+T\+T\+\_\+vline}}}\mbox{\Hypertarget{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eade4bb6465c32e56588f35e5120769e2e}\label{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eade4bb6465c32e56588f35e5120769e2e}} 
+S\+T\+B\+T\+T\+\_\+vline&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+vcurve@{S\+T\+B\+T\+T\+\_\+vcurve}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+vcurve@{S\+T\+B\+T\+T\+\_\+vcurve}}}\mbox{\Hypertarget{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab9ac3e527ce18873abeab556f6768ce4}\label{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab9ac3e527ce18873abeab556f6768ce4}} 
+S\+T\+B\+T\+T\+\_\+vcurve&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+vcubic@{S\+T\+B\+T\+T\+\_\+vcubic}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+vcubic@{S\+T\+B\+T\+T\+\_\+vcubic}}}\mbox{\Hypertarget{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab6cd2670234c731eafba404d3a2470fd}\label{imstb__truetype_8h_a61dadd085c1777f559549e05962b2c9eab6cd2670234c731eafba404d3a2470fd}} 
+S\+T\+B\+T\+T\+\_\+vcubic&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635}\label{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE}}}\mbox{\Hypertarget{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a7df9cd0e95e0b375d03348661b399b69}\label{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a7df9cd0e95e0b375d03348661b399b69}} 
+S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+U\+N\+I\+C\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC}}}\mbox{\Hypertarget{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635adc1a3ed4f2abe63dd4e91d789136db3f}\label{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635adc1a3ed4f2abe63dd4e91d789136db3f}} 
+S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+AC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO}}}\mbox{\Hypertarget{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635acd63703eafd91118387dfb70b384132d}\label{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635acd63703eafd91118387dfb70b384132d}} 
+S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+I\+SO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT@{S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT}}}\mbox{\Hypertarget{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a86f00e4c49cfec574b34090faa47f878}\label{imstb__truetype_8h_a726ca809ffd3d67ab4b8476646f26635a86f00e4c49cfec574b34090faa47f878}} 
+S\+T\+B\+T\+T\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+M\+I\+C\+R\+O\+S\+O\+FT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2d}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0}}}\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daeec1111b4adcd61a20a461138726fc46}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daeec1111b4adcd61a20a461138726fc46}} 
+S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1}}}\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa13de23938974ed5ed2039ad0c623901}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2daa13de23938974ed5ed2039ad0c623901}} 
+S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+1\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646}}}\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2803b7d7150216b6e67cdd2ef9e734b0}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da2803b7d7150216b6e67cdd2ef9e734b0}} 
+S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+I\+S\+O\+\_\+10646&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP}}}\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ead513507e004e256fb772d7ee91f60}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da4ead513507e004e256fb772d7ee91f60}} 
+S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+B\+MP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL@{S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL}}}\mbox{\Hypertarget{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da95f85f02ffe39539e6b4032a3db58eed}\label{imstb__truetype_8h_a0411cd49bb5b71852cecd93bcbf0ca2da95f85f02ffe39539e6b4032a3db58eed}} 
+S\+T\+B\+T\+T\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+2\+\_\+0\+\_\+\+F\+U\+LL&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600}\label{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL}}}\mbox{\Hypertarget{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a87372d512b2e4be1dce36fe0153b8cc0}\label{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a87372d512b2e4be1dce36fe0153b8cc0}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+Y\+M\+B\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP}}}\mbox{\Hypertarget{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600af3b7a17fc226e7540f025d241f36f17d}\label{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600af3b7a17fc226e7540f025d241f36f17d}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+B\+MP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS}}}\mbox{\Hypertarget{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600aaaab3da7b4e39433ac3db32fd9a83808}\label{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600aaaab3da7b4e39433ac3db32fd9a83808}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+S\+H\+I\+F\+T\+J\+IS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL@{S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL}}}\mbox{\Hypertarget{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a08224d2a200bd947c6513926290f4640}\label{imstb__truetype_8h_abed82baf7f470b522273a3e37c24c600a08224d2a200bd947c6513926290f4640}} 
+S\+T\+B\+T\+T\+\_\+\+M\+S\+\_\+\+E\+I\+D\+\_\+\+U\+N\+I\+C\+O\+D\+E\+\_\+\+F\+U\+LL&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a11789a74295482059768d7ed21ddc1ae}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a11789a74295482059768d7ed21ddc1ae}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+O\+M\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aedbd64dd9fc105aabbbae72bae09be1f}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aedbd64dd9fc105aabbbae72bae09be1f}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+A\+R\+A\+B\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aa1cd5f4622dd634ffafe0487a2135524}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aa1cd5f4622dd634ffafe0487a2135524}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+J\+A\+P\+A\+N\+E\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a4f4920b5c91733bd8bb176d5425bd106}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a4f4920b5c91733bd8bb176d5425bd106}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+H\+E\+B\+R\+EW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a808bbaa74269579caa945ffdae31c62a}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a808bbaa74269579caa945ffdae31c62a}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+C\+H\+I\+N\+E\+S\+E\+\_\+\+T\+R\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ac3c0a50ac37d4b5a68e0ea22824bee75}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57ac3c0a50ac37d4b5a68e0ea22824bee75}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+G\+R\+E\+EK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a0b8da1ad3177e0c9b1564c780fc11f0b}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57a0b8da1ad3177e0c9b1564c780fc11f0b}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+K\+O\+R\+E\+AN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN@{S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN}}}\mbox{\Hypertarget{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aba7e217cc8f987ce69ab91180bd15a7f}\label{imstb__truetype_8h_ab04a0655cd1e3bcac5e8f48c18df1a57aba7e217cc8f987ce69ab91180bd15a7f}} 
+S\+T\+B\+T\+T\+\_\+\+M\+A\+C\+\_\+\+E\+I\+D\+\_\+\+R\+U\+S\+S\+I\+AN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{imstb__truetype_8h_a9f906556cc09c60d136cb9af18305ef3}\label{imstb__truetype_8h_a9f906556cc09c60d136cb9af18305ef3}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Bake\+Font\+Bitmap@{stbtt\+\_\+\+Bake\+Font\+Bitmap}}
+\index{stbtt\+\_\+\+Bake\+Font\+Bitmap@{stbtt\+\_\+\+Bake\+Font\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Bake\+Font\+Bitmap()}{stbtt\_BakeFontBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Bake\+Font\+Bitmap (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{offset,  }\item[{float}]{pixel\+\_\+height,  }\item[{unsigned char $\ast$}]{pixels,  }\item[{int}]{pw,  }\item[{int}]{ph,  }\item[{int}]{first\+\_\+char,  }\item[{int}]{num\+\_\+chars,  }\item[{\mbox{\hyperlink{structstbtt__bakedchar}{stbtt\+\_\+bakedchar}} $\ast$}]{chardata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_aafc4974ee424f18246f47b0926a1cd31}\label{imstb__truetype_8h_aafc4974ee424f18246f47b0926a1cd31}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian@{stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian}}
+\index{stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian@{stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian()}{stbtt\_CompareUTF8toUTF16\_bigendian()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Compare\+U\+T\+F8to\+U\+T\+F16\+\_\+bigendian (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{int}]{len1,  }\item[{const char $\ast$}]{s2,  }\item[{int}]{len2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a213d5628c6b2e5c107b99378eefc6e3a}\label{imstb__truetype_8h_a213d5628c6b2e5c107b99378eefc6e3a}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Find\+Glyph\+Index@{stbtt\+\_\+\+Find\+Glyph\+Index}}
+\index{stbtt\+\_\+\+Find\+Glyph\+Index@{stbtt\+\_\+\+Find\+Glyph\+Index}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Find\+Glyph\+Index()}{stbtt\_FindGlyphIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Find\+Glyph\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{unicode\+\_\+codepoint }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_a213d5628c6b2e5c107b99378eefc6e3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_a76ec14e5c7e57981dc5a409d89b5e92f}\label{imstb__truetype_8h_a76ec14e5c7e57981dc5a409d89b5e92f}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Find\+Matching\+Font@{stbtt\+\_\+\+Find\+Matching\+Font}}
+\index{stbtt\+\_\+\+Find\+Matching\+Font@{stbtt\+\_\+\+Find\+Matching\+Font}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Find\+Matching\+Font()}{stbtt\_FindMatchingFont()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Find\+Matching\+Font (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{fontdata,  }\item[{const char $\ast$}]{name,  }\item[{int}]{flags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a8254e6763560645597c44e00024b58fa}\label{imstb__truetype_8h_a8254e6763560645597c44e00024b58fa}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Free\+Bitmap@{stbtt\+\_\+\+Free\+Bitmap}}
+\index{stbtt\+\_\+\+Free\+Bitmap@{stbtt\+\_\+\+Free\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Free\+Bitmap()}{stbtt\_FreeBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Free\+Bitmap (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bitmap,  }\item[{void $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a1254dc807df81931ab070c6e80370489}\label{imstb__truetype_8h_a1254dc807df81931ab070c6e80370489}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Free\+S\+DF@{stbtt\+\_\+\+Free\+S\+DF}}
+\index{stbtt\+\_\+\+Free\+S\+DF@{stbtt\+\_\+\+Free\+S\+DF}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Free\+S\+D\+F()}{stbtt\_FreeSDF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Free\+S\+DF (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{bitmap,  }\item[{void $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a8aa85852fbc25667bf0438e29e128c93}\label{imstb__truetype_8h_a8aa85852fbc25667bf0438e29e128c93}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Free\+Shape@{stbtt\+\_\+\+Free\+Shape}}
+\index{stbtt\+\_\+\+Free\+Shape@{stbtt\+\_\+\+Free\+Shape}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Free\+Shape()}{stbtt\_FreeShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Free\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{\mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$}]{vertices }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ab7f7e3a2bc7ae72720057b07a13c400f}\label{imstb__truetype_8h_ab7f7e3a2bc7ae72720057b07a13c400f}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Baked\+Quad@{stbtt\+\_\+\+Get\+Baked\+Quad}}
+\index{stbtt\+\_\+\+Get\+Baked\+Quad@{stbtt\+\_\+\+Get\+Baked\+Quad}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Baked\+Quad()}{stbtt\_GetBakedQuad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Baked\+Quad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__bakedchar}{stbtt\+\_\+bakedchar}} $\ast$}]{chardata,  }\item[{int}]{pw,  }\item[{int}]{ph,  }\item[{int}]{char\+\_\+index,  }\item[{float $\ast$}]{xpos,  }\item[{float $\ast$}]{ypos,  }\item[{\mbox{\hyperlink{structstbtt__aligned__quad}{stbtt\+\_\+aligned\+\_\+quad}} $\ast$}]{q,  }\item[{int}]{opengl\+\_\+fillrule }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ae0b8431bbb0b6aa53126fd7c71839157}\label{imstb__truetype_8h_ae0b8431bbb0b6aa53126fd7c71839157}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Bitmap@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Bitmap@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Bitmap()}{stbtt\_GetCodepointBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Codepoint\+Bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int}]{codepoint,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a2e607ba774cee7f2425917105dabd16f}\label{imstb__truetype_8h_a2e607ba774cee7f2425917105dabd16f}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box()}{stbtt\_GetCodepointBitmapBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{font,  }\item[{int}]{codepoint,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int $\ast$}]{ix0,  }\item[{int $\ast$}]{iy0,  }\item[{int $\ast$}]{ix1,  }\item[{int $\ast$}]{iy1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a18fae014dd2261e554248ca737d05578}\label{imstb__truetype_8h_a18fae014dd2261e554248ca737d05578}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel()}{stbtt\_GetCodepointBitmapBoxSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Box\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{font,  }\item[{int}]{codepoint,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int $\ast$}]{ix0,  }\item[{int $\ast$}]{iy0,  }\item[{int $\ast$}]{ix1,  }\item[{int $\ast$}]{iy1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a8a7a6a78f74633fce32d70cb18f90c9c}\label{imstb__truetype_8h_a8a7a6a78f74633fce32d70cb18f90c9c}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel@{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel()}{stbtt\_GetCodepointBitmapSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Codepoint\+Bitmap\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{codepoint,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_abbfa26d9cbfeae7e224f2f62ef6c096d}\label{imstb__truetype_8h_abbfa26d9cbfeae7e224f2f62ef6c096d}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Box@{stbtt\+\_\+\+Get\+Codepoint\+Box}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Box@{stbtt\+\_\+\+Get\+Codepoint\+Box}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Box()}{stbtt\_GetCodepointBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Codepoint\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{codepoint,  }\item[{int $\ast$}]{x0,  }\item[{int $\ast$}]{y0,  }\item[{int $\ast$}]{x1,  }\item[{int $\ast$}]{y1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a015fbd6e96df8ee58bd41bb4211b64e7}\label{imstb__truetype_8h_a015fbd6e96df8ee58bd41bb4211b64e7}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics@{stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics@{stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics()}{stbtt\_GetCodepointHMetrics()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Codepoint\+H\+Metrics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{codepoint,  }\item[{int $\ast$}]{advance\+Width,  }\item[{int $\ast$}]{left\+Side\+Bearing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a83703ede616bacefc0312ef2803774a1}\label{imstb__truetype_8h_a83703ede616bacefc0312ef2803774a1}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance@{stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance@{stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance()}{stbtt\_GetCodepointKernAdvance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Codepoint\+Kern\+Advance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{ch1,  }\item[{int}]{ch2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_af5e7bd15f27b2add615b0141af2a9683}\label{imstb__truetype_8h_af5e7bd15f27b2add615b0141af2a9683}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+S\+DF@{stbtt\+\_\+\+Get\+Codepoint\+S\+DF}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+S\+DF@{stbtt\+\_\+\+Get\+Codepoint\+S\+DF}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+S\+D\+F()}{stbtt\_GetCodepointSDF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Codepoint\+S\+DF (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale,  }\item[{int}]{codepoint,  }\item[{int}]{padding,  }\item[{unsigned char}]{onedge\+\_\+value,  }\item[{float}]{pixel\+\_\+dist\+\_\+scale,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a073c07bd3c08775d2528a0a602be1795}\label{imstb__truetype_8h_a073c07bd3c08775d2528a0a602be1795}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Codepoint\+Shape@{stbtt\+\_\+\+Get\+Codepoint\+Shape}}
+\index{stbtt\+\_\+\+Get\+Codepoint\+Shape@{stbtt\+\_\+\+Get\+Codepoint\+Shape}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Codepoint\+Shape()}{stbtt\_GetCodepointShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Codepoint\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{unicode\+\_\+codepoint,  }\item[{\mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$$\ast$}]{vertices }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a4dd4ca3bff4e304b2c8d952f87fbb639}\label{imstb__truetype_8h_a4dd4ca3bff4e304b2c8d952f87fbb639}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Font\+Bounding\+Box@{stbtt\+\_\+\+Get\+Font\+Bounding\+Box}}
+\index{stbtt\+\_\+\+Get\+Font\+Bounding\+Box@{stbtt\+\_\+\+Get\+Font\+Bounding\+Box}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Font\+Bounding\+Box()}{stbtt\_GetFontBoundingBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Font\+Bounding\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int $\ast$}]{x0,  }\item[{int $\ast$}]{y0,  }\item[{int $\ast$}]{x1,  }\item[{int $\ast$}]{y1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ae32ee486ed5ececb8109dc51ac0eafde}\label{imstb__truetype_8h_ae32ee486ed5ececb8109dc51ac0eafde}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Font\+Name\+String@{stbtt\+\_\+\+Get\+Font\+Name\+String}}
+\index{stbtt\+\_\+\+Get\+Font\+Name\+String@{stbtt\+\_\+\+Get\+Font\+Name\+String}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Font\+Name\+String()}{stbtt\_GetFontNameString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} const char$\ast$ stbtt\+\_\+\+Get\+Font\+Name\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{font,  }\item[{int $\ast$}]{length,  }\item[{int}]{platform\+ID,  }\item[{int}]{encoding\+ID,  }\item[{int}]{language\+ID,  }\item[{int}]{name\+ID }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a5ba17159df62ca39649e6f2231ac6e89}\label{imstb__truetype_8h_a5ba17159df62ca39649e6f2231ac6e89}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index@{stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index}}
+\index{stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index@{stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index()}{stbtt\_GetFontOffsetForIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Font\+Offset\+For\+Index (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_a5ba17159df62ca39649e6f2231ac6e89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_a2784e0e55678a5980e950b1c9fbc75f0}\label{imstb__truetype_8h_a2784e0e55678a5980e950b1c9fbc75f0}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Font\+V\+Metrics@{stbtt\+\_\+\+Get\+Font\+V\+Metrics}}
+\index{stbtt\+\_\+\+Get\+Font\+V\+Metrics@{stbtt\+\_\+\+Get\+Font\+V\+Metrics}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Font\+V\+Metrics()}{stbtt\_GetFontVMetrics()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Font\+V\+Metrics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int $\ast$}]{ascent,  }\item[{int $\ast$}]{descent,  }\item[{int $\ast$}]{line\+Gap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a12154e222685026a3cf315a1b5720f24}\label{imstb__truetype_8h_a12154e222685026a3cf315a1b5720f24}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2@{stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2}}
+\index{stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2@{stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2()}{stbtt\_GetFontVMetricsOS2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Font\+V\+Metrics\+O\+S2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int $\ast$}]{typo\+Ascent,  }\item[{int $\ast$}]{typo\+Descent,  }\item[{int $\ast$}]{typo\+Line\+Gap }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a6268874111f9c616cd53c63ea509a8d3}\label{imstb__truetype_8h_a6268874111f9c616cd53c63ea509a8d3}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Bitmap@{stbtt\+\_\+\+Get\+Glyph\+Bitmap}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Bitmap@{stbtt\+\_\+\+Get\+Glyph\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Bitmap()}{stbtt\_GetGlyphBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Glyph\+Bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int}]{glyph,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a7bba8bb63f534246ccd3ed5b9390cc53}\label{imstb__truetype_8h_a7bba8bb63f534246ccd3ed5b9390cc53}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box()}{stbtt\_GetGlyphBitmapBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{font,  }\item[{int}]{glyph,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int $\ast$}]{ix0,  }\item[{int $\ast$}]{iy0,  }\item[{int $\ast$}]{ix1,  }\item[{int $\ast$}]{iy1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a597ef6b92ab0b5800c74478548b4782f}\label{imstb__truetype_8h_a597ef6b92ab0b5800c74478548b4782f}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel()}{stbtt\_GetGlyphBitmapBoxSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Box\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{font,  }\item[{int}]{glyph,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int $\ast$}]{ix0,  }\item[{int $\ast$}]{iy0,  }\item[{int $\ast$}]{ix1,  }\item[{int $\ast$}]{iy1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a94b39dcc8fcc6921ddbfee882daf70fd}\label{imstb__truetype_8h_a94b39dcc8fcc6921ddbfee882daf70fd}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel@{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel()}{stbtt\_GetGlyphBitmapSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Glyph\+Bitmap\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{glyph,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_accf148d2d285fd55178d9a401734ba92}\label{imstb__truetype_8h_accf148d2d285fd55178d9a401734ba92}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Box@{stbtt\+\_\+\+Get\+Glyph\+Box}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Box@{stbtt\+\_\+\+Get\+Glyph\+Box}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Box()}{stbtt\_GetGlyphBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Glyph\+Box (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{glyph\+\_\+index,  }\item[{int $\ast$}]{x0,  }\item[{int $\ast$}]{y0,  }\item[{int $\ast$}]{x1,  }\item[{int $\ast$}]{y1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ab593f3066f2a8a7e33e7b7011d1b1f9a}\label{imstb__truetype_8h_ab593f3066f2a8a7e33e7b7011d1b1f9a}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+H\+Metrics@{stbtt\+\_\+\+Get\+Glyph\+H\+Metrics}}
+\index{stbtt\+\_\+\+Get\+Glyph\+H\+Metrics@{stbtt\+\_\+\+Get\+Glyph\+H\+Metrics}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+H\+Metrics()}{stbtt\_GetGlyphHMetrics()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Glyph\+H\+Metrics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{glyph\+\_\+index,  }\item[{int $\ast$}]{advance\+Width,  }\item[{int $\ast$}]{left\+Side\+Bearing }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_acf0b09547b1c2002ad0266802224552d}\label{imstb__truetype_8h_acf0b09547b1c2002ad0266802224552d}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance@{stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance@{stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance()}{stbtt\_GetGlyphKernAdvance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Glyph\+Kern\+Advance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{glyph1,  }\item[{int}]{glyph2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a3e41dff0cd53e65bbce3b37591ac6c88}\label{imstb__truetype_8h_a3e41dff0cd53e65bbce3b37591ac6c88}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+S\+DF@{stbtt\+\_\+\+Get\+Glyph\+S\+DF}}
+\index{stbtt\+\_\+\+Get\+Glyph\+S\+DF@{stbtt\+\_\+\+Get\+Glyph\+S\+DF}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+S\+D\+F()}{stbtt\_GetGlyphSDF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} unsigned char$\ast$ stbtt\+\_\+\+Get\+Glyph\+S\+DF (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{scale,  }\item[{int}]{glyph,  }\item[{int}]{padding,  }\item[{unsigned char}]{onedge\+\_\+value,  }\item[{float}]{pixel\+\_\+dist\+\_\+scale,  }\item[{int $\ast$}]{width,  }\item[{int $\ast$}]{height,  }\item[{int $\ast$}]{xoff,  }\item[{int $\ast$}]{yoff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a695c82840a7d4eaa1d5be00131c9718b}\label{imstb__truetype_8h_a695c82840a7d4eaa1d5be00131c9718b}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Glyph\+Shape@{stbtt\+\_\+\+Get\+Glyph\+Shape}}
+\index{stbtt\+\_\+\+Get\+Glyph\+Shape@{stbtt\+\_\+\+Get\+Glyph\+Shape}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Glyph\+Shape()}{stbtt\_GetGlyphShape()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Glyph\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{glyph\+\_\+index,  }\item[{\mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$$\ast$}]{vertices }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_af7ee37667bd84fee4c1fcf640fe8a672}\label{imstb__truetype_8h_af7ee37667bd84fee4c1fcf640fe8a672}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Number\+Of\+Fonts@{stbtt\+\_\+\+Get\+Number\+Of\+Fonts}}
+\index{stbtt\+\_\+\+Get\+Number\+Of\+Fonts@{stbtt\+\_\+\+Get\+Number\+Of\+Fonts}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Number\+Of\+Fonts()}{stbtt\_GetNumberOfFonts()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Get\+Number\+Of\+Fonts (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_abbca8f4e5de8209200a7be6c1c57661e}\label{imstb__truetype_8h_abbca8f4e5de8209200a7be6c1c57661e}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Get\+Packed\+Quad@{stbtt\+\_\+\+Get\+Packed\+Quad}}
+\index{stbtt\+\_\+\+Get\+Packed\+Quad@{stbtt\+\_\+\+Get\+Packed\+Quad}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Get\+Packed\+Quad()}{stbtt\_GetPackedQuad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Get\+Packed\+Quad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__packedchar}{stbtt\+\_\+packedchar}} $\ast$}]{chardata,  }\item[{int}]{pw,  }\item[{int}]{ph,  }\item[{int}]{char\+\_\+index,  }\item[{float $\ast$}]{xpos,  }\item[{float $\ast$}]{ypos,  }\item[{\mbox{\hyperlink{structstbtt__aligned__quad}{stbtt\+\_\+aligned\+\_\+quad}} $\ast$}]{q,  }\item[{int}]{align\+\_\+to\+\_\+integer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ac3b6bda1851d0b1a4fd53f5f353668e5}\label{imstb__truetype_8h_ac3b6bda1851d0b1a4fd53f5f353668e5}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Init\+Font@{stbtt\+\_\+\+Init\+Font}}
+\index{stbtt\+\_\+\+Init\+Font@{stbtt\+\_\+\+Init\+Font}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Init\+Font()}{stbtt\_InitFont()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Init\+Font (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_ac3b6bda1851d0b1a4fd53f5f353668e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_a3378c5794e9ab2a16492ab7e3c3c9485}\label{imstb__truetype_8h_a3378c5794e9ab2a16492ab7e3c3c9485}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Is\+Glyph\+Empty@{stbtt\+\_\+\+Is\+Glyph\+Empty}}
+\index{stbtt\+\_\+\+Is\+Glyph\+Empty@{stbtt\+\_\+\+Is\+Glyph\+Empty}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Is\+Glyph\+Empty()}{stbtt\_IsGlyphEmpty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Is\+Glyph\+Empty (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{int}]{glyph\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a4416bb8395a4d2e717f613bb4903c7eb}\label{imstb__truetype_8h_a4416bb8395a4d2e717f613bb4903c7eb}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Codepoint\+Bitmap@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap}}
+\index{stbtt\+\_\+\+Make\+Codepoint\+Bitmap@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Codepoint\+Bitmap()}{stbtt\_MakeCodepointBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Codepoint\+Bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int}]{codepoint }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a51bd3fc45817d8606c749e585241fa71}\label{imstb__truetype_8h_a51bd3fc45817d8606c749e585241fa71}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel}}
+\index{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel()}{stbtt\_MakeCodepointBitmapSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{codepoint }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a4b3487c748701f5b89b7be56625df1be}\label{imstb__truetype_8h_a4b3487c748701f5b89b7be56625df1be}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter}}
+\index{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter@{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter()}{stbtt\_MakeCodepointBitmapSubpixelPrefilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Codepoint\+Bitmap\+Subpixel\+Prefilter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{oversample\+\_\+x,  }\item[{int}]{oversample\+\_\+y,  }\item[{float $\ast$}]{sub\+\_\+x,  }\item[{float $\ast$}]{sub\+\_\+y,  }\item[{int}]{codepoint }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a915acab7676b20098f4d480376c5b589}\label{imstb__truetype_8h_a915acab7676b20098f4d480376c5b589}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Glyph\+Bitmap@{stbtt\+\_\+\+Make\+Glyph\+Bitmap}}
+\index{stbtt\+\_\+\+Make\+Glyph\+Bitmap@{stbtt\+\_\+\+Make\+Glyph\+Bitmap}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Glyph\+Bitmap()}{stbtt\_MakeGlyphBitmap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Glyph\+Bitmap (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{int}]{glyph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_aa82d35f758bc70bd675c48da381e7ea7}\label{imstb__truetype_8h_aa82d35f758bc70bd675c48da381e7ea7}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel@{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel}}
+\index{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel@{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel()}{stbtt\_MakeGlyphBitmapSubpixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{glyph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a006159e27c5c733ea11c688211e47c25}\label{imstb__truetype_8h_a006159e27c5c733ea11c688211e47c25}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter@{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter}}
+\index{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter@{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter()}{stbtt\_MakeGlyphBitmapSubpixelPrefilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Make\+Glyph\+Bitmap\+Subpixel\+Prefilter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{unsigned char $\ast$}]{output,  }\item[{int}]{out\+\_\+w,  }\item[{int}]{out\+\_\+h,  }\item[{int}]{out\+\_\+stride,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{oversample\+\_\+x,  }\item[{int}]{oversample\+\_\+y,  }\item[{float $\ast$}]{sub\+\_\+x,  }\item[{float $\ast$}]{sub\+\_\+y,  }\item[{int}]{glyph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_adfc8faff4ebfbad1ce0bff9b4ebc691c}\label{imstb__truetype_8h_adfc8faff4ebfbad1ce0bff9b4ebc691c}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Begin@{stbtt\+\_\+\+Pack\+Begin}}
+\index{stbtt\+\_\+\+Pack\+Begin@{stbtt\+\_\+\+Pack\+Begin}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Begin()}{stbtt\_PackBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Pack\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{unsigned char $\ast$}]{pixels,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{stride\+\_\+in\+\_\+bytes,  }\item[{int}]{padding,  }\item[{void $\ast$}]{alloc\+\_\+context }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_adfc8faff4ebfbad1ce0bff9b4ebc691c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_ab51e492c4b320b8af6ef557ad3388140}\label{imstb__truetype_8h_ab51e492c4b320b8af6ef557ad3388140}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+End@{stbtt\+\_\+\+Pack\+End}}
+\index{stbtt\+\_\+\+Pack\+End@{stbtt\+\_\+\+Pack\+End}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+End()}{stbtt\_PackEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Pack\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a344fc3b0ff7829d993ca8db3eadd321f}\label{imstb__truetype_8h_a344fc3b0ff7829d993ca8db3eadd321f}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Font\+Range@{stbtt\+\_\+\+Pack\+Font\+Range}}
+\index{stbtt\+\_\+\+Pack\+Font\+Range@{stbtt\+\_\+\+Pack\+Font\+Range}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Font\+Range()}{stbtt\_PackFontRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Pack\+Font\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{const unsigned char $\ast$}]{fontdata,  }\item[{int}]{font\+\_\+index,  }\item[{float}]{font\+\_\+size,  }\item[{int}]{first\+\_\+unicode\+\_\+char\+\_\+in\+\_\+range,  }\item[{int}]{num\+\_\+chars\+\_\+in\+\_\+range,  }\item[{\mbox{\hyperlink{structstbtt__packedchar}{stbtt\+\_\+packedchar}} $\ast$}]{chardata\+\_\+for\+\_\+range }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a051bbf0eddd73f253c1b1050a9e47157}\label{imstb__truetype_8h_a051bbf0eddd73f253c1b1050a9e47157}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Font\+Ranges@{stbtt\+\_\+\+Pack\+Font\+Ranges}}
+\index{stbtt\+\_\+\+Pack\+Font\+Ranges@{stbtt\+\_\+\+Pack\+Font\+Ranges}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Font\+Ranges()}{stbtt\_PackFontRanges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Pack\+Font\+Ranges (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{const unsigned char $\ast$}]{fontdata,  }\item[{int}]{font\+\_\+index,  }\item[{\mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$}]{ranges,  }\item[{int}]{num\+\_\+ranges }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a8cf20362ceefc78d4df2e1703de3da50}\label{imstb__truetype_8h_a8cf20362ceefc78d4df2e1703de3da50}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects}}
+\index{stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects()}{stbtt\_PackFontRangesGatherRects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Pack\+Font\+Ranges\+Gather\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{\mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$}]{ranges,  }\item[{int}]{num\+\_\+ranges,  }\item[{\mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$}]{rects }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_a8cf20362ceefc78d4df2e1703de3da50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_aeec3933fdb14884b7c2919e6ddc44259}\label{imstb__truetype_8h_aeec3933fdb14884b7c2919e6ddc44259}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects}}
+\index{stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects()}{stbtt\_PackFontRangesPackRects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Pack\+Font\+Ranges\+Pack\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{\mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$}]{rects,  }\item[{int}]{num\+\_\+rects }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_ab6eca9e0104838ca2483dea24dd9e631}\label{imstb__truetype_8h_ab6eca9e0104838ca2483dea24dd9e631}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects}}
+\index{stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects@{stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects()}{stbtt\_PackFontRangesRenderIntoRects()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} int stbtt\+\_\+\+Pack\+Font\+Ranges\+Render\+Into\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{\mbox{\hyperlink{structstbtt__pack__range}{stbtt\+\_\+pack\+\_\+range}} $\ast$}]{ranges,  }\item[{int}]{num\+\_\+ranges,  }\item[{\mbox{\hyperlink{structstbrp__rect}{stbrp\+\_\+rect}} $\ast$}]{rects }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a4c55e174efbacaf82a8ddb9d1956717e}\label{imstb__truetype_8h_a4c55e174efbacaf82a8ddb9d1956717e}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Pack\+Set\+Oversampling@{stbtt\+\_\+\+Pack\+Set\+Oversampling}}
+\index{stbtt\+\_\+\+Pack\+Set\+Oversampling@{stbtt\+\_\+\+Pack\+Set\+Oversampling}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Pack\+Set\+Oversampling()}{stbtt\_PackSetOversampling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Pack\+Set\+Oversampling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt__pack__context}{stbtt\+\_\+pack\+\_\+context}} $\ast$}]{spc,  }\item[{unsigned int}]{h\+\_\+oversample,  }\item[{unsigned int}]{v\+\_\+oversample }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__truetype_8h_a4c55e174efbacaf82a8ddb9d1956717e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imstb__truetype_8h_a5b868ef9a9f92e0cc8b6bc0dd52087db}\label{imstb__truetype_8h_a5b868ef9a9f92e0cc8b6bc0dd52087db}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Rasterize@{stbtt\+\_\+\+Rasterize}}
+\index{stbtt\+\_\+\+Rasterize@{stbtt\+\_\+\+Rasterize}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Rasterize()}{stbtt\_Rasterize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} void stbtt\+\_\+\+Rasterize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstbtt____bitmap}{stbtt\+\_\+\+\_\+bitmap}} $\ast$}]{result,  }\item[{float}]{flatness\+\_\+in\+\_\+pixels,  }\item[{\mbox{\hyperlink{structstbtt__vertex}{stbtt\+\_\+vertex}} $\ast$}]{vertices,  }\item[{int}]{num\+\_\+verts,  }\item[{float}]{scale\+\_\+x,  }\item[{float}]{scale\+\_\+y,  }\item[{float}]{shift\+\_\+x,  }\item[{float}]{shift\+\_\+y,  }\item[{int}]{x\+\_\+off,  }\item[{int}]{y\+\_\+off,  }\item[{int}]{invert,  }\item[{void $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_a76da72e13355eae763c567ffde0b4607}\label{imstb__truetype_8h_a76da72e13355eae763c567ffde0b4607}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels@{stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels}}
+\index{stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels@{stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels()}{stbtt\_ScaleForMappingEmToPixels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} float stbtt\+\_\+\+Scale\+For\+Mapping\+Em\+To\+Pixels (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{pixels }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imstb__truetype_8h_aad275d7211530a3d817fcd8647690b7b}\label{imstb__truetype_8h_aad275d7211530a3d817fcd8647690b7b}} 
+\index{imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}!stbtt\+\_\+\+Scale\+For\+Pixel\+Height@{stbtt\+\_\+\+Scale\+For\+Pixel\+Height}}
+\index{stbtt\+\_\+\+Scale\+For\+Pixel\+Height@{stbtt\+\_\+\+Scale\+For\+Pixel\+Height}!imstb\+\_\+truetype.\+h@{imstb\+\_\+truetype.\+h}}
+\subsubsection{\texorpdfstring{stbtt\+\_\+\+Scale\+For\+Pixel\+Height()}{stbtt\_ScaleForPixelHeight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imstb__truetype_8h_ab459250c5579b1d942e0d8eb23936827}{S\+T\+B\+T\+T\+\_\+\+D\+EF}} float stbtt\+\_\+\+Scale\+For\+Pixel\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structstbtt__fontinfo}{stbtt\+\_\+fontinfo}} $\ast$}]{info,  }\item[{float}]{pixels }\end{DoxyParamCaption})}
+

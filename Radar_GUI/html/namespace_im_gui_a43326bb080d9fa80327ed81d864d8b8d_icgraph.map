@@ -1,0 +1,8 @@
+<map id="ImGui::NavMoveRequestCancel" name="ImGui::NavMoveRequestCancel">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a8a96ace94b2000ada6f21d7459d51920" title="ImGui::NavMoveRequestForward" alt="" coords="256,5,465,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a41ecf265e5f678c78fc9c30b3cf2077f" title="ImGui::TreePop" alt="" coords="305,56,417,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#aa226265c140eb6ee375c5b9abc69c4fc" title="ImGui::EndMenuBar" alt="" coords="291,107,430,133"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a1448a5a4e8c431c15f991e9255c0df95" title="ImGui::EndMenu" alt="" coords="301,157,420,184"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#afe7a28c6eb52fff3cc27d5a698fea4ff" title="ImGui::ShowMetricsWindow" alt="" coords="513,56,699,83"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#ab92f330c808546b340eb7bdf7e5f7c95" title="ImGui::EndMainMenuBar" alt="" coords="523,107,689,133"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ImGui::SetNextWindowBgAlpha" name="ImGui::SetNextWindowBgAlpha">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a288e01ff1c8102d6374a6b1e409b9878" title="ImGui::Begin" alt="" coords="279,5,376,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a36816a48385f4759d746a03cf6202512" title="ImGui::BeginTooltip" alt="" coords="260,56,395,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a3826acf68fc4a12bb66401575f51d6a2" title="ImGui::SetTooltipV" alt="" coords="473,31,604,57"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#ac2609b0f034d3bcd8d70d26df8694eaa" title="ImGui::BeginDragDropSource" alt="" coords="443,81,635,108"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a313073fa01b8a9791f241ef93091ce92" title="ImGui::SetTooltip" alt="" coords="683,31,805,57"/>
+</map>

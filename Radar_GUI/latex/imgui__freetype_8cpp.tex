@@ -1,0 +1,53 @@
+\hypertarget{imgui__freetype_8cpp}{}\section{imgui\+\_\+freetype.\+cpp File Reference}
+\label{imgui__freetype_8cpp}\index{imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}}
+{\ttfamily \#include \char`\"{}imgui\+\_\+freetype.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+internal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ft2build.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}imstb\+\_\+rectpack.\+h\char`\"{}}\newline
+Include dependency graph for imgui\+\_\+freetype.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__freetype_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imgui__freetype_8cpp_a2269176f26c6ea4521fbc0e9ce9c0da8}{F\+T\+\_\+\+C\+E\+IL}}(X)~(((X + 63) \& -\/64) / 64)
+\item 
+\#define \mbox{\hyperlink{imgui__freetype_8cpp_a9592e63d0df8b6f0712e8da3aea5db23}{S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT}}(x)~\mbox{\hyperlink{imgui_8h_acb09e7dc42e8e3cefb0ecaa197978920}{I\+M\+\_\+\+A\+S\+S\+E\+RT}}(x)
+\item 
+\#define \mbox{\hyperlink{imgui__freetype_8cpp_aebe589aefd15ba7289a47168e31b5e45}{S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC}}
+\item 
+\#define \mbox{\hyperlink{imgui__freetype_8cpp_a0791e69f0dcd58efa795dd50eb8c6cd0}{S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imgui__freetype_8cpp_a2269176f26c6ea4521fbc0e9ce9c0da8}\label{imgui__freetype_8cpp_a2269176f26c6ea4521fbc0e9ce9c0da8}} 
+\index{imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}!F\+T\+\_\+\+C\+E\+IL@{F\+T\+\_\+\+C\+E\+IL}}
+\index{F\+T\+\_\+\+C\+E\+IL@{F\+T\+\_\+\+C\+E\+IL}!imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}}
+\subsubsection{\texorpdfstring{F\+T\+\_\+\+C\+E\+IL}{FT\_CEIL}}
+{\footnotesize\ttfamily \#define F\+T\+\_\+\+C\+E\+IL(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~(((X + 63) \& -\/64) / 64)}
+
+\mbox{\Hypertarget{imgui__freetype_8cpp_a0791e69f0dcd58efa795dd50eb8c6cd0}\label{imgui__freetype_8cpp_a0791e69f0dcd58efa795dd50eb8c6cd0}} 
+\index{imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}!S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON@{S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\index{S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON@{S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}!imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}{STB\_RECT\_PACK\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+R\+E\+C\+T\+\_\+\+P\+A\+C\+K\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}
+
+\mbox{\Hypertarget{imgui__freetype_8cpp_a9592e63d0df8b6f0712e8da3aea5db23}\label{imgui__freetype_8cpp_a9592e63d0df8b6f0712e8da3aea5db23}} 
+\index{imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}!S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT@{S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT}}
+\index{S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT@{S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT}!imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}}
+\subsubsection{\texorpdfstring{S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT}{STBRP\_ASSERT}}
+{\footnotesize\ttfamily \#define S\+T\+B\+R\+P\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{imgui_8h_acb09e7dc42e8e3cefb0ecaa197978920}{I\+M\+\_\+\+A\+S\+S\+E\+RT}}(x)}
+
+\mbox{\Hypertarget{imgui__freetype_8cpp_aebe589aefd15ba7289a47168e31b5e45}\label{imgui__freetype_8cpp_aebe589aefd15ba7289a47168e31b5e45}} 
+\index{imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}!S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC@{S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC}}
+\index{S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC@{S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC}!imgui\+\_\+freetype.\+cpp@{imgui\+\_\+freetype.\+cpp}}
+\subsubsection{\texorpdfstring{S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC}{STBRP\_STATIC}}
+{\footnotesize\ttfamily \#define S\+T\+B\+R\+P\+\_\+\+S\+T\+A\+T\+IC}
+

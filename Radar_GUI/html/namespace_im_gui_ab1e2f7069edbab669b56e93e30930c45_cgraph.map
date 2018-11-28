@@ -1,0 +1,6 @@
+<map id="ImGui::FocusableItemRegister" name="ImGui::FocusableItemRegister">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#aa4c4806c81aef3abe125b209f19d4a2b" title="ImGui::IsKeyPressedMap" alt="" coords="251,13,421,39"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a83331a8afa5316bc98ed9c98b151ac01" title="ImGui::IsKeyPressed" alt="" coords="469,13,615,39"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ad94a09fc01052f02fe11bec5a3c11275" title="ImGui::GetKeyPressedAmount" alt="" coords="663,13,864,39"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#ad3af0fc327467a44116d7d04018b9124" title="ImGui::CalcTypematicPressed\lRepeatAmount" alt="" coords="912,5,1111,47"/>
+</map>

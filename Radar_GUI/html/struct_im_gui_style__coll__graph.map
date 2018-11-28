@@ -1,0 +1,4 @@
+<map id="ImGuiStyle" name="ImGuiStyle">
+<area shape="rect" id="node2" href="$struct_im_vec2.html" title="{ImVec2\n|+ x\l+ y\l|+ ImVec2()\l+ ImVec2()\l+ operator[]()\l}" alt="" coords="5,13,103,134"/>
+<area shape="rect" id="node3" href="$struct_im_vec4.html" title="{ImVec4\n|+ x\l+ y\l+ z\l+ w\l|+ ImVec4()\l+ ImVec4()\l}" alt="" coords="193,5,280,141"/>
+</map>

@@ -1,0 +1,172 @@
+\hypertarget{graphics_8h}{}\section{graphics.\+h File Reference}
+\label{graphics_8h}\index{graphics.\+h@{graphics.\+h}}
+{\ttfamily \#include \char`\"{}imgui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+glfw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+opengl3.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$corecrt\+\_\+math\+\_\+defines.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}Font\+Renderer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Vertex\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Index\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Vertex\+Array.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Shader.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Shader\+\_\+s.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Remote\+Server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Remote\+Client.\+h\char`\"{}}\newline
+Include dependency graph for graphics.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{graphics_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8h_a8e11ce2cdf67a8052a51b1c4ef5f2dac}{gl\+Initialize}} ()
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{graphics_8h_a780d636a125b17bb3b70bd34bda8d1fc}{gl\+Create\+Window}} ()
+\item 
+void \mbox{\hyperlink{graphics_8h_a5180f7bf2b71421af837035824a8c8ac}{framebuffer\+\_\+size\+\_\+callback}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, int \mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int \mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}})
+\item 
+void \mbox{\hyperlink{graphics_8h_a4ee391c8bab624943c822faafb2c320e}{error\+\_\+callback}} (int error, const char $\ast$description)
+\item 
+void \mbox{\hyperlink{graphics_8h_a286930f4e8ede059b83ff6eafa2ff718}{key\+\_\+callback}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, int key, int scancode, int action, int mods)
+\item 
+int \mbox{\hyperlink{graphics_8h_a5cd48f226b7c6246608da40117650544}{gl\+Render\+Loop}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+void \mbox{\hyperlink{graphics_8h_a1ce959486847cd03e66889d09b67984e}{screen\+Overlay}} (bool $\ast$p\+\_\+open, int corner)
+\item 
+void \mbox{\hyperlink{graphics_8h_a3e7250fbecb3a20c790c13faf88834b2}{render\+Graph}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8h_a4ee391c8bab624943c822faafb2c320e}\label{graphics_8h_a4ee391c8bab624943c822faafb2c320e}} 
+\index{graphics.\+h@{graphics.\+h}!error\+\_\+callback@{error\+\_\+callback}}
+\index{error\+\_\+callback@{error\+\_\+callback}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{error\+\_\+callback()}{error\_callback()}}
+{\footnotesize\ttfamily void error\+\_\+callback (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{const char $\ast$}]{description }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h_a4ee391c8bab624943c822faafb2c320e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a5180f7bf2b71421af837035824a8c8ac}\label{graphics_8h_a5180f7bf2b71421af837035824a8c8ac}} 
+\index{graphics.\+h@{graphics.\+h}!framebuffer\+\_\+size\+\_\+callback@{framebuffer\+\_\+size\+\_\+callback}}
+\index{framebuffer\+\_\+size\+\_\+callback@{framebuffer\+\_\+size\+\_\+callback}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{framebuffer\+\_\+size\+\_\+callback()}{framebuffer\_size\_callback()}}
+{\footnotesize\ttfamily void framebuffer\+\_\+size\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8h_a780d636a125b17bb3b70bd34bda8d1fc}\label{graphics_8h_a780d636a125b17bb3b70bd34bda8d1fc}} 
+\index{graphics.\+h@{graphics.\+h}!gl\+Create\+Window@{gl\+Create\+Window}}
+\index{gl\+Create\+Window@{gl\+Create\+Window}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{gl\+Create\+Window()}{glCreateWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ gl\+Create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{graphics_8h_a780d636a125b17bb3b70bd34bda8d1fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{graphics_8h_a780d636a125b17bb3b70bd34bda8d1fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a8e11ce2cdf67a8052a51b1c4ef5f2dac}\label{graphics_8h_a8e11ce2cdf67a8052a51b1c4ef5f2dac}} 
+\index{graphics.\+h@{graphics.\+h}!gl\+Initialize@{gl\+Initialize}}
+\index{gl\+Initialize@{gl\+Initialize}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{gl\+Initialize()}{glInitialize()}}
+{\footnotesize\ttfamily void gl\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{graphics_8h_a8e11ce2cdf67a8052a51b1c4ef5f2dac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a5cd48f226b7c6246608da40117650544}\label{graphics_8h_a5cd48f226b7c6246608da40117650544}} 
+\index{graphics.\+h@{graphics.\+h}!gl\+Render\+Loop@{gl\+Render\+Loop}}
+\index{gl\+Render\+Loop@{gl\+Render\+Loop}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{gl\+Render\+Loop()}{glRenderLoop()}}
+{\footnotesize\ttfamily int gl\+Render\+Loop (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h_a5cd48f226b7c6246608da40117650544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{graphics_8h_a5cd48f226b7c6246608da40117650544_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a286930f4e8ede059b83ff6eafa2ff718}\label{graphics_8h_a286930f4e8ede059b83ff6eafa2ff718}} 
+\index{graphics.\+h@{graphics.\+h}!key\+\_\+callback@{key\+\_\+callback}}
+\index{key\+\_\+callback@{key\+\_\+callback}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{key\+\_\+callback()}{key\_callback()}}
+{\footnotesize\ttfamily void key\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h_a286930f4e8ede059b83ff6eafa2ff718_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a3e7250fbecb3a20c790c13faf88834b2}\label{graphics_8h_a3e7250fbecb3a20c790c13faf88834b2}} 
+\index{graphics.\+h@{graphics.\+h}!render\+Graph@{render\+Graph}}
+\index{render\+Graph@{render\+Graph}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{render\+Graph()}{renderGraph()}}
+{\footnotesize\ttfamily void render\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h_a3e7250fbecb3a20c790c13faf88834b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8h_a1ce959486847cd03e66889d09b67984e}\label{graphics_8h_a1ce959486847cd03e66889d09b67984e}} 
+\index{graphics.\+h@{graphics.\+h}!screen\+Overlay@{screen\+Overlay}}
+\index{screen\+Overlay@{screen\+Overlay}!graphics.\+h@{graphics.\+h}}
+\subsubsection{\texorpdfstring{screen\+Overlay()}{screenOverlay()}}
+{\footnotesize\ttfamily void screen\+Overlay (\begin{DoxyParamCaption}\item[{bool $\ast$}]{p\+\_\+open,  }\item[{int}]{corner }\end{DoxyParamCaption})}
+

@@ -1,6 +1,5 @@
 #pragma once
 #include <ft2build.h>
-#include "graphics.h"
 #include <iostream>
 #include <map>
 #include <string>

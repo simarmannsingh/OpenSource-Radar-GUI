@@ -1,0 +1,224 @@
+\hypertarget{struct_im_gui_text_buffer}{}\section{Im\+Gui\+Text\+Buffer Struct Reference}
+\label{struct_im_gui_text_buffer}\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+
+
+Collaboration diagram for Im\+Gui\+Text\+Buffer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{struct_im_gui_text_buffer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_im_gui_text_buffer_a4c4369c5e65f591554428b947c498d0d}{Im\+Gui\+Text\+Buffer}} ()
+\item 
+char \mbox{\hyperlink{struct_im_gui_text_buffer_a8550f53463fd12711e3d08b740227bd4}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_im_gui_text_buffer_aab6d83c6b9a8061287a4cb6135c1cab4}{begin}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_im_gui_text_buffer_a2fc30ad0d384f98dfcea722f798d91f2}{end}} () const
+\item 
+int \mbox{\hyperlink{struct_im_gui_text_buffer_a2811fcd43e0224eb3bd0f3464b634289}{size}} () const
+\item 
+bool \mbox{\hyperlink{struct_im_gui_text_buffer_afdef38ae725bb5495f0143170fa902c8}{empty}} ()
+\item 
+void \mbox{\hyperlink{struct_im_gui_text_buffer_a9e4edc9f950bc9e35d5c3b3071dbc0df}{clear}} ()
+\item 
+void \mbox{\hyperlink{struct_im_gui_text_buffer_a3271f361e0f1997f4c3eb77665fdf161}{reserve}} (int capacity)
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_im_gui_text_buffer_afb03439bc91723e274bfb9d247a691b9}{c\+\_\+str}} () const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_gui_text_buffer_a1c5892db030c5364823793f472754c9e}{appendf}} (const char $\ast$fmt,...) \mbox{\hyperlink{imgui_8h_a1251c2f9ddac0873dbad8181bd82c9f1}{I\+M\+\_\+\+F\+M\+T\+A\+R\+GS}}(2)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_gui_text_buffer_ac8a6b11834c4cee8113bf6950e66112e}{appendfv}} (const char $\ast$fmt, va\+\_\+list args) \mbox{\hyperlink{imgui_8h_a047693beb7f899f5deab1e20202016b3}{I\+M\+\_\+\+F\+M\+T\+L\+I\+ST}}(2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ char $>$ \mbox{\hyperlink{struct_im_gui_text_buffer_aa6de034b1920cdae5505cc58abf14240}{Buf}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{struct_im_gui_text_buffer_a471f810a368ec5f4a8ee12c407330c35}{Empty\+String}} \mbox{[}1\mbox{]} = \{ 0 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a4c4369c5e65f591554428b947c498d0d}\label{struct_im_gui_text_buffer_a4c4369c5e65f591554428b947c498d0d}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Text\+Buffer()}{ImGuiTextBuffer()}}
+{\footnotesize\ttfamily Im\+Gui\+Text\+Buffer\+::\+Im\+Gui\+Text\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a1c5892db030c5364823793f472754c9e}\label{struct_im_gui_text_buffer_a1c5892db030c5364823793f472754c9e}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!appendf@{appendf}}
+\index{appendf@{appendf}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{appendf()}{appendf()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Buffer\+::appendf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_gui_text_buffer_ac8a6b11834c4cee8113bf6950e66112e}\label{struct_im_gui_text_buffer_ac8a6b11834c4cee8113bf6950e66112e}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!appendfv@{appendfv}}
+\index{appendfv@{appendfv}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{appendfv()}{appendfv()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Buffer\+::appendfv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{struct_im_gui_text_buffer_ac8a6b11834c4cee8113bf6950e66112e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_buffer_ac8a6b11834c4cee8113bf6950e66112e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_aab6d83c6b9a8061287a4cb6135c1cab4}\label{struct_im_gui_text_buffer_aab6d83c6b9a8061287a4cb6135c1cab4}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!begin@{begin}}
+\index{begin@{begin}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Gui\+Text\+Buffer\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{struct_im_gui_text_buffer_aab6d83c6b9a8061287a4cb6135c1cab4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_buffer_aab6d83c6b9a8061287a4cb6135c1cab4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_afb03439bc91723e274bfb9d247a691b9}\label{struct_im_gui_text_buffer_afb03439bc91723e274bfb9d247a691b9}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!c\+\_\+str@{c\+\_\+str}}
+\index{c\+\_\+str@{c\+\_\+str}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{c\+\_\+str()}{c\_str()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Gui\+Text\+Buffer\+::c\+\_\+str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_buffer_afb03439bc91723e274bfb9d247a691b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a9e4edc9f950bc9e35d5c3b3071dbc0df}\label{struct_im_gui_text_buffer_a9e4edc9f950bc9e35d5c3b3071dbc0df}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!clear@{clear}}
+\index{clear@{clear}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Buffer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{struct_im_gui_text_buffer_a9e4edc9f950bc9e35d5c3b3071dbc0df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_buffer_a9e4edc9f950bc9e35d5c3b3071dbc0df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_afdef38ae725bb5495f0143170fa902c8}\label{struct_im_gui_text_buffer_afdef38ae725bb5495f0143170fa902c8}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!empty@{empty}}
+\index{empty@{empty}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Im\+Gui\+Text\+Buffer\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a2fc30ad0d384f98dfcea722f798d91f2}\label{struct_im_gui_text_buffer_a2fc30ad0d384f98dfcea722f798d91f2}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!end@{end}}
+\index{end@{end}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Gui\+Text\+Buffer\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{struct_im_gui_text_buffer_a2fc30ad0d384f98dfcea722f798d91f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a8550f53463fd12711e3d08b740227bd4}\label{struct_im_gui_text_buffer_a8550f53463fd12711e3d08b740227bd4}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily char Im\+Gui\+Text\+Buffer\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a3271f361e0f1997f4c3eb77665fdf161}\label{struct_im_gui_text_buffer_a3271f361e0f1997f4c3eb77665fdf161}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!reserve@{reserve}}
+\index{reserve@{reserve}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily void Im\+Gui\+Text\+Buffer\+::reserve (\begin{DoxyParamCaption}\item[{int}]{capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{struct_im_gui_text_buffer_a3271f361e0f1997f4c3eb77665fdf161_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a2811fcd43e0224eb3bd0f3464b634289}\label{struct_im_gui_text_buffer_a2811fcd43e0224eb3bd0f3464b634289}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!size@{size}}
+\index{size@{size}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Im\+Gui\+Text\+Buffer\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_text_buffer_a2811fcd43e0224eb3bd0f3464b634289_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_im_gui_text_buffer_aa6de034b1920cdae5505cc58abf14240}\label{struct_im_gui_text_buffer_aa6de034b1920cdae5505cc58abf14240}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!Buf@{Buf}}
+\index{Buf@{Buf}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{Buf}{Buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$char$>$ Im\+Gui\+Text\+Buffer\+::\+Buf}
+
+\mbox{\Hypertarget{struct_im_gui_text_buffer_a471f810a368ec5f4a8ee12c407330c35}\label{struct_im_gui_text_buffer_a471f810a368ec5f4a8ee12c407330c35}} 
+\index{Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}!Empty\+String@{Empty\+String}}
+\index{Empty\+String@{Empty\+String}!Im\+Gui\+Text\+Buffer@{Im\+Gui\+Text\+Buffer}}
+\subsubsection{\texorpdfstring{Empty\+String}{EmptyString}}
+{\footnotesize\ttfamily char Im\+Gui\+Text\+Buffer\+::\+Empty\+String = \{ 0 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\item 
+\mbox{\hyperlink{imgui_8cpp}{imgui.\+cpp}}\end{DoxyCompactItemize}

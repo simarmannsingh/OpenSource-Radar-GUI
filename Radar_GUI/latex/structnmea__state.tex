@@ -1,0 +1,78 @@
+\hypertarget{structnmea__state}{}\section{nmea\+\_\+state Struct Reference}
+\label{structnmea__state}\index{nmea\+\_\+state@{nmea\+\_\+state}}
+
+
+{\ttfamily \#include $<$nmea.\+h$>$}
+
+
+
+Collaboration diagram for nmea\+\_\+state\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{structnmea__state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{structnmea__state_af328f20b3659e91c66c79d832680dec6}{search}}
+\begin{DoxyCompactList}\small\item\em State of the search\+: S\+T\+A\+RT, E\+ND or D\+O\+NE. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{structnmea__state_a72aed21ebed1896b54b1a97f47262c1d}{field}} \mbox{[}\mbox{\hyperlink{nmea_8h_a3e71b1d0a33b70921fc460b33bbf068d}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Pointers to fields in the buffer. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structnmea__state_a6ec31934d18620490b027e544c574f6b}{str}} \mbox{[}\mbox{\hyperlink{nmea_8h_a1266d7c7847e5fce687eafaee2f46262}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Incoming N\+M\+EA 0183 string. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structnmea__state_a7e40c5b90eb5a0c69d13a80878478904}{str\+\_\+len}}
+\begin{DoxyCompactList}\small\item\em Number of bytes in str. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+N\+M\+EA parser state structure 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structnmea__state_a72aed21ebed1896b54b1a97f47262c1d}\label{structnmea__state_a72aed21ebed1896b54b1a97f47262c1d}} 
+\index{nmea\+\_\+state@{nmea\+\_\+state}!field@{field}}
+\index{field@{field}!nmea\+\_\+state@{nmea\+\_\+state}}
+\subsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily char$\ast$ nmea\+\_\+state\+::field\mbox{[}\mbox{\hyperlink{nmea_8h_a3e71b1d0a33b70921fc460b33bbf068d}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+F\+I\+E\+L\+DS}}\mbox{]}}
+
+
+
+Pointers to fields in the buffer. 
+
+\mbox{\Hypertarget{structnmea__state_af328f20b3659e91c66c79d832680dec6}\label{structnmea__state_af328f20b3659e91c66c79d832680dec6}} 
+\index{nmea\+\_\+state@{nmea\+\_\+state}!search@{search}}
+\index{search@{search}!nmea\+\_\+state@{nmea\+\_\+state}}
+\subsubsection{\texorpdfstring{search}{search}}
+{\footnotesize\ttfamily unsigned char nmea\+\_\+state\+::search}
+
+
+
+State of the search\+: S\+T\+A\+RT, E\+ND or D\+O\+NE. 
+
+\mbox{\Hypertarget{structnmea__state_a6ec31934d18620490b027e544c574f6b}\label{structnmea__state_a6ec31934d18620490b027e544c574f6b}} 
+\index{nmea\+\_\+state@{nmea\+\_\+state}!str@{str}}
+\index{str@{str}!nmea\+\_\+state@{nmea\+\_\+state}}
+\subsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily char nmea\+\_\+state\+::str\mbox{[}\mbox{\hyperlink{nmea_8h_a1266d7c7847e5fce687eafaee2f46262}{M\+A\+X\+\_\+\+N\+M\+E\+A\+\_\+\+L\+E\+N\+G\+TH}}\mbox{]}}
+
+
+
+Incoming N\+M\+EA 0183 string. 
+
+\mbox{\Hypertarget{structnmea__state_a7e40c5b90eb5a0c69d13a80878478904}\label{structnmea__state_a7e40c5b90eb5a0c69d13a80878478904}} 
+\index{nmea\+\_\+state@{nmea\+\_\+state}!str\+\_\+len@{str\+\_\+len}}
+\index{str\+\_\+len@{str\+\_\+len}!nmea\+\_\+state@{nmea\+\_\+state}}
+\subsubsection{\texorpdfstring{str\+\_\+len}{str\_len}}
+{\footnotesize\ttfamily unsigned long nmea\+\_\+state\+::str\+\_\+len}
+
+
+
+Number of bytes in str. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{nmea_8h}{nmea.\+h}}\end{DoxyCompactItemize}

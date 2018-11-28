@@ -1,0 +1,23 @@
+<map id="ImGui::MenuItem" name="ImGui::MenuItem">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#aa1bae511ca47478998693a9d8c84f2e6" title="ImGui::MenuItem" alt="" coords="175,93,296,120"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="1713,144,1887,171"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="563,43,704,69"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#aab3f43009094462cf2a5eb554785949b" title="ImGui::PushStyleVar" alt="" coords="344,93,488,120"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#af98575238bda183a523df19fb447af60" title="ImGui::Selectable" alt="" coords="353,144,479,171"/>
+<area shape="rect" id="node21" href="$namespace_im_gui.html#a14116e57d81e326adef2a702e65781d4" title="ImGui::PopStyleVar" alt="" coords="347,397,485,424"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="779,43,971,69"/>
+<area shape="rect" id="node6" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="797,93,953,120"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#aef1c8a6e5a3c70cb10d03d2a2a66dfd8" title="ImGui::PopClipRect" alt="" coords="1509,195,1645,221"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="576,93,691,120"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a96ce6060592d3ef975594357e650adc6" title="ImGui::GetWindowContentRegionMax" alt="" coords="1019,549,1260,576"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#a0a4dbfabbfa45d74319ef541962ce2eb" title="ImGui::GetContentRegionMax" alt="" coords="536,321,731,348"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="1699,448,1901,475"/>
+<area shape="rect" id="node14" href="$namespace_im_gui.html#a79c22e9c5c208b6c9534a273be71a9e6" title="ImGui::GetColumnOffset" alt="" coords="793,321,956,348"/>
+<area shape="rect" id="node15" href="$namespace_im_gui.html#a0e2889956542527c4039b6b8bf5c2a38" title="ImGui::Columns" alt="" coords="1082,271,1197,297"/>
+<area shape="rect" id="node16" href="$namespace_im_gui.html#af93bed3bce5475fe4d525d744f16aa20" title="ImGui::EndColumns" alt="" coords="1313,144,1451,171"/>
+<area shape="rect" id="node18" href="$namespace_im_gui.html#a6992289cbdb087a690403e48340bfb23" title="ImGui::BeginColumns" alt="" coords="1308,321,1456,348"/>
+<area shape="rect" id="node17" href="$namespace_im_gui.html#ad29a3fc0cb5dfc7f9fc7224512ce90bf" title="ImGui::PopItemWidth" alt="" coords="1504,144,1651,171"/>
+<area shape="rect" id="node19" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="1524,397,1631,424"/>
+<area shape="rect" id="node20" href="$namespace_im_gui.html#aba0b2d8f890a5d435ae43d0c4a2d4dd1" title="ImGui::PopID" alt="" coords="1528,347,1627,373"/>
+<area shape="rect" id="node22" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="578,600,689,627"/>
+</map>

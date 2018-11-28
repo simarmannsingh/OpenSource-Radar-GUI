@@ -1,0 +1,5 @@
+<map id="ImGui::GetNavInputAmount2d" name="ImGui::GetNavInputAmount2d">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a468ab885f9d3bd81cc7e8c3608c05193" title="ImGui::GetNavInputAmount" alt="" coords="247,13,425,39"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a6e17ebbbba6b83702bb1059aee98e420" title="ImGui::IsNavInputDown" alt="" coords="259,63,413,90"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ad3af0fc327467a44116d7d04018b9124" title="ImGui::CalcTypematicPressed\lRepeatAmount" alt="" coords="473,5,672,47"/>
+</map>

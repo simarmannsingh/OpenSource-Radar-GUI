@@ -1,0 +1,4 @@
+<map id="ImGui::RenderFrame" name="ImGui::RenderFrame">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="196,13,335,39"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="383,5,556,47"/>
+</map>

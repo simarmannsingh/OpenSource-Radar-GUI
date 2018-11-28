@@ -1,0 +1,6 @@
+<map id="ImGuiTextFilter::Build" name="ImGuiTextFilter::Build">
+<area shape="rect" id="node2" href="$struct_im_gui_text_filter_1_1_text_range.html#af65b120c583d34df5eb857962a8ac912" title="ImGuiTextFilter::TextRange\l::split" alt="" coords="200,49,380,90"/>
+<area shape="rect" id="node3" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="459,5,577,32"/>
+<area shape="rect" id="node4" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="445,56,591,83"/>
+<area shape="rect" id="node5" href="$struct_im_gui_text_filter_1_1_text_range.html#a5a6548fd40884ef5837e6a1ffa33af61" title="ImGuiTextFilter::TextRange\l::TextRange" alt="" coords="428,107,608,149"/>
+</map>

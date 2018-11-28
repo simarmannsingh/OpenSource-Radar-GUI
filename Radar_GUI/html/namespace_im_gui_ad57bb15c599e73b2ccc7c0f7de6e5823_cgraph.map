@@ -1,0 +1,15 @@
+<map id="ImGui::TextWrapped" name="ImGui::TextWrapped">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a9019a388cd0c410bcb3d3ae63a008123" title="ImGui::TextWrappedV" alt="" coords="195,233,345,260"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ab3b203dc94e7ee61a524609b3f3be50a" title="ImGui::PushTextWrapPos" alt="" coords="608,233,781,260"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a10a0d6362178c2f743092f21e1b6cd20" title="ImGui::TextV" alt="" coords="427,157,526,184"/>
+<area shape="rect" id="node14" href="$namespace_im_gui.html#a08000421b9cc13757430efe54178ae0f" title="ImGui::PopTextWrapPos" alt="" coords="393,284,560,311"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="829,208,1003,235"/>
+<area shape="rect" id="node6" href="$imgui_8cpp.html#a2e0022a073d369645a0daab17f823779" title="ImFormatStringV" alt="" coords="635,132,755,159"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a96a5f42789ecc419b2ae8af7b2acc28e" title="ImGui::TextUnformatted" alt="" coords="615,81,774,108"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#aaba5637199d31ea23d4d143b30a44aff" title="ImGui::GetTextLineHeight" alt="" coords="831,81,1001,108"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a8674467ae34d04bc99df1f7f98f47407" title="ImGui::IsClippedEx" alt="" coords="849,132,983,159"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="845,31,987,57"/>
+<area shape="rect" id="node10" href="$struct_im_rect.html#a0af3bade3781e5e7c6afdf71ccfb0d43" title="ImRect::Overlaps" alt="" coords="1086,132,1207,159"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="1051,56,1243,83"/>
+<area shape="rect" id="node13" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="1069,5,1225,32"/>
+</map>

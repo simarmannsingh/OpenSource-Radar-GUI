@@ -1,0 +1,138 @@
+\hypertarget{structaismsg__6}{}\section{aismsg\+\_\+6 Struct Reference}
+\label{structaismsg__6}\index{aismsg\+\_\+6@{aismsg\+\_\+6}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+6\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{structaismsg__6__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__6_a674410e5087a513a8cc18c7ed5a25ceb}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (6) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__6_aac3a52c354d7575cd8e72b1c5eeef307}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__6_af0d49825cc9197fe5e9d04bf61abf812}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__6_ae08724a1cd338cf62c3fbef505d920ff}{sequence}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Sequence number \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__6_ab93792be1d7e4bd787bbaff0c661689e}{destination}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__6_a6a1494f605a9a8513af82360ecdccc47}{retransmit}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Retransmit \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__6_a02e2f42ebc0a40f12ddf478b4920ebe7}{spare}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Spare \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structaismsg__6_a19432e2bf3c4f9404c167f7446c5eda2}{app\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em 16 bits \+: Application ID \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsixbit}{sixbit}} \mbox{\hyperlink{structaismsg__6_a749d7ea5722842dc7b4411d9b5318b9b}{data}}
+\begin{DoxyCompactList}\small\item\em 960 bits \+: Data payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 6 -\/ Addressed Binary Message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__6_a19432e2bf3c4f9404c167f7446c5eda2}\label{structaismsg__6_a19432e2bf3c4f9404c167f7446c5eda2}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!app\+\_\+id@{app\+\_\+id}}
+\index{app\+\_\+id@{app\+\_\+id}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{app\+\_\+id}{app\_id}}
+{\footnotesize\ttfamily unsigned int aismsg\+\_\+6\+::app\+\_\+id}
+
+
+
+16 bits \+: Application ID 
+
+\mbox{\Hypertarget{structaismsg__6_a749d7ea5722842dc7b4411d9b5318b9b}\label{structaismsg__6_a749d7ea5722842dc7b4411d9b5318b9b}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!data@{data}}
+\index{data@{data}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsixbit}{sixbit}} aismsg\+\_\+6\+::data}
+
+
+
+960 bits \+: Data payload 
+
+\mbox{\Hypertarget{structaismsg__6_ab93792be1d7e4bd787bbaff0c661689e}\label{structaismsg__6_ab93792be1d7e4bd787bbaff0c661689e}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!destination@{destination}}
+\index{destination@{destination}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{destination}{destination}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+6\+::destination}
+
+
+
+30 bits \+: Destination M\+M\+SI 
+
+\mbox{\Hypertarget{structaismsg__6_a674410e5087a513a8cc18c7ed5a25ceb}\label{structaismsg__6_a674410e5087a513a8cc18c7ed5a25ceb}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+6\+::msgid}
+
+
+
+6 bits \+: Message\+ID (6) 
+
+\mbox{\Hypertarget{structaismsg__6_aac3a52c354d7575cd8e72b1c5eeef307}\label{structaismsg__6_aac3a52c354d7575cd8e72b1c5eeef307}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+6\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__6_a6a1494f605a9a8513af82360ecdccc47}\label{structaismsg__6_a6a1494f605a9a8513af82360ecdccc47}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!retransmit@{retransmit}}
+\index{retransmit@{retransmit}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{retransmit}{retransmit}}
+{\footnotesize\ttfamily char aismsg\+\_\+6\+::retransmit}
+
+
+
+1 bit \+: Retransmit 
+
+\mbox{\Hypertarget{structaismsg__6_ae08724a1cd338cf62c3fbef505d920ff}\label{structaismsg__6_ae08724a1cd338cf62c3fbef505d920ff}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!sequence@{sequence}}
+\index{sequence@{sequence}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily char aismsg\+\_\+6\+::sequence}
+
+
+
+2 bits \+: Sequence number 
+
+\mbox{\Hypertarget{structaismsg__6_a02e2f42ebc0a40f12ddf478b4920ebe7}\label{structaismsg__6_a02e2f42ebc0a40f12ddf478b4920ebe7}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!spare@{spare}}
+\index{spare@{spare}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char aismsg\+\_\+6\+::spare}
+
+
+
+1 bit \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__6_af0d49825cc9197fe5e9d04bf61abf812}\label{structaismsg__6_af0d49825cc9197fe5e9d04bf61abf812}} 
+\index{aismsg\+\_\+6@{aismsg\+\_\+6}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+6@{aismsg\+\_\+6}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+6\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

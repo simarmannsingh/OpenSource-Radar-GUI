@@ -1,0 +1,311 @@
+\hypertarget{graphics_8cpp}{}\section{graphics.\+cpp File Reference}
+\label{graphics_8cpp}\index{graphics.\+cpp@{graphics.\+cpp}}
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+Include dependency graph for graphics.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a8e11ce2cdf67a8052a51b1c4ef5f2dac}{gl\+Initialize}} ()
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{graphics_8cpp_a780d636a125b17bb3b70bd34bda8d1fc}{gl\+Create\+Window}} ()
+\item 
+int \mbox{\hyperlink{graphics_8cpp_a5cd48f226b7c6246608da40117650544}{gl\+Render\+Loop}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a286930f4e8ede059b83ff6eafa2ff718}{key\+\_\+callback}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, int key, int scancode, int action, int mods)
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a4ee391c8bab624943c822faafb2c320e}{error\+\_\+callback}} (int error, const char $\ast$description)
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a5180f7bf2b71421af837035824a8c8ac}{framebuffer\+\_\+size\+\_\+callback}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, int \mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}}, int \mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}})
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a1ce959486847cd03e66889d09b67984e}{screen\+Overlay}} (bool $\ast$p\+\_\+open, int corner)
+\item 
+void \mbox{\hyperlink{graphics_8cpp_a3e7250fbecb3a20c790c13faf88834b2}{render\+Graph}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}} = 200
+\item 
+int \mbox{\hyperlink{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}} = 200
+\item 
+int \mbox{\hyperlink{graphics_8cpp_a2f5d360b6fa3d644a71787c4594d6ad4}{Screen\+\_\+width}} = 800
+\item 
+int \mbox{\hyperlink{graphics_8cpp_a51f2e3e936cd3039d26f73ded40b67a0}{Screen\+\_\+height}} = 800
+\item 
+float \mbox{\hyperlink{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}{centerX}} = 320.\+0
+\item 
+float \mbox{\hyperlink{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}{centerY}} = 240.\+0
+\item 
+float \mbox{\hyperlink{graphics_8cpp_a223206273aa2f5f467eaf17d00589db9}{P\+I\+\_\+180}} = M\+\_\+\+PI / 180.\+0f
+\item 
+float \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}} = (\mbox{\hyperlink{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}{centerX}} $<$ \mbox{\hyperlink{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}{centerY}}) ? \mbox{\hyperlink{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}{centerX}} \+: \mbox{\hyperlink{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}{centerY}}
+\item 
+float \mbox{\hyperlink{graphics_8cpp_ae66610afc19a334400379784923b755d}{rad\+\_\+64}} = \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}} / 64
+\item 
+float \mbox{\hyperlink{graphics_8cpp_a38d11f8c98614fd4764fd09032b1e440}{rad\+\_\+3}} = \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}} / 3
+\item 
+const char $\ast$ \mbox{\hyperlink{graphics_8cpp_af9ab252b8a2f1d21450f208f36f4cd79}{glsl\+\_\+version}} = \char`\"{}\#version 130\char`\"{}
+\item 
+bool \mbox{\hyperlink{graphics_8cpp_ac97463ddbad6aaae114d7a2fcc2fb867}{show\+\_\+demo\+\_\+window}} = true
+\item 
+const float \mbox{\hyperlink{graphics_8cpp_a48c7f9510ef345e712ac4afe3af7b0d4}{D\+I\+S\+T\+A\+N\+CE}} = 20.\+0f
+\item 
+const float \mbox{\hyperlink{graphics_8cpp_a707791d43aa0dc07237cba201e1025d7}{x\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 20.\+0f
+\item 
+const float \mbox{\hyperlink{graphics_8cpp_a2a5a7b73ce5a1305295fdb680549bdec}{y\+\_\+\+D\+I\+S\+T\+A\+N\+CE}} = 220.\+0f
+\item 
+\mbox{\hyperlink{class_font_renderer}{Font\+Renderer}} \mbox{\hyperlink{graphics_8cpp_ad62523b484a93a24889d08882ace3f12}{FR}}
+\item 
+\mbox{\hyperlink{class_shader__s}{Shader\+\_\+s}} \mbox{\hyperlink{graphics_8cpp_a9cc1f922ec1db27a50494fb6c104f6dc}{font\+\_\+shader}}
+\item 
+G\+Luint \mbox{\hyperlink{graphics_8cpp_ad111da7b6c832d91b7277bcc1af37b91}{va\+\_\+font}}
+\item 
+G\+Luint \mbox{\hyperlink{graphics_8cpp_a6f23896e3d54250f32e9be845a528e0c}{vb\+\_\+font}}
+\item 
+const int \mbox{\hyperlink{graphics_8cpp_a61bcea5070c8fd28b617a053bf8d2fce}{v\+\_\+corners}} = 80
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8cpp_a4ee391c8bab624943c822faafb2c320e}\label{graphics_8cpp_a4ee391c8bab624943c822faafb2c320e}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!error\+\_\+callback@{error\+\_\+callback}}
+\index{error\+\_\+callback@{error\+\_\+callback}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{error\+\_\+callback()}{error\_callback()}}
+{\footnotesize\ttfamily void error\+\_\+callback (\begin{DoxyParamCaption}\item[{int}]{error,  }\item[{const char $\ast$}]{description }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8cpp_a4ee391c8bab624943c822faafb2c320e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a5180f7bf2b71421af837035824a8c8ac}\label{graphics_8cpp_a5180f7bf2b71421af837035824a8c8ac}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!framebuffer\+\_\+size\+\_\+callback@{framebuffer\+\_\+size\+\_\+callback}}
+\index{framebuffer\+\_\+size\+\_\+callback@{framebuffer\+\_\+size\+\_\+callback}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{framebuffer\+\_\+size\+\_\+callback()}{framebuffer\_size\_callback()}}
+{\footnotesize\ttfamily void framebuffer\+\_\+size\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8cpp_a780d636a125b17bb3b70bd34bda8d1fc}\label{graphics_8cpp_a780d636a125b17bb3b70bd34bda8d1fc}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!gl\+Create\+Window@{gl\+Create\+Window}}
+\index{gl\+Create\+Window@{gl\+Create\+Window}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{gl\+Create\+Window()}{glCreateWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ gl\+Create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{graphics_8cpp_a780d636a125b17bb3b70bd34bda8d1fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{graphics_8cpp_a780d636a125b17bb3b70bd34bda8d1fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a8e11ce2cdf67a8052a51b1c4ef5f2dac}\label{graphics_8cpp_a8e11ce2cdf67a8052a51b1c4ef5f2dac}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!gl\+Initialize@{gl\+Initialize}}
+\index{gl\+Initialize@{gl\+Initialize}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{gl\+Initialize()}{glInitialize()}}
+{\footnotesize\ttfamily void gl\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{graphics_8cpp_a8e11ce2cdf67a8052a51b1c4ef5f2dac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a5cd48f226b7c6246608da40117650544}\label{graphics_8cpp_a5cd48f226b7c6246608da40117650544}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!gl\+Render\+Loop@{gl\+Render\+Loop}}
+\index{gl\+Render\+Loop@{gl\+Render\+Loop}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{gl\+Render\+Loop()}{glRenderLoop()}}
+{\footnotesize\ttfamily int gl\+Render\+Loop (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8cpp_a5cd48f226b7c6246608da40117650544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{graphics_8cpp_a5cd48f226b7c6246608da40117650544_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a286930f4e8ede059b83ff6eafa2ff718}\label{graphics_8cpp_a286930f4e8ede059b83ff6eafa2ff718}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!key\+\_\+callback@{key\+\_\+callback}}
+\index{key\+\_\+callback@{key\+\_\+callback}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{key\+\_\+callback()}{key\_callback()}}
+{\footnotesize\ttfamily void key\+\_\+callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{int}]{key,  }\item[{int}]{scancode,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8cpp_a286930f4e8ede059b83ff6eafa2ff718_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a3e7250fbecb3a20c790c13faf88834b2}\label{graphics_8cpp_a3e7250fbecb3a20c790c13faf88834b2}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!render\+Graph@{render\+Graph}}
+\index{render\+Graph@{render\+Graph}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{render\+Graph()}{renderGraph()}}
+{\footnotesize\ttfamily void render\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8cpp_a3e7250fbecb3a20c790c13faf88834b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{graphics_8cpp_a1ce959486847cd03e66889d09b67984e}\label{graphics_8cpp_a1ce959486847cd03e66889d09b67984e}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!screen\+Overlay@{screen\+Overlay}}
+\index{screen\+Overlay@{screen\+Overlay}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{screen\+Overlay()}{screenOverlay()}}
+{\footnotesize\ttfamily void screen\+Overlay (\begin{DoxyParamCaption}\item[{bool $\ast$}]{p\+\_\+open,  }\item[{int}]{corner }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}\label{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!centerX@{centerX}}
+\index{centerX@{centerX}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{centerX}{centerX}}
+{\footnotesize\ttfamily float centerX = 320.\+0}
+
+\mbox{\Hypertarget{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}\label{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!centerY@{centerY}}
+\index{centerY@{centerY}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{centerY}{centerY}}
+{\footnotesize\ttfamily float centerY = 240.\+0}
+
+\mbox{\Hypertarget{graphics_8cpp_a48c7f9510ef345e712ac4afe3af7b0d4}\label{graphics_8cpp_a48c7f9510ef345e712ac4afe3af7b0d4}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!D\+I\+S\+T\+A\+N\+CE@{D\+I\+S\+T\+A\+N\+CE}}
+\index{D\+I\+S\+T\+A\+N\+CE@{D\+I\+S\+T\+A\+N\+CE}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{D\+I\+S\+T\+A\+N\+CE}{DISTANCE}}
+{\footnotesize\ttfamily const float D\+I\+S\+T\+A\+N\+CE = 20.\+0f}
+
+\mbox{\Hypertarget{graphics_8cpp_a9cc1f922ec1db27a50494fb6c104f6dc}\label{graphics_8cpp_a9cc1f922ec1db27a50494fb6c104f6dc}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!font\+\_\+shader@{font\+\_\+shader}}
+\index{font\+\_\+shader@{font\+\_\+shader}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{font\+\_\+shader}{font\_shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shader__s}{Shader\+\_\+s}} font\+\_\+shader}
+
+\mbox{\Hypertarget{graphics_8cpp_ad62523b484a93a24889d08882ace3f12}\label{graphics_8cpp_ad62523b484a93a24889d08882ace3f12}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!FR@{FR}}
+\index{FR@{FR}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{FR}{FR}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_font_renderer}{Font\+Renderer}} FR}
+
+\mbox{\Hypertarget{graphics_8cpp_af9ab252b8a2f1d21450f208f36f4cd79}\label{graphics_8cpp_af9ab252b8a2f1d21450f208f36f4cd79}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!glsl\+\_\+version@{glsl\+\_\+version}}
+\index{glsl\+\_\+version@{glsl\+\_\+version}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{glsl\+\_\+version}{glsl\_version}}
+{\footnotesize\ttfamily const char$\ast$ glsl\+\_\+version = \char`\"{}\#version 130\char`\"{}}
+
+\mbox{\Hypertarget{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}\label{graphics_8cpp_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!height@{height}}
+\index{height@{height}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height = 200}
+
+\mbox{\Hypertarget{graphics_8cpp_a223206273aa2f5f467eaf17d00589db9}\label{graphics_8cpp_a223206273aa2f5f467eaf17d00589db9}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!P\+I\+\_\+180@{P\+I\+\_\+180}}
+\index{P\+I\+\_\+180@{P\+I\+\_\+180}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{P\+I\+\_\+180}{PI\_180}}
+{\footnotesize\ttfamily float P\+I\+\_\+180 = M\+\_\+\+PI / 180.\+0f}
+
+\mbox{\Hypertarget{graphics_8cpp_a38d11f8c98614fd4764fd09032b1e440}\label{graphics_8cpp_a38d11f8c98614fd4764fd09032b1e440}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!rad\+\_\+3@{rad\+\_\+3}}
+\index{rad\+\_\+3@{rad\+\_\+3}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{rad\+\_\+3}{rad\_3}}
+{\footnotesize\ttfamily float rad\+\_\+3 = \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}} / 3}
+
+\mbox{\Hypertarget{graphics_8cpp_ae66610afc19a334400379784923b755d}\label{graphics_8cpp_ae66610afc19a334400379784923b755d}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!rad\+\_\+64@{rad\+\_\+64}}
+\index{rad\+\_\+64@{rad\+\_\+64}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{rad\+\_\+64}{rad\_64}}
+{\footnotesize\ttfamily float rad\+\_\+64 = \mbox{\hyperlink{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}{radius}} / 64}
+
+\mbox{\Hypertarget{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}\label{graphics_8cpp_a5050a760c11da521cd4aee6336f6529f}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!radius@{radius}}
+\index{radius@{radius}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily float radius = (\mbox{\hyperlink{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}{centerX}} $<$ \mbox{\hyperlink{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}{centerY}}) ? \mbox{\hyperlink{graphics_8cpp_a891008ac2715b463cc3ed01a4308e433}{centerX}} \+: \mbox{\hyperlink{graphics_8cpp_a3a13b8e487586c82378ce10a3ba95e34}{centerY}}}
+
+\mbox{\Hypertarget{graphics_8cpp_a51f2e3e936cd3039d26f73ded40b67a0}\label{graphics_8cpp_a51f2e3e936cd3039d26f73ded40b67a0}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!Screen\+\_\+height@{Screen\+\_\+height}}
+\index{Screen\+\_\+height@{Screen\+\_\+height}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{Screen\+\_\+height}{Screen\_height}}
+{\footnotesize\ttfamily int Screen\+\_\+height = 800}
+
+\mbox{\Hypertarget{graphics_8cpp_a2f5d360b6fa3d644a71787c4594d6ad4}\label{graphics_8cpp_a2f5d360b6fa3d644a71787c4594d6ad4}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!Screen\+\_\+width@{Screen\+\_\+width}}
+\index{Screen\+\_\+width@{Screen\+\_\+width}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{Screen\+\_\+width}{Screen\_width}}
+{\footnotesize\ttfamily int Screen\+\_\+width = 800}
+
+\mbox{\Hypertarget{graphics_8cpp_ac97463ddbad6aaae114d7a2fcc2fb867}\label{graphics_8cpp_ac97463ddbad6aaae114d7a2fcc2fb867}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!show\+\_\+demo\+\_\+window@{show\+\_\+demo\+\_\+window}}
+\index{show\+\_\+demo\+\_\+window@{show\+\_\+demo\+\_\+window}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{show\+\_\+demo\+\_\+window}{show\_demo\_window}}
+{\footnotesize\ttfamily bool show\+\_\+demo\+\_\+window = true}
+
+\mbox{\Hypertarget{graphics_8cpp_a61bcea5070c8fd28b617a053bf8d2fce}\label{graphics_8cpp_a61bcea5070c8fd28b617a053bf8d2fce}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!v\+\_\+corners@{v\+\_\+corners}}
+\index{v\+\_\+corners@{v\+\_\+corners}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{v\+\_\+corners}{v\_corners}}
+{\footnotesize\ttfamily const int v\+\_\+corners = 80}
+
+\mbox{\Hypertarget{graphics_8cpp_ad111da7b6c832d91b7277bcc1af37b91}\label{graphics_8cpp_ad111da7b6c832d91b7277bcc1af37b91}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!va\+\_\+font@{va\+\_\+font}}
+\index{va\+\_\+font@{va\+\_\+font}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{va\+\_\+font}{va\_font}}
+{\footnotesize\ttfamily G\+Luint va\+\_\+font}
+
+\mbox{\Hypertarget{graphics_8cpp_a6f23896e3d54250f32e9be845a528e0c}\label{graphics_8cpp_a6f23896e3d54250f32e9be845a528e0c}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!vb\+\_\+font@{vb\+\_\+font}}
+\index{vb\+\_\+font@{vb\+\_\+font}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{vb\+\_\+font}{vb\_font}}
+{\footnotesize\ttfamily G\+Luint vb\+\_\+font}
+
+\mbox{\Hypertarget{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}\label{graphics_8cpp_a2474a5474cbff19523a51eb1de01cda4}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!width@{width}}
+\index{width@{width}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int width = 200}
+
+\mbox{\Hypertarget{graphics_8cpp_a707791d43aa0dc07237cba201e1025d7}\label{graphics_8cpp_a707791d43aa0dc07237cba201e1025d7}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!x\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{x\+\_\+\+D\+I\+S\+T\+A\+N\+CE}}
+\index{x\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{x\+\_\+\+D\+I\+S\+T\+A\+N\+CE}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{x\+\_\+\+D\+I\+S\+T\+A\+N\+CE}{x\_DISTANCE}}
+{\footnotesize\ttfamily const float x\+\_\+\+D\+I\+S\+T\+A\+N\+CE = 20.\+0f}
+
+\mbox{\Hypertarget{graphics_8cpp_a2a5a7b73ce5a1305295fdb680549bdec}\label{graphics_8cpp_a2a5a7b73ce5a1305295fdb680549bdec}} 
+\index{graphics.\+cpp@{graphics.\+cpp}!y\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{y\+\_\+\+D\+I\+S\+T\+A\+N\+CE}}
+\index{y\+\_\+\+D\+I\+S\+T\+A\+N\+CE@{y\+\_\+\+D\+I\+S\+T\+A\+N\+CE}!graphics.\+cpp@{graphics.\+cpp}}
+\subsubsection{\texorpdfstring{y\+\_\+\+D\+I\+S\+T\+A\+N\+CE}{y\_DISTANCE}}
+{\footnotesize\ttfamily const float y\+\_\+\+D\+I\+S\+T\+A\+N\+CE = 220.\+0f}
+

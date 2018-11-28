@@ -1,0 +1,6 @@
+<map id="ImGui::Value" name="ImGui::Value">
+<area shape="rect" id="node2" href="$struct_im_color.html#a95206b688dcc03f725790538c74f4526" title="ImColor::ImColor" alt="" coords="176,5,295,32"/>
+<area shape="rect" id="node3" href="$struct_im_color.html#a4f4fc53e0676d50404d6d5ffcf16637f" title="ImColor::operator ImU32" alt="" coords="154,56,317,83"/>
+<area shape="rect" id="node4" href="$struct_im_color.html#a10f1de242f13c93f8be64545e4cbcb0a" title="ImColor::operator ImVec4" alt="" coords="151,107,320,133"/>
+<area shape="rect" id="node5" href="$struct_im_color.html#afcff20160db703b956d56e5a9fa88e24" title="ImColor::SetHSV" alt="" coords="175,157,296,184"/>
+</map>

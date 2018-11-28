@@ -1,0 +1,5 @@
+<map id="ImGui_ImplOpenGL3_CreateFontsTexture" name="ImGui_ImplOpenGL3_CreateFontsTexture">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a3179e560812f878f3961ce803a5d9302" title="ImGui::GetIO" alt="" coords="283,5,382,32"/>
+<area shape="rect" id="node3" href="$struct_im_font_atlas.html#a8abb0c4e67ebb38249d4df71218c4eec" title="ImFontAtlas::GetTexDataAs\lRGBA32" alt="" coords="240,57,425,98"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#aed896913f2e140cd0ad7431060dba50b" title="ImGui::MemAlloc" alt="" coords="473,64,596,91"/>
+</map>

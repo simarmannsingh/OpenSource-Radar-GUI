@@ -1,0 +1,100 @@
+\hypertarget{imstb__textedit_8h}{}\section{imstb\+\_\+textedit.\+h File Reference}
+\label{imstb__textedit_8h}\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for imstb\+\_\+textedit.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{imstb__textedit_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imstb__textedit_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_stb_undo_record}{Stb\+Undo\+Record}}
+\item 
+struct \mbox{\hyperlink{struct_stb_undo_state}{Stb\+Undo\+State}}
+\item 
+struct \mbox{\hyperlink{struct_s_t_b___textedit_state}{S\+T\+B\+\_\+\+Textedit\+State}}
+\item 
+struct \mbox{\hyperlink{struct_stb_textedit_row}{Stb\+Textedit\+Row}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imgui__internal_8h_a4411c841bf18979c0243b6b115ea2ae8}{I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{imgui__widgets_8cpp_a6022be2114016de5a8171f89d05b352a}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove}}~memmove
+\item 
+\#define \mbox{\hyperlink{imgui__widgets_8cpp_abceda0f69ec60690c009978a6e24beda}{S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}(s)~((s)-\/$>$select\+\_\+start != (s)-\/$>$select\+\_\+end)
+\item 
+\#define \mbox{\hyperlink{imgui__widgets_8cpp_a010ea37f20ef02d3c9909c59a87f3639}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE}}~int
+\item 
+\#define \mbox{\hyperlink{imstb__textedit_8h_afa79483143df87a1497010712b3dfaf9}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT}}~99
+\item 
+\#define \mbox{\hyperlink{imstb__textedit_8h_a15cbcac55cf92003c28c44734422756a}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT}}~999
+\item 
+\#define \mbox{\hyperlink{imstb__textedit_8h_a6e64031a061922e3a48d88fd8623f4c3}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}}~int
+\item 
+\#define \mbox{\hyperlink{imstb__textedit_8h_a5d0c1b8751b6517e3d817f2a025ed654}{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE}}~int
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imgui__internal_8h_a4411c841bf18979c0243b6b115ea2ae8}\label{imgui__internal_8h_a4411c841bf18979c0243b6b115ea2ae8}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H@{I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H}}
+\index{I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H@{I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H}{INCLUDE\_STB\_TEXTEDIT\_H}}
+{\footnotesize\ttfamily \#define I\+N\+C\+L\+U\+D\+E\+\_\+\+S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+H}
+
+\mbox{\Hypertarget{imgui__widgets_8cpp_abceda0f69ec60690c009978a6e24beda}\label{imgui__widgets_8cpp_abceda0f69ec60690c009978a6e24beda}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}{STB\_TEXT\_HAS\_SELECTION}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+\_\+\+H\+A\+S\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~((s)-\/$>$select\+\_\+start != (s)-\/$>$select\+\_\+end)}
+
+\mbox{\Hypertarget{imstb__textedit_8h_a6e64031a061922e3a48d88fd8623f4c3}\label{imstb__textedit_8h_a6e64031a061922e3a48d88fd8623f4c3}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE}{STB\_TEXTEDIT\_CHARTYPE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+C\+H\+A\+R\+T\+Y\+PE~int}
+
+\mbox{\Hypertarget{imgui__widgets_8cpp_a010ea37f20ef02d3c9909c59a87f3639}\label{imgui__widgets_8cpp_a010ea37f20ef02d3c9909c59a87f3639}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE}{STB\_TEXTEDIT\_KEYTYPE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+K\+E\+Y\+T\+Y\+PE~int}
+
+\mbox{\Hypertarget{imgui__widgets_8cpp_a6022be2114016de5a8171f89d05b352a}\label{imgui__widgets_8cpp_a6022be2114016de5a8171f89d05b352a}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove}{STB\_TEXTEDIT\_memmove}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+memmove~memmove}
+
+\mbox{\Hypertarget{imstb__textedit_8h_a5d0c1b8751b6517e3d817f2a025ed654}\label{imstb__textedit_8h_a5d0c1b8751b6517e3d817f2a025ed654}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE}{STB\_TEXTEDIT\_POSITIONTYPE}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+P\+O\+S\+I\+T\+I\+O\+N\+T\+Y\+PE~int}
+
+\mbox{\Hypertarget{imstb__textedit_8h_a15cbcac55cf92003c28c44734422756a}\label{imstb__textedit_8h_a15cbcac55cf92003c28c44734422756a}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT}{STB\_TEXTEDIT\_UNDOCHARCOUNT}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+C\+H\+A\+R\+C\+O\+U\+NT~999}
+
+\mbox{\Hypertarget{imstb__textedit_8h_afa79483143df87a1497010712b3dfaf9}\label{imstb__textedit_8h_afa79483143df87a1497010712b3dfaf9}} 
+\index{imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}!S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT}}
+\index{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT@{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT}!imstb\+\_\+textedit.\+h@{imstb\+\_\+textedit.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT}{STB\_TEXTEDIT\_UNDOSTATECOUNT}}
+{\footnotesize\ttfamily \#define S\+T\+B\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+\_\+\+U\+N\+D\+O\+S\+T\+A\+T\+E\+C\+O\+U\+NT~99}
+

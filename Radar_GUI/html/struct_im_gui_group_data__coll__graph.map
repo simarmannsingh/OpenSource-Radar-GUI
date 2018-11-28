@@ -1,0 +1,4 @@
+<map id="ImGuiGroupData" name="ImGuiGroupData">
+<area shape="rect" id="node2" href="$struct_im_vec1.html" title="{ImVec1\n|+ x\l|+ ImVec1()\l+ ImVec1()\l}" alt="" coords="5,20,92,112"/>
+<area shape="rect" id="node3" href="$struct_im_vec2.html" title="{ImVec2\n|+ x\l+ y\l|+ ImVec2()\l+ ImVec2()\l+ operator[]()\l}" alt="" coords="156,5,253,127"/>
+</map>

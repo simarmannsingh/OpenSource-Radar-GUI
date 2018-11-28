@@ -1,0 +1,198 @@
+\hypertarget{structaismsg__17}{}\section{aismsg\+\_\+17 Struct Reference}
+\label{structaismsg__17}\index{aismsg\+\_\+17@{aismsg\+\_\+17}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+17\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{structaismsg__17__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__17_ad1ed96391525853f34323499e6fa2040}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (17) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_a05d124ed703c5fa11963fd2a24303300}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__17_ac5e1b074133bdc942c3dd5fd13b420f8}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_a09ac75cd600194f44f44cf6e1fa61ea1}{spare1}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Spare \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__17_a15bc801d51c5e0a5c666644f144452f5}{longitude}}
+\begin{DoxyCompactList}\small\item\em 18 bits \+: Longitude in 1/1000 minute \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__17_a92c4c3008fe1da2ae4ab588cece719d3}{latitude}}
+\begin{DoxyCompactList}\small\item\em 17 bits \+: Latitude in 1/1000 minute \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_ac19c0a28b731cd7764c9b06fec986689}{spare2}}
+\begin{DoxyCompactList}\small\item\em 5 bits \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_aae1c0f82df9d72e5618b09c4a0ca2420}{msg\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Mesage Type from M.\+823 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__17_a550ec42bc073903d5a4b07b9f4570b3a}{station\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em 10 bits \+: Station ID from M.\+823 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__17_ac17316cf543595f13a57ed69a5d7f755}{z\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em 13 bits \+: Z Count \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_ac8a3a36ccd85fa1da4d4c0ded928a140}{seq\+\_\+num}}
+\begin{DoxyCompactList}\small\item\em 3 bits \+: Sequence Number \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_a6e563d70627a2810b607c8c8a4ece22d}{num\+\_\+words}}
+\begin{DoxyCompactList}\small\item\em 5 bits \+: Number of Data Words \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__17_a44ecea7299eee0da802cab93e6ae6d20}{health}}
+\begin{DoxyCompactList}\small\item\em 3 bits \+: Reference Station Health from M.\+823 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsixbit}{sixbit}} \mbox{\hyperlink{structaismsg__17_ac9a97be376f6d2ba511e35c77eb86e7c}{data}}
+\begin{DoxyCompactList}\small\item\em 0-\/696 bits \+: Data payload \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 17 -\/ G\+N\+SS Binary Broadcast Message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__17_ac9a97be376f6d2ba511e35c77eb86e7c}\label{structaismsg__17_ac9a97be376f6d2ba511e35c77eb86e7c}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!data@{data}}
+\index{data@{data}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsixbit}{sixbit}} aismsg\+\_\+17\+::data}
+
+
+
+0-\/696 bits \+: Data payload 
+
+\mbox{\Hypertarget{structaismsg__17_a44ecea7299eee0da802cab93e6ae6d20}\label{structaismsg__17_a44ecea7299eee0da802cab93e6ae6d20}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!health@{health}}
+\index{health@{health}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::health}
+
+
+
+3 bits \+: Reference Station Health from M.\+823 
+
+\mbox{\Hypertarget{structaismsg__17_a92c4c3008fe1da2ae4ab588cece719d3}\label{structaismsg__17_a92c4c3008fe1da2ae4ab588cece719d3}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!latitude@{latitude}}
+\index{latitude@{latitude}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{latitude}{latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+17\+::latitude}
+
+
+
+17 bits \+: Latitude in 1/1000 minute 
+
+\mbox{\Hypertarget{structaismsg__17_a15bc801d51c5e0a5c666644f144452f5}\label{structaismsg__17_a15bc801d51c5e0a5c666644f144452f5}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!longitude@{longitude}}
+\index{longitude@{longitude}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{longitude}{longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+17\+::longitude}
+
+
+
+18 bits \+: Longitude in 1/1000 minute 
+
+\mbox{\Hypertarget{structaismsg__17_aae1c0f82df9d72e5618b09c4a0ca2420}\label{structaismsg__17_aae1c0f82df9d72e5618b09c4a0ca2420}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!msg\+\_\+type@{msg\+\_\+type}}
+\index{msg\+\_\+type@{msg\+\_\+type}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{msg\+\_\+type}{msg\_type}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::msg\+\_\+type}
+
+
+
+6 bits \+: Mesage Type from M.\+823 
+
+\mbox{\Hypertarget{structaismsg__17_ad1ed96391525853f34323499e6fa2040}\label{structaismsg__17_ad1ed96391525853f34323499e6fa2040}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::msgid}
+
+
+
+6 bits \+: Message\+ID (17) 
+
+\mbox{\Hypertarget{structaismsg__17_a6e563d70627a2810b607c8c8a4ece22d}\label{structaismsg__17_a6e563d70627a2810b607c8c8a4ece22d}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!num\+\_\+words@{num\+\_\+words}}
+\index{num\+\_\+words@{num\+\_\+words}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{num\+\_\+words}{num\_words}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::num\+\_\+words}
+
+
+
+5 bits \+: Number of Data Words 
+
+\mbox{\Hypertarget{structaismsg__17_a05d124ed703c5fa11963fd2a24303300}\label{structaismsg__17_a05d124ed703c5fa11963fd2a24303300}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__17_ac8a3a36ccd85fa1da4d4c0ded928a140}\label{structaismsg__17_ac8a3a36ccd85fa1da4d4c0ded928a140}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!seq\+\_\+num@{seq\+\_\+num}}
+\index{seq\+\_\+num@{seq\+\_\+num}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{seq\+\_\+num}{seq\_num}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::seq\+\_\+num}
+
+
+
+3 bits \+: Sequence Number 
+
+\mbox{\Hypertarget{structaismsg__17_a09ac75cd600194f44f44cf6e1fa61ea1}\label{structaismsg__17_a09ac75cd600194f44f44cf6e1fa61ea1}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!spare1@{spare1}}
+\index{spare1@{spare1}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{spare1}{spare1}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::spare1}
+
+
+
+2 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__17_ac19c0a28b731cd7764c9b06fec986689}\label{structaismsg__17_ac19c0a28b731cd7764c9b06fec986689}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!spare2@{spare2}}
+\index{spare2@{spare2}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{spare2}{spare2}}
+{\footnotesize\ttfamily char aismsg\+\_\+17\+::spare2}
+
+
+
+5 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__17_a550ec42bc073903d5a4b07b9f4570b3a}\label{structaismsg__17_a550ec42bc073903d5a4b07b9f4570b3a}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!station\+\_\+id@{station\+\_\+id}}
+\index{station\+\_\+id@{station\+\_\+id}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{station\+\_\+id}{station\_id}}
+{\footnotesize\ttfamily int aismsg\+\_\+17\+::station\+\_\+id}
+
+
+
+10 bits \+: Station ID from M.\+823 
+
+\mbox{\Hypertarget{structaismsg__17_ac5e1b074133bdc942c3dd5fd13b420f8}\label{structaismsg__17_ac5e1b074133bdc942c3dd5fd13b420f8}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+17\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+\mbox{\Hypertarget{structaismsg__17_ac17316cf543595f13a57ed69a5d7f755}\label{structaismsg__17_ac17316cf543595f13a57ed69a5d7f755}} 
+\index{aismsg\+\_\+17@{aismsg\+\_\+17}!z\+\_\+count@{z\+\_\+count}}
+\index{z\+\_\+count@{z\+\_\+count}!aismsg\+\_\+17@{aismsg\+\_\+17}}
+\subsubsection{\texorpdfstring{z\+\_\+count}{z\_count}}
+{\footnotesize\ttfamily int aismsg\+\_\+17\+::z\+\_\+count}
+
+
+
+13 bits \+: Z Count 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

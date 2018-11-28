@@ -1,0 +1,13 @@
+<map id="ImGui::GetStyle" name="ImGui::GetStyle">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="619,47,779,74"/>
+<area shape="rect" id="node3" href="$struct_example_app_console.html#a0518a09c7e8648dd52c7c06df19ac17a" title="ExampleAppConsole::Draw" alt="" coords="168,211,348,238"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a26c67fc14081b359566d5e135cd8c767" title="ImGui::StyleColorsDark" alt="" coords="179,160,337,187"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a1cf931a42a10f71150def3ce222434b6" title="ImGui::StyleColorsClassic" alt="" coords="171,59,345,86"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#ae1fc558bfbc557b228d63f7facfc86e1" title="ImGui::StyleColorsLight" alt="" coords="179,110,337,136"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a4003d6a6ab57f2fb43db80c6339a1aed" title="ImGui::ListBoxHeader" alt="" coords="183,262,333,288"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a9a0a8f6a4a67280dce7bd91310a83a03" title="ImGui::ListBoxFooter" alt="" coords="185,312,331,339"/>
+<area shape="rect" id="node5" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="433,147,534,174"/>
+<area shape="rect" id="node7" href="$struct_im_gui_style.html#ab0a3ffb3aeec3e6b09b9bde812b28369" title="ImGuiStyle::ImGuiStyle" alt="" coords="404,198,563,224"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a83f4e863c102b0a05e0e3308b371b394" title="ImGui::ShowStyleSelector" alt="" coords="396,84,571,111"/>
+<area shape="rect" id="node6" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="673,147,724,174"/>
+</map>

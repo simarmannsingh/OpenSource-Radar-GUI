@@ -1,0 +1,6 @@
+<map id="ImGui::FindBestWindowPosForPopup" name="ImGui::FindBestWindowPosForPopup">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a4189cc4ec6ac56f3b21b29165d09ff98" title="ImGui::GetWindowAllowedExtentRect" alt="" coords="239,5,480,32"/>
+<area shape="rect" id="node3" href="$struct_im_gui_window.html#ad1580cc8b5bdf981c6ed2eb22ecd7dbb" title="ImGuiWindow::TitleBarHeight" alt="" coords="264,56,455,83"/>
+<area shape="rect" id="node4" href="$struct_im_gui_window.html#acfb8bdad2e3ea6102589813ae32d0364" title="ImGuiWindow::MenuBarHeight" alt="" coords="260,107,459,133"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a4159d978951d11bb8be459911ae58db2" title="ImGui::FindBestWindowPos\lForPopupEx" alt="" coords="267,158,452,199"/>
+</map>

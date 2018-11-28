@@ -1,4 +1,4 @@
-#shader vertex 1			// VERTEX SHADER 1					
+#shader vertex 1						// VERTEX SHADER 1					
 #version 330 core
 layout(location = 0) in vec3 aPos;
 layout(location = 1) in vec2 texCoord;
@@ -14,16 +14,18 @@ void main()
 #version 330 core
 layout(location = 0) in vec3 aPos;			
 layout(location = 1) in vec2 texCoord;		
-
+ 
 out vec2 v_texCoord;							
+
+uniform mat4 transform;
 
 void main()
 {
-	gl_Position = vec4(aPos, 1.0);
-	v_texCoord = texCoord;
+	gl_Position = transform * vec4(aPos, 1.0);
+	v_texCoord = vec2(texCoord.x, texCoord.y);
 }
 
-#shader fragment					// FRAGMENT SHADER
+#shader fragment						// FRAGMENT SHADER
 #version 330 core
 layout(location = 0) out vec4 FragColor;
 

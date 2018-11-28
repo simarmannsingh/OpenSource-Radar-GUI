@@ -1,0 +1,6 @@
+<map id="ImGui::RenderNavHighlight" name="ImGui::RenderNavHighlight">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="229,5,403,32"/>
+<area shape="rect" id="node3" href="$struct_im_rect.html#ac02d5cf6ce0358aea9ed9df43d368f3f" title="ImRect::ClipWith" alt="" coords="256,56,376,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="247,107,385,133"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="451,99,624,141"/>
+</map>

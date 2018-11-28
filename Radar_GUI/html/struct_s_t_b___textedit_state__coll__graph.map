@@ -1,0 +1,4 @@
+<map id="STB_TexteditState" name="STB_TexteditState">
+<area shape="rect" id="node2" href="$struct_stb_undo_state.html" title="{StbUndoState\n|+ undo_char\l+ undo_point\l+ redo_point\l+ undo_char_point\l+ redo_char_point\l|}" alt="" coords="21,189,150,325"/>
+<area shape="rect" id="node3" href="$struct_stb_undo_record.html" title="{StbUndoRecord\n|+ where\l+ insert_length\l+ delete_length\l+ char_storage\l|}" alt="" coords="29,5,142,127"/>
+</map>

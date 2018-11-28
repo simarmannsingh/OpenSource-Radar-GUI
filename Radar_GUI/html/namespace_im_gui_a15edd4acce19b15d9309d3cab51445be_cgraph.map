@@ -1,0 +1,6 @@
+<map id="ImGui::InputFloat" name="ImGui::InputFloat">
+<area shape="rect" id="node2" href="$imgui_8cpp.html#a75ccaf7d676b1f567ba888ae42ac3809" title="ImFormatString" alt="" coords="180,5,291,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#af10a28bbd9577edd54849516819872f5" title="ImGui::InputFloat" alt="" coords="175,56,296,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a9d6eada4e703c3bf4b2b5e5533a127fd" title="ImGui::InputScalar" alt="" coords="344,56,473,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="521,56,695,83"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ImGui::ColorButton" name="ImGui::ColorButton">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="392,83,565,109"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ae560f17cf3262017cee888d1eb77f294" title="ImGui::GetFrameHeight" alt="" coords="185,32,344,59"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="207,83,322,109"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="209,133,321,160"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a65a4f18b1bc8ce0f351687922089f374" title="ImGui::ButtonBehavior" alt="" coords="189,184,340,211"/>
+</map>

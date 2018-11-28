@@ -1,0 +1,6 @@
+<map id="ImGui::IsPopupOpen" name="ImGui::IsPopupOpen">
+<area shape="rect" id="node2" href="$struct_im_gui_window.html#a66400a63bc0b54d7d29e08d1b1b1a42b" title="ImGuiWindow::GetID" alt="" coords="196,56,339,83"/>
+<area shape="rect" id="node3" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="398,5,509,32"/>
+<area shape="rect" id="node4" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="420,56,487,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a85a245c78a9f7c351636bdad6e60c488" title="ImGui::KeepAliveID" alt="" coords="387,107,520,133"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ImGui::ClosePopupToLevel" name="ImGui::ClosePopupToLevel">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a2febc7edd279491870160d390fd6e2e5" title="ImGui::ClosePopupsOverWindow" alt="" coords="231,5,444,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a7f3f82fc44d67af554faf104b913ea55" title="ImGui::ClosePopup" alt="" coords="270,56,405,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#aeaec6479834db7918260fc082107f90b" title="ImGui::CloseCurrentPopup" alt="" coords="249,107,425,133"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a1448a5a4e8c431c15f991e9255c0df95" title="ImGui::EndMenu" alt="" coords="278,157,397,184"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a6d840f615c198c2342968f733fda11b3" title="ImGui::BeginPopupModal" alt="" coords="492,56,661,83"/>
+</map>

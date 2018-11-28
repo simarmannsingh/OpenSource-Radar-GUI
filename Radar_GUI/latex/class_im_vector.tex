@@ -1,0 +1,480 @@
+\hypertarget{class_im_vector}{}\section{Im\+Vector$<$ T $>$ Class Template Reference}
+\label{class_im_vector}\index{Im\+Vector$<$ T $>$@{Im\+Vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+
+
+Collaboration diagram for Im\+Vector$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_im_vector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}
+\item 
+typedef \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} $\ast$ \mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}}
+\item 
+typedef const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} $\ast$ \mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_im_vector_a547fff373659fd848c3ecc6b25a83f25}{Im\+Vector}} ()
+\item 
+\mbox{\hyperlink{class_im_vector_a9b782359ca26eaa1a6a6138fcf341c54}{$\sim$\+Im\+Vector}} ()
+\item 
+\mbox{\hyperlink{class_im_vector_a6e2ee59d8b2fa1583617a2110a56aed4}{Im\+Vector}} (const \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$ \&src)
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$ \& \mbox{\hyperlink{class_im_vector_a0d795963a9fd9d15833fdf87ba292438}{operator=}} (const \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$ \&src)
+\item 
+bool \mbox{\hyperlink{class_im_vector_aa53e48a5272f4bad1099368769514ff1}{empty}} () const
+\item 
+int \mbox{\hyperlink{class_im_vector_a8c903ecb1aaee0601b6a8ad835a4a435}{size}} () const
+\item 
+int \mbox{\hyperlink{class_im_vector_ac17681baa8b9b5cd97e556da29f9ef73}{capacity}} () const
+\item 
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_a59a3eeadda07579727de93ca6844b91e}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_ab97c3f6f1943602e36afb593c6f03ff1}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\item 
+void \mbox{\hyperlink{class_im_vector_ae2d401b4ec5f1113cdb8edb5a61a38f7}{clear}} ()
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a300a8b559cd87a78063046ef81151bce}{begin}} ()
+\item 
+\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} \mbox{\hyperlink{class_im_vector_ac72cd4105b5c6a7f76157df945b39d4c}{begin}} () const
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a947fbc3b1d8c1997e51ae6caab440379}{end}} ()
+\item 
+\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} \mbox{\hyperlink{class_im_vector_a06efa87357864d1c130f0f400eeccf8d}{end}} () const
+\item 
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_a5b0108d6b1a4a11609723f8305fb9011}{front}} ()
+\item 
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_a76dc6bb045574ba79b15a1941b662597}{front}} () const
+\item 
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_a3e4424d3fca190894598a6575f9d2401}{back}} ()
+\item 
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \& \mbox{\hyperlink{class_im_vector_a6f22918d4f139a1c4c3410ccae726f81}{back}} () const
+\item 
+void \mbox{\hyperlink{class_im_vector_ac7f0862107eb88349d17f9a2e147deaa}{swap}} (\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} $>$ \&rhs)
+\item 
+int \mbox{\hyperlink{class_im_vector_a3a097635d464b1b70dc7d59996a88b28}{\+\_\+grow\+\_\+capacity}} (int sz) const
+\item 
+void \mbox{\hyperlink{class_im_vector_ac371dd62e56ae486b1a5038cf07eee56}{resize}} (int new\+\_\+size)
+\item 
+void \mbox{\hyperlink{class_im_vector_a1ea8f92d2e1c48772b3765b76a46c543}{resize}} (int new\+\_\+size, const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&v)
+\item 
+void \mbox{\hyperlink{class_im_vector_a0f14f5736c3372157856eebb67123b75}{reserve}} (int new\+\_\+capacity)
+\item 
+void \mbox{\hyperlink{class_im_vector_a68387993f2a5f5c3b2a7139d9ab778b8}{push\+\_\+back}} (const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&v)
+\item 
+void \mbox{\hyperlink{class_im_vector_a3db7ce62d3c429effdb893fbf7148c1c}{pop\+\_\+back}} ()
+\item 
+void \mbox{\hyperlink{class_im_vector_a9a21cfec59d057cba605da14682180d2}{push\+\_\+front}} (const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&v)
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a1e1fd9b678be9d4b4432fbefde976045}{erase}} (\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it)
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a908dd550be687acdbeadcf0500374276}{erase}} (\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it, \mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it\+\_\+last)
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a0948ac4ab740ea42c6cd11a279a4b9a6}{erase\+\_\+unsorted}} (\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it)
+\item 
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector_a52fdb731c13c82a1fd971186c6a701b5}{insert}} (\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it, const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&v)
+\item 
+bool \mbox{\hyperlink{class_im_vector_a8d3d5f3462afbf38d9e8f410ebd085ee}{contains}} (const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&v) const
+\item 
+int \mbox{\hyperlink{class_im_vector_aab9b55d6496e7fc637a3c3e90f793504}{index\+\_\+from\+\_\+pointer}} (\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} it) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_im_vector_abbfd157947f66280d27b21d70a16df8d}{Size}}
+\item 
+int \mbox{\hyperlink{class_im_vector_abd24482b4d30d22e37582e521e5bfb33}{Capacity}}
+\item 
+T $\ast$ \mbox{\hyperlink{class_im_vector_ac0e46e8b30cb079d93c8f0aad7d7cbd0}{Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}\label{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}} 
+\index{Im\+Vector@{Im\+Vector}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{const\+\_\+iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+typedef const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}$\ast$ \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}
+
+\mbox{\Hypertarget{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}\label{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}} 
+\index{Im\+Vector@{Im\+Vector}!iterator@{iterator}}
+\index{iterator@{iterator}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+typedef \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}$\ast$ \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}}}
+
+\mbox{\Hypertarget{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}\label{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}} 
+\index{Im\+Vector@{Im\+Vector}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{value\+\_\+type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+typedef T \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_im_vector_a547fff373659fd848c3ecc6b25a83f25}\label{class_im_vector_a547fff373659fd848c3ecc6b25a83f25}} 
+\index{Im\+Vector@{Im\+Vector}!Im\+Vector@{Im\+Vector}}
+\index{Im\+Vector@{Im\+Vector}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{Im\+Vector()}{ImVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_im_vector}{Im\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a9b782359ca26eaa1a6a6138fcf341c54}\label{class_im_vector_a9b782359ca26eaa1a6a6138fcf341c54}} 
+\index{Im\+Vector@{Im\+Vector}!````~Im\+Vector@{$\sim$\+Im\+Vector}}
+\index{````~Im\+Vector@{$\sim$\+Im\+Vector}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{$\sim$\+Im\+Vector()}{~ImVector()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_im_vector}{Im\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a6e2ee59d8b2fa1583617a2110a56aed4}\label{class_im_vector_a6e2ee59d8b2fa1583617a2110a56aed4}} 
+\index{Im\+Vector@{Im\+Vector}!Im\+Vector@{Im\+Vector}}
+\index{Im\+Vector@{Im\+Vector}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{Im\+Vector()}{ImVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\mbox{\hyperlink{class_im_vector}{Im\+Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_im_vector_a3a097635d464b1b70dc7d59996a88b28}\label{class_im_vector_a3a097635d464b1b70dc7d59996a88b28}} 
+\index{Im\+Vector@{Im\+Vector}!\+\_\+grow\+\_\+capacity@{\+\_\+grow\+\_\+capacity}}
+\index{\+\_\+grow\+\_\+capacity@{\+\_\+grow\+\_\+capacity}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{\+\_\+grow\+\_\+capacity()}{\_grow\_capacity()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::\+\_\+grow\+\_\+capacity (\begin{DoxyParamCaption}\item[{int}]{sz }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a3e4424d3fca190894598a6575f9d2401}\label{class_im_vector_a3e4424d3fca190894598a6575f9d2401}} 
+\index{Im\+Vector@{Im\+Vector}!back@{back}}
+\index{back@{back}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a3e4424d3fca190894598a6575f9d2401_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a6f22918d4f139a1c4c3410ccae726f81}\label{class_im_vector_a6f22918d4f139a1c4c3410ccae726f81}} 
+\index{Im\+Vector@{Im\+Vector}!back@{back}}
+\index{back@{back}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a300a8b559cd87a78063046ef81151bce}\label{class_im_vector_a300a8b559cd87a78063046ef81151bce}} 
+\index{Im\+Vector@{Im\+Vector}!begin@{begin}}
+\index{begin@{begin}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a300a8b559cd87a78063046ef81151bce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_ac72cd4105b5c6a7f76157df945b39d4c}\label{class_im_vector_ac72cd4105b5c6a7f76157df945b39d4c}} 
+\index{Im\+Vector@{Im\+Vector}!begin@{begin}}
+\index{begin@{begin}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_ac17681baa8b9b5cd97e556da29f9ef73}\label{class_im_vector_ac17681baa8b9b5cd97e556da29f9ef73}} 
+\index{Im\+Vector@{Im\+Vector}!capacity@{capacity}}
+\index{capacity@{capacity}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_ae2d401b4ec5f1113cdb8edb5a61a38f7}\label{class_im_vector_ae2d401b4ec5f1113cdb8edb5a61a38f7}} 
+\index{Im\+Vector@{Im\+Vector}!clear@{clear}}
+\index{clear@{clear}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_ae2d401b4ec5f1113cdb8edb5a61a38f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a8d3d5f3462afbf38d9e8f410ebd085ee}\label{class_im_vector_a8d3d5f3462afbf38d9e8f410ebd085ee}} 
+\index{Im\+Vector@{Im\+Vector}!contains@{contains}}
+\index{contains@{contains}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_aa53e48a5272f4bad1099368769514ff1}\label{class_im_vector_aa53e48a5272f4bad1099368769514ff1}} 
+\index{Im\+Vector@{Im\+Vector}!empty@{empty}}
+\index{empty@{empty}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_aa53e48a5272f4bad1099368769514ff1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a947fbc3b1d8c1997e51ae6caab440379}\label{class_im_vector_a947fbc3b1d8c1997e51ae6caab440379}} 
+\index{Im\+Vector@{Im\+Vector}!end@{end}}
+\index{end@{end}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_im_vector_a947fbc3b1d8c1997e51ae6caab440379_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a06efa87357864d1c130f0f400eeccf8d}\label{class_im_vector_a06efa87357864d1c130f0f400eeccf8d}} 
+\index{Im\+Vector@{Im\+Vector}!end@{end}}
+\index{end@{end}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a1e1fd9b678be9d4b4432fbefde976045}\label{class_im_vector_a1e1fd9b678be9d4b4432fbefde976045}} 
+\index{Im\+Vector@{Im\+Vector}!erase@{erase}}
+\index{erase@{erase}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a1e1fd9b678be9d4b4432fbefde976045_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a908dd550be687acdbeadcf0500374276}\label{class_im_vector_a908dd550be687acdbeadcf0500374276}} 
+\index{Im\+Vector@{Im\+Vector}!erase@{erase}}
+\index{erase@{erase}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it,  }\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it\+\_\+last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a0948ac4ab740ea42c6cd11a279a4b9a6}\label{class_im_vector_a0948ac4ab740ea42c6cd11a279a4b9a6}} 
+\index{Im\+Vector@{Im\+Vector}!erase\+\_\+unsorted@{erase\+\_\+unsorted}}
+\index{erase\+\_\+unsorted@{erase\+\_\+unsorted}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{erase\+\_\+unsorted()}{erase\_unsorted()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::erase\+\_\+unsorted (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a5b0108d6b1a4a11609723f8305fb9011}\label{class_im_vector_a5b0108d6b1a4a11609723f8305fb9011}} 
+\index{Im\+Vector@{Im\+Vector}!front@{front}}
+\index{front@{front}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a5b0108d6b1a4a11609723f8305fb9011_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a76dc6bb045574ba79b15a1941b662597}\label{class_im_vector_a76dc6bb045574ba79b15a1941b662597}} 
+\index{Im\+Vector@{Im\+Vector}!front@{front}}
+\index{front@{front}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_aab9b55d6496e7fc637a3c3e90f793504}\label{class_im_vector_aab9b55d6496e7fc637a3c3e90f793504}} 
+\index{Im\+Vector@{Im\+Vector}!index\+\_\+from\+\_\+pointer@{index\+\_\+from\+\_\+pointer}}
+\index{index\+\_\+from\+\_\+pointer@{index\+\_\+from\+\_\+pointer}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{index\+\_\+from\+\_\+pointer()}{index\_from\_pointer()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::index\+\_\+from\+\_\+pointer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a52fdb731c13c82a1fd971186c6a701b5}\label{class_im_vector_a52fdb731c13c82a1fd971186c6a701b5}} 
+\index{Im\+Vector@{Im\+Vector}!insert@{insert}}
+\index{insert@{insert}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a74b5478f1f6fd471cc71219bce483db6}{iterator}} \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector_aedeac9c5080f9d6ce96ae837768ee4c4}{const\+\_\+iterator}}}]{it,  }\item[{const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a0d795963a9fd9d15833fdf87ba292438}\label{class_im_vector_a0d795963a9fd9d15833fdf87ba292438}} 
+\index{Im\+Vector@{Im\+Vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$T$>$\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$ \&}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a59a3eeadda07579727de93ca6844b91e}\label{class_im_vector_a59a3eeadda07579727de93ca6844b91e}} 
+\index{Im\+Vector@{Im\+Vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_ab97c3f6f1943602e36afb593c6f03ff1}\label{class_im_vector_ab97c3f6f1943602e36afb593c6f03ff1}} 
+\index{Im\+Vector@{Im\+Vector}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}}\& \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a3db7ce62d3c429effdb893fbf7148c1c}\label{class_im_vector_a3db7ce62d3c429effdb893fbf7148c1c}} 
+\index{Im\+Vector@{Im\+Vector}!pop\+\_\+back@{pop\+\_\+back}}
+\index{pop\+\_\+back@{pop\+\_\+back}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{pop\+\_\+back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a3db7ce62d3c429effdb893fbf7148c1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a68387993f2a5f5c3b2a7139d9ab778b8}\label{class_im_vector_a68387993f2a5f5c3b2a7139d9ab778b8}} 
+\index{Im\+Vector@{Im\+Vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_a68387993f2a5f5c3b2a7139d9ab778b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a9a21cfec59d057cba605da14682180d2}\label{class_im_vector_a9a21cfec59d057cba605da14682180d2}} 
+\index{Im\+Vector@{Im\+Vector}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{push\+\_\+front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a0f14f5736c3372157856eebb67123b75}\label{class_im_vector_a0f14f5736c3372157856eebb67123b75}} 
+\index{Im\+Vector@{Im\+Vector}!reserve@{reserve}}
+\index{reserve@{reserve}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+capacity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_im_vector_a0f14f5736c3372157856eebb67123b75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_ac371dd62e56ae486b1a5038cf07eee56}\label{class_im_vector_ac371dd62e56ae486b1a5038cf07eee56}} 
+\index{Im\+Vector@{Im\+Vector}!resize@{resize}}
+\index{resize@{resize}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_ac371dd62e56ae486b1a5038cf07eee56_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_im_vector_a1ea8f92d2e1c48772b3765b76a46c543}\label{class_im_vector_a1ea8f92d2e1c48772b3765b76a46c543}} 
+\index{Im\+Vector@{Im\+Vector}!resize@{resize}}
+\index{resize@{resize}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+size,  }\item[{const \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_a8c903ecb1aaee0601b6a8ad835a4a435}\label{class_im_vector_a8c903ecb1aaee0601b6a8ad835a4a435}} 
+\index{Im\+Vector@{Im\+Vector}!size@{size}}
+\index{size@{size}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_im_vector_ac7f0862107eb88349d17f9a2e147deaa}\label{class_im_vector_ac7f0862107eb88349d17f9a2e147deaa}} 
+\index{Im\+Vector@{Im\+Vector}!swap@{swap}}
+\index{swap@{swap}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ \mbox{\hyperlink{class_im_vector_a8bd77e4e7581d8e5f9e98d7c2f3c2a80}{value\+\_\+type}} $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_im_vector_ac7f0862107eb88349d17f9a2e147deaa_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_im_vector_abd24482b4d30d22e37582e521e5bfb33}\label{class_im_vector_abd24482b4d30d22e37582e521e5bfb33}} 
+\index{Im\+Vector@{Im\+Vector}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::Capacity}
+
+\mbox{\Hypertarget{class_im_vector_ac0e46e8b30cb079d93c8f0aad7d7cbd0}\label{class_im_vector_ac0e46e8b30cb079d93c8f0aad7d7cbd0}} 
+\index{Im\+Vector@{Im\+Vector}!Data@{Data}}
+\index{Data@{Data}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{Data}{Data}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T$\ast$ \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::Data}
+
+\mbox{\Hypertarget{class_im_vector_abbfd157947f66280d27b21d70a16df8d}\label{class_im_vector_abbfd157947f66280d27b21d70a16df8d}} 
+\index{Im\+Vector@{Im\+Vector}!Size@{Size}}
+\index{Size@{Size}!Im\+Vector@{Im\+Vector}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ T $>$\+::Size}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+<map id="ImGui::PopStyleVar" name="ImGui::PopStyleVar">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a0565e1ef69c897b1f30f37f95dd787f1" title="ImGui::BeginChildFrame" alt="" coords="191,157,353,184"/>
+<area shape="rect" id="node6" href="$struct_example_app_console.html#a0518a09c7e8648dd52c7c06df19ac17a" title="ExampleAppConsole::Draw" alt="" coords="1009,132,1189,159"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a1e55711a21f97d5dff919d697d3a7201" title="ImGui::BeginMenu" alt="" coords="207,259,337,285"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#aa1bae511ca47478998693a9d8c84f2e6" title="ImGui::MenuItem" alt="" coords="211,309,333,336"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#acc8cda7bb7c80b9dd36bc394723d1606" title="ImGui::InputTextEx" alt="" coords="401,157,535,184"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#aa72b5760a3a206729723a587ac7c8519" title="ImGui::InputText" alt="" coords="607,81,724,108"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a0470693929ed9930cbf5b737577c2414" title="ImGui::InputTextMultiline" alt="" coords="583,157,748,184"/>
+<area shape="rect" id="node5" href="$struct_im_gui_text_filter.html#ab93ad5985019ff9d3781606551fc26cc" title="ImGuiTextFilter::Draw" alt="" coords="805,5,952,32"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a1da680314eaf3f60ea2a42c76f3584b0" title="ImGui::InputText" alt="" coords="820,107,937,133"/>
+<area shape="rect" id="node7" href="$struct_example_app_log.html#a5ad3a4bdb89171b84aeaff96948a1f77" title="ExampleAppLog::Draw" alt="" coords="1022,5,1177,32"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#a81dd8855d2cec99457d2339498cc3c4a" title="ImGui::InputTextMultiline" alt="" coords="796,157,961,184"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#a237e76bff3088f1c2622f4aebae2356e" title="ImGui::MenuItem" alt="" coords="407,309,529,336"/>
+</map>

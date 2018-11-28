@@ -1,0 +1,379 @@
+\hypertarget{struct_im_font}{}\section{Im\+Font Struct Reference}
+\label{struct_im_font}\index{Im\+Font@{Im\+Font}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+
+
+Collaboration diagram for Im\+Font\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_im_font__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} \mbox{\hyperlink{struct_im_font_a4b802233ac8d3f3beddc395837288683}{Glyph}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_font_a1d35b1eb7c2f6a3a648308531e88e7f1}{Im\+Font}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_font_a377366ed7c5d076363ad4760aeff63ec}{$\sim$\+Im\+Font}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_aecf7773b1c40b433f91ee245f463de12}{Clear\+Output\+Data}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_a04b3a1437bd0032722bbbd3613941162}{Build\+Lookup\+Table}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $\ast$ \mbox{\hyperlink{struct_im_font_ac6a773b73c6406fd8f08c4c93213a501}{Find\+Glyph}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $\ast$ \mbox{\hyperlink{struct_im_font_aa9ce4765070dfdee66bf5e5e81acaac3}{Find\+Glyph\+No\+Fallback}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_a1f504f78cc066db20ea2d688e73a560b}{Set\+Fallback\+Char}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c)
+\item 
+float \mbox{\hyperlink{struct_im_font_adffcff4e4e2d17455410bd4ba76b42e4}{Get\+Char\+Advance}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c) const
+\item 
+bool \mbox{\hyperlink{struct_im_font_a97dafa61cc94e84be396d69b0d42b1ce}{Is\+Loaded}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_im_font_a11843ed46aaa122264d0da87ffafd627}{Get\+Debug\+Name}} () const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{struct_im_font_ad67f64fd206ad197f4b93b1a1ae27cfe}{Calc\+Text\+SizeA}} (float size, float max\+\_\+width, float wrap\+\_\+width, const char $\ast$text\+\_\+begin, const char $\ast$text\+\_\+end=N\+U\+LL, const char $\ast$$\ast$remaining=N\+U\+LL) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} const char $\ast$ \mbox{\hyperlink{struct_im_font_a3781bb82a1ceba919cb6c98a398c7a67}{Calc\+Word\+Wrap\+PositionA}} (float scale, const char $\ast$text, const char $\ast$text\+\_\+end, float wrap\+\_\+width) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_aa8370ddcf8d3e4e034d07de9e00fcdd1}{Render\+Char}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, float size, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col, \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_a2877acf1cfcd964bc2e7fe600a08849e}{Render\+Text}} (\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$draw\+\_\+list, float size, \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} pos, \mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}} col, const \mbox{\hyperlink{struct_im_vec4}{Im\+Vec4}} \&clip\+\_\+rect, const char $\ast$text\+\_\+begin, const char $\ast$text\+\_\+end, float wrap\+\_\+width=0.\+0f, bool cpu\+\_\+fine\+\_\+clip=false) const
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_ab7865a365d9653b4636b198d2f222fd6}{Grow\+Index}} (int new\+\_\+size)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_ae63d3d343052336d7718aacac8f394b7}{Add\+Glyph}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} c, float x0, float y0, float x1, float y1, float u0, float v0, float u1, float v1, float advance\+\_\+x)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_font_aba8cd20f14ba47175d45d3f2063aa329}{Add\+Remap\+Char}} (\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} dst, \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} src, bool overwrite\+\_\+dst=true)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{struct_im_font_a423e36d1594281f1a5a537e5b0d0a3d4}{Font\+Size}}
+\item 
+float \mbox{\hyperlink{struct_im_font_ae98fb07fd8862a7243d77b11f38bba19}{Scale}}
+\item 
+\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} \mbox{\hyperlink{struct_im_font_af9b95f3df0b6d45f45903d82301d7f84}{Display\+Offset}}
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $>$ \mbox{\hyperlink{struct_im_font_a1a0901fc1a8cbd41d582d6cef4946bc9}{Glyphs}}
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ float $>$ \mbox{\hyperlink{struct_im_font_af906476eda06d8a842d0a843a247f530}{Index\+AdvanceX}}
+\item 
+\mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$ \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} $>$ \mbox{\hyperlink{struct_im_font_a0c948f3741da03da9bc1731e236173c8}{Index\+Lookup}}
+\item 
+const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $\ast$ \mbox{\hyperlink{struct_im_font_a0e666b0c49646bd294103f4d288df4b8}{Fallback\+Glyph}}
+\item 
+float \mbox{\hyperlink{struct_im_font_ad58a5ee4492a3a9fa56f73e5a40d728d}{Fallback\+AdvanceX}}
+\item 
+\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} \mbox{\hyperlink{struct_im_font_ae54c2c4184bfcbc7b8f6da9cbc4f93c0}{Fallback\+Char}}
+\item 
+short \mbox{\hyperlink{struct_im_font_a4a30fc7711d628ad582ccb3188a51ddd}{Config\+Data\+Count}}
+\item 
+\mbox{\hyperlink{struct_im_font_config}{Im\+Font\+Config}} $\ast$ \mbox{\hyperlink{struct_im_font_afa4eb6cfb979ffa120e9795f328623a1}{Config\+Data}}
+\item 
+\mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}} $\ast$ \mbox{\hyperlink{struct_im_font_a8a5e0df6be5e3cabe91ae830524db960}{Container\+Atlas}}
+\item 
+float \mbox{\hyperlink{struct_im_font_a5238ef18f8ad02b783fb8b3a195b708e}{Ascent}}
+\item 
+float \mbox{\hyperlink{struct_im_font_abcca12aa908bf7105433e7db6088a5e5}{Descent}}
+\item 
+bool \mbox{\hyperlink{struct_im_font_a3858e851f69b3abbbefad76030a546ff}{Dirty\+Lookup\+Tables}}
+\item 
+int \mbox{\hyperlink{struct_im_font_a8087b2ee8b27dcf5c6e30a8318f87cc7}{Metrics\+Total\+Surface}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{struct_im_font_a4b802233ac8d3f3beddc395837288683}\label{struct_im_font_a4b802233ac8d3f3beddc395837288683}} 
+\index{Im\+Font@{Im\+Font}!Glyph@{Glyph}}
+\index{Glyph@{Glyph}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Glyph}{Glyph}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} \mbox{\hyperlink{struct_im_font_a4b802233ac8d3f3beddc395837288683}{Im\+Font\+::\+Glyph}}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_im_font_a1d35b1eb7c2f6a3a648308531e88e7f1}\label{struct_im_font_a1d35b1eb7c2f6a3a648308531e88e7f1}} 
+\index{Im\+Font@{Im\+Font}!Im\+Font@{Im\+Font}}
+\index{Im\+Font@{Im\+Font}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Im\+Font()}{ImFont()}}
+{\footnotesize\ttfamily Im\+Font\+::\+Im\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_font_a377366ed7c5d076363ad4760aeff63ec}\label{struct_im_font_a377366ed7c5d076363ad4760aeff63ec}} 
+\index{Im\+Font@{Im\+Font}!````~Im\+Font@{$\sim$\+Im\+Font}}
+\index{````~Im\+Font@{$\sim$\+Im\+Font}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{$\sim$\+Im\+Font()}{~ImFont()}}
+{\footnotesize\ttfamily Im\+Font\+::$\sim$\+Im\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_im_font_ae63d3d343052336d7718aacac8f394b7}\label{struct_im_font_ae63d3d343052336d7718aacac8f394b7}} 
+\index{Im\+Font@{Im\+Font}!Add\+Glyph@{Add\+Glyph}}
+\index{Add\+Glyph@{Add\+Glyph}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Add\+Glyph()}{AddGlyph()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Add\+Glyph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c,  }\item[{float}]{x0,  }\item[{float}]{y0,  }\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{u0,  }\item[{float}]{v0,  }\item[{float}]{u1,  }\item[{float}]{v1,  }\item[{float}]{advance\+\_\+x }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_font_aba8cd20f14ba47175d45d3f2063aa329}\label{struct_im_font_aba8cd20f14ba47175d45d3f2063aa329}} 
+\index{Im\+Font@{Im\+Font}!Add\+Remap\+Char@{Add\+Remap\+Char}}
+\index{Add\+Remap\+Char@{Add\+Remap\+Char}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Add\+Remap\+Char()}{AddRemapChar()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Add\+Remap\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{dst,  }\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{src,  }\item[{bool}]{overwrite\+\_\+dst = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_font_a04b3a1437bd0032722bbbd3613941162}\label{struct_im_font_a04b3a1437bd0032722bbbd3613941162}} 
+\index{Im\+Font@{Im\+Font}!Build\+Lookup\+Table@{Build\+Lookup\+Table}}
+\index{Build\+Lookup\+Table@{Build\+Lookup\+Table}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Build\+Lookup\+Table()}{BuildLookupTable()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Build\+Lookup\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_font_ad67f64fd206ad197f4b93b1a1ae27cfe}\label{struct_im_font_ad67f64fd206ad197f4b93b1a1ae27cfe}} 
+\index{Im\+Font@{Im\+Font}!Calc\+Text\+SizeA@{Calc\+Text\+SizeA}}
+\index{Calc\+Text\+SizeA@{Calc\+Text\+SizeA}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Calc\+Text\+Size\+A()}{CalcTextSizeA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Font\+::\+Calc\+Text\+SizeA (\begin{DoxyParamCaption}\item[{float}]{size,  }\item[{float}]{max\+\_\+width,  }\item[{float}]{wrap\+\_\+width,  }\item[{const char $\ast$}]{text\+\_\+begin,  }\item[{const char $\ast$}]{text\+\_\+end = {\ttfamily NULL},  }\item[{const char $\ast$$\ast$}]{remaining = {\ttfamily NULL} }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_ad67f64fd206ad197f4b93b1a1ae27cfe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_a3781bb82a1ceba919cb6c98a398c7a67}\label{struct_im_font_a3781bb82a1ceba919cb6c98a398c7a67}} 
+\index{Im\+Font@{Im\+Font}!Calc\+Word\+Wrap\+PositionA@{Calc\+Word\+Wrap\+PositionA}}
+\index{Calc\+Word\+Wrap\+PositionA@{Calc\+Word\+Wrap\+PositionA}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Calc\+Word\+Wrap\+Position\+A()}{CalcWordWrapPositionA()}}
+{\footnotesize\ttfamily const char $\ast$ Im\+Font\+::\+Calc\+Word\+Wrap\+PositionA (\begin{DoxyParamCaption}\item[{float}]{scale,  }\item[{const char $\ast$}]{text,  }\item[{const char $\ast$}]{text\+\_\+end,  }\item[{float}]{wrap\+\_\+width }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_a3781bb82a1ceba919cb6c98a398c7a67_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_aecf7773b1c40b433f91ee245f463de12}\label{struct_im_font_aecf7773b1c40b433f91ee245f463de12}} 
+\index{Im\+Font@{Im\+Font}!Clear\+Output\+Data@{Clear\+Output\+Data}}
+\index{Clear\+Output\+Data@{Clear\+Output\+Data}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Clear\+Output\+Data()}{ClearOutputData()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Clear\+Output\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_aecf7773b1c40b433f91ee245f463de12_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_ac6a773b73c6406fd8f08c4c93213a501}\label{struct_im_font_ac6a773b73c6406fd8f08c4c93213a501}} 
+\index{Im\+Font@{Im\+Font}!Find\+Glyph@{Find\+Glyph}}
+\index{Find\+Glyph@{Find\+Glyph}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Find\+Glyph()}{FindGlyph()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $\ast$ Im\+Font\+::\+Find\+Glyph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c }\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_ac6a773b73c6406fd8f08c4c93213a501_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_aa9ce4765070dfdee66bf5e5e81acaac3}\label{struct_im_font_aa9ce4765070dfdee66bf5e5e81acaac3}} 
+\index{Im\+Font@{Im\+Font}!Find\+Glyph\+No\+Fallback@{Find\+Glyph\+No\+Fallback}}
+\index{Find\+Glyph\+No\+Fallback@{Find\+Glyph\+No\+Fallback}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Find\+Glyph\+No\+Fallback()}{FindGlyphNoFallback()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}} $\ast$ Im\+Font\+::\+Find\+Glyph\+No\+Fallback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_im_font_adffcff4e4e2d17455410bd4ba76b42e4}\label{struct_im_font_adffcff4e4e2d17455410bd4ba76b42e4}} 
+\index{Im\+Font@{Im\+Font}!Get\+Char\+Advance@{Get\+Char\+Advance}}
+\index{Get\+Char\+Advance@{Get\+Char\+Advance}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Get\+Char\+Advance()}{GetCharAdvance()}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Get\+Char\+Advance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_im_font_a11843ed46aaa122264d0da87ffafd627}\label{struct_im_font_a11843ed46aaa122264d0da87ffafd627}} 
+\index{Im\+Font@{Im\+Font}!Get\+Debug\+Name@{Get\+Debug\+Name}}
+\index{Get\+Debug\+Name@{Get\+Debug\+Name}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Get\+Debug\+Name()}{GetDebugName()}}
+{\footnotesize\ttfamily const char$\ast$ Im\+Font\+::\+Get\+Debug\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_a11843ed46aaa122264d0da87ffafd627_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_ab7865a365d9653b4636b198d2f222fd6}\label{struct_im_font_ab7865a365d9653b4636b198d2f222fd6}} 
+\index{Im\+Font@{Im\+Font}!Grow\+Index@{Grow\+Index}}
+\index{Grow\+Index@{Grow\+Index}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Grow\+Index()}{GrowIndex()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Grow\+Index (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_im_font_a97dafa61cc94e84be396d69b0d42b1ce}\label{struct_im_font_a97dafa61cc94e84be396d69b0d42b1ce}} 
+\index{Im\+Font@{Im\+Font}!Is\+Loaded@{Is\+Loaded}}
+\index{Is\+Loaded@{Is\+Loaded}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Is\+Loaded()}{IsLoaded()}}
+{\footnotesize\ttfamily bool Im\+Font\+::\+Is\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_font_a97dafa61cc94e84be396d69b0d42b1ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_aa8370ddcf8d3e4e034d07de9e00fcdd1}\label{struct_im_font_aa8370ddcf8d3e4e034d07de9e00fcdd1}} 
+\index{Im\+Font@{Im\+Font}!Render\+Char@{Render\+Char}}
+\index{Render\+Char@{Render\+Char}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Render\+Char()}{RenderChar()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Render\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$}]{draw\+\_\+list,  }\item[{float}]{size,  }\item[{\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}}}]{col,  }\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{struct_im_font_aa8370ddcf8d3e4e034d07de9e00fcdd1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_a2877acf1cfcd964bc2e7fe600a08849e}\label{struct_im_font_a2877acf1cfcd964bc2e7fe600a08849e}} 
+\index{Im\+Font@{Im\+Font}!Render\+Text@{Render\+Text}}
+\index{Render\+Text@{Render\+Text}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Render\+Text()}{RenderText()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Render\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_im_draw_list}{Im\+Draw\+List}} $\ast$}]{draw\+\_\+list,  }\item[{float}]{size,  }\item[{\mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}}}]{pos,  }\item[{\mbox{\hyperlink{imgui_8h_a118cff4eeb8d00e7d07ce3d6460eed36}{Im\+U32}}}]{col,  }\item[{const \mbox{\hyperlink{struct_im_vec4}{Im\+Vec4}} \&}]{clip\+\_\+rect,  }\item[{const char $\ast$}]{text\+\_\+begin,  }\item[{const char $\ast$}]{text\+\_\+end,  }\item[{float}]{wrap\+\_\+width = {\ttfamily 0.0f},  }\item[{bool}]{cpu\+\_\+fine\+\_\+clip = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{struct_im_font_a2877acf1cfcd964bc2e7fe600a08849e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_font_a1f504f78cc066db20ea2d688e73a560b}\label{struct_im_font_a1f504f78cc066db20ea2d688e73a560b}} 
+\index{Im\+Font@{Im\+Font}!Set\+Fallback\+Char@{Set\+Fallback\+Char}}
+\index{Set\+Fallback\+Char@{Set\+Fallback\+Char}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Set\+Fallback\+Char()}{SetFallbackChar()}}
+{\footnotesize\ttfamily void Im\+Font\+::\+Set\+Fallback\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}}]{c }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_im_font_a5238ef18f8ad02b783fb8b3a195b708e}\label{struct_im_font_a5238ef18f8ad02b783fb8b3a195b708e}} 
+\index{Im\+Font@{Im\+Font}!Ascent@{Ascent}}
+\index{Ascent@{Ascent}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Ascent}{Ascent}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Ascent}
+
+\mbox{\Hypertarget{struct_im_font_afa4eb6cfb979ffa120e9795f328623a1}\label{struct_im_font_afa4eb6cfb979ffa120e9795f328623a1}} 
+\index{Im\+Font@{Im\+Font}!Config\+Data@{Config\+Data}}
+\index{Config\+Data@{Config\+Data}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Config\+Data}{ConfigData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_font_config}{Im\+Font\+Config}}$\ast$ Im\+Font\+::\+Config\+Data}
+
+\mbox{\Hypertarget{struct_im_font_a4a30fc7711d628ad582ccb3188a51ddd}\label{struct_im_font_a4a30fc7711d628ad582ccb3188a51ddd}} 
+\index{Im\+Font@{Im\+Font}!Config\+Data\+Count@{Config\+Data\+Count}}
+\index{Config\+Data\+Count@{Config\+Data\+Count}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Config\+Data\+Count}{ConfigDataCount}}
+{\footnotesize\ttfamily short Im\+Font\+::\+Config\+Data\+Count}
+
+\mbox{\Hypertarget{struct_im_font_a8a5e0df6be5e3cabe91ae830524db960}\label{struct_im_font_a8a5e0df6be5e3cabe91ae830524db960}} 
+\index{Im\+Font@{Im\+Font}!Container\+Atlas@{Container\+Atlas}}
+\index{Container\+Atlas@{Container\+Atlas}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Container\+Atlas}{ContainerAtlas}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_font_atlas}{Im\+Font\+Atlas}}$\ast$ Im\+Font\+::\+Container\+Atlas}
+
+\mbox{\Hypertarget{struct_im_font_abcca12aa908bf7105433e7db6088a5e5}\label{struct_im_font_abcca12aa908bf7105433e7db6088a5e5}} 
+\index{Im\+Font@{Im\+Font}!Descent@{Descent}}
+\index{Descent@{Descent}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Descent}{Descent}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Descent}
+
+\mbox{\Hypertarget{struct_im_font_a3858e851f69b3abbbefad76030a546ff}\label{struct_im_font_a3858e851f69b3abbbefad76030a546ff}} 
+\index{Im\+Font@{Im\+Font}!Dirty\+Lookup\+Tables@{Dirty\+Lookup\+Tables}}
+\index{Dirty\+Lookup\+Tables@{Dirty\+Lookup\+Tables}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Dirty\+Lookup\+Tables}{DirtyLookupTables}}
+{\footnotesize\ttfamily bool Im\+Font\+::\+Dirty\+Lookup\+Tables}
+
+\mbox{\Hypertarget{struct_im_font_af9b95f3df0b6d45f45903d82301d7f84}\label{struct_im_font_af9b95f3df0b6d45f45903d82301d7f84}} 
+\index{Im\+Font@{Im\+Font}!Display\+Offset@{Display\+Offset}}
+\index{Display\+Offset@{Display\+Offset}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Display\+Offset}{DisplayOffset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_im_vec2}{Im\+Vec2}} Im\+Font\+::\+Display\+Offset}
+
+\mbox{\Hypertarget{struct_im_font_ad58a5ee4492a3a9fa56f73e5a40d728d}\label{struct_im_font_ad58a5ee4492a3a9fa56f73e5a40d728d}} 
+\index{Im\+Font@{Im\+Font}!Fallback\+AdvanceX@{Fallback\+AdvanceX}}
+\index{Fallback\+AdvanceX@{Fallback\+AdvanceX}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Fallback\+AdvanceX}{FallbackAdvanceX}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Fallback\+AdvanceX}
+
+\mbox{\Hypertarget{struct_im_font_ae54c2c4184bfcbc7b8f6da9cbc4f93c0}\label{struct_im_font_ae54c2c4184bfcbc7b8f6da9cbc4f93c0}} 
+\index{Im\+Font@{Im\+Font}!Fallback\+Char@{Fallback\+Char}}
+\index{Fallback\+Char@{Fallback\+Char}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Fallback\+Char}{FallbackChar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} Im\+Font\+::\+Fallback\+Char}
+
+\mbox{\Hypertarget{struct_im_font_a0e666b0c49646bd294103f4d288df4b8}\label{struct_im_font_a0e666b0c49646bd294103f4d288df4b8}} 
+\index{Im\+Font@{Im\+Font}!Fallback\+Glyph@{Fallback\+Glyph}}
+\index{Fallback\+Glyph@{Fallback\+Glyph}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Fallback\+Glyph}{FallbackGlyph}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}}$\ast$ Im\+Font\+::\+Fallback\+Glyph}
+
+\mbox{\Hypertarget{struct_im_font_a423e36d1594281f1a5a537e5b0d0a3d4}\label{struct_im_font_a423e36d1594281f1a5a537e5b0d0a3d4}} 
+\index{Im\+Font@{Im\+Font}!Font\+Size@{Font\+Size}}
+\index{Font\+Size@{Font\+Size}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Font\+Size}{FontSize}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Font\+Size}
+
+\mbox{\Hypertarget{struct_im_font_a1a0901fc1a8cbd41d582d6cef4946bc9}\label{struct_im_font_a1a0901fc1a8cbd41d582d6cef4946bc9}} 
+\index{Im\+Font@{Im\+Font}!Glyphs@{Glyphs}}
+\index{Glyphs@{Glyphs}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Glyphs}{Glyphs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$\mbox{\hyperlink{struct_im_font_glyph}{Im\+Font\+Glyph}}$>$ Im\+Font\+::\+Glyphs}
+
+\mbox{\Hypertarget{struct_im_font_af906476eda06d8a842d0a843a247f530}\label{struct_im_font_af906476eda06d8a842d0a843a247f530}} 
+\index{Im\+Font@{Im\+Font}!Index\+AdvanceX@{Index\+AdvanceX}}
+\index{Index\+AdvanceX@{Index\+AdvanceX}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Index\+AdvanceX}{IndexAdvanceX}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$float$>$ Im\+Font\+::\+Index\+AdvanceX}
+
+\mbox{\Hypertarget{struct_im_font_a0c948f3741da03da9bc1731e236173c8}\label{struct_im_font_a0c948f3741da03da9bc1731e236173c8}} 
+\index{Im\+Font@{Im\+Font}!Index\+Lookup@{Index\+Lookup}}
+\index{Index\+Lookup@{Index\+Lookup}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Index\+Lookup}{IndexLookup}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_im_vector}{Im\+Vector}}$<$\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}}$>$ Im\+Font\+::\+Index\+Lookup}
+
+\mbox{\Hypertarget{struct_im_font_a8087b2ee8b27dcf5c6e30a8318f87cc7}\label{struct_im_font_a8087b2ee8b27dcf5c6e30a8318f87cc7}} 
+\index{Im\+Font@{Im\+Font}!Metrics\+Total\+Surface@{Metrics\+Total\+Surface}}
+\index{Metrics\+Total\+Surface@{Metrics\+Total\+Surface}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Metrics\+Total\+Surface}{MetricsTotalSurface}}
+{\footnotesize\ttfamily int Im\+Font\+::\+Metrics\+Total\+Surface}
+
+\mbox{\Hypertarget{struct_im_font_ae98fb07fd8862a7243d77b11f38bba19}\label{struct_im_font_ae98fb07fd8862a7243d77b11f38bba19}} 
+\index{Im\+Font@{Im\+Font}!Scale@{Scale}}
+\index{Scale@{Scale}!Im\+Font@{Im\+Font}}
+\subsubsection{\texorpdfstring{Scale}{Scale}}
+{\footnotesize\ttfamily float Im\+Font\+::\+Scale}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\item 
+\mbox{\hyperlink{imgui__draw_8cpp}{imgui\+\_\+draw.\+cpp}}\end{DoxyCompactItemize}

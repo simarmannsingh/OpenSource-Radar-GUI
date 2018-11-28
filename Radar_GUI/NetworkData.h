@@ -14,21 +14,26 @@ Our payload consists of
 */
 
 
-struct Packet {
 
-	//total size of the variables = 9 bytes
-	unsigned int amplitude;				//size : 4 bytes
-	unsigned short int range;			//size : 2 bytes
-	unsigned short int Angle;			//size : 2 bytes
-	bool Direc;							//size : 1 byte
+	class Packet
+	{
+
+	public:
+		//total size of the variables = 9 bytes
+		unsigned int amplitude;				//size : 4 bytes
+		unsigned short int range;			//size : 2 bytes
+		unsigned short int Angle;			//size : 2 bytes
+		bool Direc;							//size : 1 byte
 
 
-	void serialize(char * data) {
-		memcpy(data, this, sizeof(Packet));
-	}
+		void serialize(char * data) {
+			memcpy(data, this, sizeof(Packet));
+		}
 
-	void deserialize(char * data) {
-		memcpy(this, data, sizeof(Packet));
-	}
-};
+		void deserialize(char * data) {
+			memcpy(this, data, sizeof(Packet));
+		}
+	};
+
+
 

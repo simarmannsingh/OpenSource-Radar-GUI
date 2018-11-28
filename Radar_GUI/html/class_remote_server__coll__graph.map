@@ -1,0 +1,3 @@
+<map id="RemoteServer" name="RemoteServer">
+<area shape="rect" id="node2" href="$class_server_network.html" title="{ServerNetwork\n|+ ListenSocket\l+ ClientSocket\l+ iResult\l+ sessions\l|+ ServerNetwork()\l+ ~ServerNetwork()\l+ acceptNewClient()\l+ receiveData()\l+ sendToAll()\l}" alt="" coords="13,5,152,185"/>
+</map>

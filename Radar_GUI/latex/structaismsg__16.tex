@@ -1,0 +1,174 @@
+\hypertarget{structaismsg__16}{}\section{aismsg\+\_\+16 Struct Reference}
+\label{structaismsg__16}\index{aismsg\+\_\+16@{aismsg\+\_\+16}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+16\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{structaismsg__16__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__16_a50ff62f233b1c59233ca4b956ce66439}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (16) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__16_a4015419e0516d74f359f17a13b70b894}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__16_a7e811edb86e859681646be5aad3970a6}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__16_a5458942f28ab2515b519f6a1d18845db}{spare1}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Spare \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__16_a30a42eb8b0449613fb1d327b36b20617}{destid\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI A \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__16_aad02c6a8d52b1d1b4c9fe3b024a5bb3d}{offset\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: Slot Offset A \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__16_a9c30330fc44bf824d92970e5d116b1d2}{increment\+\_\+a}}
+\begin{DoxyCompactList}\small\item\em 10 bits \+: Increment A \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__16_acd56772a6e5c43621f1cfdca23bb7ffd}{destid\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI B \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__16_a829a14b0b75c3ca56567675022c66fb3}{offset\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: Slot Offset B \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__16_a3a99bad551b09b4ec8f4f1c34c1d7762}{increment\+\_\+b}}
+\begin{DoxyCompactList}\small\item\em 10 bits \+: Increment B \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__16_a85c81d792d81c32b331d49d06be1ca78}{spare2}}
+\begin{DoxyCompactList}\small\item\em 4 bits \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__16_af11883a62a1591d10262e210f83b40b3}{num\+\_\+cmds}}
+\begin{DoxyCompactList}\small\item\em Number of commands received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 16 -\/ Assigned Mode Command 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__16_a30a42eb8b0449613fb1d327b36b20617}\label{structaismsg__16_a30a42eb8b0449613fb1d327b36b20617}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!destid\+\_\+a@{destid\+\_\+a}}
+\index{destid\+\_\+a@{destid\+\_\+a}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{destid\+\_\+a}{destid\_a}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+16\+::destid\+\_\+a}
+
+
+
+30 bits \+: Destination M\+M\+SI A 
+
+\mbox{\Hypertarget{structaismsg__16_acd56772a6e5c43621f1cfdca23bb7ffd}\label{structaismsg__16_acd56772a6e5c43621f1cfdca23bb7ffd}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!destid\+\_\+b@{destid\+\_\+b}}
+\index{destid\+\_\+b@{destid\+\_\+b}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{destid\+\_\+b}{destid\_b}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+16\+::destid\+\_\+b}
+
+
+
+30 bits \+: Destination M\+M\+SI B 
+
+\mbox{\Hypertarget{structaismsg__16_a9c30330fc44bf824d92970e5d116b1d2}\label{structaismsg__16_a9c30330fc44bf824d92970e5d116b1d2}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!increment\+\_\+a@{increment\+\_\+a}}
+\index{increment\+\_\+a@{increment\+\_\+a}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{increment\+\_\+a}{increment\_a}}
+{\footnotesize\ttfamily int aismsg\+\_\+16\+::increment\+\_\+a}
+
+
+
+10 bits \+: Increment A 
+
+\mbox{\Hypertarget{structaismsg__16_a3a99bad551b09b4ec8f4f1c34c1d7762}\label{structaismsg__16_a3a99bad551b09b4ec8f4f1c34c1d7762}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!increment\+\_\+b@{increment\+\_\+b}}
+\index{increment\+\_\+b@{increment\+\_\+b}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{increment\+\_\+b}{increment\_b}}
+{\footnotesize\ttfamily int aismsg\+\_\+16\+::increment\+\_\+b}
+
+
+
+10 bits \+: Increment B 
+
+\mbox{\Hypertarget{structaismsg__16_a50ff62f233b1c59233ca4b956ce66439}\label{structaismsg__16_a50ff62f233b1c59233ca4b956ce66439}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+16\+::msgid}
+
+
+
+6 bits \+: Message\+ID (16) 
+
+\mbox{\Hypertarget{structaismsg__16_af11883a62a1591d10262e210f83b40b3}\label{structaismsg__16_af11883a62a1591d10262e210f83b40b3}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!num\+\_\+cmds@{num\+\_\+cmds}}
+\index{num\+\_\+cmds@{num\+\_\+cmds}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{num\+\_\+cmds}{num\_cmds}}
+{\footnotesize\ttfamily char aismsg\+\_\+16\+::num\+\_\+cmds}
+
+
+
+Number of commands received. 
+
+\mbox{\Hypertarget{structaismsg__16_aad02c6a8d52b1d1b4c9fe3b024a5bb3d}\label{structaismsg__16_aad02c6a8d52b1d1b4c9fe3b024a5bb3d}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!offset\+\_\+a@{offset\+\_\+a}}
+\index{offset\+\_\+a@{offset\+\_\+a}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{offset\+\_\+a}{offset\_a}}
+{\footnotesize\ttfamily int aismsg\+\_\+16\+::offset\+\_\+a}
+
+
+
+12 bits \+: Slot Offset A 
+
+\mbox{\Hypertarget{structaismsg__16_a829a14b0b75c3ca56567675022c66fb3}\label{structaismsg__16_a829a14b0b75c3ca56567675022c66fb3}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!offset\+\_\+b@{offset\+\_\+b}}
+\index{offset\+\_\+b@{offset\+\_\+b}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{offset\+\_\+b}{offset\_b}}
+{\footnotesize\ttfamily int aismsg\+\_\+16\+::offset\+\_\+b}
+
+
+
+12 bits \+: Slot Offset B 
+
+\mbox{\Hypertarget{structaismsg__16_a4015419e0516d74f359f17a13b70b894}\label{structaismsg__16_a4015419e0516d74f359f17a13b70b894}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+16\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__16_a5458942f28ab2515b519f6a1d18845db}\label{structaismsg__16_a5458942f28ab2515b519f6a1d18845db}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!spare1@{spare1}}
+\index{spare1@{spare1}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{spare1}{spare1}}
+{\footnotesize\ttfamily char aismsg\+\_\+16\+::spare1}
+
+
+
+2 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__16_a85c81d792d81c32b331d49d06be1ca78}\label{structaismsg__16_a85c81d792d81c32b331d49d06be1ca78}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!spare2@{spare2}}
+\index{spare2@{spare2}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{spare2}{spare2}}
+{\footnotesize\ttfamily char aismsg\+\_\+16\+::spare2}
+
+
+
+4 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__16_a7e811edb86e859681646be5aad3970a6}\label{structaismsg__16_a7e811edb86e859681646be5aad3970a6}} 
+\index{aismsg\+\_\+16@{aismsg\+\_\+16}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+16@{aismsg\+\_\+16}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+16\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

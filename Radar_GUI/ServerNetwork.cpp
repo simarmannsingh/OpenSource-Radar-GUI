@@ -1,6 +1,12 @@
-//#include "stdafx.h" 
+/*
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ Author			:	Simar Mann Singh
+ Department		:	High Frequency Department, TF
+ Date			:	28/08/2018
+ -------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
 #include "ServerNetwork.h"
-#include "NetworkData.h"
 
 ServerNetwork::ServerNetwork(void)
 {
@@ -10,34 +16,34 @@ ServerNetwork::ServerNetwork(void)
 	// our sockets for the server
 	ListenSocket = INVALID_SOCKET;
 	ClientSocket = INVALID_SOCKET;
-
-
+	
 	#define DEFAULT_PORT "27015"
-	#define DEFAULT_BUFLEN 64            // use this with caution. It is length of buffer in bytes
-
-
+	#define DEFAULT_BUFLEN 64					// use this with caution. It is length of buffer in bytes
+	
 	// address info for the server to listen to
 	struct addrinfo *result = NULL;
 	struct addrinfo hints;
 
 	// Initialize Winsock
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-	if (iResult != 0) {
+	if (iResult != 0) 
+	{
 		printf("WSAStartup failed with error: %d\n", iResult);
 		exit(1);
 	}
 
 	// set address information
-	ZeroMemory(&hints, sizeof(hints));			//writing zeros in memory pointed to by the pointer '&hints' upto memory length given by 'sizeof(hints)'
-	hints.ai_family = AF_INET;
+	ZeroMemory(&hints, sizeof(hints));			// writing zeros in memory pointed to by the pointer '&hints' upto memory length given by 'sizeof(hints)'
+	hints.ai_family   = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_protocol = IPPROTO_TCP;    // <---------------------------For UDP/TCP connection!!!
-	hints.ai_flags = AI_PASSIVE;
+	hints.ai_protocol = IPPROTO_TCP;			// <---------------------------For UDP/TCP connection!!!
+	hints.ai_flags    = AI_PASSIVE;
 
 	// Resolve the server address and port
 	iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
 
-	if (iResult != 0) {
+	if (iResult != 0) 
+	{
 		printf("getaddrinfo failed with error: %d\n", iResult);
 		WSACleanup();
 		exit(1);
@@ -45,6 +51,7 @@ ServerNetwork::ServerNetwork(void)
 
 	// Create a SOCKET for connecting to server
 	ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+	printf("Listen Socket : %d\n", ListenSocket);
 
 	if (ListenSocket == INVALID_SOCKET) {
 		printf("socket failed with error: %ld\n", WSAGetLastError());
@@ -56,7 +63,6 @@ ServerNetwork::ServerNetwork(void)
 	// Set the mode of the socket to be nonblocking
 	u_long iMode = 1;
 	iResult = ioctlsocket(ListenSocket, FIONBIO, &iMode);
-
 	if (iResult == SOCKET_ERROR) {
 		printf("ioctlsocket failed with error: %d\n", WSAGetLastError());
 		closesocket(ListenSocket);
@@ -64,7 +70,7 @@ ServerNetwork::ServerNetwork(void)
 		exit(1);
 	}
 
-	// Setup the TCP listening socket
+	// Setup the TCP listening socket9
 	iResult = bind(ListenSocket, result->ai_addr, (int)result->ai_addrlen);
 
 	if (iResult == SOCKET_ERROR) {
@@ -87,17 +93,24 @@ ServerNetwork::ServerNetwork(void)
 		WSACleanup();
 		exit(1);
 	}
+	printf("Listening for Clients ....\n");
 }
 
 ServerNetwork::~ServerNetwork(void)
 {
+	printf("Server network failed with error: %d\n", WSAGetLastError());
 }
 
 // accept new connections
-bool ServerNetwork::acceptNewClient(unsigned int & id)
+bool ServerNetwork::acceptNewClient(const unsigned int & id)
 {
 	// if client waiting, accept the connection and save the socket
+	if (ServerNetwork::ListenSocket == NULL)
+	{
+		printf("Accept new client failed with error: %d\n", WSAGetLastError());
+	}
 	ClientSocket = accept(ListenSocket, NULL, NULL);
+
 
 	if (ClientSocket != INVALID_SOCKET)
 	{

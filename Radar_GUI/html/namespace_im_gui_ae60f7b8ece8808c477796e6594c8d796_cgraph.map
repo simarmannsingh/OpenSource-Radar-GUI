@@ -1,0 +1,11 @@
+<map id="ImGui::VerticalSeparator" name="ImGui::VerticalSeparator">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="217,5,391,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="247,56,361,83"/>
+<area shape="rect" id="node4" href="$struct_im_rect.html#afa75cb8491f20901c96166d17dcddac4" title="ImRect::GetWidth" alt="" coords="241,107,367,133"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="248,157,360,184"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="235,208,373,235"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#aa548475d8f771ab6524d73d900a41198" title="ImGui::LogText" alt="" coords="249,260,359,287"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="439,198,612,239"/>
+<area shape="rect" id="node9" href="$struct_im_gui_text_buffer.html#ac8a6b11834c4cee8113bf6950e66112e" title="ImGuiTextBuffer::appendfv" alt="" coords="439,264,611,291"/>
+<area shape="rect" id="node10" href="$imgui_8cpp.html#a2e0022a073d369645a0daab17f823779" title="ImFormatStringV" alt="" coords="660,264,780,291"/>
+</map>

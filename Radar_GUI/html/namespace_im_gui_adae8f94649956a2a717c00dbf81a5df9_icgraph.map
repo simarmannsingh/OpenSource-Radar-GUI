@@ -1,0 +1,4 @@
+<map id="ImGui::ClearDragDrop" name="ImGui::ClearDragDrop">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#ac2609b0f034d3bcd8d70d26df8694eaa" title="ImGui::BeginDragDropSource" alt="" coords="201,5,393,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a02f225fefff2a046038ed99ab20606da" title="ImGui::EndDragDropSource" alt="" coords="206,56,389,83"/>
+</map>

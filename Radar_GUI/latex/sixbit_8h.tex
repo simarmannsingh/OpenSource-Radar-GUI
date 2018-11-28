@@ -1,0 +1,80 @@
+\hypertarget{sixbit_8h}{}\section{sixbit.\+h File Reference}
+\label{sixbit_8h}\index{sixbit.\+h@{sixbit.\+h}}
+
+
+Header file for sixbit.\+c.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsixbit}{sixbit}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sixbit_8h_a3a8670b3483f4813642412fac44d1c0b}{S\+I\+X\+B\+I\+T\+\_\+\+L\+EN}}~255
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{sixbit_8h_a2d8b2533ad2f340f3fe9104198109ac9}{binfrom6bit}} (char ascii)
+\item 
+int \mbox{\hyperlink{sixbit_8h_ac84e877f5f81440d24b211d772c4c660}{init\+\_\+6bit}} (\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$state)
+\item 
+unsigned long \mbox{\hyperlink{sixbit_8h_a33de2bb0492b4c2b6ba285f402681ae8}{get\+\_\+6bit}} (\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$state, short numbits)
+\item 
+unsigned int \mbox{\hyperlink{sixbit_8h_aa8679c58c0c9e82bcf63ae29fbf2b3b7}{sixbit\+\_\+length}} (\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$state)
+\item 
+char \mbox{\hyperlink{sixbit_8h_a52792911141c70af848261a3e7cd0a0d}{binto6bit}} (char value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for sixbit.\+c. 
+
+\begin{DoxyAuthor}{Author}
+Brian C. Lane \href{mailto:bcl@brianlane.com}{\tt bcl@brianlane.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sixbit_8h_a3a8670b3483f4813642412fac44d1c0b}\label{sixbit_8h_a3a8670b3483f4813642412fac44d1c0b}} 
+\index{sixbit.\+h@{sixbit.\+h}!S\+I\+X\+B\+I\+T\+\_\+\+L\+EN@{S\+I\+X\+B\+I\+T\+\_\+\+L\+EN}}
+\index{S\+I\+X\+B\+I\+T\+\_\+\+L\+EN@{S\+I\+X\+B\+I\+T\+\_\+\+L\+EN}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{S\+I\+X\+B\+I\+T\+\_\+\+L\+EN}{SIXBIT\_LEN}}
+{\footnotesize\ttfamily \#define S\+I\+X\+B\+I\+T\+\_\+\+L\+EN~255}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{sixbit_8h_a2d8b2533ad2f340f3fe9104198109ac9}\label{sixbit_8h_a2d8b2533ad2f340f3fe9104198109ac9}} 
+\index{sixbit.\+h@{sixbit.\+h}!binfrom6bit@{binfrom6bit}}
+\index{binfrom6bit@{binfrom6bit}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{binfrom6bit()}{binfrom6bit()}}
+{\footnotesize\ttfamily char binfrom6bit (\begin{DoxyParamCaption}\item[{char}]{ascii }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sixbit_8h_a52792911141c70af848261a3e7cd0a0d}\label{sixbit_8h_a52792911141c70af848261a3e7cd0a0d}} 
+\index{sixbit.\+h@{sixbit.\+h}!binto6bit@{binto6bit}}
+\index{binto6bit@{binto6bit}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{binto6bit()}{binto6bit()}}
+{\footnotesize\ttfamily char binto6bit (\begin{DoxyParamCaption}\item[{char}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sixbit_8h_a33de2bb0492b4c2b6ba285f402681ae8}\label{sixbit_8h_a33de2bb0492b4c2b6ba285f402681ae8}} 
+\index{sixbit.\+h@{sixbit.\+h}!get\+\_\+6bit@{get\+\_\+6bit}}
+\index{get\+\_\+6bit@{get\+\_\+6bit}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+6bit()}{get\_6bit()}}
+{\footnotesize\ttfamily unsigned long get\+\_\+6bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$}]{state,  }\item[{short}]{numbits }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sixbit_8h_ac84e877f5f81440d24b211d772c4c660}\label{sixbit_8h_ac84e877f5f81440d24b211d772c4c660}} 
+\index{sixbit.\+h@{sixbit.\+h}!init\+\_\+6bit@{init\+\_\+6bit}}
+\index{init\+\_\+6bit@{init\+\_\+6bit}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{init\+\_\+6bit()}{init\_6bit()}}
+{\footnotesize\ttfamily int init\+\_\+6bit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sixbit_8h_aa8679c58c0c9e82bcf63ae29fbf2b3b7}\label{sixbit_8h_aa8679c58c0c9e82bcf63ae29fbf2b3b7}} 
+\index{sixbit.\+h@{sixbit.\+h}!sixbit\+\_\+length@{sixbit\+\_\+length}}
+\index{sixbit\+\_\+length@{sixbit\+\_\+length}!sixbit.\+h@{sixbit.\+h}}
+\subsubsection{\texorpdfstring{sixbit\+\_\+length()}{sixbit\_length()}}
+{\footnotesize\ttfamily unsigned int sixbit\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsixbit}{sixbit}} $\ast$}]{state }\end{DoxyParamCaption})}
+

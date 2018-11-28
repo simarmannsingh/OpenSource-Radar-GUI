@@ -1,0 +1,8 @@
+<map id="ImGui::Begin" name="ImGui::Begin">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#ab33717bb71ef5e393ae18656fc6b229d" title="ImGui::SetNextWindowSize" alt="" coords="163,5,345,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a7de5a63cec4babe417f972403db6430c" title="ImGui::SetNextWindowBgAlpha" alt="" coords="151,56,357,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a581e58db0bc930bafa4a5d23093a2b99" title="ImGui::Begin" alt="" coords="205,107,303,133"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#abca25f22c02e73d5eb2e9c72c4557813" title="ImGui::FindWindowByName" alt="" coords="405,107,591,133"/>
+<area shape="rect" id="node6" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="692,81,759,108"/>
+<area shape="rect" id="node7" href="$struct_im_gui_storage.html#aaf87a98ede89da09113b0189f6d878ca" title="ImGuiStorage::GetVoidPtr" alt="" coords="639,132,812,159"/>
+</map>

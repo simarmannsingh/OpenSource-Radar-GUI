@@ -1,0 +1,4 @@
+<map id="serverLoop" name="serverLoop">
+<area shape="rect" id="node2" href="$class_remote_server.html#a3db7209565922096aa27128c011c476b" title="RemoteServer::update" alt="" coords="137,13,288,39"/>
+<area shape="rect" id="node3" href="$class_server_network.html#a88e6b758f3c4272463aac8c10908b036" title="ServerNetwork::acceptNew\lClient" alt="" coords="336,5,513,47"/>
+</map>

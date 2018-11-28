@@ -1,0 +1,7 @@
+<map id="ImGui::Image" name="ImGui::Image">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="152,5,325,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="181,56,296,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="183,107,295,133"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="169,157,308,184"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="373,150,547,191"/>
+</map>

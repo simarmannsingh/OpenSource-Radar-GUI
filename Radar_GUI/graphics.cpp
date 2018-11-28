@@ -8,34 +8,39 @@
  -------------------------------------------------------------------------------------------------------------------------------------------
 */
 
-#include "graphics.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <fstream>
-#include <string>
-#include <iostream>
-#include <sstream>
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "VertexArray.h"
-#include <math.h>
-#include "FontRenderer.h"
-#include <corecrt_math_defines.h>
-#include "Shader.h"
-#include "Shader_s.h"
-#include "Texture.h"
+/*
+CODE
+(search for "[SEGMENT]" in the code to find more about them )
 
-bool flag_coherent = FALSE;
-bool flag_CFAR = FALSE;
+// [SEGMENT] VARIABLE DECLARATIONS
+// [SEGMENT] FUNCTION DECLARATIONS
+// [SEGMENT] GLFW AND OPENGL INITIALIZATION
+// [SEGMENT] CONTEXT CREATION AND GLAD INITIALIZATION
+// [SEGMENT] MAIN RENDER LOOP
+// [SEGMENT] REGISTERING KEY PRESS INTERRUPT USING CALLBACKS
+// [SEGMENT] REGISTERING ERROR INTERRUPT USING CALLBACKS
+// [SEGMENT] CHANGING SCREENSIZE USING CALLBACK
+// [SEGMENT] DESIGNING SCREENOVERLAY TO RENDER INFORMATION TAB ON SCREEN
+// [SEGMENT] ANIMATING SIGNAL ON INFORMATION TAB
+*/
+
+#include "graphics.h"
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] VARIABLE DECLARATIONS
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+static bool flag_coherent	= FALSE;
+static bool flag_connect	= FALSE;
+static bool flag_CFAR		= FALSE;
 
 int width = 200;
 int height = 200;
 
-
 int Screen_width = 800;
 int Screen_height = 800;
-
-
+								
+// Variables for Radar PPI display
 float centerX = 320.0;
 float centerY = 240.0;
 float PI_180 = M_PI / 180.0f;
@@ -43,12 +48,29 @@ float radius = (centerX < centerY) ? centerX : centerY;
 float rad_64 = radius / 64;
 float rad_3 = radius / 3;
 
+// Variables for ImGui
 const char* glsl_version = "#version 130";																
 bool show_demo_window = true;																			
 static int counter = 0;																					
-static float f = 0.0f;																					
+static float Slider1 = 0.0f;																					
+static float Slider2 = 0.0f;																					
+static float Slider3 = 0.0f;																					
+																		
+const float DISTANCE = 20.0f;
+const float x_DISTANCE = 20.0f;
+const float y_DISTANCE = 200.0f;
+const float NetOvrlayDistance = 395.0f;
 
-// Initialize the FreeType fonts
+static int corner = 1;
+static bool ScreenOverlayFlag = true;
+static bool infoFlag = false;
+
+static int ScreenOverlay_n = 0;
+
+double elapsedTime = 0;
+
+
+// Variables for FreeType fonts
 FontRenderer FR;
 Shader_s font_shader;
 GLuint va_font, vb_font;
@@ -56,16 +78,28 @@ GLuint va_font, vb_font;
 const int v_corners = 80;
 
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] FUNCTION DECLARATIONS
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+void glInitialize();																	// To initialize GLFW and OpenGL library
+GLFWwindow* glCreateWindow();															// To create an empty window of size 1080 x 720 and initialize Glad library 
+int glRenderLoop(GLFWwindow* window);													// To render every graphical entity in the window created
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);		// To enable Keyboard Input to system using system callbacks
+void error_callback(int error, const char* description);								// To enable error reporting using error callbacks
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);				// Callback for any change in the position/size of the generated window
+void screenOverlay(bool* p_open, int corner);											// Enabling screen Overlay to design the information tab. Funciton called from Render Loop
+void renderGraph();																		// Animating signal, represented on the Information Tab. Function invoked from Render Loop
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] GLFW AND OPENGL INITIALIZATION 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 void glInitialize()
 {
-	/*
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-
-					Initializing GLFW Library and setting minimum required version to OpenGL 3.3
-
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-	*/
-
+	
+	// Initializing GLFW Library and setting minimum required version to OpenGL 3.3
+	
 	// GLFW Initialization
 	int glfw_Init = glfwInit();
 	if (!glfw_Init)
@@ -75,19 +109,24 @@ void glInitialize()
 		exit(EXIT_FAILURE);
 	}
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);										// defines the veriosn of the openGL used 
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);										// defines the version of the openGL used 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);						// We are using <<---OPENGL_CORE--->> Profile
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 	printf("GLFW initialization completed successfully\n");
 
 	
 }
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] CONTEXT CREATION AND GLAD INITIALIZATION 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 GLFWwindow* glCreateWindow()
 {
-	
-	glfwSetErrorCallback(error_callback);
-	GLFWwindow* window = glfwCreateWindow(800, 800, "Radar - HF dept TF", NULL, NULL);	// creating a window 800x800 in size			--->> 800 x 600
+	// To create an empty window of size 1080 x 720 and initialize Glad library 
+	// Registering Interrupt function calls using callbacks
+	glfwSetErrorCallback(error_callback);	
+	GLFWwindow* window = glfwCreateWindow(1080, 720, "Radar - HF dept TF", NULL, NULL);	// creating a window 1080x720 in size			--->> 800 x 600
 	if (window == NULL)
 	{
 		printf("Failed at creating window\n");
@@ -97,7 +136,7 @@ GLFWwindow* glCreateWindow()
 	}
 	printf("Window Creation completed successfully\n");
 	
-	/* Make the window's context current */
+	// Make the window's context current 
 	glfwMakeContextCurrent(window);														//making context of our window the main context on the current thread
 	glfwSwapInterval(1);
 
@@ -115,13 +154,14 @@ GLFWwindow* glCreateWindow()
 	return window;
 }
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] MAIN RENDER LOOP 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 int glRenderLoop(GLFWwindow* window)
 {
 	/*
 	 -------------------------------------------------------------------------------------------------------------------------------------------
-
-														-->>  RENDER LOOP  <<--
-
+					To render every graphical entity in the window created
 	 -------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	
@@ -144,7 +184,7 @@ int glRenderLoop(GLFWwindow* window)
 
 		for (int i = 0; i < v_corners; i++)									// Initializing the vertex_PPI vector 
 		{
-			angle = i * 2 * 3.14 / v_corners;
+			angle = (GLfloat)(i * 2 * 3.14 / v_corners);
 			vertices_PPI[i][0] = radius * cos(angle);
 			vertices_PPI[i][1] = radius * sin(angle);
 
@@ -212,8 +252,7 @@ int glRenderLoop(GLFWwindow* window)
 		ib_rec.unbind();
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
-
-
+		
 		// Generating TRIANGLE's buffer and adding data 
 		VertexArray va_tri;
 		VertexBuffer vb_tri(vertices_tri, sizeof(vertices_tri));
@@ -230,7 +269,6 @@ int glRenderLoop(GLFWwindow* window)
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
-
 		Shader shader1("res/shaders/Basic.shader", 1);
 		//Shader shader2("res/shaders/Basic.shader", 2);
 		shader1.bind();
@@ -245,15 +283,10 @@ int glRenderLoop(GLFWwindow* window)
 		Texture texture("res/images/diamond.png");
 		texture.bind();
 		//shader.unBind();
-		
+		 
 
-	/*
-	-------------------------------------------------------------------------------------------------------------------------------------------
 
-												FONT rendering using Freetype library
-
-	-------------------------------------------------------------------------------------------------------------------------------------------
-	*/
+	//	FONT RENDERING USING FREETYPE LIBRARY
 			
 		// Initialize the FreeType fonts
 		font_shader = FR.FontInit();
@@ -271,18 +304,12 @@ int glRenderLoop(GLFWwindow* window)
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindVertexArray(0);
 		
-	/*
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-
-														-->>  ImGUI Setup  <<--
-
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-	*/
+	//  ImGUI Setup  
 	 
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
-	//ImGuiIO& io = ImGui::GetIO(); (void)io;
-	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;  // Enable Keyboard Controls
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;  // Enable Keyboard Controls
 
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init(glsl_version);
@@ -290,18 +317,13 @@ int glRenderLoop(GLFWwindow* window)
 	ImGui::StyleColorsDark();
 		
 
-	/*
-	 -------------------------------------------------------------------------------------------------------------------------------------------
+	//  TRANSLATION MATRIX
 
-														-->>  Translation Matrix  <<--
-
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-	*/
 	{
-		/*
+		
 		glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
 		glm::mat4 trans(1);
-		std::cout << "Before  :::   ---> vec.x  : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
+		std::cout << "Before  :::  \nvec.x  : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
 		trans = glm::translate(trans, glm::vec3(1.0f, 1.0f, 0.0f));
 		vec = trans * vec;
 		//trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
@@ -312,63 +334,53 @@ int glRenderLoop(GLFWwindow* window)
 		glm::mat4 transform;
 		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
 		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
-		glUseProgram(shdrprgm);
-		unsigned int transformLoc = glGetUniformLocation(shdrprgm, "transform");
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+		//glUseProgram(shdrprgm);
+
+		//unsigned int transformLoc = glGetUniformLocation(shdrprgm, "transform");
+		//glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
 
 		//unsigned int location = glGetUniformLocation(shdrprgm, "transform");
 		//glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(trans));
-		*/
+		
 	}
-	/*
-	 -------------------------------------------------------------------------------------------------------------------------------------------
 
-														-->>  OpenGL Loop  <<--
-
-	 -------------------------------------------------------------------------------------------------------------------------------------------
-	*/
+	// OPENGL LOOP
 	while (!glfwWindowShouldClose(window))
-	{	
+	{
+		glfwPollEvents();
+		//client->sendData(Clnetwork);
+		//server->receiveFromClients(svnetwork);
+
 		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+
+		// Radar Beam
+		glViewport(0, 0, 1080, 800);
 		shader1.bind();
+		shader1.setUniform4f("u_Color", 0.1f, 0.7f, 0.0f, 0.15f);
+		va_circ.Bind();
+		ib_circ.bind();
+		elapsedTime = glfwGetTime();
+		if (elapsedTime > 10)
+		{
+			elapsedTime = 0;
+			glfwSetTime(0.0f);
+		}
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		for (int i = 0; i < 8; i++)
+		{			
+			glDrawArrays(GL_TRIANGLE_FAN, i, i + 15);
+			shader1.setUniform4f("u_Color", 0.1f, (elapsedTime/10)*0.9f, (elapsedTime / 10)*0.2f, 0.15f);
+		}
+			
 		glViewport(0, 0, 800, 800);
 		shader1.setUniform4f("u_Color", 0.8f, 0.8f, 0.1f, 1.0f);
-				
-		{
-			// RECTANGLES
-			// Rendering object number 1		-  OUTER RECT
-			// Defining Properties 
-			va_rec.Bind();
-			ib_rec.bind();			
-			glViewport(540, 640, 260, 160);
-			glLineWidth(10.0f);
-			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-			shader1.setUniform4f("u_Color", 0.0f, 0.1f, 0.6f, 1.0f);
-			
-			//Drawing the object
-			GLClearError();
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
-			GLCheckError();			
-			
-			glViewport(545, 645, 250, 150);
-			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-			shader1.setUniform4f("u_Color", 0.4f, 0.4f, 0.4f, 1.0f);
-			
-			//Drawing the object			
-			GLClearError();
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
-			GLCheckError();
-
-			va_rec.unBind();
-		}
 		
 		{
 			//CIRCELS
 			// Outer Circle
-			va_circ.Bind();
-			ib_circ.bind();
+		
 			glViewport(60, 100, 600, 600);
 			shader1.setUniform4f("u_Color", 0.2f, 0.2f, 0.6f, 1.0f);			
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -391,93 +403,87 @@ int glRenderLoop(GLFWwindow* window)
 			glViewport(355, 395, 10, 10);
 			shader1.setUniform4f("u_Color",0.15f, 0.15f, 0.25f, 1.0f);
 			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
-			va_circ.unBind();
-			ib_circ.unbind();
-		}
-		/*
-		{
-		//Scanning Beam
-			va_tri.Bind();
-			glViewport(360, 400, 270, 270);
-			shader1.setUniform4f("u_Color", 0.4f, 0.4f, 0.4f, 1.0f);
-			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-			//Drawing the object			
-			GLClearError();
-			glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
-			GLCheckError();
-
-			va_tri.unBind();
-		}
-		*/
-		glViewport(550, 650, 240, 140);
-		shader1.setUniform4f("u_Color", 0.8f, 0.8f, 0.8f, 1.0f);
-		FR.RenderText(font_shader, "Status :", 20.0f, 640.0f, 1.0f, va_font, vb_font);
-		if (flag_coherent)
-		{
-			FR.RenderText(font_shader, "COHERENT", 320.0f, 640.0f, 1.0f, va_font, vb_font);
-		}
-		else
-		{
-			FR.RenderText(font_shader, "INCOHERENT", 320.0f, 640.0f, 1.0f, va_font, vb_font);
-		}
-
-		FR.RenderText(font_shader, "CFAR   :", 20.0f, 580.0f, 1.0f, va_font, vb_font);
-		if (flag_CFAR)
-		{
-			FR.RenderText(font_shader, "ON", 320.0f, 580.0f, 1.0f, va_font, vb_font);
-		}
-		else
-		{
-			FR.RenderText(font_shader, "OFF", 320.0f, 580.0f, 1.0f, va_font, vb_font);
-		}		
-		
-		
-		
-		// ImGUI
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-		
-		{
-			ImGui::Begin("Hello, world!");
-			if (show_demo_window)
-				ImGui::ShowDemoWindow(&show_demo_window);
-
-			ImGui::Text("RADAR Controls");               // Display some text (you can use a format strings too)
-			ImGui::Checkbox("CFAR", &show_demo_window);      // Edit bools storing our window open/close state
-			ImGui::Checkbox("COHERENT", &show_demo_window);      // Edit bools storing our window open/close state
-			ImGui::Text("ZOOM");
-			ImGui::SameLine();
-			ImGui::SliderFloat("", &f, 0.0f, 1.0f);
-
-			ImGui::Text("Andgular Offset :");
-			ImGui::SameLine();
-			ImGui::SliderFloat("", &f, 0.0f, 1.0f);
-
-			ImGui::Text("ZeroPoint Offset :");
-			ImGui::SameLine();
-			ImGui::SliderFloat("", &f, 0.0f, 1.0f);
-
-			if (ImGui::Button("Button"))
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
-			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-			ImGui::End(); 
-		}
-
-
-		ImGui::Render();
-		glfwMakeContextCurrent(window);
-		glfwGetFramebufferSize(window, &Screen_width, &Screen_height);
-		glViewport(0, 0, Screen_width, Screen_height);
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 					
+			
+		}
+		
+		
+		va_circ.unBind();
+		ib_circ.unbind();
+		
+		const char* item[] = { "first", "threerst" ,"tworst" };
+		{
+			// ImGUI
+			ImGui_ImplOpenGL3_NewFrame();
+			ImGui_ImplGlfw_NewFrame();
+			ImGui::NewFrame();
+			//ImGui::ShowDemoWindow(&show_demo_window);
+			// Screen Overlay
+			if (ScreenOverlayFlag)
+				screenOverlay(&ScreenOverlayFlag, corner);
+				screenOverlayTwo(&ScreenOverlayFlag, corner);
+	
+				ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - x_DISTANCE : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - NetOvrlayDistance : NetOvrlayDistance);
+				ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
+				ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
+				ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
+								
+				ImGui::Begin("Network Controls", &ScreenOverlayFlag, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav);
+
+				ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "NETWORK SETTINGS");
+				ImGui::Separator();
+				
+				static char buf2[64] = ""; ImGui::InputText("decimal", buf2, 64, ImGuiInputTextFlags_CharsDecimal);
+				
+				if (ImGui::Button("Connect", ImVec2(80, 20)))
+				{
+					char key[] = "192.168.1.100";
+					int res = strcmp(buf2, key);
+					if (res )
+					{
+						Beep(400, 500);
+					}
+				}
+
+				//ImGui::Combo("combo", &counter, item, 3);
+				ImGui::RadioButton("2x Zoom", &counter, 0);
+				ImGui::RadioButton("4x Zoom", &counter, 1);
+				renderGraph();
+
+				if (ImGui::Button("Info", ImVec2(80, 20)))
+				{
+
+					infoFlag = true;
+					ImVec2 Info_window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x -(3 * x_DISTANCE) : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y -(3* y_DISTANCE ): y_DISTANCE);
+					ImVec2 Info_window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
+					ImGui::SetNextWindowPos(Info_window_pos, ImGuiCond_Always, Info_window_pos_pivot);
+					ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
+					if(infoFlag)
+					{
+						screenOverlay(&infoFlag, corner);
+					}					
+				}
+
+				ImGui::SameLine();
+				if (ImGui::Button("Exit", ImVec2(80, 20)))
+				{
+					counter++;
+				}
+				ImGui::SameLine();
+				ImGui::End();
+			
+			
+			ImGui::Render();
+			glfwMakeContextCurrent(window);
+			glfwGetFramebufferSize(window, &Screen_width, &Screen_height);
+			glViewport(0, 0, Screen_width, Screen_height);
+			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+		}
 		glFlush();
 			   
 		// glfw: swap buffers and poll IO events (key pressed/release, mouse moved etc)
-		glfwSwapBuffers(window);
-		glfwPollEvents();
+		glfwMakeContextCurrent(window);
+		glfwSwapBuffers(window);		
 	}	
 	ImGui_ImplOpenGL3_Shutdown();
 	ImGui_ImplGlfw_Shutdown();
@@ -486,7 +492,9 @@ int glRenderLoop(GLFWwindow* window)
 	return 0;
 }
 
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] REGISTERING KEY PRESS INTERRUPT USING CALLBACKS
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
 	std::cout << key << "\n";
@@ -505,6 +513,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 			flag_coherent = FALSE;
 		}
 	}
+
 	if (key == GLFW_KEY_O && action == GLFW_PRESS)
 	{
 		if (!flag_CFAR)
@@ -543,14 +552,146 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 }
 
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] REGISTERING ERROR INTERRUPT USING CALLBACKS
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 void error_callback(int error, const char* description)
 {
 	puts(description);
 	Sleep(2000);
 }
 
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)			// Callback for any change in the position/size of the generated window
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] CHANGING SCREENSIZE USING CALLBACK
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)			
 {
 	glViewport(0, 0, width, height);
 }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] DESIGNING SCREENOVERLAY TO RENDER INFORMATION TAB ON SCREEN
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+void screenOverlay(bool* p_open, int corner)
+{
+	ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - DISTANCE : DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - DISTANCE : DISTANCE);
+	ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
+	if (corner != -1)
+	
+	ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
+	ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
+	if (ImGui::Begin("Example: Simple Overlay", p_open, (corner != -1 ? ImGuiWindowFlags_NoMove : 0) | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav))
+	{
+		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Mode Settings");
+		ImGui::Separator();
+		if (!flag_connect)
+		{
+			ImGui::Text("Connection Status  : Disconnected    \n");
+		}
+		else
+		{
+			ImGui::Text("Connection Status  : Connected   \n");
+		}
+		
+		
+		if (!flag_coherent)
+		{
+			ImGui::Text("Coherent Status    : Incoherent\n");
+		}
+		else
+		{
+			ImGui::Text("Coherent Status    : Coherent\n");
+		}
+		
+		if (!flag_CFAR)
+		{
+			ImGui::Text("CFAR Mode	      : OFF       \n");
+		}
+		else
+		{
+			ImGui::Text("CFAR Mode	      : ON       \n");
+		}
+		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Signal Reception");
+		ImGui::Separator();
+		//ImGui::Text("Amplitude : %d ", RemoteClient::Txpacket.amplitude);
+		ImGui::Text("Amplitude : 113");
+		ImGui::Text("Direction : 9 degrees");
+		ImGui::Text("Direction : ");
+		
+		
+		
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)   ", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
+		if (ImGui::BeginPopupContextWindow())
+		{
+			if (ImGui::MenuItem("Custom", NULL, corner == -1)) corner = -1;
+			if (ImGui::MenuItem("Top-left", NULL, corner == 0)) corner = 0;
+			if (ImGui::MenuItem("Top-right", NULL, corner == 1)) corner = 1;
+			if (ImGui::MenuItem("Bottom-left", NULL, corner == 2)) corner = 2;
+			if (ImGui::MenuItem("Bottom-right", NULL, corner == 3)) corner = 3;
+			if (p_open && ImGui::MenuItem("Close")) *p_open = false;
+			ImGui::EndPopup();
+		}
+	}
+	ImGui::End();
+}
+
+
+void screenOverlayTwo(bool* p_open, int corner)
+{
+
+	ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - x_DISTANCE : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - y_DISTANCE : y_DISTANCE);
+	ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
+	ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
+	ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
+	
+	ImGui::Begin("RADAR Controls", &ScreenOverlayFlag, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav);
+
+	ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "RADAR SETTINGS");
+	ImGui::Separator();
+	ImGui::Checkbox("CONNECT", &flag_connect);      // Edit bools storing our window open/close state
+	ImGui::Checkbox("COHERENT", &flag_coherent);      // Edit bools storing our window open/close state
+	ImGui::Checkbox("CFAR", &flag_CFAR);      // Edit bools storing our window open/close state
+
+	ImGui::Text("ZOOM            :");
+	ImGui::SameLine();
+	ImGui::SliderFloat("Slider1", &Slider1, 0.0f, 1.0f);
+	ImGui::Text("Andgular Offset :");
+	ImGui::SameLine();
+	ImGui::SliderFloat("Slider2", &Slider2, 0.0f, 1.0f);
+	ImGui::Text("ZeroPoint Offset:");
+	ImGui::SameLine();
+	ImGui::SliderFloat("Slider3", &Slider3, 0.0f, 1.0f);
+	ImGui::Text("   ");
+
+	ImGui::End();
+}
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// [SEGMENT] ANIMATING SIGNAL FLOW ON INFORMATION TAB 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+void renderGraph()
+{
+	static bool animate = true;
+	ImGui::Checkbox("Plot Signal", &animate);
+	
+	// Create a dummy array of contiguous float values to plot
+	// Tip: If your float aren't contiguous but part of a structure, you can pass a pointer to your first float and the sizeof() of your structure in the Stride parameter.
+	static float values[90] = { 0 };
+	static int values_offset = 0;
+	static double refresh_time = 0.0;
+	if (!animate || refresh_time == 0.0f)
+		refresh_time = ImGui::GetTime();
+	while (refresh_time < ImGui::GetTime()) // Create dummy data at fixed 60 hz rate for the demo
+	{
+		static float phase = 0.0f;
+		values[values_offset] = cosf(phase);
+		values_offset = (values_offset + 1) % IM_ARRAYSIZE(values);
+		phase += 0.5f*values_offset;
+		refresh_time += 1.0f / 60.0f;
+	}
+	ImGui::PlotLines("Lines", values, IM_ARRAYSIZE(values), values_offset, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
+}
+

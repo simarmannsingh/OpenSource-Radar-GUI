@@ -1,0 +1,4 @@
+<map id="ImGui::IsMouseHoveringRect" name="ImGui::IsMouseHoveringRect">
+<area shape="rect" id="node2" href="$struct_im_rect.html#ac02d5cf6ce0358aea9ed9df43d368f3f" title="ImRect::ClipWith" alt="" coords="244,5,364,32"/>
+<area shape="rect" id="node3" href="$struct_im_rect.html#ac583156fd0e9306181fff5d120b262ea" title="ImRect::Contains" alt="" coords="243,56,365,83"/>
+</map>

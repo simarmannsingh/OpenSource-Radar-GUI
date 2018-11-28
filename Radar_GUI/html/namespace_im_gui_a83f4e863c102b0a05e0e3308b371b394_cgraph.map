@@ -1,0 +1,7 @@
+<map id="ImGui::ShowStyleSelector" name="ImGui::ShowStyleSelector">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#aa2979368da5b9e98d368449b36d166b2" title="ImGui::Combo" alt="" coords="263,5,368,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a1cf931a42a10f71150def3ce222434b6" title="ImGui::StyleColorsClassic" alt="" coords="228,56,403,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a26c67fc14081b359566d5e135cd8c767" title="ImGui::StyleColorsDark" alt="" coords="236,107,395,133"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#ae1fc558bfbc557b228d63f7facfc86e1" title="ImGui::StyleColorsLight" alt="" coords="236,157,395,184"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#abafef4bb3e3654efd96a47b2e22870a7" title="ImGui::GetStyle" alt="" coords="451,107,565,133"/>
+</map>

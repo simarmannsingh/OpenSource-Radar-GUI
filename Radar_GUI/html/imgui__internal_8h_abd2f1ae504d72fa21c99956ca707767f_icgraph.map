@@ -1,0 +1,5 @@
+<map id="ImFontAtlasBuildRegisterDefaultCustomRects" name="ImFontAtlasBuildRegisterDefaultCustomRects">
+<area shape="rect" id="node2" href="$imgui__internal_8h.html#a434a381598e3cdcefeff89f63803588a" title="ImFontAtlasBuildWithStbTruetype" alt="" coords="223,5,441,32"/>
+<area shape="rect" id="node4" href="$namespace_im_gui_free_type.html#acb5c34ce2486d90e3afe7944664cc677" title="ImGuiFreeType::BuildFont\lAtlas" alt="" coords="245,57,419,98"/>
+<area shape="rect" id="node3" href="$struct_im_font_atlas.html#a81e39e30dffa4dd7e458a53297451e27" title="ImFontAtlas::Build" alt="" coords="489,5,619,32"/>
+</map>

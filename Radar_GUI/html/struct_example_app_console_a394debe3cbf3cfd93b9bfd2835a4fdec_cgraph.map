@@ -1,0 +1,9 @@
+<map id="ExampleAppConsole::TextEditCallbackStub" name="ExampleAppConsole::TextEditCallbackStub">
+<area shape="rect" id="node2" href="$struct_example_app_console.html#a0bc85c5dd2bef56ae1a64697be00ec87" title="ExampleAppConsole::\lTextEditCallback" alt="" coords="204,123,355,164"/>
+<area shape="rect" id="node3" href="$struct_example_app_console.html#a11bcb7a4b801e5eeb0c098c082fedc25" title="ExampleAppConsole::\lStrnicmp" alt="" coords="421,5,571,47"/>
+<area shape="rect" id="node4" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="640,71,785,98"/>
+<area shape="rect" id="node5" href="$struct_example_app_console.html#a719354ce6be7481923a5fd702e785952" title="ExampleAppConsole::\lAddLog" alt="" coords="421,123,571,164"/>
+<area shape="rect" id="node7" href="$struct_im_gui_input_text_callback_data.html#ab5dc30d7edcf60efbd5bb8e677dab8bf" title="ImGuiInputTextCallbackData\l::DeleteChars" alt="" coords="403,188,589,229"/>
+<area shape="rect" id="node8" href="$struct_im_gui_input_text_callback_data.html#a9963937f48aba00466c2af404dad1e25" title="ImGuiInputTextCallbackData\l::InsertChars" alt="" coords="403,253,589,295"/>
+<area shape="rect" id="node6" href="$struct_example_app_console.html#a61d0da41ef31ea8690b23681a1e54dba" title="ExampleAppConsole::\lStrdup" alt="" coords="637,123,788,164"/>
+</map>

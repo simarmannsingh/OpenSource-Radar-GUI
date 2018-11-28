@@ -1,0 +1,5 @@
+<map id="ImGui::IsKeyPressedMap" name="ImGui::IsKeyPressedMap">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a83331a8afa5316bc98ed9c98b151ac01" title="ImGui::IsKeyPressed" alt="" coords="224,13,369,39"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ad94a09fc01052f02fe11bec5a3c11275" title="ImGui::GetKeyPressedAmount" alt="" coords="417,13,619,39"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ad3af0fc327467a44116d7d04018b9124" title="ImGui::CalcTypematicPressed\lRepeatAmount" alt="" coords="667,5,865,47"/>
+</map>

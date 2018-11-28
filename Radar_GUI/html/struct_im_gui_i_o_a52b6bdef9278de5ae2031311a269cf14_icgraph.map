@@ -1,0 +1,5 @@
+<map id="ImGuiIO::AddInputCharacter" name="ImGuiIO::AddInputCharacter">
+<area shape="rect" id="node2" href="$struct_im_gui_i_o.html#adaf150a1908c02c3cae15a35915bbb26" title="ImGuiIO::AddInputCharactersUTF8" alt="" coords="237,5,460,32"/>
+<area shape="rect" id="node3" href="$imgui__impl__glfw_8h.html#aa44de756329ce5447b6b15f0362617a0" title="ImGui_ImplGlfw_CharCallback" alt="" coords="251,56,447,83"/>
+<area shape="rect" id="node4" href="$imgui__impl__glfw_8cpp.html#a6fe1ba0e49c2da76f4f28856bc8511fb" title="ImGui_ImplGlfw_InstallCallbacks" alt="" coords="508,56,719,83"/>
+</map>

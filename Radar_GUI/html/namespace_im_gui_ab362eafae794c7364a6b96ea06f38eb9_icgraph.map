@@ -1,0 +1,14 @@
+<map id="ImGui::RenderTextClipped" name="ImGui::RenderTextClipped">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a55e5a7edb676a8f5cd7f65443138a8a0" title="ImGui::LabelTextV" alt="" coords="231,56,361,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ae479220c66b039874c6e4c9e9b22849f" title="ImGui::ButtonEx" alt="" coords="237,107,355,133"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#aa895095bdc7a2907375c555e245575ea" title="ImGui::BeginCombo" alt="" coords="227,157,365,184"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ad92ccfbc33d448ff40cfcf9219177344" title="ImGui::LabelText" alt="" coords="439,56,559,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a38094c568ce398db5a3abb9d3ac92030" title="ImGui::Button" alt="" coords="447,107,550,133"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a7bd295da4be19bab98262c76fcaeb4fb" title="ImGui::LogButtons" alt="" coords="666,5,797,32"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="651,157,811,184"/>
+<area shape="rect" id="node8" href="$struct_example_app_log.html#a5ad3a4bdb89171b84aeaff96948a1f77" title="ExampleAppLog::Draw" alt="" coords="654,56,809,83"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a6bfb117816d669f8704e5d0c0c0795fe" title="ImGui::ColorEditOptionsPopup" alt="" coords="632,107,831,133"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#ac3f45e2aa0b1d591cc8a2cdf8b566a45" title="ImGui::ColorEdit4" alt="" coords="879,107,1003,133"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a5afe76ba1c91f07363e40396e7df656e" title="ImGui::ColorEdit3" alt="" coords="1051,107,1175,133"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#a0bdce99eef17ef1e1fef40a18bd811ab" title="ImGui::ShowFontSelector" alt="" coords="413,157,584,184"/>
+</map>

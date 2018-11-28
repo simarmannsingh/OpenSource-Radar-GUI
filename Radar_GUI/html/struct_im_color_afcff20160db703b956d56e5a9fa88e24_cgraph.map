@@ -1,0 +1,15 @@
+<map id="ImColor::SetHSV" name="ImColor::SetHSV">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a074427678b3e56378b7dcdefa4c8b5c7" title="ImGui::ColorConvertHSVtoRGB" alt="" coords="175,5,377,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a1b3324308e43eeded5c3599fa0f03e85" title="ImGui::Value" alt="" coords="227,56,325,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a9e7b83611fe441d54fad2effb4bf4965" title="ImGui::Text" alt="" coords="425,56,515,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a10a0d6362178c2f743092f21e1b6cd20" title="ImGui::TextV" alt="" coords="563,56,661,83"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="916,5,1089,32"/>
+<area shape="rect" id="node7" href="$imgui_8cpp.html#a2e0022a073d369645a0daab17f823779" title="ImFormatStringV" alt="" coords="729,56,849,83"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a96a5f42789ecc419b2ae8af7b2acc28e" title="ImGui::TextUnformatted" alt="" coords="709,107,868,133"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#aaba5637199d31ea23d4d143b30a44aff" title="ImGui::GetTextLineHeight" alt="" coords="917,56,1088,83"/>
+<area shape="rect" id="node10" href="$namespace_im_gui.html#a8674467ae34d04bc99df1f7f98f47407" title="ImGui::IsClippedEx" alt="" coords="936,107,1069,133"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="932,157,1073,184"/>
+<area shape="rect" id="node11" href="$struct_im_rect.html#a0af3bade3781e5e7c6afdf71ccfb0d43" title="ImRect::Overlaps" alt="" coords="1173,107,1294,133"/>
+<area shape="rect" id="node13" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="1137,157,1329,184"/>
+<area shape="rect" id="node14" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="1155,208,1311,235"/>
+</map>

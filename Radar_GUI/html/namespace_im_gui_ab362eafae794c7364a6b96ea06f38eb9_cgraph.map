@@ -1,0 +1,5 @@
+<map id="ImGui::RenderTextClipped" name="ImGui::RenderTextClipped">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="416,5,608,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="227,56,368,83"/>
+<area shape="rect" id="node4" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="434,56,590,83"/>
+</map>

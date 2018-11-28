@@ -1,0 +1,5 @@
+<map id="ImGui::EndColumns" name="ImGui::EndColumns">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="387,22,560,49"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#ad29a3fc0cb5dfc7f9fc7224512ce90bf" title="ImGui::PopItemWidth" alt="" coords="192,22,339,49"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#aef1c8a6e5a3c70cb10d03d2a2a66dfd8" title="ImGui::PopClipRect" alt="" coords="197,73,333,100"/>
+</map>

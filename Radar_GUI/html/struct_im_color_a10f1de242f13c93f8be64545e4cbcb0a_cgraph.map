@@ -1,0 +1,14 @@
+<map id="ImColor::operator ImVec4" name="ImColor::operator ImVec4">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a1b3324308e43eeded5c3599fa0f03e85" title="ImGui::Value" alt="" coords="223,56,320,83"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a9e7b83611fe441d54fad2effb4bf4965" title="ImGui::Text" alt="" coords="368,56,457,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a10a0d6362178c2f743092f21e1b6cd20" title="ImGui::TextV" alt="" coords="505,56,604,83"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="859,5,1032,32"/>
+<area shape="rect" id="node6" href="$imgui_8cpp.html#a2e0022a073d369645a0daab17f823779" title="ImFormatStringV" alt="" coords="671,56,791,83"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a96a5f42789ecc419b2ae8af7b2acc28e" title="ImGui::TextUnformatted" alt="" coords="652,107,811,133"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#aaba5637199d31ea23d4d143b30a44aff" title="ImGui::GetTextLineHeight" alt="" coords="860,56,1031,83"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a8674467ae34d04bc99df1f7f98f47407" title="ImGui::IsClippedEx" alt="" coords="879,107,1012,133"/>
+<area shape="rect" id="node11" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="875,157,1016,184"/>
+<area shape="rect" id="node10" href="$struct_im_rect.html#a0af3bade3781e5e7c6afdf71ccfb0d43" title="ImRect::Overlaps" alt="" coords="1115,107,1237,133"/>
+<area shape="rect" id="node12" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="1080,157,1272,184"/>
+<area shape="rect" id="node13" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="1098,208,1254,235"/>
+</map>

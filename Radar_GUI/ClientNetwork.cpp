@@ -1,5 +1,12 @@
-#include "ClientNetwork.h"
+/*
+ -------------------------------------------------------------------------------------------------------------------------------------------
+ Author			:	Simar Mann Singh
+ Department		:	High Frequency Department, TF
+ Date			:	28/08/2018
+ -------------------------------------------------------------------------------------------------------------------------------------------
+*/
 
+#include "ClientNetwork.h"
 
 ClientNetwork::ClientNetwork(void)
 {
@@ -51,27 +58,23 @@ ClientNetwork::ClientNetwork(void)
 
 		// Connect to server.
 		iResult = connect(ClientSocket, ptr->ai_addr, (int)ptr->ai_addrlen);
-
 		if (iResult == SOCKET_ERROR)
 		{
 			closesocket(ClientSocket);
 			ClientSocket = INVALID_SOCKET;
-			printf("The server is down... did not connect");
+			printf("The server is down... did not connect\n");
 		}
 	}
 
-
 	// no longer need address info for server
 	freeaddrinfo(result);
-
-
 
 	// if connection failed
 	if (ClientSocket == INVALID_SOCKET)
 	{
 		printf("Unable to connect to server!\n");
 		WSACleanup();
-		exit(1);
+		//exit(1);
 	}
 
 	// Set the mode of the socket to be nonblocking
@@ -83,16 +86,22 @@ ClientNetwork::ClientNetwork(void)
 		printf("ioctlsocket failed with error: %d\n", WSAGetLastError());
 		closesocket(ClientSocket);
 		WSACleanup();
-		exit(1);
+		//exit(1);
 	}
 
 	//disable nagle
 	char value = 1;
-	setsockopt(ClientSocket, IPPROTO_TCP, TCP_NODELAY, &value, sizeof(value));
-
-
+	iResult =  setsockopt(ClientSocket, IPPROTO_TCP, TCP_NODELAY, &value, sizeof(value));
+	if (iResult == SOCKET_ERROR)
+	{
+		printf("setsockopt failed with error: %d\n", WSAGetLastError());
+		closesocket(ClientSocket);
+		WSACleanup();
+		//exit(1);
+	}
 }
 
 ClientNetwork::~ClientNetwork(void)
 {
+	printf("Client Network failed with error: %d\n", WSAGetLastError());
 }

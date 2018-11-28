@@ -1,0 +1,149 @@
+\hypertarget{class_server_network}{}\section{Server\+Network Class Reference}
+\label{class_server_network}\index{Server\+Network@{Server\+Network}}
+
+
+{\ttfamily \#include $<$Server\+Network.\+h$>$}
+
+
+
+Collaboration diagram for Server\+Network\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_server_network__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_network_ae5ef6aa3aa8c12d9e72a36873bf0f92a}{Server\+Network}} (void)
+\item 
+\mbox{\hyperlink{class_server_network_a105ccb70cf8cd161dc01076fe72e6cfe}{$\sim$\+Server\+Network}} (void)
+\item 
+bool \mbox{\hyperlink{class_server_network_a88e6b758f3c4272463aac8c10908b036}{accept\+New\+Client}} (const unsigned int \&id)
+\item 
+int \mbox{\hyperlink{class_server_network_a51b2272cbdf4f723c105ed08384772da}{receive\+Data}} (unsigned int client\+\_\+id, char $\ast$recvbuf)
+\item 
+void \mbox{\hyperlink{class_server_network_a33f470f2d8b21035731c2dcce5348d43}{send\+To\+All}} (char $\ast$packets, int total\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\+O\+C\+K\+ET \mbox{\hyperlink{class_server_network_a903089768bbbfa891774eaaaf8ce79b7}{Listen\+Socket}}
+\item 
+S\+O\+C\+K\+ET \mbox{\hyperlink{class_server_network_a432ddc13be160e45b4e1f61a117213d3}{Client\+Socket}}
+\item 
+int \mbox{\hyperlink{class_server_network_ad90cce9fc9f5945db77450548c0e0f63}{i\+Result}}
+\item 
+std\+::map$<$ unsigned int, S\+O\+C\+K\+ET $>$ \mbox{\hyperlink{class_server_network_a3acc0dabb1f7264874843ebd896a6d20}{sessions}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_network_ae5ef6aa3aa8c12d9e72a36873bf0f92a}\label{class_server_network_ae5ef6aa3aa8c12d9e72a36873bf0f92a}} 
+\index{Server\+Network@{Server\+Network}!Server\+Network@{Server\+Network}}
+\index{Server\+Network@{Server\+Network}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{Server\+Network()}{ServerNetwork()}}
+{\footnotesize\ttfamily Server\+Network\+::\+Server\+Network (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_server_network_a105ccb70cf8cd161dc01076fe72e6cfe}\label{class_server_network_a105ccb70cf8cd161dc01076fe72e6cfe}} 
+\index{Server\+Network@{Server\+Network}!````~Server\+Network@{$\sim$\+Server\+Network}}
+\index{````~Server\+Network@{$\sim$\+Server\+Network}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{$\sim$\+Server\+Network()}{~ServerNetwork()}}
+{\footnotesize\ttfamily Server\+Network\+::$\sim$\+Server\+Network (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_network_a88e6b758f3c4272463aac8c10908b036}\label{class_server_network_a88e6b758f3c4272463aac8c10908b036}} 
+\index{Server\+Network@{Server\+Network}!accept\+New\+Client@{accept\+New\+Client}}
+\index{accept\+New\+Client@{accept\+New\+Client}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{accept\+New\+Client()}{acceptNewClient()}}
+{\footnotesize\ttfamily bool Server\+Network\+::accept\+New\+Client (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{id }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_network_a88e6b758f3c4272463aac8c10908b036_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_server_network_a51b2272cbdf4f723c105ed08384772da}\label{class_server_network_a51b2272cbdf4f723c105ed08384772da}} 
+\index{Server\+Network@{Server\+Network}!receive\+Data@{receive\+Data}}
+\index{receive\+Data@{receive\+Data}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{receive\+Data()}{receiveData()}}
+{\footnotesize\ttfamily int Server\+Network\+::receive\+Data (\begin{DoxyParamCaption}\item[{unsigned int}]{client\+\_\+id,  }\item[{char $\ast$}]{recvbuf }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_network_a51b2272cbdf4f723c105ed08384772da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_network_a51b2272cbdf4f723c105ed08384772da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_server_network_a33f470f2d8b21035731c2dcce5348d43}\label{class_server_network_a33f470f2d8b21035731c2dcce5348d43}} 
+\index{Server\+Network@{Server\+Network}!send\+To\+All@{send\+To\+All}}
+\index{send\+To\+All@{send\+To\+All}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{send\+To\+All()}{sendToAll()}}
+{\footnotesize\ttfamily void Server\+Network\+::send\+To\+All (\begin{DoxyParamCaption}\item[{char $\ast$}]{packets,  }\item[{int}]{total\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_network_a33f470f2d8b21035731c2dcce5348d43_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_server_network_a33f470f2d8b21035731c2dcce5348d43_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_server_network_a432ddc13be160e45b4e1f61a117213d3}\label{class_server_network_a432ddc13be160e45b4e1f61a117213d3}} 
+\index{Server\+Network@{Server\+Network}!Client\+Socket@{Client\+Socket}}
+\index{Client\+Socket@{Client\+Socket}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{Client\+Socket}{ClientSocket}}
+{\footnotesize\ttfamily S\+O\+C\+K\+ET Server\+Network\+::\+Client\+Socket}
+
+\mbox{\Hypertarget{class_server_network_ad90cce9fc9f5945db77450548c0e0f63}\label{class_server_network_ad90cce9fc9f5945db77450548c0e0f63}} 
+\index{Server\+Network@{Server\+Network}!i\+Result@{i\+Result}}
+\index{i\+Result@{i\+Result}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{i\+Result}{iResult}}
+{\footnotesize\ttfamily int Server\+Network\+::i\+Result}
+
+\mbox{\Hypertarget{class_server_network_a903089768bbbfa891774eaaaf8ce79b7}\label{class_server_network_a903089768bbbfa891774eaaaf8ce79b7}} 
+\index{Server\+Network@{Server\+Network}!Listen\+Socket@{Listen\+Socket}}
+\index{Listen\+Socket@{Listen\+Socket}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{Listen\+Socket}{ListenSocket}}
+{\footnotesize\ttfamily S\+O\+C\+K\+ET Server\+Network\+::\+Listen\+Socket}
+
+\mbox{\Hypertarget{class_server_network_a3acc0dabb1f7264874843ebd896a6d20}\label{class_server_network_a3acc0dabb1f7264874843ebd896a6d20}} 
+\index{Server\+Network@{Server\+Network}!sessions@{sessions}}
+\index{sessions@{sessions}!Server\+Network@{Server\+Network}}
+\subsubsection{\texorpdfstring{sessions}{sessions}}
+{\footnotesize\ttfamily std\+::map$<$unsigned int, S\+O\+C\+K\+ET$>$ Server\+Network\+::sessions}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_server_network_8h}{Server\+Network.\+h}}\item 
+\mbox{\hyperlink{_server_network_8cpp}{Server\+Network.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,320 @@
+\hypertarget{structaismsg__9}{}\section{aismsg\+\_\+9 Struct Reference}
+\label{structaismsg__9}\index{aismsg\+\_\+9@{aismsg\+\_\+9}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+9\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{structaismsg__9__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__9_a2b2c8b45668ed080ba65705f0a3000ce}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (9) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a1e94f7d421b46a4e7e308cc92c78d03f}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__9_a59d55a49e7c75c17c37d407c6fa7cf8d}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__9_a6b2d1659d3ad3df8c1bb77646a5c6bf7}{altitude}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: Altitude \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__9_ab9dd43a3ac0d1e6508cf7e54ccff26f0}{sog}}
+\begin{DoxyCompactList}\small\item\em 10 bits \+: Speed Over Ground \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a099a7480fa8b032cbdb7fd587ec0130e}{pos\+\_\+acc}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Position Accuracy \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__9_a635359dcddfaee8c8dbdef4a1054165e}{longitude}}
+\begin{DoxyCompactList}\small\item\em 28 bits \+: Longitude in 1/10000 minute \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{structaismsg__9_ad09461b522182e4611aee0b00f6fb363}{latitude}}
+\begin{DoxyCompactList}\small\item\em 27 bits \+: Latitude in 1/10000 minute \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__9_a5220b7d7fe7f9e4e4b2ea298255fd357}{cog}}
+\begin{DoxyCompactList}\small\item\em 12 bits \+: Course Over Ground \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a83ae2d2e1685c564df365bc1bdc1c419}{utc\+\_\+sec}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: U\+TC Seconds \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{structaismsg__9_a071f16f358ffbc5b85c9f0e5540fa7e5}{regional}}
+\begin{DoxyCompactList}\small\item\em 8 bits \+: Regional bits \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a0a29f6881fc19c47d4d4801d7d27b30f}{dte}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: D\+TE flag \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a1b9cadb72d7a98790eab470df9bd4393}{spare}}
+\begin{DoxyCompactList}\small\item\em 3 bits \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a4877f217abcbbb89cd4b49b141c6f730}{assigned}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Assigned mode flag \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_a62055e7800d3222ddea078ed282865fc}{raim}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: R\+A\+IM flag \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__9_ab892d4a2d1113b55991b93d91a638630}{comm\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Comm State Flag \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \mbox{\hyperlink{structaismsg__9_ab8d3e28d3fd5dd63dfbabb062542bc2e}{sync\_state}}\\
+\>\>{\em 2 bits : SOTDMA Sync State }\\
+\>char \mbox{\hyperlink{structaismsg__9_acfb357582c843a5ebab66dc0c8fca310}{slot\_timeout}}\\
+\>\>{\em 3 bits : SOTDMA Slot Timeout }\\
+\>int \mbox{\hyperlink{structaismsg__9_a9d2f899ec16707fbbf0d4ad5ab6c8b48}{sub\_message}}\\
+\>\>{\em 14 bits : SOTDMA Sub-\/Messsage }\\
+\} \mbox{\hyperlink{structaismsg__9_ab1aaa1ece43de71eac51307706335d0b}{sotdma}}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \mbox{\hyperlink{structaismsg__9_ab8d3e28d3fd5dd63dfbabb062542bc2e}{sync\_state}}\\
+\>\>{\em 2 bits : ITDMA Sync State }\\
+\>int \mbox{\hyperlink{structaismsg__9_a7b81b6ff7daa453ccfbc33034f913704}{slot\_inc}}\\
+\>\>{\em 13 bits : ITDMA Slot Increment }\\
+\>char \mbox{\hyperlink{structaismsg__9_ad073c40d4bafdf413ac4b37b37e2b314}{num\_slots}}\\
+\>\>{\em 3 bits : ITDMA Number of Slots }\\
+\>char \mbox{\hyperlink{structaismsg__9_af5c092aadb88d05b1aad19abd599e66c}{keep\_flag}}\\
+\>\>{\em 1 bit : ITDMA Keep Flag }\\
+\} \mbox{\hyperlink{structaismsg__9_a6e9c9c7038c7564b276cb945e0ed39d2}{itdma}}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 9 -\/ Standard S\+AR Aircraft position report 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__9_a6b2d1659d3ad3df8c1bb77646a5c6bf7}\label{structaismsg__9_a6b2d1659d3ad3df8c1bb77646a5c6bf7}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!altitude@{altitude}}
+\index{altitude@{altitude}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{altitude}{altitude}}
+{\footnotesize\ttfamily int aismsg\+\_\+9\+::altitude}
+
+
+
+12 bits \+: Altitude 
+
+\mbox{\Hypertarget{structaismsg__9_a4877f217abcbbb89cd4b49b141c6f730}\label{structaismsg__9_a4877f217abcbbb89cd4b49b141c6f730}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!assigned@{assigned}}
+\index{assigned@{assigned}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{assigned}{assigned}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::assigned}
+
+
+
+1 bit \+: Assigned mode flag 
+
+\mbox{\Hypertarget{structaismsg__9_a5220b7d7fe7f9e4e4b2ea298255fd357}\label{structaismsg__9_a5220b7d7fe7f9e4e4b2ea298255fd357}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!cog@{cog}}
+\index{cog@{cog}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{cog}{cog}}
+{\footnotesize\ttfamily int aismsg\+\_\+9\+::cog}
+
+
+
+12 bits \+: Course Over Ground 
+
+\mbox{\Hypertarget{structaismsg__9_ab892d4a2d1113b55991b93d91a638630}\label{structaismsg__9_ab892d4a2d1113b55991b93d91a638630}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!comm\+\_\+state@{comm\+\_\+state}}
+\index{comm\+\_\+state@{comm\+\_\+state}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{comm\+\_\+state}{comm\_state}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::comm\+\_\+state}
+
+
+
+1 bit \+: Comm State Flag 
+
+\mbox{\Hypertarget{structaismsg__9_a0a29f6881fc19c47d4d4801d7d27b30f}\label{structaismsg__9_a0a29f6881fc19c47d4d4801d7d27b30f}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!dte@{dte}}
+\index{dte@{dte}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{dte}{dte}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::dte}
+
+
+
+1 bit \+: D\+TE flag 
+
+\mbox{\Hypertarget{structaismsg__9_a6e9c9c7038c7564b276cb945e0ed39d2}\label{structaismsg__9_a6e9c9c7038c7564b276cb945e0ed39d2}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!itdma@{itdma}}
+\index{itdma@{itdma}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{itdma}{itdma}}
+{\footnotesize\ttfamily struct \{ ... \}   aismsg\+\_\+9\+::itdma}
+
+\mbox{\Hypertarget{structaismsg__9_af5c092aadb88d05b1aad19abd599e66c}\label{structaismsg__9_af5c092aadb88d05b1aad19abd599e66c}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!keep\+\_\+flag@{keep\+\_\+flag}}
+\index{keep\+\_\+flag@{keep\+\_\+flag}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{keep\+\_\+flag}{keep\_flag}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::keep\+\_\+flag}
+
+
+
+1 bit \+: I\+T\+D\+MA Keep Flag 
+
+\mbox{\Hypertarget{structaismsg__9_ad09461b522182e4611aee0b00f6fb363}\label{structaismsg__9_ad09461b522182e4611aee0b00f6fb363}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!latitude@{latitude}}
+\index{latitude@{latitude}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{latitude}{latitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+9\+::latitude}
+
+
+
+27 bits \+: Latitude in 1/10000 minute 
+
+\mbox{\Hypertarget{structaismsg__9_a635359dcddfaee8c8dbdef4a1054165e}\label{structaismsg__9_a635359dcddfaee8c8dbdef4a1054165e}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!longitude@{longitude}}
+\index{longitude@{longitude}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{longitude}{longitude}}
+{\footnotesize\ttfamily long aismsg\+\_\+9\+::longitude}
+
+
+
+28 bits \+: Longitude in 1/10000 minute 
+
+\mbox{\Hypertarget{structaismsg__9_a2b2c8b45668ed080ba65705f0a3000ce}\label{structaismsg__9_a2b2c8b45668ed080ba65705f0a3000ce}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::msgid}
+
+
+
+6 bits \+: Message\+ID (9) 
+
+\mbox{\Hypertarget{structaismsg__9_ad073c40d4bafdf413ac4b37b37e2b314}\label{structaismsg__9_ad073c40d4bafdf413ac4b37b37e2b314}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!num\+\_\+slots@{num\+\_\+slots}}
+\index{num\+\_\+slots@{num\+\_\+slots}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{num\+\_\+slots}{num\_slots}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::num\+\_\+slots}
+
+
+
+3 bits \+: I\+T\+D\+MA Number of Slots 
+
+\mbox{\Hypertarget{structaismsg__9_a099a7480fa8b032cbdb7fd587ec0130e}\label{structaismsg__9_a099a7480fa8b032cbdb7fd587ec0130e}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!pos\+\_\+acc@{pos\+\_\+acc}}
+\index{pos\+\_\+acc@{pos\+\_\+acc}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{pos\+\_\+acc}{pos\_acc}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::pos\+\_\+acc}
+
+
+
+1 bit \+: Position Accuracy 
+
+\mbox{\Hypertarget{structaismsg__9_a62055e7800d3222ddea078ed282865fc}\label{structaismsg__9_a62055e7800d3222ddea078ed282865fc}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!raim@{raim}}
+\index{raim@{raim}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{raim}{raim}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::raim}
+
+
+
+1 bit \+: R\+A\+IM flag 
+
+\mbox{\Hypertarget{structaismsg__9_a071f16f358ffbc5b85c9f0e5540fa7e5}\label{structaismsg__9_a071f16f358ffbc5b85c9f0e5540fa7e5}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!regional@{regional}}
+\index{regional@{regional}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{regional}{regional}}
+{\footnotesize\ttfamily unsigned char aismsg\+\_\+9\+::regional}
+
+
+
+8 bits \+: Regional bits 
+
+\mbox{\Hypertarget{structaismsg__9_a1e94f7d421b46a4e7e308cc92c78d03f}\label{structaismsg__9_a1e94f7d421b46a4e7e308cc92c78d03f}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__9_a7b81b6ff7daa453ccfbc33034f913704}\label{structaismsg__9_a7b81b6ff7daa453ccfbc33034f913704}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!slot\+\_\+inc@{slot\+\_\+inc}}
+\index{slot\+\_\+inc@{slot\+\_\+inc}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{slot\+\_\+inc}{slot\_inc}}
+{\footnotesize\ttfamily int aismsg\+\_\+9\+::slot\+\_\+inc}
+
+
+
+13 bits \+: I\+T\+D\+MA Slot Increment 
+
+\mbox{\Hypertarget{structaismsg__9_acfb357582c843a5ebab66dc0c8fca310}\label{structaismsg__9_acfb357582c843a5ebab66dc0c8fca310}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!slot\+\_\+timeout@{slot\+\_\+timeout}}
+\index{slot\+\_\+timeout@{slot\+\_\+timeout}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{slot\+\_\+timeout}{slot\_timeout}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::slot\+\_\+timeout}
+
+
+
+3 bits \+: S\+O\+T\+D\+MA Slot Timeout 
+
+\mbox{\Hypertarget{structaismsg__9_ab9dd43a3ac0d1e6508cf7e54ccff26f0}\label{structaismsg__9_ab9dd43a3ac0d1e6508cf7e54ccff26f0}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!sog@{sog}}
+\index{sog@{sog}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{sog}{sog}}
+{\footnotesize\ttfamily int aismsg\+\_\+9\+::sog}
+
+
+
+10 bits \+: Speed Over Ground 
+
+\mbox{\Hypertarget{structaismsg__9_ab1aaa1ece43de71eac51307706335d0b}\label{structaismsg__9_ab1aaa1ece43de71eac51307706335d0b}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!sotdma@{sotdma}}
+\index{sotdma@{sotdma}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{sotdma}{sotdma}}
+{\footnotesize\ttfamily struct \{ ... \}   aismsg\+\_\+9\+::sotdma}
+
+\mbox{\Hypertarget{structaismsg__9_a1b9cadb72d7a98790eab470df9bd4393}\label{structaismsg__9_a1b9cadb72d7a98790eab470df9bd4393}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!spare@{spare}}
+\index{spare@{spare}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::spare}
+
+
+
+3 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__9_a9d2f899ec16707fbbf0d4ad5ab6c8b48}\label{structaismsg__9_a9d2f899ec16707fbbf0d4ad5ab6c8b48}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!sub\+\_\+message@{sub\+\_\+message}}
+\index{sub\+\_\+message@{sub\+\_\+message}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{sub\+\_\+message}{sub\_message}}
+{\footnotesize\ttfamily int aismsg\+\_\+9\+::sub\+\_\+message}
+
+
+
+14 bits \+: S\+O\+T\+D\+MA Sub-\/\+Messsage 
+
+\mbox{\Hypertarget{structaismsg__9_ab8d3e28d3fd5dd63dfbabb062542bc2e}\label{structaismsg__9_ab8d3e28d3fd5dd63dfbabb062542bc2e}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!sync\+\_\+state@{sync\+\_\+state}}
+\index{sync\+\_\+state@{sync\+\_\+state}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{sync\+\_\+state}{sync\_state}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::sync\+\_\+state}
+
+
+
+2 bits \+: S\+O\+T\+D\+MA Sync State 
+
+2 bits \+: I\+T\+D\+MA Sync State \mbox{\Hypertarget{structaismsg__9_a59d55a49e7c75c17c37d407c6fa7cf8d}\label{structaismsg__9_a59d55a49e7c75c17c37d407c6fa7cf8d}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+9\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+\mbox{\Hypertarget{structaismsg__9_a83ae2d2e1685c564df365bc1bdc1c419}\label{structaismsg__9_a83ae2d2e1685c564df365bc1bdc1c419}} 
+\index{aismsg\+\_\+9@{aismsg\+\_\+9}!utc\+\_\+sec@{utc\+\_\+sec}}
+\index{utc\+\_\+sec@{utc\+\_\+sec}!aismsg\+\_\+9@{aismsg\+\_\+9}}
+\subsubsection{\texorpdfstring{utc\+\_\+sec}{utc\_sec}}
+{\footnotesize\ttfamily char aismsg\+\_\+9\+::utc\+\_\+sec}
+
+
+
+6 bits \+: U\+TC Seconds 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

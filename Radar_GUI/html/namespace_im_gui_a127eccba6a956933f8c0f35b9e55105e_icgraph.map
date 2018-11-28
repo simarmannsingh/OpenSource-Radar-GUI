@@ -1,0 +1,6 @@
+<map id="ImGui::DragScalar" name="ImGui::DragScalar">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#aa797a92d52ffa907cb5186a8476f1c20" title="ImGui::DragFloat" alt="" coords="181,5,301,32"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a202444c7b59820ae0a16d26f4322b4a9" title="ImGui::DragInt" alt="" coords="189,56,294,83"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#a6f27fa140df683e09943411c959a1f2b" title="ImGui::DragFloatRange2" alt="" coords="349,5,513,32"/>
+<area shape="rect" id="node5" href="$namespace_im_gui.html#ae3c5fcb2ff6c529d518a646a97a65186" title="ImGui::DragIntRange2" alt="" coords="357,56,506,83"/>
+</map>

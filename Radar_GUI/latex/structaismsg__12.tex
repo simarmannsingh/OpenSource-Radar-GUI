@@ -1,0 +1,126 @@
+\hypertarget{structaismsg__12}{}\section{aismsg\+\_\+12 Struct Reference}
+\label{structaismsg__12}\index{aismsg\+\_\+12@{aismsg\+\_\+12}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+12\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{structaismsg__12__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__12_a8b3dee970f26be48e167ae72d8245a0b}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (12) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__12_a7919c4fdbbdf43619c625df928e32ead}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__12_a13279b63437d173caf794365a318aea9}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__12_af8ed3f3c3bfb11a8d16589fbe815155e}{sequence}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Sequence \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__12_a884b03b535b98aa254e1d37ed9c2ed5b}{destination}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: Destination M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__12_a4220a4c65c732e998a9dd9f7b831268b}{retransmit}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Retransmit \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__12_af85023b905d3755d9b7318e01cf0c899}{spare}}
+\begin{DoxyCompactList}\small\item\em 1 bit \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__12_a7f5612e9f1e4b3184d4515a373234fe9}{message}} \mbox{[}158\mbox{]}
+\begin{DoxyCompactList}\small\item\em 936 bits \+: Message in A\+S\+C\+II \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 12 -\/ Addressed safety related message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__12_a884b03b535b98aa254e1d37ed9c2ed5b}\label{structaismsg__12_a884b03b535b98aa254e1d37ed9c2ed5b}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!destination@{destination}}
+\index{destination@{destination}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{destination}{destination}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+12\+::destination}
+
+
+
+30 bits \+: Destination M\+M\+SI 
+
+\mbox{\Hypertarget{structaismsg__12_a7f5612e9f1e4b3184d4515a373234fe9}\label{structaismsg__12_a7f5612e9f1e4b3184d4515a373234fe9}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!message@{message}}
+\index{message@{message}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::message\mbox{[}158\mbox{]}}
+
+
+
+936 bits \+: Message in A\+S\+C\+II 
+
+\mbox{\Hypertarget{structaismsg__12_a8b3dee970f26be48e167ae72d8245a0b}\label{structaismsg__12_a8b3dee970f26be48e167ae72d8245a0b}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::msgid}
+
+
+
+6 bits \+: Message\+ID (12) 
+
+\mbox{\Hypertarget{structaismsg__12_a7919c4fdbbdf43619c625df928e32ead}\label{structaismsg__12_a7919c4fdbbdf43619c625df928e32ead}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__12_a4220a4c65c732e998a9dd9f7b831268b}\label{structaismsg__12_a4220a4c65c732e998a9dd9f7b831268b}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!retransmit@{retransmit}}
+\index{retransmit@{retransmit}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{retransmit}{retransmit}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::retransmit}
+
+
+
+1 bit \+: Retransmit 
+
+\mbox{\Hypertarget{structaismsg__12_af8ed3f3c3bfb11a8d16589fbe815155e}\label{structaismsg__12_af8ed3f3c3bfb11a8d16589fbe815155e}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!sequence@{sequence}}
+\index{sequence@{sequence}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::sequence}
+
+
+
+2 bits \+: Sequence 
+
+\mbox{\Hypertarget{structaismsg__12_af85023b905d3755d9b7318e01cf0c899}\label{structaismsg__12_af85023b905d3755d9b7318e01cf0c899}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!spare@{spare}}
+\index{spare@{spare}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char aismsg\+\_\+12\+::spare}
+
+
+
+1 bit \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__12_a13279b63437d173caf794365a318aea9}\label{structaismsg__12_a13279b63437d173caf794365a318aea9}} 
+\index{aismsg\+\_\+12@{aismsg\+\_\+12}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+12@{aismsg\+\_\+12}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+12\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

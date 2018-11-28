@@ -1,0 +1,272 @@
+\hypertarget{imgui__impl__glfw_8cpp}{}\section{imgui\+\_\+impl\+\_\+glfw.\+cpp File Reference}
+\label{imgui__impl__glfw_8cpp}\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+{\ttfamily \#include \char`\"{}imgui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}imgui\+\_\+impl\+\_\+glfw.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$G\+L\+F\+W/glfw3.\+h$>$}\newline
+Include dependency graph for imgui\+\_\+impl\+\_\+glfw.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_af81f1903ed3f6ea6f2182e856b87a6b2}{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}}~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3200)
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_a962141962262d1961f4189f70a505a29}{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED}}~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_ae64ad564e536847807e36c670c8ac9fc}{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA}}~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_ac70b8597a58988c599e0f0a80b4a28e1}{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI}}~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_aaf81690ad26c92c85a6acdd7f1d3a3bc}{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN}}~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3200)
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_a0720760ecc7d8768f926a5b2ba4af07d}{M\+A\+P\+\_\+\+B\+U\+T\+T\+ON}}(N\+A\+V\+\_\+\+NO,  B\+U\+T\+T\+O\+N\+\_\+\+NO)~\{ if (buttons\+\_\+count $>$ B\+U\+T\+T\+O\+N\+\_\+\+NO \&\& buttons\mbox{[}B\+U\+T\+T\+O\+N\+\_\+\+NO\mbox{]} == G\+L\+F\+W\+\_\+\+P\+R\+E\+SS) io.\+Nav\+Inputs\mbox{[}N\+A\+V\+\_\+\+NO\mbox{]} = 1.\+0f; \}
+\item 
+\#define \mbox{\hyperlink{imgui__impl__glfw_8cpp_ad181101ed89f4155bbc97eccffea135b}{M\+A\+P\+\_\+\+A\+N\+A\+L\+OG}}(N\+A\+V\+\_\+\+NO,  A\+X\+I\+S\+\_\+\+NO,  V0,  V1)~\{ float v = (axes\+\_\+count $>$ A\+X\+I\+S\+\_\+\+NO) ? axes\mbox{[}A\+X\+I\+S\+\_\+\+NO\mbox{]} \+: V0; v = (v -\/ V0) / (V1 -\/ V0); if (v $>$ 1.\+0f) v = 1.\+0f; if (io.\+Nav\+Inputs\mbox{[}\+N\+A\+V\+\_\+\+N\+O\mbox{]} $<$ v) io.\+Nav\+Inputs\mbox{[}\+N\+A\+V\+\_\+\+N\+O\mbox{]} = v; \}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413}{Glfw\+Client\+Api}} \{ \mbox{\hyperlink{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a64b18e86183bf2f895418038ae86fd97}{Glfw\+Client\+Api\+\_\+\+Unknown}}, 
+\mbox{\hyperlink{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a4bdb1206a80d2fecbccc1ba13a194189}{Glfw\+Client\+Api\+\_\+\+Open\+GL}}, 
+\mbox{\hyperlink{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413aea35a390f6542022f5704637f7cbefb5}{Glfw\+Client\+Api\+\_\+\+Vulkan}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a7e2f4161d656b233ce0fb093bd7b73f0}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback}} (G\+L\+F\+Wwindow $\ast$, int button, int action, int)
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a2824e65fa25cf3906feef67cfb864787}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback}} (G\+L\+F\+Wwindow $\ast$, double xoffset, double yoffset)
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a87ff0a6084161760006ea22e5afe7a4e}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback}} (G\+L\+F\+Wwindow $\ast$, int key, int, int action, int mods)
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a9081dfebdfc735ac037191d1cad33791}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback}} (G\+L\+F\+Wwindow $\ast$, unsigned int c)
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a6fe1ba0e49c2da76f4f28856bc8511fb}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}})
+\item 
+bool \mbox{\hyperlink{imgui__impl__glfw_8cpp_a3d472e598f8e218a0bd994e840b865ab}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, bool install\+\_\+callbacks)
+\item 
+bool \mbox{\hyperlink{imgui__impl__glfw_8cpp_ac7cab00e5027bccc3b536afb0e07bc8f}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan}} (G\+L\+F\+Wwindow $\ast$\mbox{\hyperlink{radar_8cpp_a80de27bd7dc4e2b2ad3d5895b97a70f0}{window}}, bool install\+\_\+callbacks)
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a983c2903ccb938fea5ecdd4d53e54704}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown}} ()
+\item 
+void \mbox{\hyperlink{imgui__impl__glfw_8cpp_a206e99434f63c4b8e24e8a4208c11b65}{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_ac70b8597a58988c599e0f0a80b4a28e1}\label{imgui__impl__glfw_8cpp_ac70b8597a58988c599e0f0a80b4a28e1}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI}}
+\index{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI}{GLFW\_HAS\_PER\_MONITOR\_DPI}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+P\+E\+R\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+PI~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_aaf81690ad26c92c85a6acdd7f1d3a3bc}\label{imgui__impl__glfw_8cpp_aaf81690ad26c92c85a6acdd7f1d3a3bc}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN}}
+\index{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN}{GLFW\_HAS\_VULKAN}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+V\+U\+L\+K\+AN~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3200)}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_ae64ad564e536847807e36c670c8ac9fc}\label{imgui__impl__glfw_8cpp_ae64ad564e536847807e36c670c8ac9fc}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA}}
+\index{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA}{GLFW\_HAS\_WINDOW\_ALPHA}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+P\+HA~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a962141962262d1961f4189f70a505a29}\label{imgui__impl__glfw_8cpp_a962141962262d1961f4189f70a505a29}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED}}
+\index{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED}{GLFW\_HAS\_WINDOW\_HOVERED}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+O\+V\+E\+R\+ED~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3300)}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_af81f1903ed3f6ea6f2182e856b87a6b2}\label{imgui__impl__glfw_8cpp_af81f1903ed3f6ea6f2182e856b87a6b2}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}}
+\index{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST@{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST}{GLFW\_HAS\_WINDOW\_TOPMOST}}
+{\footnotesize\ttfamily \#define G\+L\+F\+W\+\_\+\+H\+A\+S\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+P\+M\+O\+ST~(G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+A\+J\+OR $\ast$ 1000 + G\+L\+F\+W\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+I\+N\+OR $\ast$ 100 $>$= 3200)}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_ad181101ed89f4155bbc97eccffea135b}\label{imgui__impl__glfw_8cpp_ad181101ed89f4155bbc97eccffea135b}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!M\+A\+P\+\_\+\+A\+N\+A\+L\+OG@{M\+A\+P\+\_\+\+A\+N\+A\+L\+OG}}
+\index{M\+A\+P\+\_\+\+A\+N\+A\+L\+OG@{M\+A\+P\+\_\+\+A\+N\+A\+L\+OG}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+A\+N\+A\+L\+OG}{MAP\_ANALOG}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+A\+N\+A\+L\+OG(\begin{DoxyParamCaption}\item[{}]{N\+A\+V\+\_\+\+NO,  }\item[{}]{A\+X\+I\+S\+\_\+\+NO,  }\item[{}]{V0,  }\item[{}]{V1 }\end{DoxyParamCaption})~\{ float v = (axes\+\_\+count $>$ A\+X\+I\+S\+\_\+\+NO) ? axes\mbox{[}A\+X\+I\+S\+\_\+\+NO\mbox{]} \+: V0; v = (v -\/ V0) / (V1 -\/ V0); if (v $>$ 1.\+0f) v = 1.\+0f; if (io.\+Nav\+Inputs\mbox{[}\+N\+A\+V\+\_\+\+N\+O\mbox{]} $<$ v) io.\+Nav\+Inputs\mbox{[}\+N\+A\+V\+\_\+\+N\+O\mbox{]} = v; \}}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a0720760ecc7d8768f926a5b2ba4af07d}\label{imgui__impl__glfw_8cpp_a0720760ecc7d8768f926a5b2ba4af07d}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!M\+A\+P\+\_\+\+B\+U\+T\+T\+ON@{M\+A\+P\+\_\+\+B\+U\+T\+T\+ON}}
+\index{M\+A\+P\+\_\+\+B\+U\+T\+T\+ON@{M\+A\+P\+\_\+\+B\+U\+T\+T\+ON}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+P\+\_\+\+B\+U\+T\+T\+ON}{MAP\_BUTTON}}
+{\footnotesize\ttfamily \#define M\+A\+P\+\_\+\+B\+U\+T\+T\+ON(\begin{DoxyParamCaption}\item[{}]{N\+A\+V\+\_\+\+NO,  }\item[{}]{B\+U\+T\+T\+O\+N\+\_\+\+NO }\end{DoxyParamCaption})~\{ if (buttons\+\_\+count $>$ B\+U\+T\+T\+O\+N\+\_\+\+NO \&\& buttons\mbox{[}B\+U\+T\+T\+O\+N\+\_\+\+NO\mbox{]} == G\+L\+F\+W\+\_\+\+P\+R\+E\+SS) io.\+Nav\+Inputs\mbox{[}N\+A\+V\+\_\+\+NO\mbox{]} = 1.\+0f; \}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413}\label{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Glfw\+Client\+Api@{Glfw\+Client\+Api}}
+\index{Glfw\+Client\+Api@{Glfw\+Client\+Api}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Glfw\+Client\+Api}{GlfwClientApi}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413}{Glfw\+Client\+Api}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Glfw\+Client\+Api\+\_\+\+Unknown@{Glfw\+Client\+Api\+\_\+\+Unknown}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Glfw\+Client\+Api\+\_\+\+Unknown@{Glfw\+Client\+Api\+\_\+\+Unknown}}}\mbox{\Hypertarget{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a64b18e86183bf2f895418038ae86fd97}\label{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a64b18e86183bf2f895418038ae86fd97}} 
+Glfw\+Client\+Api\+\_\+\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Glfw\+Client\+Api\+\_\+\+Open\+GL@{Glfw\+Client\+Api\+\_\+\+Open\+GL}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Glfw\+Client\+Api\+\_\+\+Open\+GL@{Glfw\+Client\+Api\+\_\+\+Open\+GL}}}\mbox{\Hypertarget{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a4bdb1206a80d2fecbccc1ba13a194189}\label{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413a4bdb1206a80d2fecbccc1ba13a194189}} 
+Glfw\+Client\+Api\+\_\+\+Open\+GL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Glfw\+Client\+Api\+\_\+\+Vulkan@{Glfw\+Client\+Api\+\_\+\+Vulkan}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Glfw\+Client\+Api\+\_\+\+Vulkan@{Glfw\+Client\+Api\+\_\+\+Vulkan}}}\mbox{\Hypertarget{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413aea35a390f6542022f5704637f7cbefb5}\label{imgui__impl__glfw_8cpp_abfd5392e93ee3c4e7f86cc5515e2d413aea35a390f6542022f5704637f7cbefb5}} 
+Glfw\+Client\+Api\+\_\+\+Vulkan&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a9081dfebdfc735ac037191d1cad33791}\label{imgui__impl__glfw_8cpp_a9081dfebdfc735ac037191d1cad33791}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback()}{ImGui\_ImplGlfw\_CharCallback()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Char\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{,  }\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a9081dfebdfc735ac037191d1cad33791_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a9081dfebdfc735ac037191d1cad33791_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a3d472e598f8e218a0bd994e840b865ab}\label{imgui__impl__glfw_8cpp_a3d472e598f8e218a0bd994e840b865ab}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+G\+L()}{ImGui\_ImplGlfw\_InitForOpenGL()}}
+{\footnotesize\ttfamily bool Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Open\+GL (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{bool}]{install\+\_\+callbacks }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a3d472e598f8e218a0bd994e840b865ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_ac7cab00e5027bccc3b536afb0e07bc8f}\label{imgui__impl__glfw_8cpp_ac7cab00e5027bccc3b536afb0e07bc8f}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan()}{ImGui\_ImplGlfw\_InitForVulkan()}}
+{\footnotesize\ttfamily bool Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Init\+For\+Vulkan (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{bool}]{install\+\_\+callbacks }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a6fe1ba0e49c2da76f4f28856bc8511fb}\label{imgui__impl__glfw_8cpp_a6fe1ba0e49c2da76f4f28856bc8511fb}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks()}{ImGui\_ImplGlfw\_InstallCallbacks()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Install\+Callbacks (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a6fe1ba0e49c2da76f4f28856bc8511fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a87ff0a6084161760006ea22e5afe7a4e}\label{imgui__impl__glfw_8cpp_a87ff0a6084161760006ea22e5afe7a4e}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback()}{ImGui\_ImplGlfw\_KeyCallback()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Key\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{,  }\item[{int}]{key,  }\item[{int}]{,  }\item[{int}]{action,  }\item[{int}]{mods }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{imgui__impl__glfw_8cpp_a87ff0a6084161760006ea22e5afe7a4e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a87ff0a6084161760006ea22e5afe7a4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a7e2f4161d656b233ce0fb093bd7b73f0}\label{imgui__impl__glfw_8cpp_a7e2f4161d656b233ce0fb093bd7b73f0}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback()}{ImGui\_ImplGlfw\_MouseButtonCallback()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Mouse\+Button\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{,  }\item[{int}]{button,  }\item[{int}]{action,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a7e2f4161d656b233ce0fb093bd7b73f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a206e99434f63c4b8e24e8a4208c11b65}\label{imgui__impl__glfw_8cpp_a206e99434f63c4b8e24e8a4208c11b65}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame()}{ImGui\_ImplGlfw\_NewFrame()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a206e99434f63c4b8e24e8a4208c11b65_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a206e99434f63c4b8e24e8a4208c11b65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a2824e65fa25cf3906feef67cfb864787}\label{imgui__impl__glfw_8cpp_a2824e65fa25cf3906feef67cfb864787}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback()}{ImGui\_ImplGlfw\_ScrollCallback()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Scroll\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{imgui__impl__glfw_8cpp_a2824e65fa25cf3906feef67cfb864787_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{imgui__impl__glfw_8cpp_a2824e65fa25cf3906feef67cfb864787_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{imgui__impl__glfw_8cpp_a983c2903ccb938fea5ecdd4d53e54704}\label{imgui__impl__glfw_8cpp_a983c2903ccb938fea5ecdd4d53e54704}} 
+\index{imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}!Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown}}
+\index{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown@{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown}!imgui\+\_\+impl\+\_\+glfw.\+cpp@{imgui\+\_\+impl\+\_\+glfw.\+cpp}}
+\subsubsection{\texorpdfstring{Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown()}{ImGui\_ImplGlfw\_Shutdown()}}
+{\footnotesize\ttfamily void Im\+Gui\+\_\+\+Impl\+Glfw\+\_\+\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

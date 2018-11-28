@@ -1,0 +1,104 @@
+\hypertarget{structais__state}{}\section{ais\+\_\+state Struct Reference}
+\label{structais__state}\index{ais\+\_\+state@{ais\+\_\+state}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for ais\+\_\+state\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{structais__state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{structais__state_a60e9e905fb708ad025c8f05235ea45c0}{msgid}}
+\begin{DoxyCompactList}\small\item\em Message ID 0-\/31. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structais__state_acc3dec0720044a75c7419a35ed01e903}{sequence}}
+\begin{DoxyCompactList}\small\item\em V\+DM message sequence number. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structais__state_a21fa7f41c319c8b0b8a8683424ca449e}{total}}
+\begin{DoxyCompactList}\small\item\em Total \# of parts for the message. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{structais__state_ab9e57e0fec53505653a2e6d31c5b80d8}{num}}
+\begin{DoxyCompactList}\small\item\em Number of the last part stored. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structais__state_a5878295f539fbcd20ae5cb12c4e2da19}{channel}}
+\begin{DoxyCompactList}\small\item\em A\+IS Channel character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsixbit}{sixbit}} \mbox{\hyperlink{structais__state_a7f348a9ab6b6c2d0d3679a4e802879f1}{six\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em sixbit parser state \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{structais__state}{ais\+\_\+state}} the state for the Message Parser
+
+It keeps track partial messages until a complete message has been received and it hols the sixbit state for exteacting bits from the message. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structais__state_a5878295f539fbcd20ae5cb12c4e2da19}\label{structais__state_a5878295f539fbcd20ae5cb12c4e2da19}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!channel@{channel}}
+\index{channel@{channel}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{channel}{channel}}
+{\footnotesize\ttfamily char ais\+\_\+state\+::channel}
+
+
+
+A\+IS Channel character. 
+
+\mbox{\Hypertarget{structais__state_a60e9e905fb708ad025c8f05235ea45c0}\label{structais__state_a60e9e905fb708ad025c8f05235ea45c0}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!msgid@{msgid}}
+\index{msgid@{msgid}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily unsigned char ais\+\_\+state\+::msgid}
+
+
+
+Message ID 0-\/31. 
+
+\mbox{\Hypertarget{structais__state_ab9e57e0fec53505653a2e6d31c5b80d8}\label{structais__state_ab9e57e0fec53505653a2e6d31c5b80d8}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!num@{num}}
+\index{num@{num}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily unsigned int ais\+\_\+state\+::num}
+
+
+
+Number of the last part stored. 
+
+\mbox{\Hypertarget{structais__state_acc3dec0720044a75c7419a35ed01e903}\label{structais__state_acc3dec0720044a75c7419a35ed01e903}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!sequence@{sequence}}
+\index{sequence@{sequence}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{sequence}{sequence}}
+{\footnotesize\ttfamily unsigned int ais\+\_\+state\+::sequence}
+
+
+
+V\+DM message sequence number. 
+
+\mbox{\Hypertarget{structais__state_a7f348a9ab6b6c2d0d3679a4e802879f1}\label{structais__state_a7f348a9ab6b6c2d0d3679a4e802879f1}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!six\+\_\+state@{six\+\_\+state}}
+\index{six\+\_\+state@{six\+\_\+state}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{six\+\_\+state}{six\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsixbit}{sixbit}} ais\+\_\+state\+::six\+\_\+state}
+
+
+
+sixbit parser state 
+
+\mbox{\Hypertarget{structais__state_a21fa7f41c319c8b0b8a8683424ca449e}\label{structais__state_a21fa7f41c319c8b0b8a8683424ca449e}} 
+\index{ais\+\_\+state@{ais\+\_\+state}!total@{total}}
+\index{total@{total}!ais\+\_\+state@{ais\+\_\+state}}
+\subsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily unsigned int ais\+\_\+state\+::total}
+
+
+
+Total \# of parts for the message. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

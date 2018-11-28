@@ -4,14 +4,18 @@
 #include "ClientNetwork.h"
 #include "NetworkData.h"
 
+static Packet Txpacket;
+
+static ClientNetwork* Clnetwork;	
+
 class RemoteClient
 {
-
-public:
-
+public:	
+	
+	// Constructor / Destructor
 	RemoteClient();
-	~RemoteClient(void);
+	~RemoteClient(void);	
 
-	ClientNetwork* network;
+	void sendData(ClientNetwork* network);
 };
 

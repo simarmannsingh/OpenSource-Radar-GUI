@@ -1,0 +1,7 @@
+<map id="ImGui::PushClipRect" name="ImGui::PushClipRect">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#abb20c9f8365cab62d9394ebb1dd5d769" title="ImGui::PushColumnClipRect" alt="" coords="196,5,383,32"/>
+<area shape="rect" id="node3" href="$struct_im_draw_list.html#a0ab1ab409f0e269755e50a77901bae39" title="ImDrawList::PushClipRect\lFullScreen" alt="" coords="203,57,376,98"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#ab3f1fc018f903b7ad79fd10663375774" title="ImGui::NewFrame" alt="" coords="431,64,557,91"/>
+<area shape="rect" id="node5" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="605,64,707,91"/>
+<area shape="rect" id="node6" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="755,64,805,91"/>
+</map>

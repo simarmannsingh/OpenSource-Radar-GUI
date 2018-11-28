@@ -1,0 +1,11 @@
+<map id="ImGui::SaveIniSettingsToDisk" name="ImGui::SaveIniSettingsToDisk">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a27043a530e0e842e01c279dd4207f9eb" title="ImGui::SaveIniSettingsTo\lMemory" alt="" coords="247,99,413,141"/>
+<area shape="rect" id="node7" href="$imgui_8cpp.html#a59120cb7e606e96199c452c1e1c34c0f" title="ImFileOpen" alt="" coords="286,187,374,213"/>
+<area shape="rect" id="node3" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="494,157,611,184"/>
+<area shape="rect" id="node4" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="480,5,625,32"/>
+<area shape="rect" id="node5" href="$struct_im_gui_text_buffer.html#a2811fcd43e0224eb3bd0f3464b634289" title="ImGuiTextBuffer::size" alt="" coords="479,56,626,83"/>
+<area shape="rect" id="node6" href="$struct_im_gui_text_buffer.html#afb03439bc91723e274bfb9d247a691b9" title="ImGuiTextBuffer::c_str" alt="" coords="477,107,628,133"/>
+<area shape="rect" id="node8" href="$imgui_8cpp.html#ac2561e31f0de066ef0bb5bfbb541c8ae" title="ImTextCountCharsFromUtf8" alt="" coords="461,208,644,235"/>
+<area shape="rect" id="node10" href="$imgui_8cpp.html#aeb054c43ad8aae45de24efc759a0ff7a" title="ImTextStrFromUtf8" alt="" coords="487,259,618,285"/>
+<area shape="rect" id="node9" href="$imgui_8cpp.html#a036b9dd7f0942fd34e385cc115f36631" title="ImTextCharFromUtf8" alt="" coords="692,233,833,260"/>
+</map>

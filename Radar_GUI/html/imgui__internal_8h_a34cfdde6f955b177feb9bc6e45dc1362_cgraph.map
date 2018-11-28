@@ -1,0 +1,9 @@
+<map id="ImFileLoadToMemory" name="ImFileLoadToMemory">
+<area shape="rect" id="node2" href="$imgui_8cpp.html#a59120cb7e606e96199c452c1e1c34c0f" title="ImFileOpen" alt="" coords="217,56,305,83"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#aed896913f2e140cd0ad7431060dba50b" title="ImGui::MemAlloc" alt="" coords="200,107,323,133"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#a269ec695c6e722ec3da85dae37f0675d" title="ImGui::MemFree" alt="" coords="202,157,321,184"/>
+<area shape="rect" id="node3" href="$imgui_8cpp.html#ac2561e31f0de066ef0bb5bfbb541c8ae" title="ImTextCountCharsFromUtf8" alt="" coords="371,5,553,32"/>
+<area shape="rect" id="node5" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="403,56,521,83"/>
+<area shape="rect" id="node6" href="$imgui_8cpp.html#aeb054c43ad8aae45de24efc759a0ff7a" title="ImTextStrFromUtf8" alt="" coords="397,107,527,133"/>
+<area shape="rect" id="node4" href="$imgui_8cpp.html#a036b9dd7f0942fd34e385cc115f36631" title="ImTextCharFromUtf8" alt="" coords="601,56,743,83"/>
+</map>

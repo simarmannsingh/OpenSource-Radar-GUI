@@ -1,0 +1,200 @@
+\hypertarget{structaismsg__24}{}\section{aismsg\+\_\+24 Struct Reference}
+\label{structaismsg__24}\index{aismsg\+\_\+24@{aismsg\+\_\+24}}
+
+
+{\ttfamily \#include $<$vdm\+\_\+parse.\+h$>$}
+
+
+
+Collaboration diagram for aismsg\+\_\+24\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{structaismsg__24__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structaismsg__24_a74a2b7bc3f9f59660145982f7343080f}{msgid}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Message\+ID (24) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a3b7620ae515776496d84d16d75ac4e9e}{repeat}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Repeated \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{structaismsg__24_a8eabfc1e4a4372e492f82e871cd2f870}{userid}}
+\begin{DoxyCompactList}\small\item\em 30 bits \+: User\+ID / M\+M\+SI \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a316709966eedd71c28b4d8ae5436e106}{part\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em 2 bits \+: Part Number \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a439ea42e22b0db680d8d608c08c0b19e}{name}} \mbox{[}21\mbox{]}
+\begin{DoxyCompactList}\small\item\em 120 bits \+: Ship Name in A\+S\+C\+II \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{structaismsg__24_ad4e0aaee702cbf90aaf9ad0da5886d32}{ship\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em 8 bits \+: Type of Ship and Cargo \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_af54a6f8e63bb033a2f1189f75a6d7f32}{vendor\+\_\+id}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em 42 bits \+: Vendor ID in A\+S\+C\+II \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a4f228566aa426dcbae33dc20b5ceb966}{callsign}} \mbox{[}8\mbox{]}
+\begin{DoxyCompactList}\small\item\em 42 bits \+: Callsign in A\+S\+C\+II \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__24_ac5d275e5489beeab8d031950269bc5fe}{dim\+\_\+bow}}
+\begin{DoxyCompactList}\small\item\em 9 bits \+: G\+PS Ant. Distance from Bow \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structaismsg__24_afa24ce0757b54600f9be4bab8bd4bb64}{dim\+\_\+stern}}
+\begin{DoxyCompactList}\small\item\em 9 bits \+: G\+PS Ant. Distance from Stern \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_aa97c1413316032a1a67219a09b00b774}{dim\+\_\+port}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: G\+PS Ant. Distance from Port \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a4e020d67718ed77036c5761f93a69c45}{dim\+\_\+starboard}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: G\+PS Ant. Distance from Starboard \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_a748f9c1c3f591156bb53dab0bc5c1959}{spare}}
+\begin{DoxyCompactList}\small\item\em 6 bits \+: Spare \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structaismsg__24_aefca52b145c57fbea09fcc696daafdbc}{flags}}
+\begin{DoxyCompactList}\small\item\em A/B flags -\/ A = 1 B = 2 Both = 3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+IS Message 24 -\/ Class B CS Static Data Report
+
+Message 24 is a 2 part message, 24A with the name and 24B with the dimensions, etc. This structure is used to hold the results. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaismsg__24_a4f228566aa426dcbae33dc20b5ceb966}\label{structaismsg__24_a4f228566aa426dcbae33dc20b5ceb966}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!callsign@{callsign}}
+\index{callsign@{callsign}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{callsign}{callsign}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::callsign\mbox{[}8\mbox{]}}
+
+
+
+42 bits \+: Callsign in A\+S\+C\+II 
+
+\mbox{\Hypertarget{structaismsg__24_ac5d275e5489beeab8d031950269bc5fe}\label{structaismsg__24_ac5d275e5489beeab8d031950269bc5fe}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!dim\+\_\+bow@{dim\+\_\+bow}}
+\index{dim\+\_\+bow@{dim\+\_\+bow}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{dim\+\_\+bow}{dim\_bow}}
+{\footnotesize\ttfamily int aismsg\+\_\+24\+::dim\+\_\+bow}
+
+
+
+9 bits \+: G\+PS Ant. Distance from Bow 
+
+\mbox{\Hypertarget{structaismsg__24_aa97c1413316032a1a67219a09b00b774}\label{structaismsg__24_aa97c1413316032a1a67219a09b00b774}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!dim\+\_\+port@{dim\+\_\+port}}
+\index{dim\+\_\+port@{dim\+\_\+port}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{dim\+\_\+port}{dim\_port}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::dim\+\_\+port}
+
+
+
+6 bits \+: G\+PS Ant. Distance from Port 
+
+\mbox{\Hypertarget{structaismsg__24_a4e020d67718ed77036c5761f93a69c45}\label{structaismsg__24_a4e020d67718ed77036c5761f93a69c45}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!dim\+\_\+starboard@{dim\+\_\+starboard}}
+\index{dim\+\_\+starboard@{dim\+\_\+starboard}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{dim\+\_\+starboard}{dim\_starboard}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::dim\+\_\+starboard}
+
+
+
+6 bits \+: G\+PS Ant. Distance from Starboard 
+
+\mbox{\Hypertarget{structaismsg__24_afa24ce0757b54600f9be4bab8bd4bb64}\label{structaismsg__24_afa24ce0757b54600f9be4bab8bd4bb64}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!dim\+\_\+stern@{dim\+\_\+stern}}
+\index{dim\+\_\+stern@{dim\+\_\+stern}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{dim\+\_\+stern}{dim\_stern}}
+{\footnotesize\ttfamily int aismsg\+\_\+24\+::dim\+\_\+stern}
+
+
+
+9 bits \+: G\+PS Ant. Distance from Stern 
+
+\mbox{\Hypertarget{structaismsg__24_aefca52b145c57fbea09fcc696daafdbc}\label{structaismsg__24_aefca52b145c57fbea09fcc696daafdbc}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!flags@{flags}}
+\index{flags@{flags}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::flags}
+
+
+
+A/B flags -\/ A = 1 B = 2 Both = 3. 
+
+\mbox{\Hypertarget{structaismsg__24_a74a2b7bc3f9f59660145982f7343080f}\label{structaismsg__24_a74a2b7bc3f9f59660145982f7343080f}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!msgid@{msgid}}
+\index{msgid@{msgid}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{msgid}{msgid}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::msgid}
+
+
+
+6 bits \+: Message\+ID (24) 
+
+\mbox{\Hypertarget{structaismsg__24_a439ea42e22b0db680d8d608c08c0b19e}\label{structaismsg__24_a439ea42e22b0db680d8d608c08c0b19e}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!name@{name}}
+\index{name@{name}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::name\mbox{[}21\mbox{]}}
+
+
+
+120 bits \+: Ship Name in A\+S\+C\+II 
+
+Message 24B \mbox{\Hypertarget{structaismsg__24_a316709966eedd71c28b4d8ae5436e106}\label{structaismsg__24_a316709966eedd71c28b4d8ae5436e106}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!part\+\_\+number@{part\+\_\+number}}
+\index{part\+\_\+number@{part\+\_\+number}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{part\+\_\+number}{part\_number}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::part\+\_\+number}
+
+
+
+2 bits \+: Part Number 
+
+Message 24A \mbox{\Hypertarget{structaismsg__24_a3b7620ae515776496d84d16d75ac4e9e}\label{structaismsg__24_a3b7620ae515776496d84d16d75ac4e9e}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!repeat@{repeat}}
+\index{repeat@{repeat}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{repeat}{repeat}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::repeat}
+
+
+
+2 bits \+: Repeated 
+
+\mbox{\Hypertarget{structaismsg__24_ad4e0aaee702cbf90aaf9ad0da5886d32}\label{structaismsg__24_ad4e0aaee702cbf90aaf9ad0da5886d32}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!ship\+\_\+type@{ship\+\_\+type}}
+\index{ship\+\_\+type@{ship\+\_\+type}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{ship\+\_\+type}{ship\_type}}
+{\footnotesize\ttfamily unsigned char aismsg\+\_\+24\+::ship\+\_\+type}
+
+
+
+8 bits \+: Type of Ship and Cargo 
+
+\mbox{\Hypertarget{structaismsg__24_a748f9c1c3f591156bb53dab0bc5c1959}\label{structaismsg__24_a748f9c1c3f591156bb53dab0bc5c1959}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!spare@{spare}}
+\index{spare@{spare}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{spare}{spare}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::spare}
+
+
+
+6 bits \+: Spare 
+
+\mbox{\Hypertarget{structaismsg__24_a8eabfc1e4a4372e492f82e871cd2f870}\label{structaismsg__24_a8eabfc1e4a4372e492f82e871cd2f870}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!userid@{userid}}
+\index{userid@{userid}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{userid}{userid}}
+{\footnotesize\ttfamily unsigned long aismsg\+\_\+24\+::userid}
+
+
+
+30 bits \+: User\+ID / M\+M\+SI 
+
+\mbox{\Hypertarget{structaismsg__24_af54a6f8e63bb033a2f1189f75a6d7f32}\label{structaismsg__24_af54a6f8e63bb033a2f1189f75a6d7f32}} 
+\index{aismsg\+\_\+24@{aismsg\+\_\+24}!vendor\+\_\+id@{vendor\+\_\+id}}
+\index{vendor\+\_\+id@{vendor\+\_\+id}!aismsg\+\_\+24@{aismsg\+\_\+24}}
+\subsubsection{\texorpdfstring{vendor\+\_\+id}{vendor\_id}}
+{\footnotesize\ttfamily char aismsg\+\_\+24\+::vendor\+\_\+id\mbox{[}8\mbox{]}}
+
+
+
+42 bits \+: Vendor ID in A\+S\+C\+II 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vdm__parse_8h}{vdm\+\_\+parse.\+h}}\end{DoxyCompactItemize}

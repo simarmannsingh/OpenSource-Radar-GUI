@@ -1,0 +1,9 @@
+<map id="ImGui::TextUnformatted" name="ImGui::TextUnformatted">
+<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="212,5,385,32"/>
+<area shape="rect" id="node3" href="$namespace_im_gui.html#aaba5637199d31ea23d4d143b30a44aff" title="ImGui::GetTextLineHeight" alt="" coords="213,56,384,83"/>
+<area shape="rect" id="node4" href="$namespace_im_gui.html#a8674467ae34d04bc99df1f7f98f47407" title="ImGui::IsClippedEx" alt="" coords="232,107,365,133"/>
+<area shape="rect" id="node6" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="228,157,369,184"/>
+<area shape="rect" id="node5" href="$struct_im_rect.html#a0af3bade3781e5e7c6afdf71ccfb0d43" title="ImRect::Overlaps" alt="" coords="469,107,590,133"/>
+<area shape="rect" id="node7" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="433,157,625,184"/>
+<area shape="rect" id="node8" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="451,208,607,235"/>
+</map>

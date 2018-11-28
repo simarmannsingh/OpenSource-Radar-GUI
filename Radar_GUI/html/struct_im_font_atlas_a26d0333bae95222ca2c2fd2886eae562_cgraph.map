@@ -1,0 +1,11 @@
+<map id="ImFontAtlas::AddFontFromFileTTF" name="ImFontAtlas::AddFontFromFileTTF">
+<area shape="rect" id="node2" href="$imgui_8cpp.html#af2eb6628093055e05a064ef1e9ca3461" title="ImFileLoadToMemory" alt="" coords="232,107,379,133"/>
+<area shape="rect" id="node10" href="$imgui_8cpp.html#a75ccaf7d676b1f567ba888ae42ac3809" title="ImFormatString" alt="" coords="250,157,361,184"/>
+<area shape="rect" id="node3" href="$imgui_8cpp.html#a59120cb7e606e96199c452c1e1c34c0f" title="ImFileOpen" alt="" coords="444,56,532,83"/>
+<area shape="rect" id="node8" href="$namespace_im_gui.html#aed896913f2e140cd0ad7431060dba50b" title="ImGui::MemAlloc" alt="" coords="427,107,549,133"/>
+<area shape="rect" id="node9" href="$namespace_im_gui.html#a269ec695c6e722ec3da85dae37f0675d" title="ImGui::MemFree" alt="" coords="429,157,547,184"/>
+<area shape="rect" id="node4" href="$imgui_8cpp.html#ac2561e31f0de066ef0bb5bfbb541c8ae" title="ImTextCountCharsFromUtf8" alt="" coords="597,5,780,32"/>
+<area shape="rect" id="node6" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="630,56,747,83"/>
+<area shape="rect" id="node7" href="$imgui_8cpp.html#aeb054c43ad8aae45de24efc759a0ff7a" title="ImTextStrFromUtf8" alt="" coords="623,107,754,133"/>
+<area shape="rect" id="node5" href="$imgui_8cpp.html#a036b9dd7f0942fd34e385cc115f36631" title="ImTextCharFromUtf8" alt="" coords="828,56,969,83"/>
+</map>

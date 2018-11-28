@@ -1,0 +1,181 @@
+\hypertarget{struct_im_gui_input_text_callback_data}{}\section{Im\+Gui\+Input\+Text\+Callback\+Data Struct Reference}
+\label{struct_im_gui_input_text_callback_data}\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+
+
+{\ttfamily \#include $<$imgui.\+h$>$}
+
+
+
+Collaboration diagram for Im\+Gui\+Input\+Text\+Callback\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{struct_im_gui_input_text_callback_data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} \mbox{\hyperlink{struct_im_gui_input_text_callback_data_ae19641bad15c1a163928d121075ca09c}{Im\+Gui\+Input\+Text\+Callback\+Data}} ()
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_gui_input_text_callback_data_ab5dc30d7edcf60efbd5bb8e677dab8bf}{Delete\+Chars}} (int pos, int bytes\+\_\+count)
+\item 
+\mbox{\hyperlink{imgui_8h_a43829975e84e45d1149597467a14bbf5}{I\+M\+G\+U\+I\+\_\+\+A\+PI}} void \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a9963937f48aba00466c2af404dad1e25}{Insert\+Chars}} (int pos, const char $\ast$text, const char $\ast$text\+\_\+end=N\+U\+LL)
+\item 
+bool \mbox{\hyperlink{struct_im_gui_input_text_callback_data_aae1b69a904053961be171d7f47ef430e}{Has\+Selection}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h_a7d2c6153a6b9b5d3178ce82434ac9fb8}{Im\+Gui\+Input\+Text\+Flags}} \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a6ad2f8e385c68e56e6682fc0c4e79949}{Event\+Flag}}
+\item 
+\mbox{\hyperlink{imgui_8h_a7d2c6153a6b9b5d3178ce82434ac9fb8}{Im\+Gui\+Input\+Text\+Flags}} \mbox{\hyperlink{struct_im_gui_input_text_callback_data_aac3133cf2c9d194142481e54192d8fa1}{Flags}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_im_gui_input_text_callback_data_ae8358ea4135032204fcba6c9ada7c49f}{User\+Data}}
+\item 
+\mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a7a6e9a43c5db8f236cde912b913fe707}{Event\+Char}}
+\item 
+\mbox{\hyperlink{imgui_8h_a1671ca739cf1384a8cc268758f27b4e7}{Im\+Gui\+Key}} \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a2db52e1da5e8109d4eeb5b0ab22200a9}{Event\+Key}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_im_gui_input_text_callback_data_ac8cd46c3473851c2822aae8240289069}{Buf}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_input_text_callback_data_aa4db7629a772cfc3286a5a3fd1e5f1ab}{Buf\+Text\+Len}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a0e391986e9359f6777ab27a3b08229a6}{Buf\+Size}}
+\item 
+bool \mbox{\hyperlink{struct_im_gui_input_text_callback_data_aa2d91cca2b46de3f2b218573579f122b}{Buf\+Dirty}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a45b3cc4d7625b1bc38d5b995ca149b43}{Cursor\+Pos}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a72642ac2ce877eaade95386cad70ee8a}{Selection\+Start}}
+\item 
+int \mbox{\hyperlink{struct_im_gui_input_text_callback_data_a616bf3a1f0c2d73b9133931f22ab44a7}{Selection\+End}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_ae19641bad15c1a163928d121075ca09c}\label{struct_im_gui_input_text_callback_data_ae19641bad15c1a163928d121075ca09c}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Im\+Gui\+Input\+Text\+Callback\+Data()}{ImGuiInputTextCallbackData()}}
+{\footnotesize\ttfamily Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Im\+Gui\+Input\+Text\+Callback\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_ab5dc30d7edcf60efbd5bb8e677dab8bf}\label{struct_im_gui_input_text_callback_data_ab5dc30d7edcf60efbd5bb8e677dab8bf}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Delete\+Chars@{Delete\+Chars}}
+\index{Delete\+Chars@{Delete\+Chars}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Delete\+Chars()}{DeleteChars()}}
+{\footnotesize\ttfamily void Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Delete\+Chars (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{bytes\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_input_text_callback_data_ab5dc30d7edcf60efbd5bb8e677dab8bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_aae1b69a904053961be171d7f47ef430e}\label{struct_im_gui_input_text_callback_data_aae1b69a904053961be171d7f47ef430e}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Has\+Selection@{Has\+Selection}}
+\index{Has\+Selection@{Has\+Selection}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Has\+Selection()}{HasSelection()}}
+{\footnotesize\ttfamily bool Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Has\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a9963937f48aba00466c2af404dad1e25}\label{struct_im_gui_input_text_callback_data_a9963937f48aba00466c2af404dad1e25}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Insert\+Chars@{Insert\+Chars}}
+\index{Insert\+Chars@{Insert\+Chars}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Insert\+Chars()}{InsertChars()}}
+{\footnotesize\ttfamily void Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Insert\+Chars (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{const char $\ast$}]{text,  }\item[{const char $\ast$}]{text\+\_\+end = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_im_gui_input_text_callback_data_a9963937f48aba00466c2af404dad1e25_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_ac8cd46c3473851c2822aae8240289069}\label{struct_im_gui_input_text_callback_data_ac8cd46c3473851c2822aae8240289069}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Buf@{Buf}}
+\index{Buf@{Buf}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Buf}{Buf}}
+{\footnotesize\ttfamily char$\ast$ Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Buf}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_aa2d91cca2b46de3f2b218573579f122b}\label{struct_im_gui_input_text_callback_data_aa2d91cca2b46de3f2b218573579f122b}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Buf\+Dirty@{Buf\+Dirty}}
+\index{Buf\+Dirty@{Buf\+Dirty}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Buf\+Dirty}{BufDirty}}
+{\footnotesize\ttfamily bool Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Buf\+Dirty}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a0e391986e9359f6777ab27a3b08229a6}\label{struct_im_gui_input_text_callback_data_a0e391986e9359f6777ab27a3b08229a6}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Buf\+Size@{Buf\+Size}}
+\index{Buf\+Size@{Buf\+Size}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Buf\+Size}{BufSize}}
+{\footnotesize\ttfamily int Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Buf\+Size}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_aa4db7629a772cfc3286a5a3fd1e5f1ab}\label{struct_im_gui_input_text_callback_data_aa4db7629a772cfc3286a5a3fd1e5f1ab}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Buf\+Text\+Len@{Buf\+Text\+Len}}
+\index{Buf\+Text\+Len@{Buf\+Text\+Len}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Buf\+Text\+Len}{BufTextLen}}
+{\footnotesize\ttfamily int Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Buf\+Text\+Len}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a45b3cc4d7625b1bc38d5b995ca149b43}\label{struct_im_gui_input_text_callback_data_a45b3cc4d7625b1bc38d5b995ca149b43}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Cursor\+Pos@{Cursor\+Pos}}
+\index{Cursor\+Pos@{Cursor\+Pos}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Cursor\+Pos}{CursorPos}}
+{\footnotesize\ttfamily int Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Cursor\+Pos}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a7a6e9a43c5db8f236cde912b913fe707}\label{struct_im_gui_input_text_callback_data_a7a6e9a43c5db8f236cde912b913fe707}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Event\+Char@{Event\+Char}}
+\index{Event\+Char@{Event\+Char}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Event\+Char}{EventChar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_af2c7badaf05a0008e15ef76d40875e97}{Im\+Wchar}} Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Event\+Char}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a6ad2f8e385c68e56e6682fc0c4e79949}\label{struct_im_gui_input_text_callback_data_a6ad2f8e385c68e56e6682fc0c4e79949}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Event\+Flag@{Event\+Flag}}
+\index{Event\+Flag@{Event\+Flag}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Event\+Flag}{EventFlag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a7d2c6153a6b9b5d3178ce82434ac9fb8}{Im\+Gui\+Input\+Text\+Flags}} Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Event\+Flag}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a2db52e1da5e8109d4eeb5b0ab22200a9}\label{struct_im_gui_input_text_callback_data_a2db52e1da5e8109d4eeb5b0ab22200a9}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Event\+Key@{Event\+Key}}
+\index{Event\+Key@{Event\+Key}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Event\+Key}{EventKey}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a1671ca739cf1384a8cc268758f27b4e7}{Im\+Gui\+Key}} Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Event\+Key}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_aac3133cf2c9d194142481e54192d8fa1}\label{struct_im_gui_input_text_callback_data_aac3133cf2c9d194142481e54192d8fa1}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Flags@{Flags}}
+\index{Flags@{Flags}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{imgui_8h_a7d2c6153a6b9b5d3178ce82434ac9fb8}{Im\+Gui\+Input\+Text\+Flags}} Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Flags}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a616bf3a1f0c2d73b9133931f22ab44a7}\label{struct_im_gui_input_text_callback_data_a616bf3a1f0c2d73b9133931f22ab44a7}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Selection\+End@{Selection\+End}}
+\index{Selection\+End@{Selection\+End}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Selection\+End}{SelectionEnd}}
+{\footnotesize\ttfamily int Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Selection\+End}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_a72642ac2ce877eaade95386cad70ee8a}\label{struct_im_gui_input_text_callback_data_a72642ac2ce877eaade95386cad70ee8a}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!Selection\+Start@{Selection\+Start}}
+\index{Selection\+Start@{Selection\+Start}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{Selection\+Start}{SelectionStart}}
+{\footnotesize\ttfamily int Im\+Gui\+Input\+Text\+Callback\+Data\+::\+Selection\+Start}
+
+\mbox{\Hypertarget{struct_im_gui_input_text_callback_data_ae8358ea4135032204fcba6c9ada7c49f}\label{struct_im_gui_input_text_callback_data_ae8358ea4135032204fcba6c9ada7c49f}} 
+\index{Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}!User\+Data@{User\+Data}}
+\index{User\+Data@{User\+Data}!Im\+Gui\+Input\+Text\+Callback\+Data@{Im\+Gui\+Input\+Text\+Callback\+Data}}
+\subsubsection{\texorpdfstring{User\+Data}{UserData}}
+{\footnotesize\ttfamily void$\ast$ Im\+Gui\+Input\+Text\+Callback\+Data\+::\+User\+Data}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imgui_8h}{imgui.\+h}}\item 
+\mbox{\hyperlink{imgui__widgets_8cpp}{imgui\+\_\+widgets.\+cpp}}\end{DoxyCompactItemize}
