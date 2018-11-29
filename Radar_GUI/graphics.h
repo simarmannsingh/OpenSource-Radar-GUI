@@ -43,6 +43,7 @@ int glRenderLoop(GLFWwindow* window);
 //ImGui
 void screenOverlay(bool* p_open, int corner);
 void screenOverlayTwo(bool* p_open, int corner);
+void SmartHUD(bool* p_open, int corner);
 void renderGraph();
 
 

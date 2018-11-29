@@ -33,6 +33,14 @@ CODE
 static bool flag_coherent	= FALSE;
 static bool flag_connect	= FALSE;
 static bool flag_CFAR		= FALSE;
+static bool Close_App		= FALSE;
+static bool Background		= TRUE;
+static bool InfoButton		= FALSE;
+static bool ScreenOverlayFlag = TRUE;
+static bool infoFlag        = FALSE;
+static bool animate         = FALSE;
+bool show_demo_window		= TRUE;																			
+
 
 int width = 200;
 int height = 200;
@@ -50,24 +58,20 @@ float rad_3 = radius / 3;
 
 // Variables for ImGui
 const char* glsl_version = "#version 130";																
-bool show_demo_window = true;																			
 static int counter = 0;																					
-static float Slider1 = 0.0f;																					
-static float Slider2 = 0.0f;																					
-static float Slider3 = 0.0f;																					
 																		
 const float DISTANCE = 20.0f;
 const float x_DISTANCE = 20.0f;
-const float y_DISTANCE = 200.0f;
-const float NetOvrlayDistance = 395.0f;
-
-static int corner = 1;
-static bool ScreenOverlayFlag = true;
-static bool infoFlag = false;
-
+const float y_DISTANCE = 220.0f;
+const float NetOvrlayDistance = 420.0f;
 static int ScreenOverlay_n = 0;
-
 double elapsedTime = 0;
+static int corner = 1;
+
+static float Slider1 = 0.0f;																					
+static float Slider2 = 0.0f;																					
+static float Slider3 = 0.0f;																					
+
 
 
 // Variables for FreeType fonts
@@ -348,35 +352,39 @@ int glRenderLoop(GLFWwindow* window)
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwPollEvents();
-		//client->sendData(Clnetwork);
-		//server->receiveFromClients(svnetwork);
-
+	
 		glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-
 		// Radar Beam
-		glViewport(0, 0, 1080, 800);
 		shader1.bind();
-		shader1.setUniform4f("u_Color", 0.1f, 0.7f, 0.0f, 0.15f);
+		shader1.setUniform4f("u_Color", 0.1f, 0.21f, 0.09f, 0.12f);
 		va_circ.Bind();
 		ib_circ.bind();
-		elapsedTime = glfwGetTime();
-		if (elapsedTime > 10)
+		if (Background)
 		{
-			elapsedTime = 0;
-			glfwSetTime(0.0f);
+			glViewport(-160, -250, 1280, 1200);
+			elapsedTime = glfwGetTime();
+			if (elapsedTime > 10)
+			{
+				elapsedTime = 0;
+			}
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+			for (int i = 0; i < 10; i++)
+			{
+				glDrawArrays(GL_TRIANGLE_FAN, i, i + 15);
+			}
+
+			glViewport(650, -100, 1280, 1200);
+			for (int i = 0; i < 8; i++)
+			{
+				shader1.setUniform4f("u_Color", 0.12f, 0.63f, 0.02f, 0.15f);
+				glDrawArrays(GL_TRIANGLE_FAN, i, i + 15);
+			}
 		}
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-		for (int i = 0; i < 8; i++)
-		{			
-			glDrawArrays(GL_TRIANGLE_FAN, i, i + 15);
-			shader1.setUniform4f("u_Color", 0.1f, (elapsedTime/10)*0.9f, (elapsedTime / 10)*0.2f, 0.15f);
-		}
-			
+
 		glViewport(0, 0, 800, 800);
-		shader1.setUniform4f("u_Color", 0.8f, 0.8f, 0.1f, 1.0f);
-		
+		shader1.setUniform4f("u_Color", 0.8f, 0.8f, 0.1f, 1.0f);		
 		{
 			//CIRCELS
 			// Outer Circle
@@ -402,8 +410,7 @@ int glRenderLoop(GLFWwindow* window)
 			//Center Dome
 			glViewport(355, 395, 10, 10);
 			shader1.setUniform4f("u_Color",0.15f, 0.15f, 0.25f, 1.0f);
-			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);
-					
+			glDrawArrays(GL_TRIANGLE_FAN, 0, 80);				
 			
 		}
 		
@@ -411,7 +418,7 @@ int glRenderLoop(GLFWwindow* window)
 		va_circ.unBind();
 		ib_circ.unbind();
 		
-		const char* item[] = { "first", "threerst" ,"tworst" };
+		const char* item[] = { "2x", "4x" ,"8x" };
 		{
 			// ImGUI
 			ImGui_ImplOpenGL3_NewFrame();
@@ -420,9 +427,12 @@ int glRenderLoop(GLFWwindow* window)
 			//ImGui::ShowDemoWindow(&show_demo_window);
 			// Screen Overlay
 			if (ScreenOverlayFlag)
+			// Funtion Calls for rendering Different GUI sections on Screen
 				screenOverlay(&ScreenOverlayFlag, corner);
 				screenOverlayTwo(&ScreenOverlayFlag, corner);
-	
+				SmartHUD(&ScreenOverlayFlag, 2);
+
+
 				ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - x_DISTANCE : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - NetOvrlayDistance : NetOvrlayDistance);
 				ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
 				ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
@@ -434,7 +444,7 @@ int glRenderLoop(GLFWwindow* window)
 				ImGui::Separator();
 				
 				static char buf2[64] = ""; ImGui::InputText("decimal", buf2, 64, ImGuiInputTextFlags_CharsDecimal);
-				
+				ImGui::SameLine(250);
 				if (ImGui::Button("Connect", ImVec2(80, 20)))
 				{
 					char key[] = "192.168.1.100";
@@ -444,34 +454,42 @@ int glRenderLoop(GLFWwindow* window)
 						Beep(400, 500);
 					}
 				}
-
-				//ImGui::Combo("combo", &counter, item, 3);
-				ImGui::RadioButton("2x Zoom", &counter, 0);
-				ImGui::RadioButton("4x Zoom", &counter, 1);
+				ImGui::Checkbox("Plot Graph",&animate);
 				renderGraph();
 
 				if (ImGui::Button("Info", ImVec2(80, 20)))
+					ImGui::OpenPopup("Credits");
+				if (ImGui::BeginPopupModal("Credits", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoMove))
 				{
-
-					infoFlag = true;
-					ImVec2 Info_window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x -(3 * x_DISTANCE) : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y -(3* y_DISTANCE ): y_DISTANCE);
-					ImVec2 Info_window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
-					ImGui::SetNextWindowPos(Info_window_pos, ImGuiCond_Always, Info_window_pos_pivot);
-					ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
-					if(infoFlag)
-					{
-						screenOverlay(&infoFlag, corner);
-					}					
+					ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Development Credits ");
+					ImGui::Text("Departmet Head   :  Prof. Dr.-Ing. Michael Hoft");
+					ImGui::TextColored(ImVec4(0.5f, 0.5f, 0.7f, 0.8f), "(Email)          :  mh@tf.uni-kiel.de ");
+					ImGui::Text("Maintainer       :  Dr.-Ing. Alexander Tyuplik");
+					ImGui::TextColored(ImVec4(0.5f, 0.5f, 0.7f, 0.8f), "(Email)          :  alt@tf.uni-kiel.de ");
+					ImGui::Text("Source Code      :  Simar Mann Singh");
+					ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "\n\nCopyrights ");
+					ImGui::Text("(c) High Frequency (HF) Department \nChristian-Albrechts-Universitat zu Kiel (CAU) \n\n");
+					ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "All rights reserved!");
+					ImGui::Text("Modification, sublicensing, or distribution of this Software Program \nis strictly prohibited!!\n\n");
+					ImGui::Separator();
+					ImGui::Text("");
+					ImGui::SameLine(200);
+					if (ImGui::Button("OK", ImVec2(80, 20))) { ImGui::CloseCurrentPopup(); }
+					ImGui::SetItemDefaultFocus();
+					ImGui::EndPopup();
 				}
-
+				
 				ImGui::SameLine();
 				if (ImGui::Button("Exit", ImVec2(80, 20)))
 				{
-					counter++;
+					ImGui::End();
+					ImGui_ImplOpenGL3_Shutdown();
+					ImGui_ImplGlfw_Shutdown();
+					ImGui::DestroyContext();
+					return 0;
 				}
 				ImGui::SameLine();
-				ImGui::End();
-			
+				ImGui::End();			
 			
 			ImGui::Render();
 			glfwMakeContextCurrent(window);
@@ -583,7 +601,7 @@ void screenOverlay(bool* p_open, int corner)
 	ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
 	if (ImGui::Begin("Example: Simple Overlay", p_open, (corner != -1 ? ImGuiWindowFlags_NoMove : 0) | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav))
 	{
-		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Mode Settings");
+		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "STATUS");
 		ImGui::Separator();
 		if (!flag_connect)
 		{
@@ -614,32 +632,42 @@ void screenOverlay(bool* p_open, int corner)
 		}
 		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Signal Reception");
 		ImGui::Separator();
-		//ImGui::Text("Amplitude : %d ", RemoteClient::Txpacket.amplitude);
-		ImGui::Text("Amplitude : 113");
-		ImGui::Text("Direction : 9 degrees");
-		ImGui::Text("Direction : ");
 		
-		
-		
-		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)   ", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-		if (ImGui::BeginPopupContextWindow())
+
+		ImGui::Text("Amplitude : ");
+		if (flag_connect)
 		{
-			if (ImGui::MenuItem("Custom", NULL, corner == -1)) corner = -1;
-			if (ImGui::MenuItem("Top-left", NULL, corner == 0)) corner = 0;
-			if (ImGui::MenuItem("Top-right", NULL, corner == 1)) corner = 1;
-			if (ImGui::MenuItem("Bottom-left", NULL, corner == 2)) corner = 2;
-			if (ImGui::MenuItem("Bottom-right", NULL, corner == 3)) corner = 3;
-			if (p_open && ImGui::MenuItem("Close")) *p_open = false;
-			ImGui::EndPopup();
+			ImGui::SameLine(100);
+			ImGui::Text(" %0.3f", (2 * ImGui::GetIO().Framerate));
 		}
+		ImGui::Text("Direction : ");
+		if (flag_connect)
+		{
+			ImGui::SameLine(100);
+			ImGui::Text(" %d", flag_CFAR ? 1 : 0);
+		}
+
+		ImGui::Text("Angle     : ");
+		if (flag_connect)
+		{
+			ImGui::SameLine(100);
+			ImGui::Text(" %0.3f", (ImGui::GetIO().Framerate * 3));
+		}
+
+		ImGui::Text("Range     : ");
+		if (flag_connect)
+		{
+			ImGui::SameLine(100);
+			ImGui::Text(" %0.3f", (ImGui::GetTime() / 5) * 2 * ImGui::GetIO().Framerate);
+		}
+
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)   ", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 	}
 	ImGui::End();
 }
 
-
 void screenOverlayTwo(bool* p_open, int corner)
 {
-
 	ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - x_DISTANCE : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - y_DISTANCE : y_DISTANCE);
 	ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
 	ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
@@ -649,8 +677,15 @@ void screenOverlayTwo(bool* p_open, int corner)
 
 	ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "RADAR SETTINGS");
 	ImGui::Separator();
-	ImGui::Checkbox("CONNECT", &flag_connect);      // Edit bools storing our window open/close state
-	ImGui::Checkbox("COHERENT", &flag_coherent);      // Edit bools storing our window open/close state
+	if (ImGui::Checkbox("Connect", &flag_connect))      // Edit bools storing our window open/close state
+	{
+		;// animate = FALSE;
+	}
+	ImGui::SameLine(150);
+	ImGui::RadioButton("2x Zoom", &counter, 0);
+	ImGui::Checkbox("Coherent", &flag_coherent);      // Edit bools storing our window open/close state
+	ImGui::SameLine(150);
+	ImGui::RadioButton("4x Zoom", &counter, 1);
 	ImGui::Checkbox("CFAR", &flag_CFAR);      // Edit bools storing our window open/close state
 
 	ImGui::Text("ZOOM            :");
@@ -667,31 +702,115 @@ void screenOverlayTwo(bool* p_open, int corner)
 	ImGui::End();
 }
 
+void SmartHUD(bool* p_open, int corner)
+{
+	ImVec2 window_pos = ImVec2((corner & 1) ? ImGui::GetIO().DisplaySize.x - x_DISTANCE : x_DISTANCE, (corner & 2) ? ImGui::GetIO().DisplaySize.y - x_DISTANCE : x_DISTANCE);
+	ImVec2 window_pos_pivot = ImVec2((corner & 1) ? 1.0f : 0.0f, (corner & 2) ? 1.0f : 0.0f);
+	ImGui::SetNextWindowPos(window_pos, ImGuiCond_Always, window_pos_pivot);
+	ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
 
+	ImGui::Begin("Display", &ScreenOverlayFlag, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav);
+
+	ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Display Options");
+	ImGui::Separator();
+	ImGui::Checkbox("Background", &Background);      // Edit bools storing our window open/close state
+	
+	ImGui::End();
+}
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] ANIMATING SIGNAL FLOW ON INFORMATION TAB 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 void renderGraph()
-{
-	static bool animate = true;
-	ImGui::Checkbox("Plot Signal", &animate);
-	
-	// Create a dummy array of contiguous float values to plot
-	// Tip: If your float aren't contiguous but part of a structure, you can pass a pointer to your first float and the sizeof() of your structure in the Stride parameter.
-	static float values[90] = { 0 };
-	static int values_offset = 0;
-	static double refresh_time = 0.0;
-	if (!animate || refresh_time == 0.0f)
-		refresh_time = ImGui::GetTime();
-	while (refresh_time < ImGui::GetTime()) // Create dummy data at fixed 60 hz rate for the demo
+{			
+		// Tip: If your float aren't contiguous but part of a structure, you can pass a pointer to your first float and the sizeof() of your structure in the Stride parameter.
+		static float values[90] = { 0 };
+		static int values_offset = 0;
+		static double refresh_time = 0.0;
+		if (!animate || refresh_time == 0.0f)
+			refresh_time = ImGui::GetTime();
+		while (refresh_time < ImGui::GetTime()) // Create dummy data at fixed 60 hz rate for the demo
+		{
+			static float phase = 0.0f;
+			values[values_offset] = cosf(phase);
+			values_offset = (values_offset + 1) % IM_ARRAYSIZE(values);
+			phase += 0.5f*values_offset;
+			refresh_time += 1.0f / 60.0f;				// 60.0f represents plotting frequency which is 60Hz
+		}
+	if (flag_connect && animate)
 	{
-		static float phase = 0.0f;
-		values[values_offset] = cosf(phase);
-		values_offset = (values_offset + 1) % IM_ARRAYSIZE(values);
-		phase += 0.5f*values_offset;
-		refresh_time += 1.0f / 60.0f;
+		// Create a dummy array of contiguous float values to plot
+		ImGui::PlotLines("Lines", values, IM_ARRAYSIZE(values), values_offset, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
 	}
-	ImGui::PlotLines("Lines", values, IM_ARRAYSIZE(values), values_offset, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
+	
+	else if ((!flag_connect && animate))
+	{
+		ImGui::OpenPopup("Error");
+		ImGui::PlotLines("Lines", NULL, NULL, NULL, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
+		if (ImGui::BeginPopupModal("Error", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoMove))
+		{
+			ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Radar Disconnected\n\n");
+			ImGui::Text("Please connect the Radar to the computer\nand click on Connect Checkbox.");
+			ImGui::TextColored(ImVec4(0.5f, 0.5f, 0.7f, 0.8f), "(Connection will establish automatically)\n\n\n");
+			//ImGui::Text("Data unavailable for plotting graph");
+			ImGui::Separator();
+			ImGui::Text("");
+			ImGui::SameLine(105);
+			if (ImGui::Button("OK", ImVec2(80, 20)))
+			{
+				animate = FALSE;
+				flag_connect = FALSE;
+				ImGui::PlotLines("Lines", NULL, NULL, NULL, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
+				ImGui::CloseCurrentPopup();				
+			}
+			ImGui::SetItemDefaultFocus();
+			ImGui::EndPopup();
+		}
+
+	}
+	else 
+	{
+		ImGui::PlotLines("Lines", NULL, NULL, NULL, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
+	}
 }
+
+
+
+
+
+
+/*
+There are two flags:-
+1. Bool "Connect"		---->			CHECKBOX    //This flag is raised when Checkbox "Connect" is clicked 
+2. Bool "Animate"		---->			CHECKBOX    //This flag is raised when Checkbox "Plot Graph" is clicked 
+
+Situation:
+If (!Connect)
+	then PLOT GRAPH should not work which means 
+	Animate = FALSE;
+
+			If(Connect)
+			and then if PLOT GRAPH is clicked, graph can be plotted which means
+				Animate = TRUE;
+			else
+			This should show an error that without Connect enabled, PLOT GRAPH doesn't work
+			For this, I created the below logic
+			//function for displaying  error()
+							IF
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
 
