@@ -1,8 +1,0 @@
-<map id="ImGuiTextFilter::ImGuiTextFilter" name="ImGuiTextFilter::ImGuiTextFilter">
-<area shape="rect" id="node2" href="$imgui_8cpp.html#aebf0117d9d0fb0f2731a94d64173b41a" title="ImStrncpy" alt="" coords="263,5,345,32"/>
-<area shape="rect" id="node3" href="$struct_im_gui_text_filter.html#aef362baafaa9dfa62d11bc6101c0f4c1" title="ImGuiTextFilter::Build" alt="" coords="231,56,377,83"/>
-<area shape="rect" id="node4" href="$struct_im_gui_text_filter_1_1_text_range.html#af65b120c583d34df5eb857962a8ac912" title="ImGuiTextFilter::TextRange\l::split" alt="" coords="425,49,605,90"/>
-<area shape="rect" id="node5" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="685,5,802,32"/>
-<area shape="rect" id="node6" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="671,56,816,83"/>
-<area shape="rect" id="node7" href="$struct_im_gui_text_filter_1_1_text_range.html#a5a6548fd40884ef5837e6a1ffa33af61" title="ImGuiTextFilter::TextRange\l::TextRange" alt="" coords="653,107,833,149"/>
-</map>

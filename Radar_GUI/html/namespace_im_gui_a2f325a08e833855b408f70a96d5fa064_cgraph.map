@@ -1,7 +1,0 @@
-<map id="ImGui::CreateNewWindowSettings" name="ImGui::CreateNewWindowSettings">
-<area shape="rect" id="node2" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="275,5,420,32"/>
-<area shape="rect" id="node3" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="292,56,403,83"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#a079f29569de5779052f1fbf3dd283e0f" title="ImStrdup" alt="" coords="310,107,385,133"/>
-<area shape="rect" id="node6" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="314,157,381,184"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#aed896913f2e140cd0ad7431060dba50b" title="ImGui::MemAlloc" alt="" coords="468,107,591,133"/>
-</map>

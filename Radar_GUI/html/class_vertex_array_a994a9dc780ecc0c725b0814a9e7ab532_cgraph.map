@@ -1,7 +1,0 @@
-<map id="VertexArray::AddBuffer" name="VertexArray::AddBuffer">
-<area shape="rect" id="node2" href="$class_vertex_array.html#ad5059455f0864327028636c628d5a661" title="VertexArray::Bind" alt="" coords="216,5,341,32"/>
-<area shape="rect" id="node3" href="$class_vertex_buffer.html#afc06aa70b14e2379e8565afb2e017bd2" title="VertexBuffer::bind" alt="" coords="216,56,341,83"/>
-<area shape="rect" id="node4" href="$class_vertex_buffer_layout.html#a9d81400c5f992ed1f287aa75267eb2f4" title="VertexBufferLayout\l::GetElements" alt="" coords="213,107,345,149"/>
-<area shape="rect" id="node5" href="$class_vertex_buffer_layout.html#aca33593016f0360720489d25b933ac4a" title="VertexBufferLayout\l::GetStride" alt="" coords="213,173,345,214"/>
-<area shape="rect" id="node6" href="$struct_vertex_buffer_element.html#a8465417a435f8bcd68a71bc414f1d0ee" title="VertexBufferElement\l::GetSizeOfType" alt="" coords="208,238,349,279"/>
-</map>

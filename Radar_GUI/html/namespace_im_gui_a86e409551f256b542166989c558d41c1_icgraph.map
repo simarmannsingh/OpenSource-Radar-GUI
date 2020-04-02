@@ -1,5 +1,0 @@
-<map id="ImGui::GetCursorPosY" name="ImGui::GetCursorPosY">
-<area shape="rect" id="node2" href="$struct_im_gui_list_clipper.html#a746fbd724a41dbe88fef4875a2b1e9c7" title="ImGuiListClipper::Begin" alt="" coords="208,5,367,32"/>
-<area shape="rect" id="node3" href="$struct_im_gui_list_clipper.html#ac3e115812c3c4e5a39578a7aa955379a" title="ImGuiListClipper::Step" alt="" coords="211,56,363,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#afe7a28c6eb52fff3cc27d5a698fea4ff" title="ImGui::ShowMetricsWindow" alt="" coords="415,56,600,83"/>
-</map>

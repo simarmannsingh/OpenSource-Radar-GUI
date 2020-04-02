@@ -1,5 +1,0 @@
-<map id="RemoteServer::sendActionPackets" name="RemoteServer::sendActionPackets">
-<area shape="rect" id="node2" href="$class_packet.html#a70dba5b27e4b75e68a5b3c36879f62c5" title="Packet::serialize" alt="" coords="255,5,374,32"/>
-<area shape="rect" id="node3" href="$class_server_network.html#a33f470f2d8b21035731c2dcce5348d43" title="ServerNetwork::sendToAll" alt="" coords="229,56,400,83"/>
-<area shape="rect" id="node4" href="$class_network_services.html#aecc2718ec3bbea2b6a3b309a305295d7" title="NetworkServices::sendMessage" alt="" coords="448,56,655,83"/>
-</map>

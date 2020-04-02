@@ -1,4 +1,0 @@
-<map id="ImGuiTextFilter" name="ImGuiTextFilter">
-<area shape="rect" id="node2" href="$class_im_vector.html" title="{ImVector\&lt; ImGuiTextFilter\l::TextRange \&gt;\n|+ Size\l+ Capacity\l|+ ImVector()\l+ ImVector()\l+ ~ImVector()\l+ operator=()\l+ empty()\l+ size()\l+ capacity()\l+ operator[]()\l+ operator[]()\l+ clear()\land 22 more...\l}" alt="" coords="8,233,183,487"/>
-<area shape="rect" id="node3" href="$struct_im_gui_text_filter_1_1_text_range.html" title="{ImGuiTextFilter::TextRange\n|+ b\l+ e\l|+ TextRange()\l+ TextRange()\l+ begin()\l+ end()\l+ empty()\l+ split()\l}" alt="" coords="5,5,185,171"/>
-</map>

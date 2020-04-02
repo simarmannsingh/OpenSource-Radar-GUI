@@ -1,6 +1,0 @@
-<map id="ImGui::LoadIniSettingsFromMemory" name="ImGui::LoadIniSettingsFromMemory">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a4bf22fb84ba768fc18383af50e8c217f" title="ImGui::LoadIniSettingsFromDisk" alt="" coords="236,13,445,39"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#ab3f1fc018f903b7ad79fd10663375774" title="ImGui::NewFrame" alt="" coords="493,13,620,39"/>
-<area shape="rect" id="node4" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="668,13,769,39"/>
-<area shape="rect" id="node5" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="817,13,868,39"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="ImGui::SetCurrentFont" name="ImGui::SetCurrentFont">
-<area shape="rect" id="node2" href="$struct_im_font.html#a97dafa61cc94e84be396d69b0d42b1ce" title="ImFont::IsLoaded" alt="" coords="238,5,361,32"/>
-<area shape="rect" id="node3" href="$struct_im_gui_window.html#a6881ed65e208fb6e015d3ae6bccfc794" title="ImGuiWindow::CalcFontSize" alt="" coords="205,56,393,83"/>
-</map>

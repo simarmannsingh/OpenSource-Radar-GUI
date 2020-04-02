@@ -1,8 +1,0 @@
-<map id="ImGui::SplitterBehavior" name="ImGui::SplitterBehavior">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="243,5,355,32"/>
-<area shape="rect" id="node3" href="$struct_im_rect.html#af33a7424c3341d08acd69da30c27c753" title="ImRect::Expand" alt="" coords="242,56,357,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a65a4f18b1bc8ce0f351687922089f374" title="ImGui::ButtonBehavior" alt="" coords="224,107,375,133"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a3291356b06ebe5f771d60b334a831d4b" title="ImGui::SetItemAllowOverlap" alt="" coords="208,157,391,184"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ae212a3516efcba50a684df202c8e63ad" title="ImGui::SetMouseCursor" alt="" coords="219,208,380,235"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="439,107,612,133"/>
-</map>

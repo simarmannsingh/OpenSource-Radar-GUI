@@ -1,6 +1,0 @@
-<map id="VertexBufferElement::GetSizeOfType" name="VertexBufferElement::GetSizeOfType">
-<area shape="rect" id="node2" href="$class_vertex_array.html#a994a9dc780ecc0c725b0814a9e7ab532" title="VertexArray::AddBuffer" alt="" coords="195,5,349,32"/>
-<area shape="rect" id="node5" href="$class_vertex_buffer_layout.html#a0ac1e4373209bf1a2c5c3551f690724b" title="VertexBufferLayout\l::Push" alt="" coords="206,57,338,98"/>
-<area shape="rect" id="node3" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="397,5,499,32"/>
-<area shape="rect" id="node4" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="547,5,597,32"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="ImGui::SaveIniSettingsToDisk" name="ImGui::SaveIniSettingsToDisk">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#ab3f1fc018f903b7ad79fd10663375774" title="ImGui::NewFrame" alt="" coords="247,5,373,32"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#ae8e2043e5d630169423e2d14a913afa1" title="ImGui::Shutdown" alt="" coords="249,56,371,83"/>
-<area shape="rect" id="node3" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="448,5,549,32"/>
-<area shape="rect" id="node4" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="624,5,675,32"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#ab9132deece575023170cd8e681d0581d" title="ImGui::DestroyContext" alt="" coords="421,56,576,83"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="ImGui::DragScalarN" name="ImGui::DragScalarN">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#acabf4e1f3f5d878e88591424623526e9" title="ImGui::DragFloat2" alt="" coords="191,5,317,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a9de2c920447597c0b087d8261a0c34b7" title="ImGui::DragFloat3" alt="" coords="191,56,317,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a091e461705a8f49156f44e08ba29ced1" title="ImGui::DragFloat4" alt="" coords="191,107,317,133"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a8a1121ff004dbc90c2c81b04e6623429" title="ImGui::DragInt2" alt="" coords="198,157,310,184"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a2bc8e645a1569dcb657d02f97041adda" title="ImGui::DragInt3" alt="" coords="198,208,310,235"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#a67acd6e50be3c7091fbc4c21d829e2e0" title="ImGui::DragInt4" alt="" coords="198,259,310,285"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="ImGui::FocusWindow" name="ImGui::FocusWindow">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#afd03199380411a711c74893434d91258" title="ImGui::StartMouseMovingWindow" alt="" coords="200,5,417,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#ac71920931ed7b7c8594ee84c6a94e7b8" title="ImGui::SetWindowFocus" alt="" coords="225,56,392,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#ac2609b0f034d3bcd8d70d26df8694eaa" title="ImGui::BeginDragDropSource" alt="" coords="213,107,405,133"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#aa226265c140eb6ee375c5b9abc69c4fc" title="ImGui::EndMenuBar" alt="" coords="239,157,378,184"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#acd027458d7a062d3d3073339454624e3" title="ImGui::CollapseButton" alt="" coords="473,5,625,32"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ab92f330c808546b340eb7bdf7e5f7c95" title="ImGui::EndMainMenuBar" alt="" coords="465,157,632,184"/>
-</map>

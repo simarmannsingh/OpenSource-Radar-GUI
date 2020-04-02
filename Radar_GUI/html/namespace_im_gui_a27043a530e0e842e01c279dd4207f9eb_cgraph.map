@@ -1,6 +1,0 @@
-<map id="ImGui::SaveIniSettingsToMemory" name="ImGui::SaveIniSettingsToMemory">
-<area shape="rect" id="node2" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="237,5,354,32"/>
-<area shape="rect" id="node3" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="223,56,368,83"/>
-<area shape="rect" id="node4" href="$struct_im_gui_text_buffer.html#a2811fcd43e0224eb3bd0f3464b634289" title="ImGuiTextBuffer::size" alt="" coords="222,107,369,133"/>
-<area shape="rect" id="node5" href="$struct_im_gui_text_buffer.html#afb03439bc91723e274bfb9d247a691b9" title="ImGuiTextBuffer::c_str" alt="" coords="220,157,371,184"/>
-</map>

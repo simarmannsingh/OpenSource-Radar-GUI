@@ -1,5 +1,0 @@
-<map id="ImGui::PushColumnClipRect" name="ImGui::PushColumnClipRect">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="240,5,443,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a11c8bd8676e1281e15b24c9615b6904a" title="ImGui::PushClipRect" alt="" coords="270,56,413,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="491,56,664,83"/>
-</map>

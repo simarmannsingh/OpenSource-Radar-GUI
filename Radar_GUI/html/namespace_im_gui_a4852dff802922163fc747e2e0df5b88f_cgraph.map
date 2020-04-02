@@ -1,6 +1,0 @@
-<map id="ImGui::BeginMenuBar" name="ImGui::BeginMenuBar">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="397,5,571,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a42407e196b7ed2a8755bff28aae9805f" title="ImGui::BeginGroup" alt="" coords="203,31,335,57"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="215,81,322,108"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="383,81,585,108"/>
-</map>

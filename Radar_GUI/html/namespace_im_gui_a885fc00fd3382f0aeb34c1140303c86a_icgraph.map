@@ -1,8 +1,0 @@
-<map id="ImGui::InputScalarN" name="ImGui::InputScalarN">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#ad7b5c47b0ff982749dfdbe2e3d32b397" title="ImGui::InputFloat2" alt="" coords="192,5,320,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a654b614a653848b8fc9a4ad8d1fa4257" title="ImGui::InputFloat3" alt="" coords="192,56,320,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a2e45de8550d78834f6c9a0a16db4c38c" title="ImGui::InputFloat4" alt="" coords="192,107,320,133"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a4142cc4545d789d76d51dee61c959a03" title="ImGui::InputInt2" alt="" coords="199,157,313,184"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#ab02fc4a19ed153984d3585296e1c74b1" title="ImGui::InputInt3" alt="" coords="199,208,313,235"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ac714ecf202c82dc6caa0cbf344c85a13" title="ImGui::InputInt4" alt="" coords="199,259,313,285"/>
-</map>

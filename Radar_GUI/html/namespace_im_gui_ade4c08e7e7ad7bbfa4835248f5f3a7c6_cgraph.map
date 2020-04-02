@@ -1,7 +1,0 @@
-<map id="ImGui::FocusWindow" name="ImGui::FocusWindow">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a17ff60ad1e2669130ac38a04d16eb354" title="ImGui::ClearActiveID" alt="" coords="228,5,369,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#affe95a2dc969f0d15fbd4b588c94ac1a" title="ImGui::BringWindowToFocus\lFront" alt="" coords="203,57,394,98"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a1f7b95f36d03751c928af7b1b745e959" title="ImGui::BringWindowToDisplay\lFront" alt="" coords="200,122,397,163"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a27b8ace13a8c421ee8405f0cbebe4ead" title="ImGui::SetActiveID" alt="" coords="445,5,576,32"/>
-<area shape="rect" id="node5" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="455,96,566,123"/>
-</map>

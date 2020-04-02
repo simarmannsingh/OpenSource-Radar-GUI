@@ -1,9 +1,0 @@
-<map id="ImGui::AcceptDragDropPayload" name="ImGui::AcceptDragDropPayload">
-<area shape="rect" id="node2" href="$struct_im_gui_payload.html#a7864aeb80bc28683748d015562eead4d" title="ImGuiPayload::IsDataType" alt="" coords="260,5,436,32"/>
-<area shape="rect" id="node3" href="$struct_im_rect.html#afa75cb8491f20901c96166d17dcddac4" title="ImRect::GetWidth" alt="" coords="285,56,411,83"/>
-<area shape="rect" id="node4" href="$struct_im_rect.html#a748d8ae9cb26508951ec6e2f2df0625b" title="ImRect::GetHeight" alt="" coords="283,107,413,133"/>
-<area shape="rect" id="node5" href="$struct_im_rect.html#af33a7424c3341d08acd69da30c27c753" title="ImRect::Expand" alt="" coords="291,157,405,184"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="279,208,417,235"/>
-<area shape="rect" id="node8" href="$namespace_im_gui.html#a8ddf4d05de8ab8b9aa70906a22a9973e" title="ImGui::IsMouseDown" alt="" coords="275,259,421,285"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="484,201,657,242"/>
-</map>

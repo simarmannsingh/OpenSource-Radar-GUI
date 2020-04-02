@@ -1,5 +1,0 @@
-<map id="ImGui::UpdateMouseMovingWindow" name="ImGui::UpdateMouseMovingWindow">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a85a245c78a9f7c351636bdad6e60c488" title="ImGui::KeepAliveID" alt="" coords="261,5,395,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a22d482190e8f549d5904aded1c6f7778" title="ImGui::IsMousePosValid" alt="" coords="245,56,411,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#aee9b660c1d6786c00fc47c71c66eb1eb" title="ImGui::MarkIniSettingsDirty" alt="" coords="237,107,419,133"/>
-</map>

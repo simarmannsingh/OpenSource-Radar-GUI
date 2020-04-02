@@ -1,6 +1,0 @@
-<map id="ImGui::RenderMouseCursor" name="ImGui::RenderMouseCursor">
-<area shape="rect" id="node2" href="$struct_im_font_atlas.html#a6d27a36fe034851310dd00d7dc5253c3" title="ImFontAtlas::GetMouseCursor\lTexData" alt="" coords="236,5,435,47"/>
-<area shape="rect" id="node3" href="$struct_im_draw_list.html#a7ac41e329a9df911b4823ef0150cee16" title="ImDrawList::PushTextureID" alt="" coords="246,71,425,98"/>
-<area shape="rect" id="node4" href="$struct_im_draw_list.html#ac37cd998bf5f40705c7445004a029b66" title="ImDrawList::AddImage" alt="" coords="259,122,411,149"/>
-<area shape="rect" id="node5" href="$struct_im_draw_list.html#ade9286c5ca58753f7bd571b30e2ff76c" title="ImDrawList::PopTextureID" alt="" coords="249,173,421,199"/>
-</map>

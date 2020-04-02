@@ -1,9 +1,0 @@
-<map id="ImGui::VSliderInt" name="ImGui::VSliderInt">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a8cf70d5b37efd3571df69472bc9c92bb" title="ImGui::VSliderScalar" alt="" coords="173,81,316,108"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="364,5,537,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="380,56,521,83"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ac7b9a7399d9606b25278002303f545b6" title="ImGui::ItemSize" alt="" coords="393,107,508,133"/>
-<area shape="rect" id="node8" href="$namespace_im_gui.html#aa6e503009550f5e42d6eb4c146090929" title="ImGui::ItemAdd" alt="" coords="395,157,507,184"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="585,31,777,57"/>
-<area shape="rect" id="node6" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="603,81,759,108"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="stbrp_pack_rects" name="stbrp_pack_rects">
-<area shape="rect" id="node2" href="$imgui__internal_8h.html#a434a381598e3cdcefeff89f63803588a" title="ImFontAtlasBuildWithStbTruetype" alt="" coords="420,5,639,32"/>
-<area shape="rect" id="node4" href="$imgui__internal_8h.html#a229ee0ada86f9daf3e23ad313dfeb586" title="ImFontAtlasBuildPackCustom\lRects" alt="" coords="176,27,372,69"/>
-<area shape="rect" id="node3" href="$struct_im_font_atlas.html#a81e39e30dffa4dd7e458a53297451e27" title="ImFontAtlas::Build" alt="" coords="687,5,816,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="ImGui::BeginColumns" name="ImGui::BeginColumns">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="201,5,375,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="235,56,341,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#aba0b2d8f890a5d435ae43d0c4a2d4dd1" title="ImGui::PopID" alt="" coords="239,107,337,133"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="423,81,625,108"/>
-</map>

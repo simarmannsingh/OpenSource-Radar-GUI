@@ -1,8 +1,0 @@
-<map id="ExampleAppLog" name="ExampleAppLog">
-<area shape="rect" id="node2" href="$struct_im_gui_text_buffer.html" title="{ImGuiTextBuffer\n|+ EmptyString\l|+ ImGuiTextBuffer()\l+ operator[]()\l+ begin()\l+ end()\l+ size()\l+ empty()\l+ clear()\l+ reserve()\l+ c_str()\l+ appendf()\l+ appendfv()\l}" alt="" coords="5,564,140,788"/>
-<area shape="rect" id="node3" href="$class_im_vector.html" title="{ImVector\&lt; char \&gt;\n|+ Size\l+ Capacity\l+ Data\l|+ ImVector()\l+ ImVector()\l+ ~ImVector()\l+ operator=()\l+ empty()\l+ size()\l+ capacity()\l+ operator[]()\l+ operator[]()\l+ clear()\land 22 more...\l}" alt="" coords="7,233,130,487"/>
-<area shape="rect" id="node4" href="$struct_im_gui_text_filter.html" title="{ImGuiTextFilter\n|+ InputBuf\l+ CountGrep\l|+ ImGuiTextFilter()\l+ Draw()\l+ PassFilter()\l+ Build()\l+ Clear()\l+ IsActive()\l}" alt="" coords="173,593,303,759"/>
-<area shape="rect" id="node5" href="$class_im_vector.html" title="{ImVector\&lt; ImGuiTextFilter\l::TextRange \&gt;\n|+ Size\l+ Capacity\l|+ ImVector()\l+ ImVector()\l+ ~ImVector()\l+ operator=()\l+ empty()\l+ size()\l+ capacity()\l+ operator[]()\l+ operator[]()\l+ clear()\land 22 more...\l}" alt="" coords="155,233,329,487"/>
-<area shape="rect" id="node6" href="$struct_im_gui_text_filter_1_1_text_range.html" title="{ImGuiTextFilter::TextRange\n|+ b\l+ e\l|+ TextRange()\l+ TextRange()\l+ begin()\l+ end()\l+ empty()\l+ split()\l}" alt="" coords="152,5,332,171"/>
-<area shape="rect" id="node7" href="$class_im_vector.html" title="{ImVector\&lt; int \&gt;\n|+ Size\l+ Capacity\l+ Data\l|+ ImVector()\l+ ImVector()\l+ ~ImVector()\l+ operator=()\l+ empty()\l+ size()\l+ capacity()\l+ operator[]()\l+ operator[]()\l+ clear()\land 22 more...\l}" alt="" coords="327,549,439,803"/>
-</map>

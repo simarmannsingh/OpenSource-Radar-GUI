@@ -1,7 +1,0 @@
-<map id="ImGui::LogToFile" name="ImGui::LogToFile">
-<area shape="rect" id="node2" href="$imgui_8cpp.html#a59120cb7e606e96199c452c1e1c34c0f" title="ImFileOpen" alt="" coords="173,56,261,83"/>
-<area shape="rect" id="node3" href="$imgui_8cpp.html#ac2561e31f0de066ef0bb5bfbb541c8ae" title="ImTextCountCharsFromUtf8" alt="" coords="309,5,492,32"/>
-<area shape="rect" id="node5" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="342,56,459,83"/>
-<area shape="rect" id="node6" href="$imgui_8cpp.html#aeb054c43ad8aae45de24efc759a0ff7a" title="ImTextStrFromUtf8" alt="" coords="335,107,466,133"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#a036b9dd7f0942fd34e385cc115f36631" title="ImTextCharFromUtf8" alt="" coords="540,56,681,83"/>
-</map>

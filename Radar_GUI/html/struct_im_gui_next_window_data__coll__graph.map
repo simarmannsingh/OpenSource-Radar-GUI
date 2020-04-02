@@ -1,5 +1,0 @@
-<map id="ImGuiNextWindowData" name="ImGuiNextWindowData">
-<area shape="rect" id="node2" href="$struct_im_vec2.html" title="{ImVec2\n|+ x\l+ y\l|+ ImVec2()\l+ ImVec2()\l+ operator[]()\l}" alt="" coords="189,5,286,127"/>
-<area shape="rect" id="node3" href="$struct_im_rect.html" title="{ImRect\n||+ ImRect()\l+ ImRect()\l+ ImRect()\l+ ImRect()\l+ GetCenter()\l+ GetSize()\l+ GetWidth()\l+ GetHeight()\l+ GetTL()\l+ GetTR()\land 16 more...\l}" alt="" coords="184,219,291,443"/>
-<area shape="rect" id="node4" href="$struct_im_gui_size_callback_data.html" title="{ImGuiSizeCallbackData\n|+ UserData\l|}" alt="" coords="316,292,474,369"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="ImGuiColumnsSet" name="ImGuiColumnsSet">
-<area shape="rect" id="node2" href="$class_im_vector.html" title="{ImVector\&lt; ImGuiColumnData \&gt;\n|+ Size\l+ Capacity\l|+ ImVector()\l+ ImVector()\l+ ~ImVector()\l+ operator=()\l+ empty()\l+ size()\l+ capacity()\l+ operator[]()\l+ operator[]()\l+ clear()\land 22 more...\l}" alt="" coords="5,660,208,899"/>
-<area shape="rect" id="node3" href="$struct_im_gui_column_data.html" title="{ImGuiColumnData\n|+ OffsetNorm\l+ OffsetNormBeforeResize\l+ Flags\l|+ ImGuiColumnData()\l}" alt="" coords="19,491,195,597"/>
-<area shape="rect" id="node4" href="$struct_im_rect.html" title="{ImRect\n||+ ImRect()\l+ ImRect()\l+ ImRect()\l+ ImRect()\l+ GetCenter()\l+ GetSize()\l+ GetWidth()\l+ GetHeight()\l+ GetTL()\l+ GetTR()\land 16 more...\l}" alt="" coords="53,204,160,428"/>
-<area shape="rect" id="node5" href="$struct_im_vec2.html" title="{ImVec2\n|+ x\l+ y\l|+ ImVec2()\l+ ImVec2()\l+ operator[]()\l}" alt="" coords="58,5,155,127"/>
-</map>

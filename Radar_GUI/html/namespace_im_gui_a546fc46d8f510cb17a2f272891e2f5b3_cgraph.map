@@ -1,7 +1,0 @@
-<map id="ImGui::OpenPopupOnItemClick" name="ImGui::OpenPopupOnItemClick">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#aef586112e8d1eb26ce28198d9efe9bba" title="ImGui::IsMouseReleased" alt="" coords="256,5,423,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#ac9a400eff3a9561d95e80486c52a660b" title="ImGui::IsItemHovered" alt="" coords="267,56,412,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a6ce26d34d09c7657d7abd8e28cbb1b85" title="ImGui::OpenPopupEx" alt="" coords="265,107,413,133"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#add3290865a67327258c3a32b695adb28" title="ImGui::IsItemFocused" alt="" coords="471,56,620,83"/>
-<area shape="rect" id="node6" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="490,107,601,133"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="ImGui::StyleColorsDark" name="ImGui::StyleColorsDark">
-<area shape="rect" id="node2" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="249,5,350,32"/>
-<area shape="rect" id="node4" href="$struct_im_gui_style.html#ab0a3ffb3aeec3e6b09b9bde812b28369" title="ImGuiStyle::ImGuiStyle" alt="" coords="220,56,379,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a83f4e863c102b0a05e0e3308b371b394" title="ImGui::ShowStyleSelector" alt="" coords="212,107,387,133"/>
-<area shape="rect" id="node3" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="489,5,540,32"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="435,107,595,133"/>
-</map>

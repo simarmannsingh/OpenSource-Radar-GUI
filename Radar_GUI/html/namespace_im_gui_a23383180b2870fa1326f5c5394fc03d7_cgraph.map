@@ -1,5 +1,0 @@
-<map id="ImGui::RenderArrow" name="ImGui::RenderArrow">
-<area shape="rect" id="node2" href="$struct_im_draw_list.html#a2395370cf2dab19fce3c0e2542cd4f25" title="ImDrawList::AddTriangleFilled" alt="" coords="192,5,385,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a0de2d9bd347d9866511eb8d014e62556" title="ImGui::GetColorU32" alt="" coords="219,56,358,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#abe2691de0b1a71c774ab24cc91564a94" title="ImGui::ColorConvertFloat4\lToU32" alt="" coords="433,49,607,90"/>
-</map>

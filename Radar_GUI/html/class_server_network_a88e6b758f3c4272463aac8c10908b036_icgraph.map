@@ -1,5 +1,0 @@
-<map id="ServerNetwork::acceptNewClient" name="ServerNetwork::acceptNewClient">
-<area shape="rect" id="node2" href="$class_remote_server.html#a3db7209565922096aa27128c011c476b" title="RemoteServer::update" alt="" coords="231,13,381,39"/>
-<area shape="rect" id="node3" href="$radar_8cpp.html#a4cbb697f5ceabed39aa904c5045ac181" title="serverLoop" alt="" coords="429,13,513,39"/>
-<area shape="rect" id="node4" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="561,13,612,39"/>
-</map>

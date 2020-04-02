@@ -1,6 +1,0 @@
-<map id="ImGui::InputScalar" name="ImGui::InputScalar">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#af10a28bbd9577edd54849516819872f5" title="ImGui::InputFloat" alt="" coords="188,5,309,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a8b5e9de08c18d6053d2f718b99be94a6" title="ImGui::InputInt" alt="" coords="195,56,302,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a1c3c95609588b324e21ce0c7a549025f" title="ImGui::InputDouble" alt="" coords="183,107,315,133"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a15edd4acce19b15d9309d3cab51445be" title="ImGui::InputFloat" alt="" coords="363,5,484,32"/>
-</map>

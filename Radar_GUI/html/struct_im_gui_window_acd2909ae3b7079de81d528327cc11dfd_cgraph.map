@@ -1,9 +1,0 @@
-<map id="ImGuiWindow::ImGuiWindow" name="ImGuiWindow::ImGuiWindow">
-<area shape="rect" id="node2" href="$imgui_8cpp.html#a079f29569de5779052f1fbf3dd283e0f" title="ImStrdup" alt="" coords="279,5,354,32"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="471,69,537,96"/>
-<area shape="rect" id="node5" href="$class_im_vector.html#a68387993f2a5f5c3b2a7139d9ab778b8" title="ImVector::push_back" alt="" coords="244,107,389,133"/>
-<area shape="rect" id="node6" href="$struct_im_gui_window.html#a66400a63bc0b54d7d29e08d1b1b1a42b" title="ImGuiWindow::GetID" alt="" coords="245,157,388,184"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#aed896913f2e140cd0ad7431060dba50b" title="ImGui::MemAlloc" alt="" coords="443,5,565,32"/>
-<area shape="rect" id="node7" href="$class_im_vector.html#a3e4424d3fca190894598a6575f9d2401" title="ImVector::back" alt="" coords="449,132,559,159"/>
-<area shape="rect" id="node8" href="$namespace_im_gui.html#a85a245c78a9f7c351636bdad6e60c488" title="ImGui::KeepAliveID" alt="" coords="437,183,571,209"/>
-</map>

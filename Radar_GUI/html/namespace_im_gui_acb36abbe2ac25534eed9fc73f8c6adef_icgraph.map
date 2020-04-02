@@ -1,8 +1,0 @@
-<map id="ImGui::SetNavID" name="ImGui::SetNavID">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a91892871e19fba553a0f81e2cc49b0d3" title="ImGui::SetNavIDWithRectRel" alt="" coords="171,5,361,32"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#ae46a79d836c4b223c7030ea432e3ec15" title="ImGui::NavInitWindow" alt="" coords="192,56,340,83"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a41ecf265e5f678c78fc9c30b3cf2077f" title="ImGui::TreePop" alt="" coords="210,107,322,133"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#aa226265c140eb6ee375c5b9abc69c4fc" title="ImGui::EndMenuBar" alt="" coords="433,5,571,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#ab92f330c808546b340eb7bdf7e5f7c95" title="ImGui::EndMainMenuBar" alt="" coords="643,5,809,32"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#afe7a28c6eb52fff3cc27d5a698fea4ff" title="ImGui::ShowMetricsWindow" alt="" coords="409,107,595,133"/>
-</map>

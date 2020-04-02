@@ -1,6 +1,0 @@
-<map id="ImGuiListClipper::ImGuiListClipper" name="ImGuiListClipper::ImGuiListClipper">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a581e58db0bc930bafa4a5d23093a2b99" title="ImGui::Begin" alt="" coords="233,31,331,57"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#abca25f22c02e73d5eb2e9c72c4557813" title="ImGui::FindWindowByName" alt="" coords="379,31,564,57"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="665,5,732,32"/>
-<area shape="rect" id="node5" href="$struct_im_gui_storage.html#aaf87a98ede89da09113b0189f6d878ca" title="ImGuiStorage::GetVoidPtr" alt="" coords="612,56,785,83"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="ImGuiListClipper::Begin" name="ImGuiListClipper::Begin">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a86e409551f256b542166989c558d41c1" title="ImGui::GetCursorPosY" alt="" coords="213,5,368,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#ae5319370628374ef8febf0c25c285b7e" title="ImGui::CalcListClipping" alt="" coords="212,56,369,83"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="417,5,620,32"/>
-<area shape="rect" id="node5" href="$struct_im_rect.html#a68996cb6b16a023f0a051981cd5be89e" title="ImRect::Add" alt="" coords="471,56,566,83"/>
-</map>

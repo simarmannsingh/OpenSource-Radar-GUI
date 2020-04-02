@@ -1,8 +1,0 @@
-<map id="ImGuiFreeType::BuildFontAtlas" name="ImGuiFreeType::BuildFontAtlas">
-<area shape="rect" id="node2" href="$imgui__draw_8cpp.html#a1c06e6e488c5f6034ebec7b6a84ce205" title="ImFontAtlasBuildRegister\lDefaultCustomRects" alt="" coords="231,5,401,47"/>
-<area shape="rect" id="node4" href="$struct_im_font_atlas.html#a3ede4bd513bec044c77ac392ad9c6e86" title="ImFontAtlas::ClearTexData" alt="" coords="227,71,405,98"/>
-<area shape="rect" id="node6" href="$class_im_vector.html#ac371dd62e56ae486b1a5038cf07eee56" title="ImVector::resize" alt="" coords="257,122,375,149"/>
-<area shape="rect" id="node7" href="$struct_im_font.html#a97dafa61cc94e84be396d69b0d42b1ce" title="ImFont::IsLoaded" alt="" coords="255,173,377,199"/>
-<area shape="rect" id="node3" href="$struct_im_font_atlas.html#ac51952803d2205f28ca9fc996c5f6243" title="ImFontAtlas::AddCustomRect\lRegular" alt="" coords="453,5,648,47"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a269ec695c6e722ec3da85dae37f0675d" title="ImGui::MemFree" alt="" coords="491,71,610,98"/>
-</map>

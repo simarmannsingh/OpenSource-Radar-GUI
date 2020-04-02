@@ -1,9 +1,0 @@
-<map id="ImGui::LogRenderedText" name="ImGui::LogRenderedText">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a9971ce57f2a288ac3a12df886c5550d1" title="ImGui::RenderText" alt="" coords="245,31,375,57"/>
-<area shape="rect" id="node8" href="$namespace_im_gui.html#aa483b40f6899e1b289b4bf6c2673d1d2" title="ImGui::RenderTextWrapped" alt="" coords="219,81,401,108"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a55e5a7edb676a8f5cd7f65443138a8a0" title="ImGui::LabelTextV" alt="" coords="454,5,583,32"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#aa895095bdc7a2907375c555e245575ea" title="ImGui::BeginCombo" alt="" coords="449,56,588,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#ad92ccfbc33d448ff40cfcf9219177344" title="ImGui::LabelText" alt="" coords="661,5,781,32"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a0bdce99eef17ef1e1fef40a18bd811ab" title="ImGui::ShowFontSelector" alt="" coords="636,56,807,83"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="855,56,1015,83"/>
-</map>

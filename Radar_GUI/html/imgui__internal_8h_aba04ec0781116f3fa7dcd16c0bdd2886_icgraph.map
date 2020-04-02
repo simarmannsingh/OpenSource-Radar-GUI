@@ -1,6 +1,0 @@
-<map id="ImStrncpy" name="ImStrncpy">
-<area shape="rect" id="node2" href="$struct_im_gui_text_filter.html#a0a61ee76f0b4f3c354791734b06e3140" title="ImGuiTextFilter::ImGuiText\lFilter" alt="" coords="149,5,326,47"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#adc77aecd872e578e347d8bc0dfcfa663" title="ImGui::SetDragDropPayload" alt="" coords="145,71,330,98"/>
-<area shape="rect" id="node4" href="$imgui__widgets_8cpp.html#ad17a4782d9cc3e3a20600ed35b5608e4" title="ImParseFormatTrimDecorations" alt="" coords="135,122,340,149"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#ad724ab94c8aff2440c6a1b58ae7b2334" title="ImGui::InputScalarAsWidget\lReplacement" alt="" coords="388,115,575,156"/>
-</map>

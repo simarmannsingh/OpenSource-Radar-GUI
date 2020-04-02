@@ -1,4 +1,0 @@
-<map id="NetworkServices::receiveMessage" name="NetworkServices::receiveMessage">
-<area shape="rect" id="node2" href="$class_server_network.html#a51b2272cbdf4f723c105ed08384772da" title="ServerNetwork::receiveData" alt="" coords="220,13,400,39"/>
-<area shape="rect" id="node3" href="$class_remote_server.html#a4e2bc7c80cd666ad3ad9126c3ffee844" title="RemoteServer::receiveFrom\lClients" alt="" coords="448,5,629,47"/>
-</map>

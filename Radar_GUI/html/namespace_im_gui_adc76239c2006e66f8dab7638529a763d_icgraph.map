@@ -1,5 +1,0 @@
-<map id="ImGui::RenderFrameBorder" name="ImGui::RenderFrameBorder">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#aa895095bdc7a2907375c555e245575ea" title="ImGui::BeginCombo" alt="" coords="233,5,372,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a0bdce99eef17ef1e1fef40a18bd811ab" title="ImGui::ShowFontSelector" alt="" coords="420,5,591,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#ab2eb3dec78d054fe3feab1c091ec5de5" title="ImGui::ShowStyleEditor" alt="" coords="639,5,799,32"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="ImGui::BeginPopup" name="ImGui::BeginPopup">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a6bfb117816d669f8704e5d0c0c0795fe" title="ImGui::ColorEditOptionsPopup" alt="" coords="188,5,387,32"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a6d112eeb6d8ffdebbc9d9a8c66babbee" title="ImGui::ColorPickerOptions\lPopup" alt="" coords="199,57,375,98"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#ac3f45e2aa0b1d591cc8a2cdf8b566a45" title="ImGui::ColorEdit4" alt="" coords="442,5,566,32"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a5afe76ba1c91f07363e40396e7df656e" title="ImGui::ColorEdit3" alt="" coords="629,5,753,32"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a3d5aae9e0a14aa051d5a799abbe97b32" title="ImGui::ColorPicker4" alt="" coords="435,64,573,91"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#a2a2a98cb9a17b18702be6b954670b388" title="ImGui::ColorPicker3" alt="" coords="621,64,760,91"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="ImRect::GetCenter" name="ImRect::GetCenter">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a5e8e4df6418dcda3c4c5d15ecdf7d968" title="ImGui::CloseButton" alt="" coords="193,5,327,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#acd027458d7a062d3d3073339454624e3" title="ImGui::CollapseButton" alt="" coords="184,56,336,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a6b146763845cbad5a4144772279631bc" title="ImGui::RadioButton" alt="" coords="193,107,327,133"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a018d2b61d2f00bb7a9dd2b1f933b93a5" title="ImGui::RadioButton" alt="" coords="416,81,551,108"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a6bfb117816d669f8704e5d0c0c0795fe" title="ImGui::ColorEditOptionsPopup" alt="" coords="384,132,583,159"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#ac3f45e2aa0b1d591cc8a2cdf8b566a45" title="ImGui::ColorEdit4" alt="" coords="631,132,755,159"/>
-<area shape="rect" id="node8" href="$namespace_im_gui.html#a5afe76ba1c91f07363e40396e7df656e" title="ImGui::ColorEdit3" alt="" coords="803,132,927,159"/>
-</map>

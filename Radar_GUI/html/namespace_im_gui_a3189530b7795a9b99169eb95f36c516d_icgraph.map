@@ -1,7 +1,0 @@
-<map id="ImGui::BeginTooltipEx" name="ImGui::BeginTooltipEx">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a36816a48385f4759d746a03cf6202512" title="ImGui::BeginTooltip" alt="" coords="204,56,339,83"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a3826acf68fc4a12bb66401575f51d6a2" title="ImGui::SetTooltipV" alt="" coords="417,5,548,32"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#afad90b366b6471e3b13175c0ebeb26c8" title="ImGui::ColorTooltip" alt="" coords="205,107,337,133"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#ac2609b0f034d3bcd8d70d26df8694eaa" title="ImGui::BeginDragDropSource" alt="" coords="387,56,579,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a313073fa01b8a9791f241ef93091ce92" title="ImGui::SetTooltip" alt="" coords="627,5,749,32"/>
-</map>

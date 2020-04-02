@@ -1,6 +1,0 @@
-<map id="Shader_s::use" name="Shader_s::use">
-<area shape="rect" id="node2" href="$class_font_renderer.html#adaedb69de45aa987661d83539b0d4ed8" title="FontRenderer::RenderText" alt="" coords="160,5,335,32"/>
-<area shape="rect" id="node3" href="$class_font_renderer.html#aa3830287fab6a8da56cde9c84aaf9032" title="FontRenderer::FontInit" alt="" coords="172,56,323,83"/>
-<area shape="rect" id="node4" href="$graphics_8h.html#a5cd48f226b7c6246608da40117650544" title="glRenderLoop" alt="" coords="383,56,484,83"/>
-<area shape="rect" id="node5" href="$radar_8cpp.html#a17c71e8de8c58645dd41431d716ac739" title="main" alt="" coords="532,56,583,83"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="ImGui::CollapsingHeader" name="ImGui::CollapsingHeader">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="435,5,608,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a918eabf70d288e93b2519ee1eac2c0b4" title="ImGui::TreeNodeBehavior" alt="" coords="219,56,387,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a7671e1dbc803a31b06081b52a771d83f" title="ImGui::FindRenderedTextEnd" alt="" coords="656,56,848,83"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a848b9db6cc4a186751c0ecebcaadc33b" title="ImGui::CalcTextSize" alt="" coords="451,107,592,133"/>
-<area shape="rect" id="node6" href="$struct_im_font.html#ad67f64fd206ad197f4b93b1a1ae27cfe" title="ImFont::CalcTextSizeA" alt="" coords="674,107,830,133"/>
-</map>

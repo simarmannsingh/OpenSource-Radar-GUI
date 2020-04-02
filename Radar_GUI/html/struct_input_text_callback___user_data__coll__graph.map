@@ -1,3 +1,0 @@
-<map id="InputTextCallback_UserData" name="InputTextCallback_UserData">
-<area shape="rect" id="node2" href="$struct_im_gui_input_text_callback_data.html" title="{ImGuiInputTextCallbackData\n|+ EventFlag\l+ Flags\l+ UserData\l+ EventChar\l+ EventKey\l+ Buf\l+ BufTextLen\l+ BufSize\l+ BufDirty\l+ CursorPos\l+ SelectionStart\l+ SelectionEnd\l|+ ImGuiInputTextCallbackData()\l+ DeleteChars()\l+ InsertChars()\l+ HasSelection()\l}" alt="" coords="5,5,212,288"/>
-</map>

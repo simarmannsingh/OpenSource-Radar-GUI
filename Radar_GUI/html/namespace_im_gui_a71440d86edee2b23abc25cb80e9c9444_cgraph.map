@@ -1,6 +1,0 @@
-<map id="ImGui::TreePush" name="ImGui::TreePush">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a7ceba68eca2b09fb6bf1ad88037e6203" title="ImGui::GetCurrentWindow" alt="" coords="341,5,515,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a6c7b9f2d60951462eeebad80154a8926" title="ImGui::Indent" alt="" coords="176,31,275,57"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a27a8533605dc5b8cabf161bf7715bbde" title="ImGui::PushID" alt="" coords="172,81,279,108"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a408f9ddac92f8629a7e273ced5f8c3aa" title="ImGui::GetCurrentWindowRead" alt="" coords="327,81,529,108"/>
-</map>

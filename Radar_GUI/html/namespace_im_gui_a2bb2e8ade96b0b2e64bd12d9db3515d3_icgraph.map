@@ -1,8 +1,0 @@
-<map id="ImGui::SliderScalarN" name="ImGui::SliderScalarN">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a663988b63d70d864e3acfe51f5be602c" title="ImGui::SliderFloat2" alt="" coords="196,5,329,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a946f179f439f8b94a2c4145d8050d5af" title="ImGui::SliderFloat3" alt="" coords="196,56,329,83"/>
-<area shape="rect" id="node4" href="$namespace_im_gui.html#a87b3572fa26313a1d3fc5f755e6b7dbb" title="ImGui::SliderFloat4" alt="" coords="196,107,329,133"/>
-<area shape="rect" id="node5" href="$namespace_im_gui.html#a4d65e19b43b2f70d22e47cac3130cddd" title="ImGui::SliderInt2" alt="" coords="203,157,322,184"/>
-<area shape="rect" id="node6" href="$namespace_im_gui.html#a36ecf351f979f7c2c5498846c0cf0b12" title="ImGui::SliderInt3" alt="" coords="203,208,322,235"/>
-<area shape="rect" id="node7" href="$namespace_im_gui.html#a3d98443b7e6844aaae3f90348c4d3499" title="ImGui::SliderInt4" alt="" coords="203,259,322,285"/>
-</map>

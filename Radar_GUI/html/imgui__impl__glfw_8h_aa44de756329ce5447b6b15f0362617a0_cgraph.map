@@ -1,5 +1,0 @@
-<map id="ImGui_ImplGlfw_CharCallback" name="ImGui_ImplGlfw_CharCallback">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a3179e560812f878f3961ce803a5d9302" title="ImGui::GetIO" alt="" coords="292,5,391,32"/>
-<area shape="rect" id="node3" href="$struct_im_gui_i_o.html#a52b6bdef9278de5ae2031311a269cf14" title="ImGuiIO::AddInputCharacter" alt="" coords="249,56,433,83"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#a66b44f8391ea7cba388700e4991a4859" title="ImStrlenW" alt="" coords="481,56,564,83"/>
-</map>

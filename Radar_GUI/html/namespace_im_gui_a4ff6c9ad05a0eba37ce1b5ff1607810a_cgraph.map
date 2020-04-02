@@ -1,5 +1,0 @@
-<map id="ImGui::CreateContext" name="ImGui::CreateContext">
-<area shape="rect" id="node2" href="$namespace_im_gui.html#a289dbbbffdadcf1231821d97a7c4a9be" title="ImGui::SetCurrentContext" alt="" coords="200,5,371,32"/>
-<area shape="rect" id="node3" href="$namespace_im_gui.html#a2e1fd6aabbb02f367fd6aee248506782" title="ImGui::Initialize" alt="" coords="230,56,341,83"/>
-<area shape="rect" id="node4" href="$imgui_8cpp.html#aa55e55e944172fc87494a342da489970" title="ImHash" alt="" coords="419,56,485,83"/>
-</map>
