@@ -22,32 +22,33 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{6F5B9B3C-8B00-45AC-8030-0EF9236147AE}</ProjectGuid>
     <RootNamespace>RadarGUI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Sample GUI Application</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -97,6 +98,9 @@
     <Link>
       <AdditionalLibraryDirectories>C:\Users\simar\source\repos\Baisc OpenGL example\Radar_GUI\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;shell32.lib;freetype.lib;pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <SubSystem>NotSet</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,7 +152,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ClientNetwork.cpp" />
     <ClCompile Include="FontRenderer.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="graphics.cpp" />
@@ -160,13 +163,8 @@
     <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="include\gl3w\GL\gl3w.c" />
     <ClCompile Include="IndexBuffer.cpp" />
-    <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="NetworkServices.cpp" />
     <ClCompile Include="radar.cpp" />
-    <ClCompile Include="RemoteClient.cpp" />
-    <ClCompile Include="RemoteServer.cpp" />
     <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="ServerNetwork.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -174,7 +172,6 @@
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ClientNetwork.h" />
     <ClInclude Include="FontRenderer.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="imconfig.h" />
@@ -187,15 +184,7 @@
     <ClInclude Include="include\gl3w\GL\glcorearb.h" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="linmath.h" />
-    <ClInclude Include="Logger.h" />
-    <ClInclude Include="NetworkData.h" />
-    <ClInclude Include="NetworkServices.h" />
-    <ClInclude Include="pthread.h" />
-    <ClInclude Include="RadarFunc.h" />
-    <ClInclude Include="RemoteClient.h" />
-    <ClInclude Include="RemoteServer.h" />
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="ServerNetwork.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="shader_s.h" />
     <ClInclude Include="stb_image.h" />
@@ -203,15 +192,11 @@
     <ClInclude Include="VertexArray.h" />
     <ClInclude Include="VertexBuffer.h" />
     <ClInclude Include="VertexBufferLayout.h" />
-    <ClInclude Include="winsock.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\Basic.shader" />
     <None Include="res\shaders\text.frag" />
     <None Include="res\shaders\text.vs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\images\hf.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

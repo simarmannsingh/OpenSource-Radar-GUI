@@ -1,12 +1,11 @@
 /*
  -------------------------------------------------------------------------------------------------------------------------------------------
-
  Author			:	Simar Mann Singh
- Department		:	High Frequency Department, TF
- Date			:	28/08/2018
-
+ Creation Date	:	28/08/2018
  -------------------------------------------------------------------------------------------------------------------------------------------
 */
+
+#include "graphics.h"
 
 /*
 CODE
@@ -24,8 +23,6 @@ CODE
 // [SEGMENT] ANIMATING SIGNAL ON INFORMATION TAB
 */
 
-#include "graphics.h"
-
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] VARIABLE DECLARATIONS
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -39,8 +36,7 @@ static bool InfoButton		= FALSE;
 static bool ScreenOverlayFlag = TRUE;
 static bool infoFlag        = FALSE;
 static bool animate         = FALSE;
-bool show_demo_window		= TRUE;																			
-
+bool show_demo_window		= TRUE;
 
 int width = 200;
 int height = 200;
@@ -48,15 +44,14 @@ int height = 200;
 int Screen_width = 800;
 int Screen_height = 800;
 								
-// Variables for Radar PPI display
-float centerX = 320.0;
-float centerY = 240.0;
-float PI_180 = M_PI / 180.0f;
-float radius = (centerX < centerY) ? centerX : centerY;
-float rad_64 = radius / 64;
-float rad_3 = radius / 3;
+// Variables for Radar Plan Position Indicator (PPI) display 
+//float centerX = 320.0;
+//float centerY = 240.0;
+//float PI_180 = M_PI / 180.0f;
+//float radius = (centerX < centerY) ? centerX : centerY;
+//float rad_64 = radius / 64;
+//float rad_3 = radius / 3;
 
-// Variables for ImGui
 const char* glsl_version = "#version 130";																
 static int counter = 0;																					
 																		
@@ -70,9 +65,7 @@ static int corner = 1;
 
 static float Slider1 = 0.0f;																					
 static float Slider2 = 0.0f;																					
-static float Slider3 = 0.0f;																					
-
-
+static float Slider3 = 0.0f;																	
 
 // Variables for FreeType fonts
 FontRenderer FR;
@@ -80,7 +73,6 @@ Shader_s font_shader;
 GLuint va_font, vb_font;
 
 const int v_corners = 80;
-
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] FUNCTION DECLARATIONS
@@ -91,17 +83,14 @@ GLFWwindow* glCreateWindow();															// To create an empty window of size
 int glRenderLoop(GLFWwindow* window);													// To render every graphical entity in the window created
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);		// To enable Keyboard Input to system using system callbacks
 void error_callback(int error, const char* description);								// To enable error reporting using error callbacks
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);				// Callback for any change in the position/size of the generated window
 void screenOverlay(bool* p_open, int corner);											// Enabling screen Overlay to design the information tab. Funciton called from Render Loop
 void renderGraph();																		// Animating signal, represented on the Information Tab. Function invoked from Render Loop
-
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] GLFW AND OPENGL INITIALIZATION 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 void glInitialize()
-{
-	
+{	
 	// Initializing GLFW Library and setting minimum required version to OpenGL 3.3
 	
 	// GLFW Initialization
@@ -115,11 +104,9 @@ void glInitialize()
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);										// defines the version of the openGL used 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);						// We are using <<---OPENGL_CORE--->> Profile
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);						// We are using <<-OPENGL_CORE->> Profile
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-	printf("GLFW initialization completed successfully\n");
-
-	
+	printf("GLFW initialization completed successfully\n");	
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -130,7 +117,7 @@ GLFWwindow* glCreateWindow()
 	// To create an empty window of size 1080 x 720 and initialize Glad library 
 	// Registering Interrupt function calls using callbacks
 	glfwSetErrorCallback(error_callback);	
-	GLFWwindow* window = glfwCreateWindow(1080, 720, "Radar - HF dept TF", NULL, NULL);	// creating a window 1080x720 in size			--->> 800 x 600
+	GLFWwindow* window = glfwCreateWindow(1080, 720, "Sample GUI Application", NULL, NULL);	// creating a window 1080x720 in size			--->> 800 x 600
 	if (window == NULL)
 	{
 		printf("Failed at creating window\n");
@@ -141,7 +128,7 @@ GLFWwindow* glCreateWindow()
 	printf("Window Creation completed successfully\n");
 	
 	// Make the window's context current 
-	glfwMakeContextCurrent(window);														//making context of our window the main context on the current thread
+	glfwMakeContextCurrent(window);												  //making context of our window the main context on the current thread
 	glfwSwapInterval(1);
 
 	//  GLAD Initialization
@@ -154,13 +141,12 @@ GLFWwindow* glCreateWindow()
 	printf("GLAD Initialization completed successfully\n");
 	glfwSetKeyCallback(window, key_callback);
 	//glfwSetInputMode(window, GLFW_STICKY_KEYS, 1);
-
 	return window;
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] MAIN RENDER LOOP 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------
 int glRenderLoop(GLFWwindow* window)
 {
 	/*
@@ -169,29 +155,30 @@ int glRenderLoop(GLFWwindow* window)
 	 -------------------------------------------------------------------------------------------------------------------------------------------
 	*/
 	
-		static float vertices[] = {											// vertices - vertex data for rectangle
+		static float vertices[] = {												// vertices - vertex data for rectangle
 			-1.0f,		-1.0f,   0.0f,   0.0f,		// vetex 1
 			 1.0f,		-1.0f,   1.0f,   0.0f,		// vetex 2 
 			 1.0f,	    1.0f,    1.0f,   1.0f,		// vetex 3
 			-1.0f,		1.0f,    0.0f,   1.0f		// vetex 4
 		};
 
-		static float vertices_tri[] = {											// vertices - vertex data for rectangle
+		static float vertices_tri[] = {											// vertices - vertex data for triangle
 			-1.0f,		-1.0f,   0.0f,   0.0f,		// vetex 1
 			 1.0f,		-1.0f,   1.0f,   0.0f,		// vetex 2 
 			 0.0f,	    1.0f,    1.0f,   1.0f,		// vetex 3		
 		};
 
-		GLfloat vertices_PPI[v_corners][2];									//vertices_PPI - vertex data for Circle		
+		//vertices_PPI - vertex data for creating a Circle
+		GLfloat vertices_PPI[v_corners][2];										
 		GLfloat angle = 0.0;
-		GLfloat radius = 1.0;
+		unsigned int radius = 1.0;
 
-		for (int i = 0; i < v_corners; i++)									// Initializing the vertex_PPI vector 
+		// Initializing the vertices_PPI vector (adding values to that array)
+		for (int i = 0; i < v_corners; i++)										 
 		{
 			angle = (GLfloat)(i * 2 * 3.14 / v_corners);
 			vertices_PPI[i][0] = radius * cos(angle);
 			vertices_PPI[i][1] = radius * sin(angle);
-
 		}
 
 		unsigned int indices[] = {
@@ -217,13 +204,7 @@ int glRenderLoop(GLFWwindow* window)
 			0, 11, 12,
 			0, 12, 1,
 		};
-		/*
-		float texCoord[] = {
-			0.0f, 0.0f,		//Lower-left corner
-			1.0f, 0.0f,		//Lower-Right corner
-			0.5f, 1.0f,		//top-center corner
-		};
-		*/
+		
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -287,17 +268,13 @@ int glRenderLoop(GLFWwindow* window)
 		Texture texture("res/images/diamond.png");
 		texture.bind();
 		//shader.unBind();
-		 
 
-
-	//	FONT RENDERING USING FREETYPE LIBRARY
-			
+		//	FONT RENDERING USING FREETYPE LIBRARY			
 		// Initialize the FreeType fonts
 		font_shader = FR.FontInit();
 		FR.FontSetup();
 
 		// Configure va_font/vb_font for texture quads
-
 		glGenVertexArrays(1, &va_font);
 		glGenBuffers(1, &vb_font);
 		glBindVertexArray(va_font);
@@ -308,32 +285,28 @@ int glRenderLoop(GLFWwindow* window)
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		glBindVertexArray(0);
 		
-	//  ImGUI Setup  
-	 
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
-	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;  // Enable Keyboard Controls
+		//  ImGUI Setup  	 
+		IMGUI_CHECKVERSION();
+		ImGui::CreateContext();
+		ImGuiIO& io = ImGui::GetIO(); (void)io;
+		io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;  // Enable Keyboard Controls
 
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init(glsl_version);
+		ImGui_ImplGlfw_InitForOpenGL(window, true);
+		ImGui_ImplOpenGL3_Init(glsl_version);
 
-	ImGui::StyleColorsDark();
-		
+		ImGui::StyleColorsDark();		
 
-	//  TRANSLATION MATRIX
-
-	{
-		
+	//  TRANSLATION MATRIX             
+	//  todo- messed up this old code. Rectify it
+	{		
 		glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
 		glm::mat4 trans(1);
-		std::cout << "Before  :::  \nvec.x  : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
+		std::cout << "Before\n================\nvec.x : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
 		trans = glm::translate(trans, glm::vec3(1.0f, 1.0f, 0.0f));
 		vec = trans * vec;
 		//trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
 		//trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
-		std::cout << "After  :::   ---> vec.x  : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
-
+		std::cout << "\nAfter \n================\nvec.x : " << vec.x << std::endl << "vec.y : " << vec.y << std::endl << "vec.z : " << vec.z << std::endl;
 
 		glm::mat4 transform;
 		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
@@ -536,21 +509,20 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	{
 		if (!flag_CFAR)
 		{
-			printf("CFAR ON\n");
+			printf("Option1 ON\n");
 			flag_CFAR = TRUE;
 
 		}
 		else
 		{
-			printf("CFAR OFF\n");
+			printf("Option1 OFF\n");
 			flag_CFAR = FALSE;
 		}
 	}
 	switch (key)
 	{
 	case GLFW_KEY_0:	printf("key zero pressed. \n"); 
-			break;
-	
+		break;	
 	case GLFW_KEY_D:	printf("Coherent Activated. \n");
 		break;
 	case GLFW_KEY_A:	printf("Incoherent Activated. \n");
@@ -564,7 +536,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 	case GLFW_KEY_ESCAPE: printf("ESCAPE Key pressed. \n");
 		glfwSetWindowShouldClose(window, GLFW_TRUE);
 		break;
-	default: printf("OUT OF SYLLABUS Key pressed. \n");
+	default: printf("Unknown Key pressed. Please use only D/E/F or Esc keys. Refer Manual for details.\n");
 		break;
 	}
 
@@ -581,14 +553,6 @@ void error_callback(int error, const char* description)
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-// [SEGMENT] CHANGING SCREENSIZE USING CALLBACK
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)			
-{
-	glViewport(0, 0, width, height);
-}
-
-//-------------------------------------------------------------------------------------------------------------------------------------------------
 // [SEGMENT] DESIGNING SCREENOVERLAY TO RENDER INFORMATION TAB ON SCREEN
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 void screenOverlay(bool* p_open, int corner)
@@ -601,7 +565,8 @@ void screenOverlay(bool* p_open, int corner)
 	ImGui::SetNextWindowBgAlpha(0.3f); // Transparent background
 	if (ImGui::Begin("Example: Simple Overlay", p_open, (corner != -1 ? ImGuiWindowFlags_NoMove : 0) | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav))
 	{
-		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "STATUS");
+		// All these options can be changed as per the requirement.
+		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "STATUS (Change this as per requirements)");
 		ImGui::Separator();
 		if (!flag_connect)
 		{
@@ -630,9 +595,13 @@ void screenOverlay(bool* p_open, int corner)
 		{
 			ImGui::Text("CFAR Mode	      : ON       \n");
 		}
-		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Signal Reception");
+		ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1.0f), "Signal Reception (Sample Stats)");
 		ImGui::Separator();
 		
+		/* 
+			All the stats here can be changed to receive the values from your radar signal processing
+			algorithm which calculated all these values for every sweep.
+		*/
 
 		ImGui::Text("Amplitude : ");
 		if (flag_connect)
@@ -773,44 +742,3 @@ void renderGraph()
 		ImGui::PlotLines("Lines", NULL, NULL, NULL, "avg 0.0", -1.0f, 1.0f, ImVec2(340, 100));
 	}
 }
-
-
-
-
-
-
-/*
-There are two flags:-
-1. Bool "Connect"		---->			CHECKBOX    //This flag is raised when Checkbox "Connect" is clicked 
-2. Bool "Animate"		---->			CHECKBOX    //This flag is raised when Checkbox "Plot Graph" is clicked 
-
-Situation:
-If (!Connect)
-	then PLOT GRAPH should not work which means 
-	Animate = FALSE;
-
-			If(Connect)
-			and then if PLOT GRAPH is clicked, graph can be plotted which means
-				Animate = TRUE;
-			else
-			This should show an error that without Connect enabled, PLOT GRAPH doesn't work
-			For this, I created the below logic
-			//function for displaying  error()
-							IF
-
-
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-

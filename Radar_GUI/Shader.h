@@ -7,7 +7,6 @@
 #include "Renderer.h"
 #include <unordered_map>
 
-
 struct shaderProgramSource
 {
 	std::string vertexSource1;
@@ -39,6 +38,5 @@ private:
 	int GetUniformLocation(const std::string& name);
 	shaderProgramSource ParseShader(const std::string& filepath);
 	GLuint createShader(const std::string& vertexShadersrc_n, const std::string& fragmentShadersrc);
-
 
 };

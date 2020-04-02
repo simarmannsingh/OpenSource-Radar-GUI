@@ -1,10 +1,7 @@
 /*
  -------------------------------------------------------------------------------------------------------------------------------------------
-
  Author			:	Simar Mann Singh
- Department		:	High Frequency Department, TF
- Date			:	28/08/2018
-
+Creation  Date	:	28/08/2018
  -------------------------------------------------------------------------------------------------------------------------------------------
 */
 #include "imgui.h"
@@ -25,8 +22,6 @@
 #include "Shader.h"
 #include "Shader_s.h"
 #include "Texture.h"
-#include "RemoteServer.h"
-#include "RemoteClient.h"
 
 // Initialization
 void glInitialize();
@@ -45,5 +40,3 @@ void screenOverlay(bool* p_open, int corner);
 void screenOverlayTwo(bool* p_open, int corner);
 void SmartHUD(bool* p_open, int corner);
 void renderGraph();
-
-
